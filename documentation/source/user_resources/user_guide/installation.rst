@@ -12,12 +12,12 @@ Installation
 Prerequisites
 -------------
 
-In order to run Rxn Rover, you need the free LabVIEW 2020 runtime engine,
-acquired from the `LabVIEW website <https://www.ni.com/en-us/support/downloads/software-products/download.labview-runtime.html#369481>`__.
+In order to run Rxn Rover, you need the free LabVIEW runtime engine,
+acquired from the `LabVIEW website <https://www.ni.com/en-us/support/downloads/software-products/download.labview-runtime.html#369481>`__ or a developer version of LabVIEW.
 
 You also need the Dynamic Reentrant library, developed by the Rxn Rover team
 to facilitate communication between Rxn Rover and its plugins. It can be 
-downloaded from <https://www.github.com/RxnRover/DynamicReentrant> by clicking
+downloaded from `<https://www.github.com/RxnRover/DynamicReentrant>`_ by clicking
 the "Code" button and selecting "Download ZIP". Extract the ZIP file into your
 `<labview>/user.lib/` directory, where `<labview>` is the location of your 
 LabVIEW installation. `user.lib` is where user-created, common libraries used 

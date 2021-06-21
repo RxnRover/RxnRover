@@ -5,8 +5,8 @@ Mock Experiment
 
 .. warning::
    
-   The example experiment is not complete yet! It also has only been tested on
-   Windows 10 with LabVIEW 2020.
+   This example experiment has only been tested on Windows 10 with LabVIEW 
+   2020.
 
 .. warning::
    
