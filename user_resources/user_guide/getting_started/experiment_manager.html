@@ -1,0 +1,322 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Using the Experiment Manager &mdash; Rxn Rover  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Rxn Rover Basics" href="rxnrover.html" />
+    <link rel="prev" title="Getting Started" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Rxn Rover
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Resources</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Getting Started</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Using the Experiment Manager</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#what-is-an-experiment">What is an Experiment?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-a-new-experiment">Creating a New Experiment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#using-an-existing-experiment">Using an Existing Experiment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#continuing-without-an-experiment">Continuing without an Experiment</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rxnrover.html">Rxn Rover Basics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/mock_experiment/mock_experiment.html">Mock Experiment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../additional_information/index.html">Additional Information</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_resources/dev_guide/index.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_resources/tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_resources/api/index.html">API Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">The Rxn Rover Team</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://RxnRover.github.io">Team Homepage</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://RxnRover.github.io/about">About Us</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://RxnRover.github.io/contact">Contact Us</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Rxn Rover</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">User Guide</a> &raquo;</li>
+        
+          <li><a href="index.html">Getting Started</a> &raquo;</li>
+        
+      <li>Using the Experiment Manager</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/user_resources/user_guide/getting_started/experiment_manager.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="using-the-experiment-manager">
+<span id="experiment-manager"></span><h1>Using the Experiment Manager<a class="headerlink" href="#using-the-experiment-manager" title="Permalink to this headline">¶</a></h1>
+<p>When Rxn Rover is run, the first screen a user is presented with is the
+“Experiment Manager” window. A new Experiment can be created, or an existing
+Experiment can be loaded. It is also possible to use no Experiment file so
+files are not saved, which is especially useful during software development
+and instrument troubleshooting.</p>
+<figure class="align-default" id="id1">
+<span id="experiment-manager-window"></span><a class="reference internal image-reference" href="../../../_images/experiment_manager_window.png"><img alt="Experiment Manager window." src="../../../_images/experiment_manager_window.png" style="width: 440.5px; height: 356.0px;" /></a>
+<figcaption>
+<p><span class="caption-text">Experiment Manager window.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<section id="what-is-an-experiment">
+<h2>What is an Experiment?<a class="headerlink" href="#what-is-an-experiment" title="Permalink to this headline">¶</a></h2>
+<p>An Experiment is the way Rxn Rover tracks plugins which have been loaded and
+the relationships between plugins. This information is stored in an Experiment
+file, which has the <code class="docutils literal notranslate"><span class="pre">.rrexpt</span></code> extension. By tracking this information in an
+Experiment, Rxn Rover can load the plugins for a specific laboratory setup
+easily saving you the time it would take to configure the setup again.</p>
+</section>
+<section id="creating-a-new-experiment">
+<span id="create-new-experiment"></span><h2>Creating a New Experiment<a class="headerlink" href="#creating-a-new-experiment" title="Permalink to this headline">¶</a></h2>
+<p>To create a new experiment, use the “Create New Experiment” button. This will
+open the “New Experiment” window, where the Experiment Name and Experiment
+Location are chosen. The Experiment Name will also be used as the experiment
+file name, so it should not include characters that would be invalid when
+naming a file (\/:*?&quot;&lt;&gt;|). The Experiment Location is the directory
+where the Experiment file, plugin data logs, and other output produced by the
+Experiment will reside</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Make sure that the Experiment Location does not require admin privilages!</p>
+</div>
+<figure class="align-default" id="id2">
+<span id="create-experiment-window"></span><a class="reference internal image-reference" href="../../../_images/create_experiment_window.png"><img alt="Create new experiment window." src="../../../_images/create_experiment_window.png" style="width: 282.75px; height: 222.0px;" /></a>
+<figcaption>
+<p><span class="caption-text">Create new experiment window</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="using-an-existing-experiment">
+<span id="use-existing-experiment"></span><h2>Using an Existing Experiment<a class="headerlink" href="#using-an-existing-experiment" title="Permalink to this headline">¶</a></h2>
+<p>An existing Experiment can be used by selecting the “Load Existing Experiment”
+or by double-clicking an entry in the “Recent Experiments” list.</p>
+<section id="load-existing-experiment-button">
+<h3>Load Existing Experiment Button<a class="headerlink" href="#load-existing-experiment-button" title="Permalink to this headline">¶</a></h3>
+<p>When the “Load Existing Experiment” button is pressed, a file browser will
+open. Use this file browser to select the desired Experiment file
+(<code class="docutils literal notranslate"><span class="pre">*.rrexpt</span></code>) to load and Rxn Rover will attempt to load all plugins and
+connect to the instrumentation.</p>
+</section>
+<section id="recent-experiments-list">
+<h3>Recent Experiments List<a class="headerlink" href="#recent-experiments-list" title="Permalink to this headline">¶</a></h3>
+<p>When an entry in the “Recent Experiments” list is double-clicked, Rxn Rover
+will attempt to load the Experiment file from the path specified, loading all
+plugins and connecting to the instrumentation.</p>
+<p>Use the “Clear” button to the top-right of the “Recent Experiments” list to
+remove all recent experiment items. It is currently not possible to remove a
+single recent experiment, although a recent experiment entry will be removed
+if Rxn Rover cannot find the Experiment file.</p>
+</section>
+</section>
+<section id="continuing-without-an-experiment">
+<span id="use-no-experiment"></span><h2>Continuing without an Experiment<a class="headerlink" href="#continuing-without-an-experiment" title="Permalink to this headline">¶</a></h2>
+<p>It is possible to use Rxn Rover without an active Experiment using the
+“Continue without Experiment” button. This will launch Rxn Rover without an
+associated Experiment file, but still allows Rxn Rover to function as if an
+Experiment was loaded. Attempting to save at any point in No Experiment mode
+will open the “New Experiment” window (see <a class="reference internal" href="#create-experiment-window"><span class="std std-ref">New Experiment Image above</span></a>). When exitting Rxn Rover, the “New Experiment”
+window will also open to prompt you to save the setup as an Experiment, or
+press “Cancel” to exit without saving.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Plugin data logs and other files are still created in a <a class="reference internal" href="../../additional_information/locations/rxnrover_tmp_directories.html#rxnrover-tmp-directories"><span class="std std-ref">temporary directory</span></a>, if you need to recover any data.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="rxnrover.html" class="btn btn-neutral float-right" title="Rxn Rover Basics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Iowa State University.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

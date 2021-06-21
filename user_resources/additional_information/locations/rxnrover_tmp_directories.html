@@ -1,0 +1,311 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Temporary Directories &mdash; Rxn Rover  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="User Preferences File" href="rxnrover_user_preferences_file.html" />
+    <link rel="prev" title="Plugin Directories" href="rxnrover_plugin_directories.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Rxn Rover
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Resources</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Additional Information</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Locations</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="rxnrover_plugin_directories.html">Plugin Directories</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Temporary Directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#when-is-data-written-to-a-temporary-directory">When is data written to a temporary directory?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#where-is-the-temporary-directory">Where is the temporary directory?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#which-directories-are-from-rxn-rover">Which directories are from Rxn Rover?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#recovering-temporary-rxn-rover-data">Recovering Temporary Rxn Rover Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#removing-temporary-rxn-rover-data">Removing Temporary Rxn Rover Data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rxnrover_user_preferences_file.html">User Preferences File</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_resources/dev_guide/index.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_resources/tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_resources/api/index.html">API Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">The Rxn Rover Team</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://RxnRover.github.io">Team Homepage</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://RxnRover.github.io/about">About Us</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://RxnRover.github.io/contact">Contact Us</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Rxn Rover</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Additional Information</a> &raquo;</li>
+        
+          <li><a href="index.html">Locations</a> &raquo;</li>
+        
+      <li>Temporary Directories</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/user_resources/additional_information/locations/rxnrover_tmp_directories.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="temporary-directories">
+<span id="rxnrover-tmp-directories"></span><h1>Temporary Directories<a class="headerlink" href="#temporary-directories" title="Permalink to this headline">¶</a></h1>
+<section id="when-is-data-written-to-a-temporary-directory">
+<h2>When is data written to a temporary directory?<a class="headerlink" href="#when-is-data-written-to-a-temporary-directory" title="Permalink to this headline">¶</a></h2>
+<p>When Rxn Rover is used with the “Continue without Experiment” option, some
+files, like plugin data logs, are written in a unique directory generated in a
+temporary directory. This helps to prevent data loss if the temporary data
+logs must be referenced at a prior date.</p>
+<p>Starting without an experiment file is a feature primarily added to aid in
+rapid testing and debugging during software development. Test runs during
+development are usually short, so the files are small and should not noticably
+affect system performance. However, new plugins should be tested on the scale
+of days to ensure robustness, which can cause the log files to become quite
+large. Therefore, it is recommended to
+<a class="reference internal" href="../../user_guide/getting_started/experiment_manager.html#create-new-experiment"><span class="std std-ref">create an Experiment</span></a> for long test runs.</p>
+<p>There are also valid use cases during routine usage of Rxn Rover as well, such
+as testing newly downloaded plugins and troubleshooting hardware. If the
+“Continue without Experiment” option is used frequently and for long periods
+of time, many large files may be created in the temporary directory, which you
+may want to delete periodically to free space on your system.</p>
+</section>
+<section id="where-is-the-temporary-directory">
+<span id="lv-tmp-directory"></span><h2>Where is the temporary directory?<a class="headerlink" href="#where-is-the-temporary-directory" title="Permalink to this headline">¶</a></h2>
+<p>The location of the temp directory used by LabVIEW varies by operating system.
+To find which temporary directory LabVIEW is using, or change this temporary
+directory, go to Tools &gt; Options… &gt; Paths and select “Temporary Directory”
+from the dropdown list. Common temp locations are listed below:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 79%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Operating System</p></th>
+<th class="head"><p>Temporary Directory Location</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Linux</p></td>
+<td><p>/tmp</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>/var/tmp</p></td>
+</tr>
+<tr class="row-even"><td><p>Mac OS</p></td>
+<td><p>~/Library/Caches/TemporaryItems</p></td>
+</tr>
+<tr class="row-odd"><td><p>Windows</p></td>
+<td><p>%userprofile%\AppData\Local\Temp</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="which-directories-are-from-rxn-rover">
+<span id="which-rxnrover-tmp-directory"></span><h2>Which directories are from Rxn Rover?<a class="headerlink" href="#which-directories-are-from-rxn-rover" title="Permalink to this headline">¶</a></h2>
+<p>All Rxn Rover directories in the temporary directory take the form
+<code class="docutils literal notranslate"><span class="pre">&lt;tmpdir&gt;/lvtemporary_&lt;random_number&gt;.RxnRover</span></code>, where <code class="docutils literal notranslate"><span class="pre">&lt;tmpdir&gt;</span></code> is the
+<a class="reference internal" href="#lv-tmp-directory"><span class="std std-ref">temporary directory used by LabVIEW.</span></a></p>
+</section>
+<section id="recovering-temporary-rxn-rover-data">
+<h2>Recovering Temporary Rxn Rover Data<a class="headerlink" href="#recovering-temporary-rxn-rover-data" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference internal" href="../../tutorials/recover_tmp_data.html#recover-tmp-data"><span class="std std-ref">tutorial</span></a>.</p>
+</section>
+<section id="removing-temporary-rxn-rover-data">
+<h2>Removing Temporary Rxn Rover Data<a class="headerlink" href="#removing-temporary-rxn-rover-data" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference internal" href="../../tutorials/clean_tmp_data.html#clean-tmp-data"><span class="std std-ref">tutorial</span></a>.</p>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="rxnrover_user_preferences_file.html" class="btn btn-neutral float-right" title="User Preferences File" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="rxnrover_plugin_directories.html" class="btn btn-neutral float-left" title="Plugin Directories" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Iowa State University.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

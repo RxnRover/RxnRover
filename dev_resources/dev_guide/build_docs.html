@@ -1,0 +1,331 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Building the Documentation &mdash; Rxn Rover  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Contributions" href="contributions/index.html" />
+    <link rel="prev" title="Developer Guide" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Rxn Rover
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../user_resources/user_guide/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_resources/tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_resources/additional_information/index.html">Additional Information</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Resources</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Building the Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installing-antidoc-toolchain">Installing AntiDoc Toolchain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installing-sphinx">Installing Sphinx</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#automatically">Automatically</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#manually">Manually</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Building the Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#github-ci">GitHub CI</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="contributions/index.html">Contributions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">The Rxn Rover Team</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://RxnRover.github.io">Team Homepage</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://RxnRover.github.io/about">About Us</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://RxnRover.github.io/contact">Contact Us</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Rxn Rover</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Developer Guide</a> &raquo;</li>
+        
+      <li>Building the Documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/dev_resources/dev_guide/build_docs.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="building-the-documentation">
+<h1>Building the Documentation<a class="headerlink" href="#building-the-documentation" title="Permalink to this headline">¶</a></h1>
+<p>Rxn Rover documentation is generated using a combination of two documentation
+generators:</p>
+<ol class="arabic simple">
+<li><p>The <a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx Documentation Generator</a> for general documentation, and</p></li>
+<li><p>The <a class="reference external" href="https://wovalab.gitlab.io/open-source/labview-doc-generator/">AntiDoc Toolkit for LabVIEW</a>, specifically the <a class="reference external" href="https://gitlab.com/wovalab/open-source/cli-for-antidoc">CLI for Antidoc</a> tool, for code
+documentation.</p></li>
+</ol>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Windows 10 (for AntiDoc)</p></li>
+<li><p>Python 3.x (<a class="reference external" href="https://www.python.org/">link</a>)</p></li>
+<li><p>LabVIEW (to run AntiDoc)</p></li>
+<li><p>VIPM (for installing AntiDoc)</p></li>
+</ol>
+</section>
+<section id="installing-antidoc-toolchain">
+<h2>Installing AntiDoc Toolchain<a class="headerlink" href="#installing-antidoc-toolchain" title="Permalink to this headline">¶</a></h2>
+<p>Installing AntiDoc and AntiDoc CLI is fairly easy using the VI Package Manager
+(VIPM). Open VIPM, search for “antidoc”, and install the AntiDoc and Antidoc
+CLI packages that appear, ensuring the “Publisher” field is “Wovalab”.</p>
+<p>Once the AntiDoc packages are installed, Asciidoctor needs to be installed to
+render the final product as HTML. Follow the instructions provided the AntiDoc
+authors <a class="reference external" href="https://gitlab.com/wovalab/open-source/labview-doc-generator/-/blob/master/Resources/Docs/Install-Asciidoc-Toolchain-long-way.adoc">here</a> to
+install Asciidoctor, Asciidoctor Diagram, and Graphviz. The final three
+sections about generating a PDF are not necessary.</p>
+<p>Links:</p>
+<ol class="arabic simple">
+<li><p>AntiDoc (<a class="reference external" href="https://www.vipm.io/package/wovalab_lib_antidoc/">VIPM</a>)</p></li>
+<li><p>AntiDoc CLI (<a class="reference external" href="https://www.vipm.io/package/wovalab_lib_antidoc_cli/">VIPM</a>)</p></li>
+<li><p>Ruby (<a class="reference external" href="https://rubyinstaller.org/">link</a>)</p></li>
+<li><p>Asciidoctor (<a class="reference external" href="https://asciidoctor.org/">link</a>)</p></li>
+<li><p>Asciidoctor Diagram (<a class="reference external" href="https://asciidoctor.org/docs/asciidoctor-diagram/">link</a>)</p></li>
+<li><p>Graphviz (<a class="reference external" href="https://www.graphviz.org/">link</a>)</p></li>
+</ol>
+</section>
+<section id="installing-sphinx">
+<h2>Installing Sphinx<a class="headerlink" href="#installing-sphinx" title="Permalink to this headline">¶</a></h2>
+<section id="automatically">
+<h3>Automatically<a class="headerlink" href="#automatically" title="Permalink to this headline">¶</a></h3>
+<p>Sphinx will be installed automatically when <code class="docutils literal notranslate"><span class="pre">build_docs.bat</span></code> is run. The
+script will create a virtual environment (<code class="docutils literal notranslate"><span class="pre">venv</span></code>) in the documentation
+directory, install the required packages in the <code class="docutils literal notranslate"><span class="pre">venv</span></code>, and use the <code class="docutils literal notranslate"><span class="pre">venv</span></code>
+every time <code class="docutils literal notranslate"><span class="pre">build_docs.bat</span></code> is run.</p>
+</section>
+<section id="manually">
+<h3>Manually<a class="headerlink" href="#manually" title="Permalink to this headline">¶</a></h3>
+<p>If something goes wrong with the automatic installation, or you want to
+install Sphinx manually for other reasons, follow these steps:</p>
+<ol class="arabic">
+<li><p>Create and activate a virtual environment (<code class="docutils literal notranslate"><span class="pre">venv</span></code>).</p>
+<div class="highlight-batch notranslate"><div class="highlight"><pre><span></span>python -m venv venv
+.\venv\Scripts\activate
+</pre></div>
+</div>
+</li>
+<li><p>Install Sphinx packages (make sure the <code class="docutils literal notranslate"><span class="pre">venv</span></code> is active!).</p>
+<div class="highlight-batch notranslate"><div class="highlight"><pre><span></span>pip install -r requirements
+</pre></div>
+</div>
+</li>
+<li><p>Deactivate the <code class="docutils literal notranslate"><span class="pre">venv</span></code> (<code class="docutils literal notranslate"><span class="pre">build_docs.bat</span></code> will activate it
+when run).</p>
+<div class="highlight-batch notranslate"><div class="highlight"><pre><span></span>deactivate
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+</section>
+<section id="id1">
+<h2>Building the Documentation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Run <code class="docutils literal notranslate"><span class="pre">build_docs.bat</span></code> by double-clicking or executing it in a terminal. The
+documentation will exist inside the <code class="docutils literal notranslate"><span class="pre">documentation/build/html/</span></code> directory,
+and can be viewed by opening <code class="docutils literal notranslate"><span class="pre">documentation/build/html/index.html</span></code> in a
+web browser.</p>
+<figure class="align-default" id="id2">
+<span id="build-docs-output"></span><a class="reference internal image-reference" href="../../_images/build_docs_output.png"><img alt="Example build output from AntiDoc and Sphinx." src="../../_images/build_docs_output.png" style="width: 452.5px; height: 368.0px;" /></a>
+<figcaption>
+<p><span class="caption-text">Example build output from a typical documentation build.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="github-ci">
+<h2>GitHub CI<a class="headerlink" href="#github-ci" title="Permalink to this headline">¶</a></h2>
+<p>Refer to the <a class="reference external" href="https://gitlab.com/wovalab/open-source/labview-project-documentation-with-antidoc-demo">AntiDoc GitHub CI Guide</a>.</p>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="contributions/index.html" class="btn btn-neutral float-right" title="Contributions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Developer Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Iowa State University.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
