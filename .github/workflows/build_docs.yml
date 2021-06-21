@@ -29,6 +29,7 @@ jobs:
       # With the -s flag, it only builds Sphinx documentation
       - name: Build documentation website
         run: |
+          cd documentation
           .\build_docs.bat -s
 
       # Deploys the website to the gh-pages branch
@@ -36,4 +37,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .\build\html
+          publish_dir: .\documentation\build\html
