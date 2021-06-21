@@ -1,0 +1,45 @@
+########## LabVIEW Ignores ##########
+
+# Libraries
+*.lvlibp
+*.llb
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+build/
+
+# Metadata
+*.aliases
+*.lvlps
+.cache/
+
+########## Python Ignores ##########
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Sphinx documentation
+documentation/_build/
+documentation/build/
+
+# Environments
+.env
+.venv
+env/
+venv*/
+ENV/
+env.bak/
+venv.bak/
+
+########## Project Ignores ##########
+
+logs/
+documentation/source/_static/api

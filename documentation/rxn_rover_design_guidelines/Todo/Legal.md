@@ -1,0 +1,12 @@
+# Legal Todos
+- [ ] Make sure all licenses and copyright are correct for:
+	- [x] Rxn Rover
+	- [x] Plugins
+        - [ ] Trademark statements (probably)
+	- [ ] Drivers
+        - [ ] Trademark statements (probably)
+- [x] Add our license above DRO license in dro2.
+- [x] Ensure that the message queue author is properly credited.
+    - It is from the LabVIEW Queued Message Handler project template.
+    - I added a separate occurance to each plugin.
+- [ ] TW needs to ping IP folks
