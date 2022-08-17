@@ -14,6 +14,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -97,7 +98,7 @@
            <div itemprop="articleBody">
              
   <section id="building-the-documentation">
-<h1>Building the Documentation<a class="headerlink" href="#building-the-documentation" title="Permalink to this headline"></a></h1>
+<h1>Building the Documentation<a class="headerlink" href="#building-the-documentation" title="Permalink to this heading"></a></h1>
 <p>Rxn Rover documentation is generated using a combination of two documentation
 generators:</p>
 <ol class="arabic simple">
@@ -106,7 +107,7 @@ generators:</p>
 documentation.</p></li>
 </ol>
 <section id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline"></a></h2>
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Windows 10 (for AntiDoc)</p></li>
 <li><p>Python 3.x (<a class="reference external" href="https://www.python.org/">link</a>)</p></li>
@@ -115,7 +116,7 @@ documentation.</p></li>
 </ol>
 </section>
 <section id="installing-antidoc-toolchain">
-<h2>Installing AntiDoc Toolchain<a class="headerlink" href="#installing-antidoc-toolchain" title="Permalink to this headline"></a></h2>
+<h2>Installing AntiDoc Toolchain<a class="headerlink" href="#installing-antidoc-toolchain" title="Permalink to this heading"></a></h2>
 <p>Installing AntiDoc and AntiDoc CLI is fairly easy using the VI Package Manager
 (VIPM). Open VIPM, search for “antidoc”, and install the AntiDoc and Antidoc
 CLI packages that appear, ensuring the “Publisher” field is “Wovalab”.</p>
@@ -135,16 +136,16 @@ sections about generating a PDF are not necessary.</p>
 </ol>
 </section>
 <section id="installing-sphinx">
-<h2>Installing Sphinx<a class="headerlink" href="#installing-sphinx" title="Permalink to this headline"></a></h2>
+<h2>Installing Sphinx<a class="headerlink" href="#installing-sphinx" title="Permalink to this heading"></a></h2>
 <section id="automatically">
-<h3>Automatically<a class="headerlink" href="#automatically" title="Permalink to this headline"></a></h3>
+<h3>Automatically<a class="headerlink" href="#automatically" title="Permalink to this heading"></a></h3>
 <p>Sphinx will be installed automatically when <code class="docutils literal notranslate"><span class="pre">build_docs.bat</span></code> is run. The
 script will create a virtual environment (<code class="docutils literal notranslate"><span class="pre">venv</span></code>) in the documentation
 directory, install the required packages in the <code class="docutils literal notranslate"><span class="pre">venv</span></code>, and use the <code class="docutils literal notranslate"><span class="pre">venv</span></code>
 every time <code class="docutils literal notranslate"><span class="pre">build_docs.bat</span></code> is run.</p>
 </section>
 <section id="manually">
-<h3>Manually<a class="headerlink" href="#manually" title="Permalink to this headline"></a></h3>
+<h3>Manually<a class="headerlink" href="#manually" title="Permalink to this heading"></a></h3>
 <p>If something goes wrong with the automatic installation, or you want to
 install Sphinx manually for other reasons, follow these steps:</p>
 <ol class="arabic">
@@ -169,7 +170,7 @@ when run).</p>
 </section>
 </section>
 <section id="id1">
-<h2>Building the Documentation<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
+<h2>Building the Documentation<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
 <p>Run <code class="docutils literal notranslate"><span class="pre">build_docs.bat</span></code> by double-clicking or executing it in a terminal. The
 documentation will exist inside the <code class="docutils literal notranslate"><span class="pre">documentation/build/html/</span></code> directory,
 and can be viewed by opening <code class="docutils literal notranslate"><span class="pre">documentation/build/html/index.html</span></code> in a
@@ -182,7 +183,7 @@ web browser.</p>
 </figure>
 </section>
 <section id="github-ci">
-<h2>GitHub CI<a class="headerlink" href="#github-ci" title="Permalink to this headline"></a></h2>
+<h2>GitHub CI<a class="headerlink" href="#github-ci" title="Permalink to this heading"></a></h2>
 <p>Refer to the <a class="reference external" href="https://gitlab.com/wovalab/open-source/labview-project-documentation-with-antidoc-demo">AntiDoc GitHub CI Guide</a>.</p>
 </section>
 </section>

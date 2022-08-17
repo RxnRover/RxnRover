@@ -14,6 +14,7 @@
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -108,7 +109,7 @@
            <div itemprop="articleBody">
              
   <section id="mock-experiment">
-<span id="id1"></span><h1>Mock Experiment<a class="headerlink" href="#mock-experiment" title="Permalink to this headline"></a></h1>
+<span id="id1"></span><h1>Mock Experiment<a class="headerlink" href="#mock-experiment" title="Permalink to this heading"></a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This example experiment has only been tested on Windows 10 with LabVIEW
@@ -134,7 +135,7 @@ with the following steps:</p>
 <div class="line">- Where to find the results of an optimization.</div>
 </div>
 <section id="downloading-the-plugins">
-<span id="mock-experiment-download-plugins"></span><h2>Downloading the Plugins<a class="headerlink" href="#downloading-the-plugins" title="Permalink to this headline"></a></h2>
+<span id="mock-experiment-download-plugins"></span><h2>Downloading the Plugins<a class="headerlink" href="#downloading-the-plugins" title="Permalink to this heading"></a></h2>
 <p>This tutorial uses four “mock” plugins from the Rxn Rover Plugin Catalog: a
 mock analyzer, a mock pump, and a mock temperature controller. It also uses
 the plugin which connects SQSnobFit into Rxn Rover.</p>
@@ -146,7 +147,7 @@ the Rxn Rover team.</p>
 find plugins which fulfill each role in the Rxn Rover workflow: Analyzers,
 Optimizers, and Reactor Components.</p>
 <section id="mock-lc-analyzer">
-<h3>Mock LC Analyzer<a class="headerlink" href="#mock-lc-analyzer" title="Permalink to this headline"></a></h3>
+<h3>Mock LC Analyzer<a class="headerlink" href="#mock-lc-analyzer" title="Permalink to this heading"></a></h3>
 <p>The mock analyzer plugin we will be using generates random data as if it were
 being generated and parsed from a liquid chromatograph (LC). The catalog entry
 for this plugin can be found under <code class="docutils literal notranslate"><span class="pre">First-Party</span> <span class="pre">Plugins</span> <span class="pre">&gt;</span>&#160; <span class="pre">Plugin</span> <span class="pre">Classes</span> <span class="pre">&gt;</span>
@@ -166,7 +167,7 @@ the image.</span><a class="headerlink" href="#id2" title="Permalink to this imag
 </figure>
 </section>
 <section id="mock-pump">
-<h3>Mock Pump<a class="headerlink" href="#mock-pump" title="Permalink to this headline"></a></h3>
+<h3>Mock Pump<a class="headerlink" href="#mock-pump" title="Permalink to this heading"></a></h3>
 <p>The mock pump plugin we will be using simulates a pump by changing flow rates
 and generating pressure values when the pump is “running”. The catalog entry
 for this plugin can be found under <code class="docutils literal notranslate"><span class="pre">First-Party</span> <span class="pre">Plugins</span> <span class="pre">&gt;</span> <span class="pre">Plugin</span> <span class="pre">Classes</span> <span class="pre">&gt;</span>
@@ -174,7 +175,7 @@ for this plugin can be found under <code class="docutils literal notranslate"><s
 LC Analyzer above.</p>
 </section>
 <section id="mock-temperature-controller">
-<h3>Mock Temperature Controller<a class="headerlink" href="#mock-temperature-controller" title="Permalink to this headline"></a></h3>
+<h3>Mock Temperature Controller<a class="headerlink" href="#mock-temperature-controller" title="Permalink to this heading"></a></h3>
 <p>The mock temperature controller plugin we will be using simulates a temperature
 controller by changing temperature setpoint and heating to the setpoint when it
 is “running”. The catalog entry for this plugin can be found under
@@ -182,7 +183,7 @@ is “running”. The catalog entry for this plugin can be found under
 will be downloaded similarly to the Mock LC Analyzer above.</p>
 </section>
 <section id="sqsnobfit-optimizer">
-<h3>SQSnobFit Optimizer<a class="headerlink" href="#sqsnobfit-optimizer" title="Permalink to this headline"></a></h3>
+<h3>SQSnobFit Optimizer<a class="headerlink" href="#sqsnobfit-optimizer" title="Permalink to this heading"></a></h3>
 <p>The SQSnobFit optimizer plugin creates and connects to an instance of SQSnobFit
 to perform a reaction optimization. In this mock experiment, it will only
 receive random numbers from the analyzer, but it will still try its best and
@@ -192,7 +193,7 @@ under <code class="docutils literal notranslate"><span class="pre">First-Party</
 </section>
 </section>
 <section id="installing-plugins">
-<span id="mock-experiment-install-plugins"></span><h2>Installing Plugins<a class="headerlink" href="#installing-plugins" title="Permalink to this headline"></a></h2>
+<span id="mock-experiment-install-plugins"></span><h2>Installing Plugins<a class="headerlink" href="#installing-plugins" title="Permalink to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Plugin installation for this tutorial is fairly straightforward, but when
@@ -205,7 +206,7 @@ where <code class="docutils literal notranslate"><span class="pre">&lt;documents
 (<a class="reference internal" href="../../user_guide/troubleshooting/missing_plugin_directories.html#missing-plugin-directories"><span class="std std-ref">My Plugin Directories are Missing!</span></a>)</p>
 </section>
 <section id="creating-the-mock-experiment">
-<span id="mock-experiment-create-experiment"></span><h2>Creating the Mock Experiment<a class="headerlink" href="#creating-the-mock-experiment" title="Permalink to this headline"></a></h2>
+<span id="mock-experiment-create-experiment"></span><h2>Creating the Mock Experiment<a class="headerlink" href="#creating-the-mock-experiment" title="Permalink to this heading"></a></h2>
 <p>Run Rxn Rover and you will be presented with the Experiment Manager window.
 Notice all of the different forms for the name styles in the “Recent
 Experiments”. An Experiment can be named in using any convention, but cannot
@@ -244,9 +245,9 @@ see <a class="reference internal" href="../../user_guide/getting_started/experim
 </div>
 </section>
 <section id="loading-the-plugins">
-<span id="mock-experiment-load-plugins"></span><h2>Loading the Plugins<a class="headerlink" href="#loading-the-plugins" title="Permalink to this headline"></a></h2>
+<span id="mock-experiment-load-plugins"></span><h2>Loading the Plugins<a class="headerlink" href="#loading-the-plugins" title="Permalink to this heading"></a></h2>
 <section id="reactor-components">
-<h3>Reactor Components<a class="headerlink" href="#reactor-components" title="Permalink to this headline"></a></h3>
+<h3>Reactor Components<a class="headerlink" href="#reactor-components" title="Permalink to this heading"></a></h3>
 <p>First, we will load some Reactor Components. To do this, click the “Load
 Controller” button in the top left. Enter information to match the image below.</p>
 <figure class="align-default" id="id6">
@@ -296,7 +297,7 @@ plugin list expanded.</span><a class="headerlink" href="#id8" title="Permalink t
 </figure>
 </section>
 <section id="optimizer">
-<h3>Optimizer<a class="headerlink" href="#optimizer" title="Permalink to this headline"></a></h3>
+<h3>Optimizer<a class="headerlink" href="#optimizer" title="Permalink to this heading"></a></h3>
 <p>Press the “Load Optimizer” button to open the “Select Optimizer” window. Select
 “SQSnobFit” from the list and press “OK”. It does not matter if you name
 the optimizer, as this name is not visible anywhere currently.</p>
@@ -337,7 +338,7 @@ click outside the text box for the change to take affect.</p>
 </figure>
 </section>
 <section id="assigning-parameters">
-<h3>Assigning Parameters<a class="headerlink" href="#assigning-parameters" title="Permalink to this headline"></a></h3>
+<h3>Assigning Parameters<a class="headerlink" href="#assigning-parameters" title="Permalink to this heading"></a></h3>
 <p>A window to assign parameters to reactor components will either open
 automatically when an optimizer is loaded, or by pressing the “Reassign
 Parameters” button in the Optimizer Control section. Plugins are assigned to
@@ -359,7 +360,7 @@ analyzer is loaded and passing reaction results to the optimizer, the
 optimizer will explore the space automatically.</p>
 </section>
 <section id="analyzer">
-<h3>Analyzer<a class="headerlink" href="#analyzer" title="Permalink to this headline"></a></h3>
+<h3>Analyzer<a class="headerlink" href="#analyzer" title="Permalink to this heading"></a></h3>
 <p>Press the “Load Analyzer” button to open the “Select Analyzer” window. Select
 “Mock LC Parser” from the list and press “OK”. It does not matter if you name
 the analyzer, as this name is not visible anywhere currently.</p>
@@ -407,7 +408,7 @@ report, averaging every three reports and sending the result to the optimizer.</
 </section>
 </section>
 <section id="stopping-the-optimization">
-<h2>Stopping the Optimization<a class="headerlink" href="#stopping-the-optimization" title="Permalink to this headline"></a></h2>
+<h2>Stopping the Optimization<a class="headerlink" href="#stopping-the-optimization" title="Permalink to this heading"></a></h2>
 <p>With reactor components, an optimizer, and an analyzer loaded, the automated
 optimization should be under way! Let it run for a minute or two to gather some
 “data”. After that, stop the reactor components with “Stop Hardware” and close
@@ -415,7 +416,7 @@ the Rxn Rover window. You will also need to close the two terminals that were
 opened when the optimizer and analyzer plugins were loaded.</p>
 </section>
 <section id="finding-your-data">
-<h2>Finding your Data<a class="headerlink" href="#finding-your-data" title="Permalink to this headline"></a></h2>
+<h2>Finding your Data<a class="headerlink" href="#finding-your-data" title="Permalink to this heading"></a></h2>
 <p>Once you complete an experiment with Rxn Rover, you can find data logs for each
 of the plugins in the Experiment directory that you set when you created the
 Experiment. Each reactor component should log details about the

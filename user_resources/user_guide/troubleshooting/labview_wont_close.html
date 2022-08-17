@@ -14,6 +14,7 @@
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -98,9 +99,9 @@
            <div itemprop="articleBody">
              
   <section id="labview-will-not-close">
-<h1>LabVIEW will not close<a class="headerlink" href="#labview-will-not-close" title="Permalink to this headline"></a></h1>
+<h1>LabVIEW will not close<a class="headerlink" href="#labview-will-not-close" title="Permalink to this heading"></a></h1>
 <section id="issue">
-<h2>Issue<a class="headerlink" href="#issue" title="Permalink to this headline"></a></h2>
+<h2>Issue<a class="headerlink" href="#issue" title="Permalink to this heading"></a></h2>
 <p>Rxn Rover exitted or crashed, and now either the Rxn Rover project or
 LabVIEW will not exit.</p>
 <p>If Rxn Rover crashes, you may be left with a situation where Rxn Rover has
@@ -109,12 +110,12 @@ as if Rxn Rover were running. This is also sometimes accompanied by LabVIEW
 using much more CPU % than it should be using.</p>
 </section>
 <section id="cause">
-<h2>Cause<a class="headerlink" href="#cause" title="Permalink to this headline"></a></h2>
+<h2>Cause<a class="headerlink" href="#cause" title="Permalink to this heading"></a></h2>
 <p>This error appears to occur when a plugin was not shut down properly and some
 reentrant VIs are still running in the background.</p>
 </section>
 <section id="solutions">
-<h2>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline"></a></h2>
+<h2>Solutions<a class="headerlink" href="#solutions" title="Permalink to this heading"></a></h2>
 <p>End the LabVIEW process. For example, in Windows, open the Task Manager, find
 the LabVIEW process, and choose End Process. The next time Rxn Rover is
 opened, you will be asked to recover the project, which you should do.</p>
