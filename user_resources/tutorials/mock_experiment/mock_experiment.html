@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mock Experiment &mdash; Rxn Rover  documentation</title>
-      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -28,11 +30,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../../index.html" class="icon icon-home"> Rxn Rover
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Rxn Rover
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -96,9 +102,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../user_guide/index.html">User Guide</a> &raquo;</li>
-      <li>Mock Experiment</li>
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../user_guide/index.html">User Guide</a></li>
+      <li class="breadcrumb-item active">Mock Experiment</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../../_sources/user_resources/tutorials/mock_experiment/mock_experiment.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -109,7 +115,7 @@
            <div itemprop="articleBody">
              
   <section id="mock-experiment">
-<span id="id1"></span><h1>Mock Experiment<a class="headerlink" href="#mock-experiment" title="Permalink to this heading"></a></h1>
+<span id="id1"></span><h1>Mock Experiment<a class="headerlink" href="#mock-experiment" title="Link to this heading"></a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This example experiment has only been tested on Windows 10 with LabVIEW
@@ -135,7 +141,7 @@ with the following steps:</p>
 <div class="line">- Where to find the results of an optimization.</div>
 </div>
 <section id="downloading-the-plugins">
-<span id="mock-experiment-download-plugins"></span><h2>Downloading the Plugins<a class="headerlink" href="#downloading-the-plugins" title="Permalink to this heading"></a></h2>
+<span id="mock-experiment-download-plugins"></span><h2>Downloading the Plugins<a class="headerlink" href="#downloading-the-plugins" title="Link to this heading"></a></h2>
 <p>This tutorial uses four “mock” plugins from the Rxn Rover Plugin Catalog: a
 mock analyzer, a mock pump, and a mock temperature controller. It also uses
 the plugin which connects SQSnobFit into Rxn Rover.</p>
@@ -147,7 +153,7 @@ the Rxn Rover team.</p>
 find plugins which fulfill each role in the Rxn Rover workflow: Analyzers,
 Optimizers, and Reactor Components.</p>
 <section id="mock-lc-analyzer">
-<h3>Mock LC Analyzer<a class="headerlink" href="#mock-lc-analyzer" title="Permalink to this heading"></a></h3>
+<h3>Mock LC Analyzer<a class="headerlink" href="#mock-lc-analyzer" title="Link to this heading"></a></h3>
 <p>The mock analyzer plugin we will be using generates random data as if it were
 being generated and parsed from a liquid chromatograph (LC). The catalog entry
 for this plugin can be found under <code class="docutils literal notranslate"><span class="pre">First-Party</span> <span class="pre">Plugins</span> <span class="pre">&gt;</span>&#160; <span class="pre">Plugin</span> <span class="pre">Classes</span> <span class="pre">&gt;</span>
@@ -162,12 +168,12 @@ page of the Mock LC Parser repository.</p>
 <figcaption>
 <p><span class="caption-text">Mock LC Parser repository showing the green “Code” button in the top right
 and the top of the installation instructions for the plugin at the bottom of
-the image.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+the image.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="mock-pump">
-<h3>Mock Pump<a class="headerlink" href="#mock-pump" title="Permalink to this heading"></a></h3>
+<h3>Mock Pump<a class="headerlink" href="#mock-pump" title="Link to this heading"></a></h3>
 <p>The mock pump plugin we will be using simulates a pump by changing flow rates
 and generating pressure values when the pump is “running”. The catalog entry
 for this plugin can be found under <code class="docutils literal notranslate"><span class="pre">First-Party</span> <span class="pre">Plugins</span> <span class="pre">&gt;</span> <span class="pre">Plugin</span> <span class="pre">Classes</span> <span class="pre">&gt;</span>
@@ -175,7 +181,7 @@ for this plugin can be found under <code class="docutils literal notranslate"><s
 LC Analyzer above.</p>
 </section>
 <section id="mock-temperature-controller">
-<h3>Mock Temperature Controller<a class="headerlink" href="#mock-temperature-controller" title="Permalink to this heading"></a></h3>
+<h3>Mock Temperature Controller<a class="headerlink" href="#mock-temperature-controller" title="Link to this heading"></a></h3>
 <p>The mock temperature controller plugin we will be using simulates a temperature
 controller by changing temperature setpoint and heating to the setpoint when it
 is “running”. The catalog entry for this plugin can be found under
@@ -183,7 +189,7 @@ is “running”. The catalog entry for this plugin can be found under
 will be downloaded similarly to the Mock LC Analyzer above.</p>
 </section>
 <section id="sqsnobfit-optimizer">
-<h3>SQSnobFit Optimizer<a class="headerlink" href="#sqsnobfit-optimizer" title="Permalink to this heading"></a></h3>
+<h3>SQSnobFit Optimizer<a class="headerlink" href="#sqsnobfit-optimizer" title="Link to this heading"></a></h3>
 <p>The SQSnobFit optimizer plugin creates and connects to an instance of SQSnobFit
 to perform a reaction optimization. In this mock experiment, it will only
 receive random numbers from the analyzer, but it will still try its best and
@@ -193,7 +199,7 @@ under <code class="docutils literal notranslate"><span class="pre">First-Party</
 </section>
 </section>
 <section id="installing-plugins">
-<span id="mock-experiment-install-plugins"></span><h2>Installing Plugins<a class="headerlink" href="#installing-plugins" title="Permalink to this heading"></a></h2>
+<span id="mock-experiment-install-plugins"></span><h2>Installing Plugins<a class="headerlink" href="#installing-plugins" title="Link to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Plugin installation for this tutorial is fairly straightforward, but when
@@ -206,7 +212,7 @@ where <code class="docutils literal notranslate"><span class="pre">&lt;documents
 (<a class="reference internal" href="../../user_guide/troubleshooting/missing_plugin_directories.html#missing-plugin-directories"><span class="std std-ref">My Plugin Directories are Missing!</span></a>)</p>
 </section>
 <section id="creating-the-mock-experiment">
-<span id="mock-experiment-create-experiment"></span><h2>Creating the Mock Experiment<a class="headerlink" href="#creating-the-mock-experiment" title="Permalink to this heading"></a></h2>
+<span id="mock-experiment-create-experiment"></span><h2>Creating the Mock Experiment<a class="headerlink" href="#creating-the-mock-experiment" title="Link to this heading"></a></h2>
 <p>Run Rxn Rover and you will be presented with the Experiment Manager window.
 Notice all of the different forms for the name styles in the “Recent
 Experiments”. An Experiment can be named in using any convention, but cannot
@@ -214,7 +220,7 @@ contain symbols that are not allowed in a file name.</p>
 <figure class="align-default" id="id3">
 <span id="mock-experiment-experiment-manager-window"></span><a class="reference internal image-reference" href="../../../_images/experiment_manager.png"><img alt="Screenshot of Experiment Manager window with example recent experiments." src="../../../_images/experiment_manager.png" style="width: 660.75px; height: 533.25px;" /></a>
 <figcaption>
-<p><span class="caption-text">Experiment Manager window with example recent experiments.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Experiment Manager window with example recent experiments.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>Click the “Create New Experiment” button and fill in the information like in
@@ -225,7 +231,7 @@ file explorer, like a directory on your Desktop or in your Documents. Press
 <span id="mock-experiment-new-experiment-window"></span><a class="reference internal image-reference" href="../../../_images/create_mock_experiment.png"><img alt="Screenshot of the &quot;Create New Experiment&quot; dialog with information for this mock experiment filled in." src="../../../_images/create_mock_experiment.png" style="width: 282.0px; height: 220.5px;" /></a>
 <figcaption>
 <p><span class="caption-text">Create New Experiment dialog with information for this mock experiment
-filled in.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+filled in.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>You should now be presented with a blank Rxn Rover window indicating your new
@@ -235,7 +241,7 @@ window for Rxn Rover and almost all actions are taken from here.</p>
 <span id="mock-experiment-rxnrover-blank"></span><img alt="Screenshot of a blank Rxn Rover main window with the mock experiment loaded." src="../../../_images/rxnrover_blank.png" />
 <figcaption>
 <p><span class="caption-text">Create New Experiment dialog with information for this mock experiment
-filled in.</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+filled in.</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <div class="admonition note">
@@ -245,16 +251,16 @@ see <a class="reference internal" href="../../user_guide/getting_started/experim
 </div>
 </section>
 <section id="loading-the-plugins">
-<span id="mock-experiment-load-plugins"></span><h2>Loading the Plugins<a class="headerlink" href="#loading-the-plugins" title="Permalink to this heading"></a></h2>
+<span id="mock-experiment-load-plugins"></span><h2>Loading the Plugins<a class="headerlink" href="#loading-the-plugins" title="Link to this heading"></a></h2>
 <section id="reactor-components">
-<h3>Reactor Components<a class="headerlink" href="#reactor-components" title="Permalink to this heading"></a></h3>
+<h3>Reactor Components<a class="headerlink" href="#reactor-components" title="Link to this heading"></a></h3>
 <p>First, we will load some Reactor Components. To do this, click the “Load
 Controller” button in the top left. Enter information to match the image below.</p>
 <figure class="align-default" id="id6">
 <span id="mock-experiment-load-hardware"></span><img alt="Screenshot of &quot;Select Hardware&quot; window used to load and name Reactor Component plugin instances." src="../../../_images/load_hardware.png" />
 <figcaption>
 <p><span class="caption-text">Select Hardware window used to load and name Reactor Component plugin
-instances.</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+instances.</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>Press “OK” and the plugin will start loading. The plugin will open a dialog
@@ -266,7 +272,7 @@ information: <a class="reference external" href="https://www.ni.com/en-us/suppor
 <span id="mock-experiment-select-hardware"></span><img alt="Screenshot of VISA Resource selection window." src="../../../_images/select_hardware_resource.png" />
 <figcaption>
 <p><span class="caption-text">VISA Resource selection window used to connect to physical hardware through
-a COM port.</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+a COM port.</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <div class="admonition note">
@@ -292,19 +298,19 @@ section on the right.</p>
 <span id="mock-experiment-rxnrover-manual-hardware-loaded"></span><img alt="Screenshot of main Rxn Rover window with reactor components loaded and the Manual Control plugin list expanded." src="../../../_images/rxnrover_hardware_loaded.png" />
 <figcaption>
 <p><span class="caption-text">Main Rxn Rover window with reactor components loaded and the Manual Control
-plugin list expanded.</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+plugin list expanded.</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="optimizer">
-<h3>Optimizer<a class="headerlink" href="#optimizer" title="Permalink to this heading"></a></h3>
+<h3>Optimizer<a class="headerlink" href="#optimizer" title="Link to this heading"></a></h3>
 <p>Press the “Load Optimizer” button to open the “Select Optimizer” window. Select
 “SQSnobFit” from the list and press “OK”. It does not matter if you name
 the optimizer, as this name is not visible anywhere currently.</p>
 <figure class="align-default" id="id9">
 <span id="mock-experiment-load-optimizer"></span><img alt="Screenshot of &quot;Select Optimizer&quot; window." src="../../../_images/load_optimizer.png" />
 <figcaption>
-<p><span class="caption-text">Select Optimizer window used to load and name an Optimizer plugin.</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Select Optimizer window used to load and name an Optimizer plugin.</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>Instead of a VISA Resource, this optimizer plugin requires a script that tells
@@ -318,13 +324,13 @@ Optimizer” and restart this section.</p>
 <span id="mock-experiment-select-optimizer-script-filled"></span><img alt="Screenshot of Optimizer Start Script selection window." src="../../../_images/select_optimizer_script_filled.png" />
 <figcaption>
 <p><span class="caption-text">Optimizer Start Script selection window used to select a script to run the
-SQSnobFit optimization algorithm.</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+SQSnobFit optimization algorithm.</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id11">
 <span id="mock-experiment-optimizer-terminal"></span><img alt="Screenshot of the SQSnobFit terminal open." src="../../../_images/optimizer_command_prompt.png" />
 <figcaption>
-<p><span class="caption-text">Snippet of a command prompt window running the SQSnobFit script.</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Snippet of a command prompt window running the SQSnobFit script.</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>The Optimizer Control section of the Rxn Rover main window should now have the
@@ -333,12 +339,12 @@ click outside the text box for the change to take affect.</p>
 <figure class="align-default" id="id12">
 <span id="mock-experiment-rxnrover-optimizer-loaded"></span><img alt="Screenshot of main Rxn Rover window optimizer control with SQSnobFit." src="../../../_images/rxnrover_optimizer_loaded.png" />
 <figcaption>
-<p><span class="caption-text">Main Rxn Rover window optimizer control with SQSnobFit loaded.</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Main Rxn Rover window optimizer control with SQSnobFit loaded.</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="assigning-parameters">
-<h3>Assigning Parameters<a class="headerlink" href="#assigning-parameters" title="Permalink to this heading"></a></h3>
+<h3>Assigning Parameters<a class="headerlink" href="#assigning-parameters" title="Link to this heading"></a></h3>
 <p>A window to assign parameters to reactor components will either open
 automatically when an optimizer is loaded, or by pressing the “Reassign
 Parameters” button in the Optimizer Control section. Plugins are assigned to
@@ -349,7 +355,7 @@ plugins as shown below.</p>
 <span id="mock-experiment-reassign-parameters"></span><img alt="Screenshot of parameter assignment window." src="../../../_images/reassign_parameters_assigned.png" />
 <figcaption>
 <p><span class="caption-text">Parameter assignment window with the mock plugins assigned to their
-corresponding optimization parameters.</span><a class="headerlink" href="#id13" title="Permalink to this image"></a></p>
+corresponding optimization parameters.</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>Once you have assigned the parameters, press “Accept Parameters” to manually
@@ -360,14 +366,14 @@ analyzer is loaded and passing reaction results to the optimizer, the
 optimizer will explore the space automatically.</p>
 </section>
 <section id="analyzer">
-<h3>Analyzer<a class="headerlink" href="#analyzer" title="Permalink to this heading"></a></h3>
+<h3>Analyzer<a class="headerlink" href="#analyzer" title="Link to this heading"></a></h3>
 <p>Press the “Load Analyzer” button to open the “Select Analyzer” window. Select
 “Mock LC Parser” from the list and press “OK”. It does not matter if you name
 the analyzer, as this name is not visible anywhere currently.</p>
 <figure class="align-default" id="id14">
 <span id="mock-experiment-load-analyzer"></span><img alt="Screenshot of &quot;Select Analyzer&quot; window." src="../../../_images/load_analyzer.png" />
 <figcaption>
-<p><span class="caption-text">Select Analyzer window used to load and name an Analyzer plugin.</span><a class="headerlink" href="#id14" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Select Analyzer window used to load and name an Analyzer plugin.</span><a class="headerlink" href="#id14" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>This plugin parses report files from an LC system, reading the concentration of
@@ -387,13 +393,13 @@ close it, press “Stop Analyzer” and restart this section.</p>
 <span id="mock-experiment-select-analyzer-directory"></span><img alt="Screenshot of Analyzer report directory selection window." src="../../../_images/select_analyzer_directory_filled.png" />
 <figcaption>
 <p><span class="caption-text">Analyzer report directory selection window used to select a directory where
-the fake report files are output to and parsed from.</span><a class="headerlink" href="#id15" title="Permalink to this image"></a></p>
+the fake report files are output to and parsed from.</span><a class="headerlink" href="#id15" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id16">
 <span id="mock-experiment-analyzer-command-prompt"></span><img alt="Screenshot of the report generation script running." src="../../../_images/analyzer_command_prompt.png" />
 <figcaption>
-<p><span class="caption-text">Snippet of a command prompt window running the report generation script.</span><a class="headerlink" href="#id16" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Snippet of a command prompt window running the report generation script.</span><a class="headerlink" href="#id16" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>The Analyzer section of the Rxn Rover main window should now have the
@@ -402,13 +408,13 @@ report, averaging every three reports and sending the result to the optimizer.</
 <figure class="align-default" id="id17">
 <span id="mock-experiment-rxnrover-analyzer-scrolled"></span><img alt="Screenshot of the Analyzer portion of Rxn Rover." src="../../../_images/rxnrover_analyzer_scrolled.png" />
 <figcaption>
-<p><span class="caption-text">Analyzer section of Rxn Rover with the Mock LC Parser loaded.</span><a class="headerlink" href="#id17" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Analyzer section of Rxn Rover with the Mock LC Parser loaded.</span><a class="headerlink" href="#id17" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 </section>
 <section id="stopping-the-optimization">
-<h2>Stopping the Optimization<a class="headerlink" href="#stopping-the-optimization" title="Permalink to this heading"></a></h2>
+<h2>Stopping the Optimization<a class="headerlink" href="#stopping-the-optimization" title="Link to this heading"></a></h2>
 <p>With reactor components, an optimizer, and an analyzer loaded, the automated
 optimization should be under way! Let it run for a minute or two to gather some
 “data”. After that, stop the reactor components with “Stop Hardware” and close
@@ -416,7 +422,7 @@ the Rxn Rover window. You will also need to close the two terminals that were
 opened when the optimizer and analyzer plugins were loaded.</p>
 </section>
 <section id="finding-your-data">
-<h2>Finding your Data<a class="headerlink" href="#finding-your-data" title="Permalink to this heading"></a></h2>
+<h2>Finding your Data<a class="headerlink" href="#finding-your-data" title="Link to this heading"></a></h2>
 <p>Once you complete an experiment with Rxn Rover, you can find data logs for each
 of the plugins in the Experiment directory that you set when you created the
 Experiment. Each reactor component should log details about the
@@ -430,7 +436,7 @@ files are written.</p>
 <figure class="align-default" id="id18">
 <span id="mock-experiment-directory"></span><img alt="Screenshot of the contents of the mock experiment directory." src="../../../_images/mock_experiment_directory.png" />
 <figcaption>
-<p><span class="caption-text">Contents of the mock experiment directory at the end of this tutorial.</span><a class="headerlink" href="#id18" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Contents of the mock experiment directory at the end of this tutorial.</span><a class="headerlink" href="#id18" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>

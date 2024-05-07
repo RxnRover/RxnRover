@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Temporary Directories &mdash; Rxn Rover  documentation</title>
-      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -28,11 +30,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../../index.html" class="icon icon-home"> Rxn Rover
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Rxn Rover
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -85,10 +91,10 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../index.html">Additional Information</a> &raquo;</li>
-          <li><a href="index.html">Locations</a> &raquo;</li>
-      <li>Temporary Directories</li>
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Additional Information</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Locations</a></li>
+      <li class="breadcrumb-item active">Temporary Directories</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../../_sources/user_resources/additional_information/locations/rxnrover_tmp_directories.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -99,9 +105,9 @@
            <div itemprop="articleBody">
              
   <section id="temporary-directories">
-<span id="rxnrover-tmp-directories"></span><h1>Temporary Directories<a class="headerlink" href="#temporary-directories" title="Permalink to this heading"></a></h1>
+<span id="rxnrover-tmp-directories"></span><h1>Temporary Directories<a class="headerlink" href="#temporary-directories" title="Link to this heading"></a></h1>
 <section id="when-is-data-written-to-a-temporary-directory">
-<h2>When is data written to a temporary directory?<a class="headerlink" href="#when-is-data-written-to-a-temporary-directory" title="Permalink to this heading"></a></h2>
+<h2>When is data written to a temporary directory?<a class="headerlink" href="#when-is-data-written-to-a-temporary-directory" title="Link to this heading"></a></h2>
 <p>When Rxn Rover is used with the “Continue without Experiment” option, some
 files, like plugin data logs, are written in a unique directory generated in a
 temporary directory. This helps to prevent data loss if the temporary data
@@ -120,16 +126,12 @@ of time, many large files may be created in the temporary directory, which you
 may want to delete periodically to free space on your system.</p>
 </section>
 <section id="where-is-the-temporary-directory">
-<span id="lv-tmp-directory"></span><h2>Where is the temporary directory?<a class="headerlink" href="#where-is-the-temporary-directory" title="Permalink to this heading"></a></h2>
+<span id="lv-tmp-directory"></span><h2>Where is the temporary directory?<a class="headerlink" href="#where-is-the-temporary-directory" title="Link to this heading"></a></h2>
 <p>The location of the temp directory used by LabVIEW varies by operating system.
 To find which temporary directory LabVIEW is using, or change this temporary
 directory, go to Tools &gt; Options… &gt; Paths and select “Temporary Directory”
 from the dropdown list. Common temp locations are listed below:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 21%" />
-<col style="width: 79%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Operating System</p></th>
 <th class="head"><p>Temporary Directory Location</p></th>
@@ -152,17 +154,17 @@ from the dropdown list. Common temp locations are listed below:</p>
 </table>
 </section>
 <section id="which-directories-are-from-rxn-rover">
-<span id="which-rxnrover-tmp-directory"></span><h2>Which directories are from Rxn Rover?<a class="headerlink" href="#which-directories-are-from-rxn-rover" title="Permalink to this heading"></a></h2>
+<span id="which-rxnrover-tmp-directory"></span><h2>Which directories are from Rxn Rover?<a class="headerlink" href="#which-directories-are-from-rxn-rover" title="Link to this heading"></a></h2>
 <p>All Rxn Rover directories in the temporary directory take the form
 <code class="docutils literal notranslate"><span class="pre">&lt;tmpdir&gt;/lvtemporary_&lt;random_number&gt;.RxnRover</span></code>, where <code class="docutils literal notranslate"><span class="pre">&lt;tmpdir&gt;</span></code> is the
 <a class="reference internal" href="#lv-tmp-directory"><span class="std std-ref">temporary directory used by LabVIEW.</span></a></p>
 </section>
 <section id="recovering-temporary-rxn-rover-data">
-<h2>Recovering Temporary Rxn Rover Data<a class="headerlink" href="#recovering-temporary-rxn-rover-data" title="Permalink to this heading"></a></h2>
+<h2>Recovering Temporary Rxn Rover Data<a class="headerlink" href="#recovering-temporary-rxn-rover-data" title="Link to this heading"></a></h2>
 <p>See <a class="reference internal" href="../../tutorials/recover_tmp_data.html#recover-tmp-data"><span class="std std-ref">tutorial</span></a>.</p>
 </section>
 <section id="removing-temporary-rxn-rover-data">
-<h2>Removing Temporary Rxn Rover Data<a class="headerlink" href="#removing-temporary-rxn-rover-data" title="Permalink to this heading"></a></h2>
+<h2>Removing Temporary Rxn Rover Data<a class="headerlink" href="#removing-temporary-rxn-rover-data" title="Link to this heading"></a></h2>
 <p>See <a class="reference internal" href="../../tutorials/clean_tmp_data.html#clean-tmp-data"><span class="std std-ref">tutorial</span></a>.</p>
 </section>
 </section>

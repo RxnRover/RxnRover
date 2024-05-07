@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Installation &mdash; Rxn Rover  documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -28,11 +30,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> Rxn Rover
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Rxn Rover
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -80,9 +86,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index.html">User Guide</a> &raquo;</li>
-      <li>Installation</li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">User Guide</a></li>
+      <li class="breadcrumb-item active">Installation</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/user_resources/user_guide/installation.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -93,7 +99,7 @@
            <div itemprop="articleBody">
              
   <section id="installation">
-<span id="id1"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h1>
+<span id="id1"></span><h1>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Rxn Rover currently can only be used by running the source code. You must
@@ -101,9 +107,10 @@ also download plugins for your desired optimizer, analyzer, and reactor
 components from the <a class="reference external" href="https://rxnrover.github.io/PluginCatalog">Plugin Catalog</a>.</p>
 </div>
 <section id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading"></a></h2>
-<p>In order to run Rxn Rover, you need the free LabVIEW runtime engine,
-acquired from the <a class="reference external" href="https://www.ni.com/en-us/support/downloads/software-products/download.labview-runtime.html#369481">LabVIEW website</a> or a developer version of LabVIEW.</p>
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"></a></h2>
+<p>In order to run Rxn Rover, you need to acquire a <a class="reference external" href="https://www.ni.com/en-us/shop/product/labview.html">developer version of LabVIEW</a>. We are working on an
+executable version that can be run with the free <a class="reference external" href="https://www.ni.com/en-us/support/downloads/software-products/download.labview-runtime.html#369481">LabVIEW runtime engine</a>,
+but the dynamic nature of Rxn Rover has made this step difficult to implement.</p>
 <p>You also need the Dynamic Reentrant library, developed by the Rxn Rover team
 to facilitate communication between Rxn Rover and its plugins. It can be
 downloaded from <a class="reference external" href="https://www.github.com/RxnRover/DynamicReentrant">https://www.github.com/RxnRover/DynamicReentrant</a> by clicking
@@ -113,7 +120,7 @@ LabVIEW installation. <cite>user.lib</cite> is where user-created, common librar
 across multiple projects are located.</p>
 </section>
 <section id="rxn-rover-setup">
-<h2>Rxn Rover Setup<a class="headerlink" href="#rxn-rover-setup" title="Permalink to this heading"></a></h2>
+<h2>Rxn Rover Setup<a class="headerlink" href="#rxn-rover-setup" title="Link to this heading"></a></h2>
 <p>Once the prerequisites are installed:</p>
 <ol class="arabic simple">
 <li><p>Clone or download/extract the <a class="reference external" href="https://github.com/RxnRover/RxnRover">Rxn Rover repository</a>.</p></li>
