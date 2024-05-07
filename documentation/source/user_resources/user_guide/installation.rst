@@ -12,8 +12,18 @@ Installation
 Prerequisites
 -------------
 
-In order to run Rxn Rover, you need the free LabVIEW runtime engine,
-acquired from the `LabVIEW website <https://www.ni.com/en-us/support/downloads/software-products/download.labview-runtime.html#369481>`__ or a developer version of LabVIEW.
+.. In order to run Rxn Rover, you need the free LabVIEW runtime engine,
+.. acquired from the `LabVIEW website 
+.. <https://www.ni.com/en-us/support/downloads/software-products/download.labview-runtime.html#369481>`__ 
+.. or a developer version of LabVIEW.
+
+In order to run Rxn Rover, you need to acquire a `developer version of LabVIEW
+<https://www.ni.com/en-us/shop/product/labview.html>`__. We are working on an
+executable version that can be run with the free `LabVIEW runtime engine
+<https://www.ni.com/en-us/support/downloads/software-products/download.labview-runtime.html#369481>`__,
+but the dynamic nature of Rxn Rover has made this step difficult to implement.
+
+.. Rxn Rover releases page, where the executable will be once it is complete: https://github.com/RxnRover/RxnRover/releases
 
 You also need the Dynamic Reentrant library, developed by the Rxn Rover team
 to facilitate communication between Rxn Rover and its plugins. It can be 
