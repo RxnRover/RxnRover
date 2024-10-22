@@ -27,7 +27,7 @@
 			<Item Name="DefaultUserSettings.ini" Type="Document" URL="../Config/DefaultUserSettings.ini"/>
 			<Item Name="full_color_logo_3600x3600.ico" Type="Document" URL="../assets/full_color_logo_3600x3600.ico"/>
 		</Item>
-		<Item Name="LICENSE" Type="Document" URL="../LICENSE"/>
+		<Item Name="LICENSE.txt" Type="Document" URL="../LICENSE.txt"/>
 		<Item Name="README.md" Type="Document" URL="../README.md"/>
 		<Item Name="build_actions.lvlib" Type="Library" URL="../src/build_actions/build_actions.lvlib"/>
 		<Item Name="RxnRover.lvlib" Type="Library" URL="../RxnRover.lvlib"/>
