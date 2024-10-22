@@ -24,8 +24,12 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="resources" Type="Folder">
-			<Item Name="DefaultUserSettings.ini" Type="Document" URL="../Config/DefaultUserSettings.ini"/>
-			<Item Name="full_color_logo_3600x3600.ico" Type="Document" URL="../assets/full_color_logo_3600x3600.ico"/>
+			<Item Name="defaults" Type="Folder">
+				<Item Name="DefaultUserSettings.ini" Type="Document" URL="../resources/defaults/DefaultUserSettings.ini"/>
+			</Item>
+			<Item Name="icons" Type="Folder">
+				<Item Name="full_color_logo_3600x3600.ico" Type="Document" URL="../resources/icons/full_color_logo_3600x3600.ico"/>
+			</Item>
 		</Item>
 		<Item Name="LICENSE.txt" Type="Document" URL="../LICENSE.txt"/>
 		<Item Name="README.md" Type="Document" URL="../README.md"/>
@@ -150,7 +154,7 @@
 				<Property Name="Destination[9].path" Type="Path">../build/Rxn Rover/Plugin Servers/Generic Optimizer</Property>
 				<Property Name="Destination[9].path.type" Type="Str">relativeToProject</Property>
 				<Property Name="DestinationCount" Type="Int">11</Property>
-				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/resources/full_color_logo_3600x3600.ico</Property>
+				<Property Name="Exe_iconItemID" Type="Ref"></Property>
 				<Property Name="Source[0].itemID" Type="Str">{20145443-B87B-4B36-8D58-B714A83C8BFC}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
