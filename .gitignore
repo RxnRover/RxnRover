@@ -41,5 +41,6 @@ venv.bak/
 
 ########## Project Ignores ##########
 
-logs/
 docs/source/_static/api
+logs/
+plugins/
