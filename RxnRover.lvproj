@@ -23,16 +23,14 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="assets" Type="Folder">
+		<Item Name="resources" Type="Folder">
+			<Item Name="DefaultUserSettings.ini" Type="Document" URL="../Config/DefaultUserSettings.ini"/>
 			<Item Name="full_color_logo_3600x3600.ico" Type="Document" URL="../assets/full_color_logo_3600x3600.ico"/>
 		</Item>
-		<Item Name="Config" Type="Folder">
-			<Item Name="DefaultUserSettings.ini" Type="Document" URL="../Config/DefaultUserSettings.ini"/>
-		</Item>
+		<Item Name="build_actions.lvlib" Type="Library" URL="../src/build_actions/build_actions.lvlib"/>
+		<Item Name="RxnRover.lvlib" Type="Library" URL="../RxnRover.lvlib"/>
 		<Item Name="LICENSE" Type="Document" URL="../LICENSE"/>
 		<Item Name="README.md" Type="Document" URL="../README.md"/>
-		<Item Name="build.lvlib" Type="Library" URL="../src/build/build.lvlib"/>
-		<Item Name="RxnRover.lvlib" Type="Library" URL="../RxnRover.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="Dynamic Reentrant.lvlib" Type="Library" URL="/&lt;userlib&gt;/RxnRover/DynamicReentrant/Dynamic Reentrant.lvlib"/>
@@ -152,7 +150,7 @@
 				<Property Name="Destination[9].path" Type="Path">../build/Rxn Rover/Plugin Servers/Generic Optimizer</Property>
 				<Property Name="Destination[9].path.type" Type="Str">relativeToProject</Property>
 				<Property Name="DestinationCount" Type="Int">11</Property>
-				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/assets/full_color_logo_3600x3600.ico</Property>
+				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/resources/full_color_logo_3600x3600.ico</Property>
 				<Property Name="Source[0].itemID" Type="Str">{20145443-B87B-4B36-8D58-B714A83C8BFC}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
@@ -251,7 +249,7 @@
 				<Property Name="Source[8].Container.applyInclusion" Type="Bool">true</Property>
 				<Property Name="Source[8].Container.depDestIndex" Type="Int">0</Property>
 				<Property Name="Source[8].destinationIndex" Type="Int">2</Property>
-				<Property Name="Source[8].itemID" Type="Ref">/My Computer/Config</Property>
+				<Property Name="Source[8].itemID" Type="Ref"></Property>
 				<Property Name="Source[8].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[8].type" Type="Str">Container</Property>
 				<Property Name="Source[9].destinationIndex" Type="Int">6</Property>
