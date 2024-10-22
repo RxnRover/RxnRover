@@ -13,6 +13,7 @@
 		<Property Name="IOScan.Priority" Type="UInt">9</Property>
 		<Property Name="IOScan.ReportModeConflict" Type="Bool">true</Property>
 		<Property Name="IOScan.StartEngineOnDeploy" Type="Bool">false</Property>
+		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.control.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.tcp.enabled" Type="Bool">false</Property>
@@ -28,99 +29,10 @@
 		<Item Name="Config" Type="Folder">
 			<Item Name="DefaultUserSettings.ini" Type="Document" URL="../Config/DefaultUserSettings.ini"/>
 		</Item>
-		<Item Name="Display VIs" Type="Folder">
-			<Item Name="Hardware Subpanels.vi" Type="VI" URL="../Display VIs/Hardware Subpanels.vi"/>
-			<Item Name="Ready Status.vi" Type="VI" URL="../Display VIs/Ready Status.vi"/>
-			<Item Name="Remove Control Panel.vi" Type="VI" URL="../Sub VIs/Remove Control Panel.vi"/>
-			<Item Name="Remove Entry.vi" Type="VI" URL="../Sub VIs/Remove Entry.vi"/>
-			<Item Name="Set Unsaved Changes in Title.vi" Type="VI" URL="../Display VIs/Set Unsaved Changes in Title.vi"/>
-			<Item Name="Update Status Event.vi" Type="VI" URL="../events/Update Status Event.vi"/>
-			<Item Name="Update Status.vi" Type="VI" URL="../Display VIs/Update Status.vi"/>
-			<Item Name="Update VI List.vi" Type="VI" URL="../Display VIs/Update VI List.vi"/>
-			<Item Name="Update Window Title.vi" Type="VI" URL="../Display VIs/Update Window Title.vi"/>
-		</Item>
-		<Item Name="events" Type="Folder">
-			<Item Name="Generate New Log Path Event.vi" Type="VI" URL="../Display VIs/Generate New Log Path Event.vi"/>
-			<Item Name="Hardware List Updated.vi" Type="VI" URL="../events/Hardware List Updated.vi"/>
-			<Item Name="Hardware Update Event Data.ctl" Type="VI" URL="../events/Hardware Update Event Data.ctl"/>
-			<Item Name="Hardware Updated Event.vi" Type="VI" URL="../events/Hardware Updated Event.vi"/>
-			<Item Name="Message Received Event.vi" Type="VI" URL="../events/Message Received Event.vi"/>
-			<Item Name="New Hardware Selected Event.vi" Type="VI" URL="../events/New Hardware Selected Event.vi"/>
-			<Item Name="New Hardware Selected.vi" Type="VI" URL="../events/New Hardware Selected.vi"/>
-			<Item Name="New Log Path Event.vi" Type="VI" URL="../events/New Log Path Event.vi"/>
-			<Item Name="New Parameters Event.vi" Type="VI" URL="../events/New Parameters Event.vi"/>
-			<Item Name="New Yield Event.vi" Type="VI" URL="../events/New Yield Event.vi"/>
-			<Item Name="Process Stopped Cluster.ctl" Type="VI" URL="../events/Process Stopped Cluster.ctl"/>
-			<Item Name="Process Stopped Event.vi" Type="VI" URL="../events/Process Stopped Event.vi"/>
-			<Item Name="Stop Event.vi" Type="VI" URL="../Plugin Servers/Stop Event.vi"/>
-			<Item Name="Submit Goal Event.vi" Type="VI" URL="../events/Submit Goal Event.vi"/>
-			<Item Name="VI List Event.vi" Type="VI" URL="../Plugin Servers/VI List Event.vi"/>
-		</Item>
-		<Item Name="Experiment" Type="Folder">
-			<Item Name="Experiment File.lvlib" Type="Library" URL="../Experiment/Experiment File/Experiment File.lvlib"/>
-			<Item Name="Experiment Manager.lvlib" Type="Library" URL="../Experiment/Experiment Manager/Experiment Manager.lvlib"/>
-		</Item>
-		<Item Name="File IO" Type="Folder">
-			<Item Name="File IO.lvlib" Type="Library" URL="../File IO/File IO.lvlib"/>
-		</Item>
-		<Item Name="Plugin Manager" Type="Folder">
-			<Item Name="Filter Plugins.vi" Type="VI" URL="../Sub VIs/Initialization/Filter Plugins.vi"/>
-			<Item Name="Load Plugins.vi" Type="VI" URL="../Sub VIs/Initialization/Load Plugins.vi"/>
-			<Item Name="Plugin Manager.lvlib" Type="Library" URL="../Plugin Manager/Plugin Manager.lvlib"/>
-		</Item>
-		<Item Name="Plugin Servers" Type="Folder">
-			<Item Name="Add Analyzer.vi" Type="VI" URL="../Plugin Servers/Add Analyzer.vi"/>
-			<Item Name="Add Hardware.vi" Type="VI" URL="../Plugin Servers/Add Hardware.vi"/>
-			<Item Name="Add Optimizer.vi" Type="VI" URL="../Plugin Servers/Add Optimizer.vi"/>
-			<Item Name="Assign Parameters to Hardware Dialog.vi" Type="VI" URL="../Sub VIs/Assign Parameters to Hardware Dialog.vi"/>
-			<Item Name="Controller Array.lvclass" Type="LVClass" URL="../Plugin Servers/Controller Array/Controller Array.lvclass"/>
-			<Item Name="Generic Optimizer.lvclass" Type="LVClass" URL="../Plugin Servers/Generic Optimizer/Generic Optimizer.lvclass"/>
-			<Item Name="Generic Plugin.lvclass" Type="LVClass" URL="../Plugin Servers/Controller/Generic Plugin.lvclass"/>
-			<Item Name="Initialize Plugin.vi" Type="VI" URL="../Plugin Servers/Initialize Plugin.vi"/>
-			<Item Name="LC Parser.lvclass" Type="LVClass" URL="../Plugin Servers/LC Parser/LC Parser.lvclass"/>
-			<Item Name="Load Plugin Dialog.vi" Type="VI" URL="../Plugin Servers/Load Plugin Dialog.vi"/>
-			<Item Name="Parameter to Hardware Map.lvclass" Type="LVClass" URL="../Plugin Servers/Parameter to Hardware Map/Parameter to Hardware Map.lvclass"/>
-			<Item Name="Pump Controller.lvclass" Type="LVClass" URL="../Plugin Servers/Pump Controller/Pump Controller.lvclass"/>
-			<Item Name="Stop Analyzer VI.vi" Type="VI" URL="../Sub VIs/Stop Analyzer VI.vi"/>
-			<Item Name="Stop Optimizer VI.vi" Type="VI" URL="../Sub VIs/Stop Optimizer VI.vi"/>
-			<Item Name="Stop Process VI.vi" Type="VI" URL="../Sub VIs/Stop Process VI.vi"/>
-			<Item Name="Temperature Controller.lvclass" Type="LVClass" URL="../Plugin Servers/Temperature Controller/Temperature Controller.lvclass"/>
-		</Item>
-		<Item Name="Post-Build" Type="Folder">
-			<Item Name="Add VIs to Search Path.vi" Type="VI" URL="../Post Build/Add VIs to Search Path.vi"/>
-		</Item>
-		<Item Name="Sub VIs" Type="Folder">
-			<Item Name="Initialization" Type="Folder">
-				<Item Name="Initialize Analyzer from Experiment Cluster.vi" Type="VI" URL="../Sub VIs/Initialization/Initialize Analyzer from Experiment Cluster.vi"/>
-				<Item Name="Initialize Hardware from Experiment Cluster.vi" Type="VI" URL="../Sub VIs/Initialization/Initialize Hardware from Experiment Cluster.vi"/>
-				<Item Name="Initialize Optimizer from Experiment Cluster.vi" Type="VI" URL="../Sub VIs/Initialization/Initialize Optimizer from Experiment Cluster.vi"/>
-				<Item Name="Initialize Parameter to Hardware Map from Experiment Cluster.vi" Type="VI" URL="../Sub VIs/Initialization/Initialize Parameter to Hardware Map from Experiment Cluster.vi"/>
-			</Item>
-			<Item Name="Add Process Queue Reference.vi" Type="VI" URL="../Sub VIs/Add Process Queue Reference.vi"/>
-			<Item Name="Add VI to Tab Control.vi" Type="VI" URL="../Sub VIs/Add VI to Tab Control.vi"/>
-			<Item Name="Cache Message.vi" Type="VI" URL="../Sub VIs/Cache Message.vi"/>
-			<Item Name="Check Loop Error.vi" Type="VI" URL="../Sub VIs/Check Loop Error.vi"/>
-			<Item Name="Choose Idle or Error State.vi" Type="VI" URL="../Sub VIs/Choose Idle or Error State.vi"/>
-			<Item Name="Error Handler - Main VI State Machine.vi" Type="VI" URL="../Sub VIs/Error Handler - Main VI State Machine.vi"/>
-			<Item Name="Find Available Queue.vi" Type="VI" URL="../dynamic/Find Available Queue.vi"/>
-			<Item Name="Find Subpanel on Page.vi" Type="VI" URL="../Sub VIs/Find Subpanel on Page.vi"/>
-			<Item Name="Load Plugin Front Panel.vi" Type="VI" URL="../Sub VIs/Load Plugin Front Panel.vi"/>
-			<Item Name="Queue Message.vi" Type="VI" URL="../Sub VIs/Queue Message.vi"/>
-			<Item Name="Save Reaction Rover Data to Experiment File.vi" Type="VI" URL="../Sub VIs/Save Reaction Rover Data to Experiment File.vi"/>
-			<Item Name="Split Name and Message.vi" Type="VI" URL="../Sub VIs/Split Name and Message.vi"/>
-			<Item Name="test Message Queue.lvlib" Type="Library" URL="../Sub VIs/Message Queue/test Message Queue.lvlib"/>
-			<Item Name="Variant to Data String.vi" Type="VI" URL="../Sub VIs/Variant to Data String.vi"/>
-		</Item>
-		<Item Name="Type Definitions" Type="Folder">
-			<Item Name="Data.ctl" Type="VI" URL="../Type Definitions/Data.ctl"/>
-			<Item Name="Error Levels.ctl" Type="VI" URL="../Type Definitions/Error Levels.ctl"/>
-			<Item Name="Response Commands.ctl" Type="VI" URL="../Type Definitions/Response Commands.ctl"/>
-			<Item Name="State.ctl" Type="VI" URL="../Type Definitions/State.ctl"/>
-		</Item>
-		<Item Name="User Preferences" Type="Folder">
-			<Item Name="User Preferences File.lvclass" Type="LVClass" URL="../User Preferences/User Preferences File.lvclass"/>
-		</Item>
-		<Item Name="Main.vi" Type="VI" URL="../Main.vi"/>
+		<Item Name="LICENSE" Type="Document" URL="../LICENSE"/>
+		<Item Name="README.md" Type="Document" URL="../README.md"/>
+		<Item Name="build.lvlib" Type="Library" URL="../src/build/build.lvlib"/>
+		<Item Name="RxnRover.lvlib" Type="Library" URL="../RxnRover.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="Dynamic Reentrant.lvlib" Type="Library" URL="/&lt;userlib&gt;/RxnRover/DynamicReentrant/Dynamic Reentrant.lvlib"/>
@@ -199,7 +111,7 @@
 				<Property Name="Bld_localDestDir" Type="Path">../build/Rxn Rover</Property>
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
-				<Property Name="Bld_postActionVIID" Type="Ref">/My Computer/Post-Build/Add VIs to Search Path.vi</Property>
+				<Property Name="Bld_postActionVIID" Type="Ref"></Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{09FD23A0-93D2-46A2-B12D-FA02255F97C6}</Property>
 				<Property Name="Bld_userLogFile" Type="Path">../build/Reaction Rover/build_log.txt</Property>
 				<Property Name="Bld_userLogFile.pathType" Type="Str">relativeToProject</Property>
@@ -244,95 +156,95 @@
 				<Property Name="Source[0].itemID" Type="Str">{20145443-B87B-4B36-8D58-B714A83C8BFC}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Main.vi</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Main.vi</Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
 				<Property Name="Source[10].destinationIndex" Type="Int">8</Property>
-				<Property Name="Source[10].itemID" Type="Ref">/My Computer/Plugin Servers/Temperature Controller.lvclass</Property>
+				<Property Name="Source[10].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Servers/Temperature Controller.lvclass</Property>
 				<Property Name="Source[10].type" Type="Str">Library</Property>
 				<Property Name="Source[11].destinationIndex" Type="Int">7</Property>
-				<Property Name="Source[11].itemID" Type="Ref">/My Computer/Plugin Servers/Pump Controller.lvclass</Property>
+				<Property Name="Source[11].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Servers/Pump Controller.lvclass</Property>
 				<Property Name="Source[11].type" Type="Str">Library</Property>
 				<Property Name="Source[12].destinationIndex" Type="Int">9</Property>
-				<Property Name="Source[12].itemID" Type="Ref">/My Computer/Plugin Servers/Generic Optimizer.lvclass</Property>
+				<Property Name="Source[12].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Servers/Generic Optimizer.lvclass</Property>
 				<Property Name="Source[12].type" Type="Str">Library</Property>
 				<Property Name="Source[13].destinationIndex" Type="Int">10</Property>
-				<Property Name="Source[13].itemID" Type="Ref">/My Computer/Plugin Servers/LC Parser.lvclass</Property>
+				<Property Name="Source[13].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Servers/LC Parser.lvclass</Property>
 				<Property Name="Source[13].type" Type="Str">Library</Property>
 				<Property Name="Source[14].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[14].itemID" Type="Ref">/My Computer/events/Hardware List Updated.vi</Property>
+				<Property Name="Source[14].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/Hardware List Updated.vi</Property>
 				<Property Name="Source[14].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[14].type" Type="Str">VI</Property>
 				<Property Name="Source[15].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[15].itemID" Type="Ref">/My Computer/events/Hardware Updated Event.vi</Property>
+				<Property Name="Source[15].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/Hardware Updated Event.vi</Property>
 				<Property Name="Source[15].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[15].type" Type="Str">VI</Property>
 				<Property Name="Source[16].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[16].itemID" Type="Ref">/My Computer/events/Hardware Update Event Data.ctl</Property>
+				<Property Name="Source[16].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/Hardware Update Event Data.ctl</Property>
 				<Property Name="Source[16].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[16].type" Type="Str">VI</Property>
 				<Property Name="Source[17].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[17].itemID" Type="Ref">/My Computer/events/New Hardware Selected.vi</Property>
+				<Property Name="Source[17].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/New Hardware Selected.vi</Property>
 				<Property Name="Source[17].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[17].type" Type="Str">VI</Property>
 				<Property Name="Source[18].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[18].itemID" Type="Ref">/My Computer/events/New Hardware Selected Event.vi</Property>
+				<Property Name="Source[18].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/New Hardware Selected Event.vi</Property>
 				<Property Name="Source[18].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[18].type" Type="Str">VI</Property>
 				<Property Name="Source[19].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[19].itemID" Type="Ref">/My Computer/events/New Log Path Event.vi</Property>
+				<Property Name="Source[19].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/New Log Path Event.vi</Property>
 				<Property Name="Source[19].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[19].type" Type="Str">VI</Property>
 				<Property Name="Source[2].Container.applyInclusion" Type="Bool">true</Property>
 				<Property Name="Source[2].Container.depDestIndex" Type="Int">0</Property>
 				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[2].itemID" Type="Ref">/My Computer/Display VIs</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Display VIs</Property>
 				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[2].type" Type="Str">Container</Property>
 				<Property Name="Source[20].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[20].itemID" Type="Ref">/My Computer/events/Generate New Log Path Event.vi</Property>
+				<Property Name="Source[20].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/Generate New Log Path Event.vi</Property>
 				<Property Name="Source[20].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[20].type" Type="Str">VI</Property>
 				<Property Name="Source[21].Container.applyInclusion" Type="Bool">true</Property>
 				<Property Name="Source[21].Container.depDestIndex" Type="Int">0</Property>
 				<Property Name="Source[21].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[21].itemID" Type="Ref">/My Computer/File IO</Property>
+				<Property Name="Source[21].itemID" Type="Ref">/My Computer/RxnRover.lvlib/File IO</Property>
 				<Property Name="Source[21].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[21].type" Type="Str">Container</Property>
 				<Property Name="Source[22].Container.applyInclusion" Type="Bool">true</Property>
 				<Property Name="Source[22].Container.depDestIndex" Type="Int">0</Property>
 				<Property Name="Source[22].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[22].itemID" Type="Ref">/My Computer/User Preferences</Property>
+				<Property Name="Source[22].itemID" Type="Ref">/My Computer/RxnRover.lvlib/User Preferences</Property>
 				<Property Name="Source[22].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[22].type" Type="Str">Container</Property>
 				<Property Name="Source[3].Container.applyInclusion" Type="Bool">true</Property>
 				<Property Name="Source[3].Container.depDestIndex" Type="Int">0</Property>
 				<Property Name="Source[3].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[3].itemID" Type="Ref">/My Computer/Experiment</Property>
+				<Property Name="Source[3].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Experiment</Property>
 				<Property Name="Source[3].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[3].type" Type="Str">Container</Property>
 				<Property Name="Source[4].Container.applyInclusion" Type="Bool">true</Property>
 				<Property Name="Source[4].Container.depDestIndex" Type="Int">0</Property>
 				<Property Name="Source[4].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[4].itemID" Type="Ref">/My Computer/Plugin Servers</Property>
+				<Property Name="Source[4].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Servers</Property>
 				<Property Name="Source[4].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[4].type" Type="Str">Container</Property>
 				<Property Name="Source[5].Container.applyInclusion" Type="Bool">true</Property>
 				<Property Name="Source[5].Container.depDestIndex" Type="Int">0</Property>
 				<Property Name="Source[5].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[5].itemID" Type="Ref">/My Computer/Sub VIs</Property>
+				<Property Name="Source[5].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Sub VIs</Property>
 				<Property Name="Source[5].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[5].type" Type="Str">Container</Property>
 				<Property Name="Source[6].Container.applyInclusion" Type="Bool">true</Property>
 				<Property Name="Source[6].Container.depDestIndex" Type="Int">0</Property>
 				<Property Name="Source[6].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[6].itemID" Type="Ref">/My Computer/Type Definitions</Property>
+				<Property Name="Source[6].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Type Definitions</Property>
 				<Property Name="Source[6].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[6].type" Type="Str">Container</Property>
 				<Property Name="Source[7].Container.applyInclusion" Type="Bool">true</Property>
 				<Property Name="Source[7].Container.depDestIndex" Type="Int">0</Property>
 				<Property Name="Source[7].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[7].itemID" Type="Ref">/My Computer/Plugin Manager</Property>
+				<Property Name="Source[7].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Manager</Property>
 				<Property Name="Source[7].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[7].type" Type="Str">Container</Property>
 				<Property Name="Source[8].Container.applyDestination" Type="Bool">true</Property>
@@ -343,7 +255,7 @@
 				<Property Name="Source[8].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[8].type" Type="Str">Container</Property>
 				<Property Name="Source[9].destinationIndex" Type="Int">6</Property>
-				<Property Name="Source[9].itemID" Type="Ref">/My Computer/Plugin Servers/Generic Plugin.lvclass</Property>
+				<Property Name="Source[9].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Servers/Generic Plugin.lvclass</Property>
 				<Property Name="Source[9].type" Type="Str">Library</Property>
 				<Property Name="SourceCount" Type="Int">23</Property>
 				<Property Name="TgtF_companyName" Type="Str">Iowa State University</Property>
@@ -425,7 +337,7 @@
 				<Property Name="RegDestCount" Type="Int">1</Property>
 				<Property Name="Source[0].dest" Type="Str">{E900022A-0109-41DA-A00A-423EC44A52F4}</Property>
 				<Property Name="Source[0].name" Type="Str">Main.vi</Property>
-				<Property Name="Source[0].tag" Type="Ref">/My Computer/Main.vi</Property>
+				<Property Name="Source[0].tag" Type="Ref">/My Computer/RxnRover.lvlib/Main.vi</Property>
 				<Property Name="Source[0].type" Type="Str">File</Property>
 				<Property Name="SourceCount" Type="Int">1</Property>
 			</Item>
