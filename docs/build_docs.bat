@@ -22,7 +22,7 @@ set VENVDIR=venv
 
 REM Create full paths from relative paths.
 REM Note: %~dp0 gets the absolute path.
-set "PROJECT_PATH=%~dp0..\Reaction Rover.lvproj"
+set "PROJECT_PATH=%~dp0..\RxnRover.lvproj"
 set "ADOC_PATH=%~dp0source\_static\api\index.adoc"
 
 REM Command line flags
@@ -60,7 +60,7 @@ if defined SPHINX_ONLY (
 REM Generate static HTML with AntiDoc CLI
 echo Generating project documentation with AntiDoc CLI...
 
-g-cli --lv-ver 2020 Antidoc -- -pp "%PROJECT_PATH%" -t "Reaction Rover Documentation" -out "%ADOC_PATH%"
+g-cli --lv-ver 2020 Antidoc -- -pp "%PROJECT_PATH%" -t "Rxn Rover Documentation" -out "%ADOC_PATH%"
 
 REM Convert asciidoc (*.adoc) file to HTML
 echo Converting asciidoc ^(^*.adoc^) file to HTML using asciidoctor...
