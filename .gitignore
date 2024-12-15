@@ -44,3 +44,9 @@ venv.bak/
 docs/source/_static/api
 logs/
 plugins/
+
+# todo.txt ignores
+**/todo.txt
+**/done.txt
+**/waiting.txt
+**/someday.txt
