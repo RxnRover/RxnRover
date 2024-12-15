@@ -101,173 +101,67 @@
 			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
-			<Item Name="Rxn Rover" Type="EXE">
+			<Item Name="Stand-Alone EXE" Type="EXE">
 				<Property Name="App_copyErrors" Type="Bool">true</Property>
 				<Property Name="App_INI_aliasGUID" Type="Str">{B511CD8F-BE21-4470-A7C4-3ACBADFC72C8}</Property>
 				<Property Name="App_INI_GUID" Type="Str">{78EABFCD-5B97-4F87-AF3F-FF129EE73305}</Property>
 				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
 				<Property Name="App_serverType" Type="Int">0</Property>
+				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
 				<Property Name="Bld_buildCacheID" Type="Str">{2CE40C4E-446A-4350-9E11-C85D8BAE8F13}</Property>
-				<Property Name="Bld_buildSpecName" Type="Str">Rxn Rover</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">Stand-Alone EXE</Property>
 				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
 				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
-				<Property Name="Bld_localDestDir" Type="Path">../build/Rxn Rover</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../builds/standalone_exe</Property>
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
-				<Property Name="Bld_postActionVIID" Type="Ref"></Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{09FD23A0-93D2-46A2-B12D-FA02255F97C6}</Property>
-				<Property Name="Bld_userLogFile" Type="Path">../build/Reaction Rover/build_log.txt</Property>
+				<Property Name="Bld_userLogFile" Type="Path">../builds/standalone_exe/build_log.txt</Property>
 				<Property Name="Bld_userLogFile.pathType" Type="Str">relativeToProject</Property>
+				<Property Name="Bld_version.build" Type="Int">13</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
-				<Property Name="Destination[0].destName" Type="Str">Rxn Rover.exe</Property>
-				<Property Name="Destination[0].path" Type="Path">../build/Rxn Rover/Rxn Rover.exe</Property>
+				<Property Name="Bld_version.patch" Type="Int">3</Property>
+				<Property Name="Destination[0].destName" Type="Str">RxnRover.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">../builds/standalone_exe/NI_AB_PROJECTNAME.exe</Property>
 				<Property Name="Destination[0].path.type" Type="Str">relativeToProject</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[0].type" Type="Str">App</Property>
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
-				<Property Name="Destination[1].path" Type="Path">../build/Rxn Rover/data</Property>
+				<Property Name="Destination[1].path" Type="Path">../builds/standalone_exe/data</Property>
 				<Property Name="Destination[1].path.type" Type="Str">relativeToProject</Property>
-				<Property Name="Destination[10].destName" Type="Str">LC Parser</Property>
-				<Property Name="Destination[10].path" Type="Path">../build/Rxn Rover/Plugin Servers/LC Parser</Property>
-				<Property Name="Destination[10].path.type" Type="Str">relativeToProject</Property>
-				<Property Name="Destination[2].destName" Type="Str">Config</Property>
-				<Property Name="Destination[2].path" Type="Path">../build/Rxn Rover/Config</Property>
+				<Property Name="Destination[2].destName" Type="Str">Resources</Property>
+				<Property Name="Destination[2].path" Type="Path">../builds/standalone_exe/resources</Property>
 				<Property Name="Destination[2].path.type" Type="Str">relativeToProject</Property>
-				<Property Name="Destination[3].destName" Type="Str">documentation</Property>
-				<Property Name="Destination[3].path" Type="Path">../build/Rxn Rover/documentation</Property>
-				<Property Name="Destination[3].path.type" Type="Str">relativeToProject</Property>
-				<Property Name="Destination[4].destName" Type="Str">plugins</Property>
-				<Property Name="Destination[4].path" Type="Path">../build/Rxn Rover/plugins</Property>
-				<Property Name="Destination[4].path.type" Type="Str">relativeToProject</Property>
-				<Property Name="Destination[5].destName" Type="Str">Plugin Servers</Property>
-				<Property Name="Destination[5].path" Type="Path">../build/Rxn Rover/Plugin Servers</Property>
-				<Property Name="Destination[5].path.type" Type="Str">relativeToProject</Property>
-				<Property Name="Destination[6].destName" Type="Str">Generic Controller</Property>
-				<Property Name="Destination[6].path" Type="Path">../build/Rxn Rover/Plugin Servers/Generic Controller</Property>
-				<Property Name="Destination[6].path.type" Type="Str">relativeToProject</Property>
-				<Property Name="Destination[7].destName" Type="Str">Pump Controller</Property>
-				<Property Name="Destination[7].path" Type="Path">../build/Rxn Rover/Plugin Servers/Pump Controller</Property>
-				<Property Name="Destination[7].path.type" Type="Str">relativeToProject</Property>
-				<Property Name="Destination[8].destName" Type="Str">Temperature Controller</Property>
-				<Property Name="Destination[8].path" Type="Path">../build/Rxn Rover/Plugin Servers/Temperature Controller</Property>
-				<Property Name="Destination[8].path.type" Type="Str">relativeToProject</Property>
-				<Property Name="Destination[9].destName" Type="Str">Generic Optimizer</Property>
-				<Property Name="Destination[9].path" Type="Path">../build/Rxn Rover/Plugin Servers/Generic Optimizer</Property>
-				<Property Name="Destination[9].path.type" Type="Str">relativeToProject</Property>
-				<Property Name="DestinationCount" Type="Int">11</Property>
-				<Property Name="Exe_iconItemID" Type="Ref"></Property>
-				<Property Name="Source[0].itemID" Type="Str">{20145443-B87B-4B36-8D58-B714A83C8BFC}</Property>
+				<Property Name="Destination[2].preserveHierarchy" Type="Bool">true</Property>
+				<Property Name="DestinationCount" Type="Int">3</Property>
+				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/resources/icons/full_color_logo_3600x3600.ico</Property>
+				<Property Name="Source[0].itemID" Type="Str">{A93DF313-1C85-4629-A4CE-F27FABE7AC19}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Main.vi</Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
-				<Property Name="Source[10].destinationIndex" Type="Int">8</Property>
-				<Property Name="Source[10].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Servers/Temperature Controller.lvclass</Property>
-				<Property Name="Source[10].type" Type="Str">Library</Property>
-				<Property Name="Source[11].destinationIndex" Type="Int">7</Property>
-				<Property Name="Source[11].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Servers/Pump Controller.lvclass</Property>
-				<Property Name="Source[11].type" Type="Str">Library</Property>
-				<Property Name="Source[12].destinationIndex" Type="Int">9</Property>
-				<Property Name="Source[12].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Servers/Generic Optimizer.lvclass</Property>
-				<Property Name="Source[12].type" Type="Str">Library</Property>
-				<Property Name="Source[13].destinationIndex" Type="Int">10</Property>
-				<Property Name="Source[13].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Servers/LC Parser.lvclass</Property>
-				<Property Name="Source[13].type" Type="Str">Library</Property>
-				<Property Name="Source[14].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[14].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/Hardware List Updated.vi</Property>
-				<Property Name="Source[14].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[14].type" Type="Str">VI</Property>
-				<Property Name="Source[15].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[15].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/Hardware Updated Event.vi</Property>
-				<Property Name="Source[15].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[15].type" Type="Str">VI</Property>
-				<Property Name="Source[16].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[16].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/Hardware Update Event Data.ctl</Property>
-				<Property Name="Source[16].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[16].type" Type="Str">VI</Property>
-				<Property Name="Source[17].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[17].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/New Hardware Selected.vi</Property>
-				<Property Name="Source[17].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[17].type" Type="Str">VI</Property>
-				<Property Name="Source[18].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[18].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/New Hardware Selected Event.vi</Property>
-				<Property Name="Source[18].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[18].type" Type="Str">VI</Property>
-				<Property Name="Source[19].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[19].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/New Log Path Event.vi</Property>
-				<Property Name="Source[19].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[19].type" Type="Str">VI</Property>
-				<Property Name="Source[2].Container.applyInclusion" Type="Bool">true</Property>
-				<Property Name="Source[2].Container.depDestIndex" Type="Int">0</Property>
 				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[2].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Display VIs</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/My Computer/RxnRover.lvlib</Property>
+				<Property Name="Source[2].Library.allowMissingMembers" Type="Bool">true</Property>
 				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[2].type" Type="Str">Container</Property>
-				<Property Name="Source[20].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[20].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/Generate New Log Path Event.vi</Property>
-				<Property Name="Source[20].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[20].type" Type="Str">VI</Property>
-				<Property Name="Source[21].Container.applyInclusion" Type="Bool">true</Property>
-				<Property Name="Source[21].Container.depDestIndex" Type="Int">0</Property>
-				<Property Name="Source[21].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[21].itemID" Type="Ref">/My Computer/RxnRover.lvlib/File IO</Property>
-				<Property Name="Source[21].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[21].type" Type="Str">Container</Property>
-				<Property Name="Source[22].Container.applyInclusion" Type="Bool">true</Property>
-				<Property Name="Source[22].Container.depDestIndex" Type="Int">0</Property>
-				<Property Name="Source[22].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[22].itemID" Type="Ref">/My Computer/RxnRover.lvlib/User Preferences</Property>
-				<Property Name="Source[22].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[22].type" Type="Str">Container</Property>
+				<Property Name="Source[2].type" Type="Str">Library</Property>
+				<Property Name="Source[3].Container.applyDestination" Type="Bool">true</Property>
 				<Property Name="Source[3].Container.applyInclusion" Type="Bool">true</Property>
 				<Property Name="Source[3].Container.depDestIndex" Type="Int">0</Property>
-				<Property Name="Source[3].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[3].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Experiment</Property>
+				<Property Name="Source[3].destinationIndex" Type="Int">2</Property>
+				<Property Name="Source[3].itemID" Type="Ref">/My Computer/resources</Property>
 				<Property Name="Source[3].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[3].type" Type="Str">Container</Property>
-				<Property Name="Source[4].Container.applyInclusion" Type="Bool">true</Property>
-				<Property Name="Source[4].Container.depDestIndex" Type="Int">0</Property>
-				<Property Name="Source[4].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[4].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Servers</Property>
-				<Property Name="Source[4].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[4].type" Type="Str">Container</Property>
-				<Property Name="Source[5].Container.applyInclusion" Type="Bool">true</Property>
-				<Property Name="Source[5].Container.depDestIndex" Type="Int">0</Property>
-				<Property Name="Source[5].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[5].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Sub VIs</Property>
-				<Property Name="Source[5].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[5].type" Type="Str">Container</Property>
-				<Property Name="Source[6].Container.applyInclusion" Type="Bool">true</Property>
-				<Property Name="Source[6].Container.depDestIndex" Type="Int">0</Property>
-				<Property Name="Source[6].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[6].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Type Definitions</Property>
-				<Property Name="Source[6].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[6].type" Type="Str">Container</Property>
-				<Property Name="Source[7].Container.applyInclusion" Type="Bool">true</Property>
-				<Property Name="Source[7].Container.depDestIndex" Type="Int">0</Property>
-				<Property Name="Source[7].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[7].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Manager</Property>
-				<Property Name="Source[7].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[7].type" Type="Str">Container</Property>
-				<Property Name="Source[8].Container.applyDestination" Type="Bool">true</Property>
-				<Property Name="Source[8].Container.applyInclusion" Type="Bool">true</Property>
-				<Property Name="Source[8].Container.depDestIndex" Type="Int">0</Property>
-				<Property Name="Source[8].destinationIndex" Type="Int">2</Property>
-				<Property Name="Source[8].itemID" Type="Ref"></Property>
-				<Property Name="Source[8].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[8].type" Type="Str">Container</Property>
-				<Property Name="Source[9].destinationIndex" Type="Int">6</Property>
-				<Property Name="Source[9].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Servers/Generic Plugin.lvclass</Property>
-				<Property Name="Source[9].type" Type="Str">Library</Property>
-				<Property Name="SourceCount" Type="Int">23</Property>
+				<Property Name="SourceCount" Type="Int">4</Property>
 				<Property Name="TgtF_companyName" Type="Str">Iowa State University</Property>
-				<Property Name="TgtF_fileDescription" Type="Str">Rxn Rover</Property>
-				<Property Name="TgtF_internalName" Type="Str">Rxn Rover</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">Stand-Alone EXE</Property>
+				<Property Name="TgtF_internalName" Type="Str">Stand-Alone EXE</Property>
 				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2021</Property>
-				<Property Name="TgtF_productName" Type="Str">Rxn Rover</Property>
+				<Property Name="TgtF_productName" Type="Str">Stand-Alone EXE</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{A9B9C488-ADD7-40F6-AAC2-547427E5CB24}</Property>
-				<Property Name="TgtF_targetfileName" Type="Str">Rxn Rover.exe</Property>
+				<Property Name="TgtF_targetfileName" Type="Str">RxnRover.exe</Property>
+				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
 			</Item>
 			<Item Name="Rxn Rover Installer" Type="Installer">
 				<Property Name="Destination[0].name" Type="Str">Rxn Rover</Property>
