@@ -60,6 +60,7 @@
 		<Item Name="Stop Analyzer VI.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Stop Analyzer VI.vi"/>
 		<Item Name="Stop Optimizer VI.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Stop Optimizer VI.vi"/>
 		<Item Name="Stop Process VI.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Stop Process VI.vi"/>
+		<Item Name="Syringe Pump.lvclass" Type="LVClass" URL="../src/RxnRover/Plugin Servers/Syringe Pump/Syringe Pump.lvclass"/>
 		<Item Name="Temperature Controller.lvclass" Type="LVClass" URL="../src/RxnRover/Plugin Servers/Temperature Controller/Temperature Controller.lvclass"/>
 	</Item>
 	<Item Name="Sub VIs" Type="Folder">
@@ -87,8 +88,18 @@
 	<Item Name="Type Definitions" Type="Folder">
 		<Item Name="Data.ctl" Type="VI" URL="../src/RxnRover/Type Definitions/Data.ctl"/>
 		<Item Name="Error Levels.ctl" Type="VI" URL="../src/RxnRover/Type Definitions/Error Levels.ctl"/>
+		<Item Name="New Parameters.ctl" Type="VI" URL="../src/RxnRover/Type Definitions/New Parameters.ctl"/>
 		<Item Name="Response Commands.ctl" Type="VI" URL="../src/RxnRover/Type Definitions/Response Commands.ctl"/>
 		<Item Name="State.ctl" Type="VI" URL="../src/RxnRover/Type Definitions/State.ctl"/>
+	</Item>
+	<Item Name="Type Handling" Type="Folder">
+		<Item Name="Is Variant Supported Type.vi" Type="VI" URL="../src/RxnRover/Type Handling/Is Variant Supported Type.vi"/>
+		<Item Name="Is Variant Type Boolean.vi" Type="VI" URL="../src/RxnRover/Type Handling/Is Variant Type Boolean.vi"/>
+		<Item Name="Is Variant Type Numeric.vi" Type="VI" URL="../src/RxnRover/Type Handling/Is Variant Type Numeric.vi"/>
+		<Item Name="Is Variant Type Path.vi" Type="VI" URL="../src/RxnRover/Type Handling/Is Variant Type Path.vi"/>
+		<Item Name="Is Variant Type String.vi" Type="VI" URL="../src/RxnRover/Type Handling/Is Variant Type String.vi"/>
+		<Item Name="Supported Parameter Variant Types.ctl" Type="VI" URL="../src/RxnRover/Type Handling/Supported Parameter Variant Types.ctl"/>
+		<Item Name="Unsupported Type Error.vi" Type="VI" URL="../src/RxnRover/Type Handling/Unsupported Type Error.vi"/>
 	</Item>
 	<Item Name="User Preferences" Type="Folder">
 		<Item Name="User Preferences File.lvclass" Type="LVClass" URL="../src/RxnRover/User Preferences/User Preferences File.lvclass"/>

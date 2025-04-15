@@ -1,6 +1,6 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Project Type="Project" LVVersion="20008000">
-	<Property Name="CCSymbols" Type="Str">DEBUG,1;</Property>
+	<Property Name="CCSymbols" Type="Str">DEBUG,0;NO_DRIVER,0;</Property>
 	<Property Name="NI.LV.All.SaveVersion" Type="Str">20.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="NI.Project.Description" Type="Str">Rxn Rover (pronounced Reaction Rover) is an open-source, general reaction automation software. Similarly, Rxn Rover connects an optimization algorithm - machine learning or non-machine learning - with a reactor and analysis instrumentation to create a self-optimizing system. This system allows the optimizer to control and change the reaction parameters, perform the reaction, analyze the desired results, and choose the next search step with or without human intervention. Designed knowing that each research laboratory and experiment presents different challenges, Rxn Rover supports various optimization algorithms, an array of analysis tools, and a customizable, modular reactor setup to allow for arbitrary reactor designs using provided or user-created plugins. Rxn Rover and its plugins are designed to be easy to use, understand, and modify with little to no programming experience, but complex enough to support intricate, multi-step reactions.</Property>
@@ -35,6 +35,8 @@
 		<Item Name="README.md" Type="Document" URL="../README.md"/>
 		<Item Name="build_actions.lvlib" Type="Library" URL="../src/build_actions/build_actions.lvlib"/>
 		<Item Name="RxnRover.lvlib" Type="Library" URL="../RxnRover.lvlib"/>
+		<Item Name="RxnRover.vipb" Type="Document" URL="../RxnRover.vipb"/>
+		<Item Name="RxnRover.vipc" Type="Document" URL="../RxnRover.vipc"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="Dynamic Reentrant.lvlib" Type="Library" URL="/&lt;userlib&gt;/RxnRover/DynamicReentrant/Dynamic Reentrant.lvlib"/>
@@ -98,6 +100,7 @@
 				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 				<Item Name="Get LV Class Name.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/LVClass/Get LV Class Name.vi"/>
+				<Item Name="LVNumericRepresentation.ctl" Type="VI" URL="/&lt;vilib&gt;/numeric/LVNumericRepresentation.ctl"/>
 			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
