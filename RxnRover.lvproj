@@ -35,6 +35,7 @@
 		<Item Name="README.md" Type="Document" URL="../README.md"/>
 		<Item Name="build_actions.lvlib" Type="Library" URL="../src/build_actions/build_actions.lvlib"/>
 		<Item Name="RxnRover.lvlib" Type="Library" URL="../RxnRover.lvlib"/>
+		<Item Name="Main.vi" Type="VI" URL="../src/Main.vi"/>
 		<Item Name="RxnRover.vipb" Type="Document" URL="../RxnRover.vipb"/>
 		<Item Name="RxnRover.vipc" Type="Document" URL="../RxnRover.vipc"/>
 		<Item Name="Dependencies" Type="Dependencies">
@@ -141,7 +142,7 @@
 				<Property Name="Source[0].itemID" Type="Str">{A93DF313-1C85-4629-A4CE-F27FABE7AC19}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Main.vi</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Main.vi</Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
 				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
@@ -228,7 +229,7 @@
 				<Property Name="RegDestCount" Type="Int">1</Property>
 				<Property Name="Source[0].dest" Type="Str">{E900022A-0109-41DA-A00A-423EC44A52F4}</Property>
 				<Property Name="Source[0].name" Type="Str">Main.vi</Property>
-				<Property Name="Source[0].tag" Type="Ref">/My Computer/RxnRover.lvlib/Main.vi</Property>
+				<Property Name="Source[0].tag" Type="Ref">/My Computer/Main.vi</Property>
 				<Property Name="Source[0].type" Type="Str">File</Property>
 				<Property Name="SourceCount" Type="Int">1</Property>
 			</Item>
