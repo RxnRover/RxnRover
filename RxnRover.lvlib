@@ -8,7 +8,7 @@
 		<Item Name="Hardware Subpanels.vi" Type="VI" URL="../src/RxnRover/Display VIs/Hardware Subpanels.vi"/>
 		<Item Name="Ready Status.vi" Type="VI" URL="../src/RxnRover/Display VIs/Ready Status.vi"/>
 		<Item Name="Remove Control Panel.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Remove Control Panel.vi"/>
-		<Item Name="Remove Entry.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Remove Entry.vi"/>
+		<Item Name="Remove Entry.vi" Type="VI" URL="../src/RxnRover/Display VIs/Remove Entry.vi"/>
 		<Item Name="Set Unsaved Changes in Title.vi" Type="VI" URL="../src/RxnRover/Display VIs/Set Unsaved Changes in Title.vi"/>
 		<Item Name="Update Status Event.vi" Type="VI" URL="../src/RxnRover/events/Update Status Event.vi"/>
 		<Item Name="Update Status.vi" Type="VI" URL="../src/RxnRover/Display VIs/Update Status.vi"/>
@@ -57,9 +57,9 @@
 		<Item Name="Load Plugin Dialog.vi" Type="VI" URL="../src/RxnRover/Plugin Servers/Load Plugin Dialog.vi"/>
 		<Item Name="Parameter to Hardware Map.lvclass" Type="LVClass" URL="../src/RxnRover/Plugin Servers/Parameter to Hardware Map/Parameter to Hardware Map.lvclass"/>
 		<Item Name="Pump Controller.lvclass" Type="LVClass" URL="../src/RxnRover/Plugin Servers/Pump Controller/Pump Controller.lvclass"/>
-		<Item Name="Stop Analyzer VI.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Stop Analyzer VI.vi"/>
-		<Item Name="Stop Optimizer VI.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Stop Optimizer VI.vi"/>
-		<Item Name="Stop Process VI.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Stop Process VI.vi"/>
+		<Item Name="Stop Analyzer VI.vi" Type="VI" URL="../src/RxnRover/Plugin Servers/Stop Analyzer VI.vi"/>
+		<Item Name="Stop Optimizer VI.vi" Type="VI" URL="../src/RxnRover/Plugin Servers/Stop Optimizer VI.vi"/>
+		<Item Name="Stop Process VI.vi" Type="VI" URL="../src/RxnRover/Plugin Servers/Stop Process VI.vi"/>
 		<Item Name="Syringe Pump.lvclass" Type="LVClass" URL="../src/RxnRover/Plugin Servers/Syringe Pump/Syringe Pump.lvclass"/>
 		<Item Name="Temperature Controller.lvclass" Type="LVClass" URL="../src/RxnRover/Plugin Servers/Temperature Controller/Temperature Controller.lvclass"/>
 	</Item>
