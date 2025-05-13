@@ -40,6 +40,7 @@
 		<Item Name="File IO.lvlib" Type="Library" URL="../src/RxnRover/File IO/File IO.lvlib"/>
 	</Item>
 	<Item Name="Plugin Manager" Type="Folder">
+		<Item Name="Check for Invalid Plugins.vi" Type="VI" URL="../src/RxnRover/Plugin Manager/Check for Invalid Plugins.vi"/>
 		<Item Name="Filter Plugins.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Initialization/Filter Plugins.vi"/>
 		<Item Name="Load Plugins.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Initialization/Load Plugins.vi"/>
 		<Item Name="Plugin Manager.lvlib" Type="Library" URL="../src/RxnRover/Plugin Manager/Plugin Manager.lvlib"/>
