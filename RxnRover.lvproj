@@ -102,6 +102,9 @@
 				<Item Name="Get LV Class Name.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/LVClass/Get LV Class Name.vi"/>
 				<Item Name="LVNumericRepresentation.ctl" Type="VI" URL="/&lt;vilib&gt;/numeric/LVNumericRepresentation.ctl"/>
 			</Item>
+			<Item Name="Stop Analyzer VI.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Stop Analyzer VI.vi"/>
+			<Item Name="Stop Optimizer VI.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Stop Optimizer VI.vi"/>
+			<Item Name="Stop Process VI.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Stop Process VI.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Stand-Alone EXE" Type="EXE">
