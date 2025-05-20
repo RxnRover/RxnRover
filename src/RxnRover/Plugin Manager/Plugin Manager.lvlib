@@ -13,7 +13,7 @@
 	<Item Name="Load Plugins.vi" Type="VI" URL="../Load Plugins.vi"/>
 	<Item Name="Plugin Details.ctl" Type="VI" URL="../Plugin Details.ctl"/>
 	<Item Name="Plugin Types.ctl" Type="VI" URL="../Plugin Types.ctl"/>
-	<Item Name="Read Controller Details.vi" Type="VI" URL="../Read Controller Details.vi"/>
+	<Item Name="Read Plugin Configuration.vi" Type="VI" URL="../Read Plugin Configuration.vi"/>
 	<Item Name="Read Plugin Details.vi" Type="VI" URL="../Read Plugin Details.vi"/>
 	<Item Name="Read Plugin INI.vi" Type="VI" URL="../Read Plugin INI.vi"/>
 </Library>
