@@ -6,7 +6,10 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">536903680</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Item Name="Build LocalAppData Path.vi" Type="VI" URL="../../Build LocalAppData Path.vi"/>
 	<Item Name="File Defaults Location.vi" Type="VI" URL="../File Defaults Location.vi"/>
+	<Item Name="Get LocalAppData Base Path.vi" Type="VI" URL="../../Get LocalAppData Base Path.vi"/>
+	<Item Name="Get or Create App Directory.vi" Type="VI" URL="../../Get or Create App Directory.vi"/>
 	<Item Name="Icons Location.vi" Type="VI" URL="../Icons Location.vi"/>
 	<Item Name="Resource Location.vi" Type="VI" URL="../Resource Location.vi"/>
 </Library>
