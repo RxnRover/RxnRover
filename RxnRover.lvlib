@@ -42,7 +42,9 @@
 	<Item Name="Plugin Manager" Type="Folder">
 		<Item Name="Filter Invalid Plugins.vi" Type="VI" URL="../src/RxnRover/Plugin Manager/Filter Invalid Plugins.vi"/>
 		<Item Name="Filter Plugins.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Initialization/Filter Plugins.vi"/>
+		<Item Name="Generate Plugin Error String Array.vi" Type="VI" URL="../src/RxnRover/Plugin Manager/Generate Plugin Error String Array.vi"/>
 		<Item Name="Load Plugins.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Initialization/Load Plugins.vi"/>
+		<Item Name="Log Plugin Errors.vi" Type="VI" URL="../src/RxnRover/Plugin Manager/Log Plugin Errors.vi"/>
 		<Item Name="Plugin Manager.lvlib" Type="Library" URL="../src/RxnRover/Plugin Manager/Plugin Manager.lvlib"/>
 	</Item>
 	<Item Name="Plugin Servers" Type="Folder">
