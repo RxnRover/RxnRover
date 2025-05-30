@@ -45,7 +45,7 @@
 			<Item Name="Initialize Hardware from Experiment Cluster.vi" Type="VI" URL="../src/RxnRover/Plugin Manager/Initialization/Initialize Hardware from Experiment Cluster.vi"/>
 			<Item Name="Initialize Optimizer from Experiment Cluster.vi" Type="VI" URL="../src/RxnRover/Plugin Manager/Initialization/Initialize Optimizer from Experiment Cluster.vi"/>
 			<Item Name="Initialize Parameter to Hardware Map from Experiment Cluster.vi" Type="VI" URL="../src/RxnRover/Plugin Manager/Initialization/Initialize Parameter to Hardware Map from Experiment Cluster.vi"/>
-			<Item Name="Load Plugins.vi" Type="VI" URL="../src/RxnRover/Plugin Manager/Initialization/Load Plugins.vi"/>
+			<Item Name="Load Details and Filter Plugins.vi" Type="VI" URL="../src/RxnRover/Plugin Manager/Initialization/Load Details and Filter Plugins.vi"/>
 		</Item>
 		<Item Name="Plugin Manager.lvlib" Type="Library" URL="../src/RxnRover/Plugin Manager/Plugin Manager.lvlib"/>
 	</Item>
