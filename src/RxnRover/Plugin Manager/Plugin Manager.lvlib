@@ -9,7 +9,7 @@
 	<Item Name="Config Error.ctl" Type="VI" URL="../Config Error.ctl"/>
 	<Item Name="Create Plugin Directories.vi" Type="VI" URL="../Create Plugin Directories.vi"/>
 	<Item Name="Filter Invalid Plugins.vi" Type="VI" URL="../Filter Invalid Plugins.vi"/>
-	<Item Name="Filter Plugins.vi" Type="VI" URL="../../Sub VIs/Initialization/Filter Plugins.vi"/>
+	<Item Name="Filter Plugins.vi" Type="VI" URL="../Initialization/Filter Plugins.vi"/>
 	<Item Name="Generate Plugin Error String Array.vi" Type="VI" URL="../Generate Plugin Error String Array.vi"/>
 	<Item Name="Get Default Plugin Directories.vi" Type="VI" URL="../Get Default Plugin Directories.vi"/>
 	<Item Name="Get Plugin Directorys.vi" Type="VI" URL="../Get Plugin Directorys.vi"/>
