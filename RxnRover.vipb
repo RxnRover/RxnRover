@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2024-12-18 19:08:40" Modified_Date="2025-05-31 21:29:39" Creator="zachc" Comments="" ID="cd45af92494728d254ab9820dc295246">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2024-12-18 19:08:40" Modified_Date="2025-06-02 15:45:23" Creator="zachc" Comments="" ID="dcb5b06accd4030ab0b2a3b185518e6f">
   <Library_General_Settings>
     <Package_File_Name>Rxn_Rover_lib_Rxn_Rover</Package_File_Name>
-    <Library_Version>1.3.0.4</Library_Version>
+    <Library_Version>1.3.0.5</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>..\vipm_package_builds</Library_Output_Folder>
@@ -212,6 +212,7 @@
       <close_labview_before_install>false</close_labview_before_install>
       <restart_labview_after_install>false</restart_labview_after_install>
       <skip_mass_compile_after_install>false</skip_mass_compile_after_install>
+      <install_into_global_environment>false</install_into_global_environment>
     </LabVIEW>
     <VI_Docs>
       <Edit_VI_Description>false</Edit_VI_Description>
