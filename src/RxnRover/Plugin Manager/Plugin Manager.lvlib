@@ -6,13 +6,19 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">536903680</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Item Name="Config Error.ctl" Type="VI" URL="../Config Error.ctl"/>
 	<Item Name="Create Plugin Directories.vi" Type="VI" URL="../Create Plugin Directories.vi"/>
+	<Item Name="Filter Invalid Plugins.vi" Type="VI" URL="../Filter Invalid Plugins.vi"/>
+	<Item Name="Filter Plugins.vi" Type="VI" URL="../Initialization/Filter Plugins.vi"/>
+	<Item Name="Generate Plugin Error String Array.vi" Type="VI" URL="../Generate Plugin Error String Array.vi"/>
 	<Item Name="Get Default Plugin Directories.vi" Type="VI" URL="../Get Default Plugin Directories.vi"/>
 	<Item Name="Get Plugin Directorys.vi" Type="VI" URL="../Get Plugin Directorys.vi"/>
+	<Item Name="Handle Plugin Errors.vi" Type="VI" URL="../Handle Plugin Errors.vi"/>
 	<Item Name="Load Plugins.vi" Type="VI" URL="../Load Plugins.vi"/>
+	<Item Name="Log Plugin Errors.vi" Type="VI" URL="../Log Plugin Errors.vi"/>
 	<Item Name="Plugin Details.ctl" Type="VI" URL="../Plugin Details.ctl"/>
 	<Item Name="Plugin Types.ctl" Type="VI" URL="../Plugin Types.ctl"/>
-	<Item Name="Read Controller Details.vi" Type="VI" URL="../Read Controller Details.vi"/>
+	<Item Name="Read Plugin Configuration.vi" Type="VI" URL="../Read Plugin Configuration.vi"/>
 	<Item Name="Read Plugin Details.vi" Type="VI" URL="../Read Plugin Details.vi"/>
 	<Item Name="Read Plugin INI.vi" Type="VI" URL="../Read Plugin INI.vi"/>
 </Library>

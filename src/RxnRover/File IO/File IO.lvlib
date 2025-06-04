@@ -12,6 +12,8 @@
 	<Item Name="Convert Absolute Path to Relative Path from Application.vi" Type="VI" URL="../Convert Absolute Path to Relative Path from Application.vi"/>
 	<Item Name="Convert Absolute to Relative Path if Executable.vi" Type="VI" URL="../Convert Absolute to Relative Path if Executable.vi"/>
 	<Item Name="JSON Utilities.lvlib" Type="Library" URL="../JSON Utilities/JSON Utilities.lvlib"/>
+	<Item Name="LocalAppData Utilities.lvlib" Type="Library" URL="../AppData Utilities/LocalAppData Utilities.lvlib"/>
+	<Item Name="Open File Explorer.vi" Type="VI" URL="../Open File Explorer.vi"/>
 	<Item Name="Project Locations.lvlib" Type="Library" URL="../Project Locations/Project Locations.lvlib"/>
 	<Item Name="Relative Path to Absolute Path.vi" Type="VI" URL="../Relative Path to Absolute Path.vi"/>
 </Library>

@@ -40,8 +40,13 @@
 		<Item Name="File IO.lvlib" Type="Library" URL="../src/RxnRover/File IO/File IO.lvlib"/>
 	</Item>
 	<Item Name="Plugin Manager" Type="Folder">
-		<Item Name="Filter Plugins.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Initialization/Filter Plugins.vi"/>
-		<Item Name="Load Plugins.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Initialization/Load Plugins.vi"/>
+		<Item Name="Initialization" Type="Folder">
+			<Item Name="Initialize Analyzer from Experiment Cluster.vi" Type="VI" URL="../src/RxnRover/Plugin Manager/Initialization/Initialize Analyzer from Experiment Cluster.vi"/>
+			<Item Name="Initialize Hardware from Experiment Cluster.vi" Type="VI" URL="../src/RxnRover/Plugin Manager/Initialization/Initialize Hardware from Experiment Cluster.vi"/>
+			<Item Name="Initialize Optimizer from Experiment Cluster.vi" Type="VI" URL="../src/RxnRover/Plugin Manager/Initialization/Initialize Optimizer from Experiment Cluster.vi"/>
+			<Item Name="Initialize Parameter to Hardware Map from Experiment Cluster.vi" Type="VI" URL="../src/RxnRover/Plugin Manager/Initialization/Initialize Parameter to Hardware Map from Experiment Cluster.vi"/>
+			<Item Name="Load Details and Filter Plugins.vi" Type="VI" URL="../src/RxnRover/Plugin Manager/Initialization/Load Details and Filter Plugins.vi"/>
+		</Item>
 		<Item Name="Plugin Manager.lvlib" Type="Library" URL="../src/RxnRover/Plugin Manager/Plugin Manager.lvlib"/>
 	</Item>
 	<Item Name="Plugin Servers" Type="Folder">
@@ -64,12 +69,6 @@
 		<Item Name="Temperature Controller.lvclass" Type="LVClass" URL="../src/RxnRover/Plugin Servers/Temperature Controller/Temperature Controller.lvclass"/>
 	</Item>
 	<Item Name="Sub VIs" Type="Folder">
-		<Item Name="Initialization" Type="Folder">
-			<Item Name="Initialize Analyzer from Experiment Cluster.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Initialization/Initialize Analyzer from Experiment Cluster.vi"/>
-			<Item Name="Initialize Hardware from Experiment Cluster.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Initialization/Initialize Hardware from Experiment Cluster.vi"/>
-			<Item Name="Initialize Optimizer from Experiment Cluster.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Initialization/Initialize Optimizer from Experiment Cluster.vi"/>
-			<Item Name="Initialize Parameter to Hardware Map from Experiment Cluster.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Initialization/Initialize Parameter to Hardware Map from Experiment Cluster.vi"/>
-		</Item>
 		<Item Name="Add Process Queue Reference.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Add Process Queue Reference.vi"/>
 		<Item Name="Add VI to Tab Control.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Add VI to Tab Control.vi"/>
 		<Item Name="Cache Message.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Cache Message.vi"/>
@@ -104,5 +103,4 @@
 	<Item Name="User Preferences" Type="Folder">
 		<Item Name="User Preferences File.lvclass" Type="LVClass" URL="../src/RxnRover/User Preferences/User Preferences File.lvclass"/>
 	</Item>
-	<Item Name="Main.vi" Type="VI" URL="../src/Main.vi"/>
 </Library>
