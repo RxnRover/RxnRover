@@ -18,22 +18,23 @@ Understanding the Plugin Structure
 
 The basic components of a RxnRover plugin are:
 
-1. **Driver**: The software component that communicates directly with the device. If the manufacturer provides a LabVIEW driver, you will only need to create the plugin for the device.
+1. **Driver**: The software component that communicates directly with the device. If you already have a provided LabVIEW driver, you will only need to create the plugin for the device.
 
-2. **Plugin**: The interface between the driver and RxnRover. This connects the low-level functionality of the driver to the higher-level features of the RxnRover platform.
+2. **Plugin**: The interface between the driver and RxnRover. This connects the low-level functionality of the driver to the higher-level features of the RxnRover platform. As well as supplied the User-Interface in RxnRover.
 
 In some cases, if a device driver already exists, you may only need to focus on developing the plugin that integrates with RxnRover.
 
 .. hint:: 
-   You can visit the `Instrument Driver Network (IDNet) <https://www.ni.com/en/support/downloads/instrument-drivers.html>`_ to see if your instrument already has a LabVIEW-supported driver.
+    You can visit the `Instrument Driver Network (IDNet) <https://www.ni.com/en/support/downloads/instrument-drivers.html>`_ Or the `Rxn Rover Plugin Catalog <https://rxnrover.github.io/PluginCatalog>`__  to see if your instrument already has a LabVIEW-supported driver.
 
-Develop Device Driver
+Create Device Driver
 ---------------------
 
 If the device does not already have a pre-existing driver, you'll need to create one. Instrument drivers are responsible for handling the communication and control of the device with your computer.
 
 For more detailed guidelines, refer to:  
 `Developing LabVIEW Plug and Play Instrument Drivers <https://www.ni.com/en/support/downloads/instrument-drivers/tools-resources/developing-labview-plug-and-play-instrument-drivers.html>`_
+Or see our :ref:`tutorial on creating a driver <create-new-driver>`
 
 Driver Development Checklist:
 
@@ -138,6 +139,8 @@ In the ``Initialize`` case of the LML:
 
 - Update the ``Channels`` array to correspond to the instrument states listed in the AML's Acquisition Messages array.
 - This ensures the correct data is logged to the CSV file.
+
+After creating your plugin consider `making a submission <https://rxnrover.github.io/PluginCatalog/submissions/plugin_submission_form.html>`__ to the `Rxn Rover Plugin Catalog <https://rxnrover.github.io/PluginCatalog>`__
 
 
 
