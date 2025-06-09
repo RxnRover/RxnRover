@@ -136,9 +136,6 @@
         <Path>.github</Path>
       </Exclusions>
       <Exclusions>
-        <Path>logs</Path>
-      </Exclusions>
-      <Exclusions>
         <Path>plugins</Path>
       </Exclusions>
       <Exclusions>
