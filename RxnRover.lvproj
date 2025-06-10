@@ -35,6 +35,7 @@
 		<Item Name="README.md" Type="Document" URL="../README.md"/>
 		<Item Name="build_actions.lvlib" Type="Library" URL="../src/build_actions/build_actions.lvlib"/>
 		<Item Name="RxnRover.lvlib" Type="Library" URL="../RxnRover.lvlib"/>
+		<Item Name="Main.vi" Type="VI" URL="../src/Main.vi"/>
 		<Item Name="RxnRover.vipb" Type="Document" URL="../RxnRover.vipb"/>
 		<Item Name="RxnRover.vipc" Type="Document" URL="../RxnRover.vipc"/>
 		<Item Name="Dependencies" Type="Dependencies">
@@ -101,6 +102,9 @@
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 				<Item Name="Get LV Class Name.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/LVClass/Get LV Class Name.vi"/>
 				<Item Name="LVNumericRepresentation.ctl" Type="VI" URL="/&lt;vilib&gt;/numeric/LVNumericRepresentation.ctl"/>
+				<Item Name="System Exec.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/system.llb/System Exec.vi"/>
+				<Item Name="Create Directory Recursive.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Create Directory Recursive.vi"/>
+				<Item Name="1D String Array to Delimited String.vi" Type="VI" URL="/&lt;vilib&gt;/AdvancedString/1D String Array to Delimited String.vi"/>
 			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
@@ -141,7 +145,7 @@
 				<Property Name="Source[0].itemID" Type="Str">{A93DF313-1C85-4629-A4CE-F27FABE7AC19}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Main.vi</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Main.vi</Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
 				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
@@ -173,10 +177,10 @@
 				<Property Name="Destination[0].type" Type="Str">userFolder</Property>
 				<Property Name="DestinationCount" Type="Int">1</Property>
 				<Property Name="DistPart[0].flavorID" Type="Str">DefaultFull</Property>
-				<Property Name="DistPart[0].productID" Type="Str">{46BB74ED-C08B-4728-8D39-A72BBD0D63CE}</Property>
-				<Property Name="DistPart[0].productName" Type="Str">NI LabVIEW Runtime 2020 f1 (64-bit)</Property>
+				<Property Name="DistPart[0].productID" Type="Str">{9B1296BE-6823-4A4E-9F79-F2ACED5EC8F9}</Property>
+				<Property Name="DistPart[0].productName" Type="Str">NI LabVIEW Runtime 2020</Property>
 				<Property Name="DistPart[0].SoftDep[0].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[0].SoftDep[0].productName" Type="Str">NI ActiveX Container (64-bit)</Property>
+				<Property Name="DistPart[0].SoftDep[0].productName" Type="Str">NI ActiveX Container</Property>
 				<Property Name="DistPart[0].SoftDep[0].upgradeCode" Type="Str">{1038A887-23E1-4289-B0BD-0C4B83C6BA21}</Property>
 				<Property Name="DistPart[0].SoftDep[1].exclude" Type="Bool">false</Property>
 				<Property Name="DistPart[0].SoftDep[1].productName" Type="Str">NI Deployment Framework 2020</Property>
@@ -203,7 +207,7 @@
 				<Property Name="DistPart[0].SoftDep[8].productName" Type="Str">NI TDM Streaming 19.0</Property>
 				<Property Name="DistPart[0].SoftDep[8].upgradeCode" Type="Str">{4CD11BE6-6BB7-4082-8A27-C13771BC309B}</Property>
 				<Property Name="DistPart[0].SoftDepCount" Type="Int">9</Property>
-				<Property Name="DistPart[0].upgradeCode" Type="Str">{9A9FE130-6C4C-498B-A054-CEB195F36BB4}</Property>
+				<Property Name="DistPart[0].upgradeCode" Type="Str">{D84FC73F-D1E0-4C05-A30C-DB882CD1ABD8}</Property>
 				<Property Name="DistPartCount" Type="Int">1</Property>
 				<Property Name="INST_author" Type="Str">Iowa State University</Property>
 				<Property Name="INST_autoIncrement" Type="Bool">true</Property>
@@ -214,8 +218,8 @@
 				<Property Name="INST_installerName" Type="Str">install_rxn_rover.exe</Property>
 				<Property Name="INST_productName" Type="Str">Rxn Rover</Property>
 				<Property Name="INST_productVersion" Type="Str">1.0.2</Property>
-				<Property Name="InstSpecBitness" Type="Str">64-bit</Property>
-				<Property Name="InstSpecVersion" Type="Str">20008014</Property>
+				<Property Name="InstSpecBitness" Type="Str">32-bit</Property>
+				<Property Name="InstSpecVersion" Type="Str">20008011</Property>
 				<Property Name="MSI_arpCompany" Type="Str">Iowa State University</Property>
 				<Property Name="MSI_autoselectDrivers" Type="Bool">true</Property>
 				<Property Name="MSI_distID" Type="Str">{F86A3199-9C98-4FAF-AA24-9195790F23A9}</Property>
@@ -228,7 +232,7 @@
 				<Property Name="RegDestCount" Type="Int">1</Property>
 				<Property Name="Source[0].dest" Type="Str">{E900022A-0109-41DA-A00A-423EC44A52F4}</Property>
 				<Property Name="Source[0].name" Type="Str">Main.vi</Property>
-				<Property Name="Source[0].tag" Type="Ref">/My Computer/RxnRover.lvlib/Main.vi</Property>
+				<Property Name="Source[0].tag" Type="Ref">/My Computer/Main.vi</Property>
 				<Property Name="Source[0].type" Type="Str">File</Property>
 				<Property Name="SourceCount" Type="Int">1</Property>
 			</Item>
