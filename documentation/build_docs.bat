@@ -96,5 +96,18 @@ echo Generating documentation with Sphinx...
 
 call .\make.bat html
 
+REM Copy Autodoc image assets to spinhx build 
+set "IMG_SRC=%~dp0source\_static\api\Images"
+set "IMG_DST=%~dp0build\html\dev_resources\api\Images"
+
+REM Delete old images before copying
+if exist "%IMG_DST%" (
+    rmdir /S /Q "%IMG_DST%"
+)
+mkdir "%IMG_DST%"
+
+REM Copy image files
+xcopy /E /Y /I "%IMG_SRC%\*" "%IMG_DST%\" >nul
+
 REM Pause if run from being double-clicked, so the user can see the output
 if %0 == "%~0" pause
