@@ -35,7 +35,6 @@
 		<Item Name="README.md" Type="Document" URL="../README.md"/>
 		<Item Name="build_actions.lvlib" Type="Library" URL="../src/build_actions/build_actions.lvlib"/>
 		<Item Name="RxnRover.lvlib" Type="Library" URL="../RxnRover.lvlib"/>
-		<Item Name="Main.vi" Type="VI" URL="../src/Main.vi"/>
 		<Item Name="RxnRover.vipb" Type="Document" URL="../RxnRover.vipb"/>
 		<Item Name="RxnRover.vipc" Type="Document" URL="../RxnRover.vipc"/>
 		<Item Name="Dependencies" Type="Dependencies">
