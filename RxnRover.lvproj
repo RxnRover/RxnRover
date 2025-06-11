@@ -35,6 +35,7 @@
 		<Item Name="README.md" Type="Document" URL="../README.md"/>
 		<Item Name="build_actions.lvlib" Type="Library" URL="../src/build_actions/build_actions.lvlib"/>
 		<Item Name="RxnRover.lvlib" Type="Library" URL="../RxnRover.lvlib"/>
+		<Item Name="Main.vi" Type="VI" URL="../src/Main.vi"/>
 		<Item Name="RxnRover.vipb" Type="Document" URL="../RxnRover.vipb"/>
 		<Item Name="RxnRover.vipc" Type="Document" URL="../RxnRover.vipc"/>
 		<Item Name="Dependencies" Type="Dependencies">
@@ -101,6 +102,9 @@
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 				<Item Name="Get LV Class Name.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/LVClass/Get LV Class Name.vi"/>
 				<Item Name="LVNumericRepresentation.ctl" Type="VI" URL="/&lt;vilib&gt;/numeric/LVNumericRepresentation.ctl"/>
+				<Item Name="System Exec.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/system.llb/System Exec.vi"/>
+				<Item Name="Create Directory Recursive.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Create Directory Recursive.vi"/>
+				<Item Name="1D String Array to Delimited String.vi" Type="VI" URL="/&lt;vilib&gt;/AdvancedString/1D String Array to Delimited String.vi"/>
 			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
