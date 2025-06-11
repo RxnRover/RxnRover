@@ -56,6 +56,7 @@
 		<Item Name="LC Parser.lvclass" Type="LVClass" URL="../src/RxnRover/Plugin Servers/LC Parser/LC Parser.lvclass"/>
 		<Item Name="Load Plugin Dialog.vi" Type="VI" URL="../src/RxnRover/Plugin Servers/Load Plugin Dialog.vi"/>
 		<Item Name="Parameter to Hardware Map.lvclass" Type="LVClass" URL="../src/RxnRover/Plugin Servers/Parameter to Hardware Map/Parameter to Hardware Map.lvclass"/>
+		<Item Name="Passive Hardware.lvclass" Type="LVClass" URL="../src/RxnRover/Plugin Servers/Passive Hardware/Passive Hardware.lvclass"/>
 		<Item Name="Pump Controller.lvclass" Type="LVClass" URL="../src/RxnRover/Plugin Servers/Pump Controller/Pump Controller.lvclass"/>
 		<Item Name="Stop Analyzer VI.vi" Type="VI" URL="../src/RxnRover/Plugin Servers/Stop Analyzer VI.vi"/>
 		<Item Name="Stop Optimizer VI.vi" Type="VI" URL="../src/RxnRover/Plugin Servers/Stop Optimizer VI.vi"/>

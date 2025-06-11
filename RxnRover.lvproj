@@ -1,6 +1,6 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Project Type="Project" LVVersion="20008000">
-	<Property Name="CCSymbols" Type="Str">DEBUG,0;NO_DRIVER,0;</Property>
+	<Property Name="CCSymbols" Type="Str">DEBUG,0;NO_DRIVER,1;</Property>
 	<Property Name="NI.LV.All.SaveVersion" Type="Str">20.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="NI.Project.Description" Type="Str">Rxn Rover (pronounced Reaction Rover) is an open-source, general reaction automation software. Similarly, Rxn Rover connects an optimization algorithm - machine learning or non-machine learning - with a reactor and analysis instrumentation to create a self-optimizing system. This system allows the optimizer to control and change the reaction parameters, perform the reaction, analyze the desired results, and choose the next search step with or without human intervention. Designed knowing that each research laboratory and experiment presents different challenges, Rxn Rover supports various optimization algorithms, an array of analysis tools, and a customizable, modular reactor setup to allow for arbitrary reactor designs using provided or user-created plugins. Rxn Rover and its plugins are designed to be easy to use, understand, and modify with little to no programming experience, but complex enough to support intricate, multi-step reactions.</Property>
@@ -173,10 +173,10 @@
 				<Property Name="Destination[0].type" Type="Str">userFolder</Property>
 				<Property Name="DestinationCount" Type="Int">1</Property>
 				<Property Name="DistPart[0].flavorID" Type="Str">DefaultFull</Property>
-				<Property Name="DistPart[0].productID" Type="Str">{46BB74ED-C08B-4728-8D39-A72BBD0D63CE}</Property>
-				<Property Name="DistPart[0].productName" Type="Str">NI LabVIEW Runtime 2020 f1 (64-bit)</Property>
+				<Property Name="DistPart[0].productID" Type="Str">{6B440D80-3B0D-43B2-8A06-E2E939AA1006}</Property>
+				<Property Name="DistPart[0].productName" Type="Str">NI LabVIEW Runtime 2020 SP1</Property>
 				<Property Name="DistPart[0].SoftDep[0].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[0].SoftDep[0].productName" Type="Str">NI ActiveX Container (64-bit)</Property>
+				<Property Name="DistPart[0].SoftDep[0].productName" Type="Str">NI ActiveX Container</Property>
 				<Property Name="DistPart[0].SoftDep[0].upgradeCode" Type="Str">{1038A887-23E1-4289-B0BD-0C4B83C6BA21}</Property>
 				<Property Name="DistPart[0].SoftDep[1].exclude" Type="Bool">false</Property>
 				<Property Name="DistPart[0].SoftDep[1].productName" Type="Str">NI Deployment Framework 2020</Property>
@@ -203,7 +203,7 @@
 				<Property Name="DistPart[0].SoftDep[8].productName" Type="Str">NI TDM Streaming 19.0</Property>
 				<Property Name="DistPart[0].SoftDep[8].upgradeCode" Type="Str">{4CD11BE6-6BB7-4082-8A27-C13771BC309B}</Property>
 				<Property Name="DistPart[0].SoftDepCount" Type="Int">9</Property>
-				<Property Name="DistPart[0].upgradeCode" Type="Str">{9A9FE130-6C4C-498B-A054-CEB195F36BB4}</Property>
+				<Property Name="DistPart[0].upgradeCode" Type="Str">{D84FC73F-D1E0-4C05-A30C-DB882CD1ABD8}</Property>
 				<Property Name="DistPartCount" Type="Int">1</Property>
 				<Property Name="INST_author" Type="Str">Iowa State University</Property>
 				<Property Name="INST_autoIncrement" Type="Bool">true</Property>
@@ -214,8 +214,8 @@
 				<Property Name="INST_installerName" Type="Str">install_rxn_rover.exe</Property>
 				<Property Name="INST_productName" Type="Str">Rxn Rover</Property>
 				<Property Name="INST_productVersion" Type="Str">1.0.2</Property>
-				<Property Name="InstSpecBitness" Type="Str">64-bit</Property>
-				<Property Name="InstSpecVersion" Type="Str">20008014</Property>
+				<Property Name="InstSpecBitness" Type="Str">32-bit</Property>
+				<Property Name="InstSpecVersion" Type="Str">20018000</Property>
 				<Property Name="MSI_arpCompany" Type="Str">Iowa State University</Property>
 				<Property Name="MSI_autoselectDrivers" Type="Bool">true</Property>
 				<Property Name="MSI_distID" Type="Str">{F86A3199-9C98-4FAF-AA24-9195790F23A9}</Property>
