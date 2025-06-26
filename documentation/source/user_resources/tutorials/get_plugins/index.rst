@@ -19,14 +19,33 @@ the listings or use the search feature to find your desired plugins, and
 follow the acquisition instructions included with each plugin listing to 
 download it.
 
-Where should downloaded plugins go?
------------------------------------
+Installing Plugins
+------------------
 
-Typical installation of a plugin just requires moving the downloaded plugin
-to your ``<documents>/RxnRover/Plugins`` directory, where ``<documents>`` is
-the location of a user's Documents directory for your operating system. Rxn 
-Rover will check this directory and load plugins based on their 
-``plugin.conf`` files.
+You can install plugins for RxnRover in two main ways, 
+
+Install via VIPM (Recommended)
+------------------------------
+
+If the plugin(s) you are trying to install contains a .vip file, the easiest way to install plugin(s) is through the **VI Package Manager (VIPM)**.
+
+- Download and install the `.vip` package as described in the plugin's instructions.
+
+Manual Installation
+-------------------
+
+You can also install plugins manually by downloading the plugin source code.
+
+1. Download the plugin files (typically a folder containing source code and a `plugin.conf` file).
+2. Move the plugin folder into the following directory:
+
+   ::
+
+      <documents>/RxnRover/Plugins
+
+   where `<documents>` refers to your operating system's standard **Documents** directory.
+
+3. Rxn Rover will automatically detect plugins located in this folder by reading their `plugin.conf` files.
 
 .. note::
    
