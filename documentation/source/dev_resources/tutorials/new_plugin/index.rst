@@ -140,6 +140,7 @@ In the ``Initialize`` case of the LML:
 - Update the ``Channels`` array to correspond to the instrument states listed in the AML's Acquisition Messages array.
 - This ensures the correct data is logged to the CSV file.
 
+Follow the :ref:`tutorial on creating a VIPM package <create-new-vipm-package>` to package your plugin for automated installation and distribution.
 After creating your plugin consider `making a submission <https://rxnrover.github.io/PluginCatalog/submissions/plugin_submission_form.html>`__ to the `Rxn Rover Plugin Catalog <https://rxnrover.github.io/PluginCatalog>`__
 
 
