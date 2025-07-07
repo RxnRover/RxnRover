@@ -12,7 +12,7 @@
 
 # Executables
 *.exe
-build/
+builds/
 
 # Metadata
 *.aliases
@@ -27,8 +27,8 @@ __pycache__/
 *$py.class
 
 # Sphinx documentation
-documentation/_build/
-documentation/build/
+**/_build/
+**/build/
 
 # Environments
 .env
@@ -41,5 +41,12 @@ venv.bak/
 
 ########## Project Ignores ##########
 
+docs/source/_static/api
 logs/
-documentation/source/_static/api
+plugins/
+
+# todo.txt ignores
+**/todo.txt
+**/done.txt
+**/waiting.txt
+**/someday.txt

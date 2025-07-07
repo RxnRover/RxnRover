@@ -1,40 +1,30 @@
-# This is a basic workflow to help you get started with Actions
+name: Build and Deploy Documentation
 
-name: CI
-
-# Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
 
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  build-and-deploy-docs:
     runs-on: windows-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
       # Builds the documentation website under ./build/html
       # With the -s flag, it only builds Sphinx documentation
-      - name: Build documentation website
+      - name: Build Documentation
         run: |
-          cd documentation
+          cd docs
           .\build_docs.bat -s
 
       # Deploys the website to the gh-pages branch
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .\documentation\build\html
+          publish_dir: .\docs\build\html
