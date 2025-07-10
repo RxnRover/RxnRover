@@ -1,0 +1,60 @@
+== File IO.lvlib
+
+*Responsibility:*
+No description found (add content in lvlib description)
+
+*Version:* 1.0.0.0
+
+.Nested libraries
+[cols="", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Type
+
+|<<JSON Utilities.lvlib>>
+|Library
+
+|<<Project Locations.lvlib>>
+|Library
+|===
+
+=== Functions
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|Convert Absolute Path to Relative Path from Application
+|image:File_IO.lvlib_Convert_Absolute_Path_to_Relative_Path_from_Application.vi.png[File IO.lvlib:Convert Absolute Path to Relative Path from Application.vi]
+|Converts a given absolute path to a relative path from the calling application.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Convert Absolute to Relative Path if Executable
+|image:File_IO.lvlib_Convert_Absolute_to_Relative_Path_if_Executable.vi.png[File IO.lvlib:Convert Absolute to Relative Path if Executable.vi]
+|Converts an absolute path to a relative path if the application is being executed as an executable. The absolute path is retained if a development environment is being used.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Relative Path to Absolute Path
+|image:File_IO.lvlib_Relative_Path_to_Absolute_Path.vi.png[File IO.lvlib:Relative Path to Absolute Path.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined
+
+=== Library Constant VIs
+
+[NOTE]
+====
+No Constant VIs Found
+====

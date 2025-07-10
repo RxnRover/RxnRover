@@ -1,0 +1,219 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create a New Driver &mdash; Rxn Rover  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Create a VIPM Package" href="../new_vipm_package/index.html" />
+    <link rel="prev" title="Create New Plugin Type" href="../new_plugin_type/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Rxn Rover
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_resources/user_guide/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_resources/tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_resources/additional_information/index.html">Additional Information</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developer Resources</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../dev_guide/index.html">Developer Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../new_plugin/index.html">Create a New Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../new_plugin_type/index.html">Create New Plugin Type</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Create a New Driver</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-labview-driver-project">Create a LabVIEW Driver Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#driver-project-structure">Driver Project Structure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#top-level-vis">Top-Level VIs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#folders">Folders</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#next-steps">Next Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../new_vipm_package/index.html">Create a VIPM Package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">The Rxn Rover Team</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://RxnRover.github.io">Team Homepage</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://RxnRover.github.io/about">About Us</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://RxnRover.github.io/contact">Contact Us</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Rxn Rover</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Tutorials</a></li>
+      <li class="breadcrumb-item active">Create a New Driver</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/dev_resources/tutorials/new_driver/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="create-a-new-driver">
+<span id="create-new-driver"></span><h1>Create a New Driver<a class="headerlink" href="#create-a-new-driver" title="Link to this heading"></a></h1>
+<p>RxnRover supports plugin-based integration with a variety of laboratory instruments and systems. A <em>driver</em> is a software component that enables RxnRover to communicate with external hardware, typically laboratory instruments.</p>
+<p>Creating a LabVIEW driver requires a solid understanding of programming in LabVIEW. We recommend completing National Instruments’ official LabVIEW tutorials before getting started.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>RxnRover will fail to communicate with hardware devices that do not have an accompanying driver.</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>You can visit the <a class="reference external" href="https://www.ni.com/en/support/downloads/instrument-drivers.html">Instrument Driver Network (IDNet)</a> Or the <a class="reference external" href="https://rxnrover.github.io/PluginCatalog">Rxn Rover Plugin Catalog</a>  to see if your instrument already has a LabVIEW-supported driver.</p>
+</div>
+<p>This tutorial is not meant to be a comprehensive-tutorial just as supplementary instruction. For more detailed guidelines, refer to:
+<a class="reference external" href="https://www.ni.com/en/support/downloads/instrument-drivers/tools-resources/developing-labview-plug-and-play-instrument-drivers.html">Developing LabVIEW Plug and Play Instrument Drivers</a></p>
+<section id="create-a-labview-driver-project">
+<h2>Create a LabVIEW Driver Project<a class="headerlink" href="#create-a-labview-driver-project" title="Link to this heading"></a></h2>
+<p>To get started, create a new LabVIEW project using the built-in <strong>Instrument Driver Project</strong> template.</p>
+<p>Steps:</p>
+<ol class="arabic simple">
+<li><p>Launch LabVIEW and go to <strong>File → Create Project</strong></p></li>
+<li><p>In the templates panel, select <strong>Instrument Driver Project</strong></p></li>
+<li><p>Click <strong>Finish</strong></p></li>
+</ol>
+<p>This opens the <strong>Create New Instrument Driver Project</strong> dialog. We recommend the following configuration:</p>
+<ul class="simple">
+<li><p><strong>Driver type</strong>: New Driver from Template</p></li>
+<li><p><strong>Instrument type</strong>: General Purpose (message-based)</p></li>
+</ul>
+<p>You can optionally enter:</p>
+<ul class="simple">
+<li><p>A name for your driver project</p></li>
+<li><p>A driver description</p></li>
+<li><p>A custom VI icon banner template</p></li>
+</ul>
+<p>Once completed, LabVIEW will generate a project located in the <cite>instr.lib</cite> directory—LabVIEW’s standard location for all instrument drivers.</p>
+</section>
+<section id="driver-project-structure">
+<h2>Driver Project Structure<a class="headerlink" href="#driver-project-structure" title="Link to this heading"></a></h2>
+<p>Your new driver project will be created with a standard folder and VI structure under the <cite>.lvlib</cite> file. The layout will include:</p>
+<section id="top-level-vis">
+<h3>Top-Level VIs<a class="headerlink" href="#top-level-vis" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Close.vi</strong> – Terminates communication with the instrument</p></li>
+<li><p><strong>Initialize.vi</strong> – Establishes communication and prepares the instrument</p></li>
+<li><p><strong>VI Tree.vi</strong> – A non-functional VI that provides a visual index of all included VIs</p></li>
+<li><p><strong>dir.mnu</strong> – Customizes palette view</p></li>
+<li><p><strong>Readme.html</strong> – A template README file for your driver</p></li>
+</ul>
+</section>
+<section id="folders">
+<h3>Folders<a class="headerlink" href="#folders" title="Link to this heading"></a></h3>
+<p><strong>Public/</strong>
+VIs intended for use by external callers:</p>
+<ul class="simple">
+<li><p><strong>Action-Status/</strong>
+VIs that perform actions or acquire data (e.g., getters)</p></li>
+<li><p><strong>Configure/</strong>
+VIs that change the instrument’s configuration or state (e.g., setters)</p></li>
+<li><p><strong>Data/</strong>
+Includes common I/O operations:
+- <cite>Data Read.vi</cite>
+- <cite>Data Write.vi</cite></p></li>
+<li><p><strong>Utility/</strong>
+Helper and sub-VIs not meant to be called directly</p></li>
+</ul>
+<p><strong>Private/</strong>
+Internal-use VIs not exposed to the end user or calling applications.</p>
+</section>
+</section>
+<section id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading"></a></h2>
+<p>After setting up your LabVIEW project:</p>
+<ul class="simple">
+<li><p>Begin implementing the required functionality using your instrument’s user manual or command set</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We strongly recommend testing each VI with your instrument to verify correct functionality before integrating with RxnRover.</p>
+</div>
+<p>See <a class="reference internal" href="../new_plugin/index.html#create-new-plugin"><span class="std std-ref">Create a New Plugin</span></a> for how to integrate this driver with RxnRover’s plugin system.
+See <a class="reference internal" href="../new_vipm_package/index.html#create-new-vipm-package"><span class="std std-ref">tutorial on creating a VIPM package</span></a> to package your driver for automated installation and distribution.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../new_plugin_type/index.html" class="btn btn-neutral float-left" title="Create New Plugin Type" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../new_vipm_package/index.html" class="btn btn-neutral float-right" title="Create a VIPM Package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Iowa State University.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

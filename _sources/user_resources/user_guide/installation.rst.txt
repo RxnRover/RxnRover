@@ -23,22 +23,40 @@ executable version that can be run with the free `LabVIEW runtime engine
 <https://www.ni.com/en-us/support/downloads/software-products/download.labview-runtime.html#369481>`__,
 but the dynamic nature of Rxn Rover has made this step difficult to implement.
 
-.. Rxn Rover releases page, where the executable will be once it is complete: https://github.com/RxnRover/RxnRover/releases
-
 You also need the Dynamic Reentrant library, developed by the Rxn Rover team
-to facilitate communication between Rxn Rover and its plugins. It can be 
-downloaded from `<https://www.github.com/RxnRover/DynamicReentrant>`_ by clicking
-the "Code" button and selecting "Download ZIP". Extract the ZIP file into your
-`<labview>/user.lib/` directory, where `<labview>` is the location of your 
-LabVIEW installation. `user.lib` is where user-created, common libraries used 
-across multiple projects are located.
+to facilitate communication between Rxn Rover and its plugins. You can install
+this library using either a `.vip` file (via VIPM) or a ZIP archive (for manual installation).
+
+The latest release is available at:
+`https://www.github.com/RxnRover/DynamicReentrant/releases/latest <https://www.github.com/RxnRover/DynamicReentrant/releases/latest>`_
+
+- **VIPM Install:** Download the `.vip` package from the Releases page and install it using the VI Package Manager (VIPM).
+- **Manual Install:** Download the ZIP archive from the same page. Extract its contents into your LabVIEW installation's `user.lib` directory:
+
+  ::
+
+     <labview>/user.lib/
+
+  where `<labview>` refers to the directory where LabVIEW is installed. `user.lib` is where shared or user-created libraries are placed.
+
 
 Rxn Rover Setup
 ---------------
 
 Once the prerequisites are installed:
 
-#. Clone or download/extract the `Rxn Rover repository <https://github.com/RxnRover/RxnRover>`__.
+Install via VIPM:
+
+#. Download the ``.vip`` from `Rxn Rover's release page <https://github.com/RxnRover/RxnRover/releases/latest>`__.
+#. Open ``.vip`` the VIPM application.
+#. Follow the prompts to install Rxn Rover. 
+#. Double-click Main.vi in the top directory of the repository.
+#. Click the "Run" arrow in the top left of the window that opens to run
+   Rxn Rover.
+
+Manual install:
+
+#. Clone or download/extract the `Rxn Rover repository <https://github.com/RxnRover/RxnRover>`__. into your ``Documents`` directory.
 
 #. Double-click Main.vi in the top directory of the repository.
 

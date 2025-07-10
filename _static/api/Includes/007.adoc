@@ -1,0 +1,76 @@
+== Plugin Manager.lvlib
+
+*Responsibility:*
+No description found (add content in lvlib description)
+
+*Version:* 1.0.0.0
+
+=== Functions
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|Create Plugin Directories
+|image:Plugin_Manager.lvlib_Create_Plugin_Directories.vi.png[Plugin Manager.lvlib:Create Plugin Directories.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Get Default Plugin Directories
+|image:Plugin_Manager.lvlib_Get_Default_Plugin_Directories.vi.png[Plugin Manager.lvlib:Get Default Plugin Directories.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Get Plugin Directorys
+|image:Plugin_Manager.lvlib_Get_Plugin_Directorys.vi.png[Plugin Manager.lvlib:Get Plugin Directorys.vi]
+|Returns an array of plugin directories, creating each plugin directory that does not already exist. The plugin directories are determined by the Get Default Plugin Directories VI. An array of booleans parallel to the plugin directories array is also returned, indicating whether each directory was successfully created or already exists (True) or failed to be created (False).
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Load Plugins
+|image:Plugin_Manager.lvlib_Load_Plugins.vi.png[Plugin Manager.lvlib:Load Plugins.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read Controller Details
+|image:Plugin_Manager.lvlib_Read_Controller_Details.vi.png[Plugin Manager.lvlib:Read Controller Details.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read Plugin Details
+|image:Plugin_Manager.lvlib_Read_Plugin_Details.vi.png[Plugin Manager.lvlib:Read Plugin Details.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read Plugin INI
+|image:Plugin_Manager.lvlib_Read_Plugin_INI.vi.png[Plugin Manager.lvlib:Read Plugin INI.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined
+
+=== Library Constant VIs
+
+[NOTE]
+====
+No Constant VIs Found
+====

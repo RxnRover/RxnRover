@@ -1,0 +1,269 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create a VIPM Package &mdash; Rxn Rover  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="API Documentation" href="../../api/index.html" />
+    <link rel="prev" title="Create a New Driver" href="../new_driver/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Rxn Rover
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_resources/user_guide/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_resources/tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_resources/additional_information/index.html">Additional Information</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developer Resources</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../dev_guide/index.html">Developer Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../new_plugin/index.html">Create a New Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../new_plugin_type/index.html">Create New Plugin Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../new_driver/index.html">Create a New Driver</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Create a VIPM Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#general-steps-to-create-a-vipm-package">General Steps to Create a VIPM Package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#first-party-plugins-rxnrover-developers">First-Party Plugins (RxnRover Developers)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#third-party-plugins">Third-Party Plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#build-and-share-the-package">Build and Share the Package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">The Rxn Rover Team</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://RxnRover.github.io">Team Homepage</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://RxnRover.github.io/about">About Us</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://RxnRover.github.io/contact">Contact Us</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Rxn Rover</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Tutorials</a></li>
+      <li class="breadcrumb-item active">Create a VIPM Package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/dev_resources/tutorials/new_vipm_package/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="create-a-vipm-package">
+<span id="create-new-vipm-package"></span><h1>Create a VIPM Package<a class="headerlink" href="#create-a-vipm-package" title="Link to this heading"></a></h1>
+<p>The <a class="reference external" href="https://www.vipm.io/">Virtual Package Manager (VIPM)</a> is a tool for managing LabVIEW packages, including instrument drivers and plugins. Using VIPM, you can create a package from your LabVIEW project that can be easily shared and installed by others.</p>
+<p>This tutorial will guide you through the process of creating a new VIPM package for use with the RxnRover platform.</p>
+<section id="general-steps-to-create-a-vipm-package">
+<h2>General Steps to Create a VIPM Package<a class="headerlink" href="#general-steps-to-create-a-vipm-package" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p><strong>Open VIPM</strong>
+Launch the VI Package Manager application.</p></li>
+<li><p><strong>Create a New Package</strong>
+- Click the <strong>Open VI Package Builder</strong> icon in the VIPM toolbar (top-left).
+- In the Package Builder menu, select <strong>Create New</strong>.
+- Set the <strong>Source Directory</strong> to the root folder of your LabVIEW project.
+- Set the <strong>Product Name</strong> to a meaningful name (e.g., <cite>“IR Sensor Plugin”</cite>).
+- Set the <strong>Company Name</strong> to:
+- <cite>‘RxnRover’</cite> if you’re a first-party developer.
+- Your own company name if you’re a third-party developer.</p>
+<p>This will create a new <code class="docutils literal notranslate"><span class="pre">.vipb</span></code> (VI Package Builder) file named after the Product Name in your project directory.</p>
+</li>
+<li><p><strong>Configure Basic Build Information</strong>
+- <strong>Source Directory</strong>: Points to your LabVIEW project root.
+- <strong>Build Output Directory</strong>: Choose a location like <code class="docutils literal notranslate"><span class="pre">&lt;your-workspace&gt;\VIPMPackages</span></code>.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The rest of the configuration differs slightly depending on whether you’re a <strong>first-party</strong> (RxnRover) or <strong>third-party</strong> developer.</p>
+</div>
+</section>
+<section id="first-party-plugins-rxnrover-developers">
+<h2>First-Party Plugins (RxnRover Developers)<a class="headerlink" href="#first-party-plugins-rxnrover-developers" title="Link to this heading"></a></h2>
+<p>These instructions are for RxnRover developers creating official plugins or drivers.</p>
+<ol class="arabic simple">
+<li><p><strong>Display Information</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Product Name</strong>: Name of your plugin (e.g., “IR Sensor Plugin”).</p></li>
+<li><p><strong>Icon</strong>: Optional.</p></li>
+<li><p><strong>Company Name</strong>: <cite>RxnRover</cite></p></li>
+<li><p><strong>Author Name</strong>: <cite>RxnRover</cite></p></li>
+<li><p><strong>Product Homepage</strong>: <code class="docutils literal notranslate"><span class="pre">https://github.com/RxnRover/&lt;your-plugin-repo&gt;</span></code></p></li>
+<li><p><strong>Copyright</strong>: <cite>Copyright (c) &lt;year&gt; RxnRover</cite></p></li>
+<li><p><strong>License Agreement</strong>: Path to <code class="docutils literal notranslate"><span class="pre">LICENSE.txt</span></code> in your project folder.</p></li>
+<li><p><strong>Summary</strong>: Short description (e.g., “A plugin for IR sensor data acquisition and processing”).</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p><strong>Destinations</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p>Set install location to:
+- <code class="docutils literal notranslate"><span class="pre">Documents\RxnRover\Plugins\&lt;plugin-type&gt;\&lt;Product</span> <span class="pre">Name&gt;</span></code> for plugins.
+- <code class="docutils literal notranslate"><span class="pre">instr.lib\RxnRover\&lt;Product</span> <span class="pre">Name&gt;</span></code> for drivers.</p></li>
+<li><p><strong>Package Filename</strong>:
+Use this format:
+<code class="docutils literal notranslate"><span class="pre">rxn_rover_lib_&lt;product_name&gt;-X.X.X.X.vip</span></code></p></li>
+</ul>
+<p>Continue with the rest of the tutorial.</p>
+</section>
+<section id="third-party-plugins">
+<h2>Third-Party Plugins<a class="headerlink" href="#third-party-plugins" title="Link to this heading"></a></h2>
+<p>For external developers who wish to make their plugin compatible with RxnRover.</p>
+<ol class="arabic simple">
+<li><p><strong>Display Information</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Product Name</strong>: e.g., <cite>“IR Sensor Plugin”</cite></p></li>
+<li><p><strong>Icon</strong>: Optional.</p></li>
+<li><p><strong>Company Name</strong>: Your organization.</p></li>
+<li><p><strong>Author Name</strong>: You or your organization.</p></li>
+<li><p><strong>Product Homepage</strong>: e.g., your GitHub repo.</p></li>
+<li><p><strong>Copyright</strong>: <cite>Copyright (c) &lt;year&gt; &lt;Your Company&gt;</cite></p></li>
+<li><p><strong>License Agreement</strong>: Path to <code class="docutils literal notranslate"><span class="pre">LICENSE.txt</span></code> in your project folder.</p></li>
+<li><p><strong>Summary</strong>: A brief description of the plugin.</p></li>
+<li><p><strong>Description</strong>: Provide a more detailed explanation of the plugin’s features and how to use it.</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p><strong>Destinations</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p>For plugins:
+<code class="docutils literal notranslate"><span class="pre">Documents\RxnRover\Plugins\&lt;plugin-type&gt;\&lt;Product</span> <span class="pre">Name&gt;</span></code></p></li>
+<li><p>For drivers:
+<code class="docutils literal notranslate"><span class="pre">instr.lib\RxnRover\&lt;Product</span> <span class="pre">Name&gt;</span></code></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Keep install paths consistent with RxnRover’s plugin architecture to ensure compatibility.</p>
+</div>
+<ol class="arabic simple" start="3">
+<li><p><strong>Source File Settings</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p>Include:
+- All required <code class="docutils literal notranslate"><span class="pre">.vi</span></code> files
+- Configuration files
+- Documentation (e.g., <code class="docutils literal notranslate"><span class="pre">README.md</span></code>, <code class="docutils literal notranslate"><span class="pre">LICENSE.txt</span></code>)</p></li>
+<li><p>Exclude:
+- <code class="docutils literal notranslate"><span class="pre">.git</span></code>, <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code>, <code class="docutils literal notranslate"><span class="pre">.lvproj</span></code>, other unnecessary dev files.</p></li>
+<li><p>Set the <strong>Package Source Destination</strong> to the install path you defined in the <strong>Destinations</strong> tab.</p></li>
+<li><p>This applies to all subfolders unless explicitly overridden.</p></li>
+</ul>
+<blockquote>
+<div><ol class="arabic simple" start="4">
+<li><p><strong>Package Dependencies</strong></p></li>
+</ol>
+</div></blockquote>
+<ul class="simple">
+<li><p>VIPM will auto-detect most dependencies.</p></li>
+<li><p>Manually add:
+- <cite>RxnRover</cite> (core library)
+- <cite>Dynamic Reentrant</cite> (required for plugin loading)
+- Any other required plugins or drivers.</p></li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If your plugin depends on a specific driver—or vice versa—be sure to include that in the dependencies.</p>
+</div>
+<ol class="arabic simple" start="5">
+<li><p><strong>Install Requirements</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p>Set compatible:
+- <strong>Operating Systems</strong>
+- <strong>LabVIEW Versions</strong></p></li>
+</ul>
+</section>
+<section id="build-and-share-the-package">
+<h2>Build and Share the Package<a class="headerlink" href="#build-and-share-the-package" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Once configuration is complete, click <strong>Build</strong> in the VIPM toolbar.</p></li>
+<li><p>The output <code class="docutils literal notranslate"><span class="pre">.vip</span></code> file will be generated in your chosen directory.</p></li>
+<li><p>Run the <code class="docutils literal notranslate"><span class="pre">.vip</span></code> file to install and test the package using VIPM.</p></li>
+</ol>
+<p>Share your <code class="docutils literal notranslate"><span class="pre">.vip</span></code> file with others or submit it to the RxnRover Plugin Catalog for inclusion.</p>
+<p id="plugin-submission">After creating your plugin consider <a class="reference external" href="https://rxnrover.github.io/PluginCatalog/submissions/plugin_submission_form.html">making a submission</a> to the <a class="reference external" href="https://rxnrover.github.io/PluginCatalog">Rxn Rover Plugin Catalog</a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../new_driver/index.html" class="btn btn-neutral float-left" title="Create a New Driver" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../api/index.html" class="btn btn-neutral float-right" title="API Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Iowa State University.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
