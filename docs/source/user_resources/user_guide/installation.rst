@@ -24,8 +24,21 @@ executable version that can be run with the free `LabVIEW runtime engine
 but the dynamic nature of Rxn Rover has made this step difficult to implement.
 
 You also need the Dynamic Reentrant library, developed by the Rxn Rover team
-to facilitate communication between Rxn Rover and its plugins. Both the ``.vip`` (to install via VIPM) or zip folder(to install manually) can be 
-downloaded from `<https://www.github.com/RxnRover/DynamicReentrant/releases/latest>`_ 
+to facilitate communication between Rxn Rover and its plugins. You can install
+this library using either a `.vip` file (via VIPM) or a ZIP archive (for manual installation).
+
+The latest release is available at:
+`https://www.github.com/RxnRover/DynamicReentrant/releases/latest <https://www.github.com/RxnRover/DynamicReentrant/releases/latest>`_
+
+- **VIPM Install:** Download the `.vip` package from the Releases page and install it using the VI Package Manager (VIPM).
+- **Manual Install:** Download the ZIP archive from the same page. Extract its contents into your LabVIEW installation's `user.lib` directory:
+
+  ::
+
+     <labview>/user.lib/
+
+  where `<labview>` refers to the directory where LabVIEW is installed. `user.lib` is where shared or user-created libraries are placed.
+
 
 Rxn Rover Setup
 ---------------

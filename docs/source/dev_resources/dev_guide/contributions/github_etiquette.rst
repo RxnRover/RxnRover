@@ -1,5 +1,4 @@
 GitHub Etiquette
-================
 
 This section outlines best practices for collaborating on `RxnRover's GitHub <https://github.com/RxnRover>`__ repository.
 

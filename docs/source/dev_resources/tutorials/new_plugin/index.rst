@@ -143,6 +143,3 @@ In the ``Initialize`` case of the LML:
 Follow the :ref:`tutorial on creating a VIPM package <create-new-vipm-package>` to package your plugin for automated installation and distribution.
 After creating your plugin consider `making a submission <https://rxnrover.github.io/PluginCatalog/submissions/plugin_submission_form.html>`__ to the `Rxn Rover Plugin Catalog <https://rxnrover.github.io/PluginCatalog>`__
 
-
-
-

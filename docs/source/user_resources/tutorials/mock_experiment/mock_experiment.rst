@@ -76,7 +76,6 @@ for this plugin can be found under ``First-Party Plugins > Plugin Classes >
 Reactor Components > Mock Pump``. This will be downloaded similarly to the Mock
 LC Analyzer above.
 
-
 Mock Temperature Controller
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -106,6 +105,7 @@ Installing Plugins
    installing other plugins please remember to read the installation 
    instructions provided by the authors carefully!
    
+
 To install the plugins acquired in :ref:`mock-experiment-download-plugins`, double click the .vip files you download, or open them in VIPM (VI Package Manager) 
 and follow the instructions to install them. If you do not have VIPM, you can manually install the plugins by 
 extracting each ZIP file into the ``<documents>/RxnRover/Plugins`` directory, 
