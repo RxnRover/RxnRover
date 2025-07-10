@@ -1,9 +1,24 @@
-== Project Locations.lvlib
+== File IO.lvlib
 
 *Responsibility:*
 No description found (add content in lvlib description)
 
 *Version:* 1.0.0.0
+
+.Nested libraries
+[cols="", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Type
+
+|<<JSON Utilities.lvlib>>
+|Library
+
+|<<LocalAppData Utilities.lvlib>>
+|Library
+
+|<<Project Locations.lvlib>>
+|Library
+|===
 
 === Functions
 
@@ -12,9 +27,34 @@ No description found (add content in lvlib description)
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
-|Config Directory
-|image:File_IO.lvlib_Project_Locations.lvlib_Config_Directory.vi.png[File IO.lvlib:Project Locations.lvlib:Config Directory.vi]
-|Returns the Config directory for the application, independent of whether it is run with the LabVIEW runtime, as a standalone EXE, using an installer, or during development in LabVIEW.
+|Convert Absolute Path to Relative Path from Application
+|image:RxnRover.lvlib_File_IO.lvlib_Convert_Absolute_Path_to_Relative_Path_from_Application.vi.png[RxnRover.lvlib:File IO.lvlib:Convert Absolute Path to Relative Path from Application.vi]
+|Converts a given absolute path to a relative path from the calling application.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Convert Absolute to Relative Path if Executable
+|image:RxnRover.lvlib_File_IO.lvlib_Convert_Absolute_to_Relative_Path_if_Executable.vi.png[RxnRover.lvlib:File IO.lvlib:Convert Absolute to Relative Path if Executable.vi]
+|Converts an absolute path to a relative path if the application is being executed as an executable. The absolute path is retained if a development environment is being used.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Open File Explorer
+|image:RxnRover.lvlib_File_IO.lvlib_Open_File_Explorer.vi.png[RxnRover.lvlib:File IO.lvlib:Open File Explorer.vi]
+|Opens up the file explorer to a location given in a file path (absolute)
+Does this by sending a command into the command terminal, supports Windows, Mac OS, and Linux
+
+Created 5/30/2025
+RxnRover
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Relative Path to Absolute Path
+|image:RxnRover.lvlib_File_IO.lvlib_Relative_Path_to_Absolute_Path.vi.png[RxnRover.lvlib:File IO.lvlib:Relative Path to Absolute Path.vi]
+|Converts a relative path to an absolute path from the application directory.
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]

@@ -1,140 +1,50 @@
-== Generic Optimizer.lvclass
+== test Message Queue.lvlib
 
 *Responsibility:*
-No description found (add content in lvclass description)
+No description found (add content in lvlib description)
 
-*Version:* 1.0.0.8
+*Version:* 1.0.0.0
 
-=== Diagram
-
-[plantuml, format="svg", align="center"]
-....
-@startuml
-set namespaceSeparator :
-skinparam ClassBackgroundColor #FFFFFF
-skinparam ClassBorderColor #555555
-skinparam ClassFontColor #000000
-skinparam ClassHeaderBackgroundColor #808080
-
-skinparam top to bottom direction
-class "Generic Optimizer" {
-{static} {method} +Variant to Optimizer State()
-{method} +Check Valid Message()
-{method} +Control Panel Initialization Message()
-{method} +Listening Server Cases()
-{method} +New Parameter Message()
-{method} +Resource from String()
-{method} +Resource to String()
-{method} +Start Message()
-{method} +Stop Message()
-{method} +Submit Goal()
-{method} +Subpanel UI()
-{method} +Valid Resource Message()
-
-}
-"Generic Plugin" <|-- "Generic Optimizer"
-
-
-
-@enduml
-....
-
-=== Methods
+=== Functions
 
 .Functions (non private scope only)
 [cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
-|Check Valid Message
-|image:Generic_Optimizer.lvclass_Check_Valid_Message.vi.png[Generic Optimizer.lvclass:Check Valid Message.vi]
-|No description found (add content in vi description)
+|Enqueue Message (Array)
+|image:RxnRover.lvlib_test_Message_Queue.lvlib_Enqueue_Message_(Array).vi.png[RxnRover.lvlib:test Message Queue.lvlib:Enqueue Message (Array).vi]
+|For a regular message, enqueue the message. For a priority message, enqueue it at the front of the queue.
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Control Panel Initialization Message
-|image:Generic_Optimizer.lvclass_Control_Panel_Initialization_Message.vi.png[Generic Optimizer.lvclass:Control Panel Initialization Message.vi]
-|Method to generate the initial message to send to a Controller's Control Panel.
-|image:empty.png[empty.png]
-|image:reentrancy-shared.png[reentrancy-shared.png]
-|image:empty.png[empty.png]
-
-|Listening Server Cases
-|image:Generic_Optimizer.lvclass_Listening_Server_Cases.vi.png[Generic Optimizer.lvclass:Listening Server Cases.vi]
-|Case structure with messages to listen for from the control panel. If more than the basic messages need to be handled, this should be overwritten by the child class.
-|image:empty.png[empty.png]
-|image:reentrancy-shared.png[reentrancy-shared.png]
-|image:empty.png[empty.png]
-
-|New Parameter Message
-|image:Generic_Optimizer.lvclass_New_Parameter_Message.vi.png[Generic Optimizer.lvclass:New Parameter Message.vi]
-|Dynamic dispatch for each child controller type to provide it's proper message for setting a new parameter value (setpoint).
+|Enqueue Message (Single)
+|image:RxnRover.lvlib_test_Message_Queue.lvlib_Enqueue_Message_(Single).vi.png[RxnRover.lvlib:test Message Queue.lvlib:Enqueue Message (Single).vi]
+|For a regular message, enqueue the message. For a priority message, enqueue it at the front of the queue.
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Read Valid Messages
-|image:Generic_Optimizer.lvclass_Read_Valid_Messages.vi.png[Generic Optimizer.lvclass:Read Valid Messages.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:reentrancy-shared.png[reentrancy-shared.png]
-|image:empty.png[empty.png]
-
-|Resource from String
-|image:Generic_Optimizer.lvclass_Resource_from_String.vi.png[Generic Optimizer.lvclass:Resource from String.vi]
-|No description found (add content in vi description)
+|Create All Message Queues
+|image:RxnRover.lvlib_test_Message_Queue.lvlib_Create_All_Message_Queues.vi.png[RxnRover.lvlib:test Message Queue.lvlib:Create All Message Queues.vi]
+|This VI creates and initializes all the message queues for your application. If your application requires more than one message queue, right-click the "Message Queues" constant above and select Open Type Def.  Add the new Message Queue(s) to the type definition, then initialize them in this VI. 
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Resource to String
-|image:Generic_Optimizer.lvclass_Resource_to_String.vi.png[Generic Optimizer.lvclass:Resource to String.vi]
-|No description found (add content in vi description)
+|Obtain Message Queue
+|image:RxnRover.lvlib_test_Message_Queue.lvlib_Obtain_Message_Queue.vi.png[RxnRover.lvlib:test Message Queue.lvlib:Obtain Message Queue.vi]
+|Create a queue with the Message Cluster data type.
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Start Message
-|image:Generic_Optimizer.lvclass_Start_Message.vi.png[Generic Optimizer.lvclass:Start Message.vi]
-|No description found (add content in vi description)
+|Dequeue Message
+|image:RxnRover.lvlib_test_Message_Queue.lvlib_Dequeue_Message.vi.png[RxnRover.lvlib:test Message Queue.lvlib:Dequeue Message.vi]
+|This VI pulls messages off the Message Queue.
 |image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|Stop Message
-|image:Generic_Optimizer.lvclass_Stop_Message.vi.png[Generic Optimizer.lvclass:Stop Message.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|Submit Goal
-|image:Generic_Optimizer.lvclass_Submit_Goal.vi.png[Generic Optimizer.lvclass:Submit Goal.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|Subpanel UI
-|image:Generic_Optimizer.lvclass_Subpanel_UI.vi.png[Generic Optimizer.lvclass:Subpanel UI.vi]
-|Dynamic dispatch VI that must be overridden by all inheriting classes. It is the UI that will be inserted into subpanels so data can be displayed to the user. The class will use an internally managed message queue to communicate to it. The user should only communicate to this UI through class methods.
-|image:empty.png[empty.png]
-|image:reentrancy-shared.png[reentrancy-shared.png]
-|image:empty.png[empty.png]
-
-|Valid Resource Message
-|image:Generic_Optimizer.lvclass_Valid_Resource_Message.vi.png[Generic Optimizer.lvclass:Valid Resource Message.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|Variant to Optimizer State
-|image:Generic_Optimizer.lvclass_Variant_to_Optimizer_State.vi.png[Generic Optimizer.lvclass:Variant to Optimizer State.vi]
-|Converts a variant with attributes into a named cluster representing the optimizer state. If a corresponding variant attribute does not exist, the default value for the named element according to the typedef is used.
-|image:empty.png[empty.png]
-|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
 |image:empty.png[empty.png]
 |===
 
@@ -144,7 +54,7 @@ class "Generic Optimizer" {
 
 **I**nlining: image:inlined.png[] -> Inlined
 
-=== Class Constant VIs
+=== Library Constant VIs
 
 [NOTE]
 ====

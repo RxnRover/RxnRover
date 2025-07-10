@@ -1,4 +1,4 @@
-== User Event - Stop.lvlib
+== Experiment File.lvlib
 
 *Responsibility:*
 No description found (add content in lvlib description)
@@ -12,23 +12,23 @@ No description found (add content in lvlib description)
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
-|Create User Event - Stop
-|image:Experiment_Manager.lvlib_User_Event___Stop.lvlib_Create_User_Event___Stop.vi.png[Experiment Manager.lvlib:User Event - Stop.lvlib:Create User Event - Stop.vi]
-|Create a boolean user event that will be used to stop the event loop from the message handling loop.
+|Initialize Experiment File
+|image:RxnRover.lvlib_Experiment_File.lvlib_Initialize_Experiment_File.vi.png[RxnRover.lvlib:Experiment File.lvlib:Initialize Experiment File.vi]
+|Creates a new default experiment file at the given Experiment Directory using the Experiment Name as the file name, based on the Experiment File.ctl cluster. If the file already exists, it will ask the user if they want to overwrite it or not, where cancelled becomes True if the user declines to overwrite the file or False if they chose to overwrite it.
 |image:empty.png[empty.png]
-|image:reentrancy-shared.png[reentrancy-shared.png]
 |image:empty.png[empty.png]
-
-|Fire User Event - Stop
-|image:Experiment_Manager.lvlib_User_Event___Stop.lvlib_Fire_User_Event___Stop.vi.png[Experiment Manager.lvlib:User Event - Stop.lvlib:Fire User Event - Stop.vi]
-|Send the Stop event to stop the Event Handling Loop.
-|image:empty.png[empty.png]
-|image:reentrancy-shared.png[reentrancy-shared.png]
 |image:empty.png[empty.png]
 
-|Destroy User Event - Stop
-|image:Experiment_Manager.lvlib_User_Event___Stop.lvlib_Destroy_User_Event___Stop.vi.png[Experiment Manager.lvlib:User Event - Stop.lvlib:Destroy User Event - Stop.vi]
-|Destroy the user event, even if there is an incoming error.
+|Load Experiment File
+|image:RxnRover.lvlib_Experiment_File.lvlib_Load_Experiment_File.vi.png[RxnRover.lvlib:Experiment File.lvlib:Load Experiment File.vi]
+|Load the given project file or open a file dialog if no path is given. To aid in backwards compatability as new features are added, if a setting is not found in the file, the error is ignored and the undiscovered setting is set to a default value.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Save Experiment File
+|image:RxnRover.lvlib_Experiment_File.lvlib_Save_Experiment_File.vi.png[RxnRover.lvlib:Experiment File.lvlib:Save Experiment File.vi]
+|No description found (add content in vi description)
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]

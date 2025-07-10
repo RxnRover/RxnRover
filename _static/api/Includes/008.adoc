@@ -1,7 +1,7 @@
-== test Message Queue.lvlib
+== LocalAppData Utilities.lvlib
 
 *Responsibility:*
-No description found (add content in lvlib description)
+This library provides a set of VI's designed to work within the user's Local AppData drectory. Including functions to construct appication-specific paths, retrive base paths, create necessary directories, and manage file creation or replacement within the AppData context. 
 
 *Version:* 1.0.0.0
 
@@ -12,39 +12,51 @@ No description found (add content in lvlib description)
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
-|Enqueue Message (Array)
-|image:test_Message_Queue.lvlib_Enqueue_Message_(Array).vi.png[test Message Queue.lvlib:Enqueue Message (Array).vi]
-|For a regular message, enqueue the message. For a priority message, enqueue it at the front of the queue.
+|LocalAppData Build Path
+|image:RxnRover.lvlib_File_IO.lvlib_LocalAppData_Utilities.lvlib_LocalAppData_Build_Path.vi.png[RxnRover.lvlib:File IO.lvlib:LocalAppData Utilities.lvlib:LocalAppData Build Path.vi]
+|Builds a file path with relative path and Local App Data Base Path
+An Operating system must be specified
+Supports: Windows 2000 - Windows 11, Linux, Mac OS
+
+Created 5/20/2025 - Labview 2020
+RxnRover
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Enqueue Message (Single)
-|image:test_Message_Queue.lvlib_Enqueue_Message_(Single).vi.png[test Message Queue.lvlib:Enqueue Message (Single).vi]
-|For a regular message, enqueue the message. For a priority message, enqueue it at the front of the queue.
+|LocalAppData Create Or Replace File
+|image:RxnRover.lvlib_File_IO.lvlib_LocalAppData_Utilities.lvlib_LocalAppData_Create_Or_Replace_File.vi.png[RxnRover.lvlib:File IO.lvlib:LocalAppData Utilities.lvlib:LocalAppData Create Or Replace File.vi]
+|Creates a file of specified name at type at a relative location appended with the aboslute Local App State Data Path
+
+Created 5/20/2025 - Labview 2020
+RxnRover
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Create All Message Queues
-|image:test_Message_Queue.lvlib_Create_All_Message_Queues.vi.png[test Message Queue.lvlib:Create All Message Queues.vi]
-|This VI creates and initializes all the message queues for your application. If your application requires more than one message queue, right-click the "Message Queues" constant above and select Open Type Def.  Add the new Message Queue(s) to the type definition, then initialize them in this VI. 
+|LocalAppData Get Base Path
+|image:RxnRover.lvlib_File_IO.lvlib_LocalAppData_Utilities.lvlib_LocalAppData_Get_Base_Path.vi.png[RxnRover.lvlib:File IO.lvlib:LocalAppData Utilities.lvlib:LocalAppData Get Base Path.vi]
+|Uses command prompt based off of the current operating system to retrive the LocalAppData base path
+Supports: Windows 2000 - Windows 11, Linux, Mac OS
+
+Created 5/20/2025 - Labview 2020
+RxnRover
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Obtain Message Queue
-|image:test_Message_Queue.lvlib_Obtain_Message_Queue.vi.png[test Message Queue.lvlib:Obtain Message Queue.vi]
-|Create a queue with the Message Cluster data type.
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
+|LocalAppData Get or Create App Directory
+|image:RxnRover.lvlib_File_IO.lvlib_LocalAppData_Utilities.lvlib_LocalAppData_Get_or_Create_App_Directory.vi.png[RxnRover.lvlib:File IO.lvlib:LocalAppData Utilities.lvlib:LocalAppData Get or Create App Directory.vi]
+|Create or access a local app directory given a relative path(String) EX: appname/appdirectory
 
-|Dequeue Message
-|image:test_Message_Queue.lvlib_Dequeue_Message.vi.png[test Message Queue.lvlib:Dequeue Message.vi]
-|This VI pulls messages off the Message Queue.
+Locates the correct system-specfic base directory for state data %LOCALAPPDATA(WIndows) or $XDG_STATE_HOME(Linux) or ~/Library/Application Support(Mac OS) and appends the relative path
+Creates the directory if it does not exist. 
+Compliant with XKG Base Directory Specification 
+
+Created 5/20/2025 - Labview 2020
+RxnRover
 |image:empty.png[empty.png]
-|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |===
 

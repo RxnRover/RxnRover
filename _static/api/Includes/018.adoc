@@ -1,35 +1,124 @@
-== Antidoc
+== Passive Hardware.lvclass
 
-Project website: https://gitlab.com/wovalab/open-source/labview-doc-generator[Antidoc] 
+*Responsibility:*
+Passive Hardware class which is a Controller Type within RxnRover, and is used to support passive instrument integration.  Passive Hardware typically operates in a read-only or passive capacity and requires minimal interaction with RxnRover itself. An example of a passive-hardware device in the context of RxnRover is a pH probe, or other sensors. 
 
-Maintainer website: https://www.wovalab.com[Wovalab] 
+*Version:* 1.0.0.1
 
-BSD 3-Clause License
+=== Diagram
 
-Copyright (C) 2019-2025, Wovalab,
-All rights reserved.
+[plantuml, format="svg", align="center"]
+....
+@startuml
+set namespaceSeparator :
+skinparam ClassBackgroundColor #FFFFFF
+skinparam ClassBorderColor #555555
+skinparam ClassFontColor #000000
+skinparam ClassHeaderBackgroundColor #808080
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
+skinparam top to bottom direction
+class "RxnRover.lvlib:Passive Hardware" {
+{field} +Valid Messages : Array of String
+{static} {method} +Update Data Plot()
+{static} {method} +Variant to Instrument State()
+{method} +Check Valid Message()
+{method} +Control Panel Initialization Message()
+{method} +New Parameter Message()
+{method} +Start Message()
+{method} +Stop Message()
+{method} +Subpanel UI()
 
-* Redistributions of source code must retain the above copyright notice, this
-  list of conditions and the following disclaimer.
+}
+"RxnRover.lvlib:Generic Plugin" <|-- "RxnRover.lvlib:Passive Hardware"
 
-* Redistributions in binary form must reproduce the above copyright notice,
-  this list of conditions and the following disclaimer in the documentation
-  and/or other materials provided with the distribution.
 
-* Neither the name of the copyright holder nor the names of its
-  contributors may be used to endorse or promote products derived from
-  this software without specific prior written permission.
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+@enduml
+....
+
+=== Methods
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|Check Valid Message
+|image:RxnRover.lvlib_Passive_Hardware.lvclass_Check_Valid_Message.vi.png[RxnRover.lvlib:Passive Hardware.lvclass:Check Valid Message.vi]
+|Checks if a message recieved from a Passive-Hardware instrument is valid by comparing it to a list of valid messages. 
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Control Panel Initialization Message
+|image:RxnRover.lvlib_Passive_Hardware.lvclass_Control_Panel_Initialization_Message.vi.png[RxnRover.lvlib:Passive Hardware.lvclass:Control Panel Initialization Message.vi]
+|Method to generate the initial message to send to a Controller's Control Panel.
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|New Parameter Message
+|image:RxnRover.lvlib_Passive_Hardware.lvclass_New_Parameter_Message.vi.png[RxnRover.lvlib:Passive Hardware.lvclass:New Parameter Message.vi]
+|Dynamic dispatch for each child controller type to provide it's proper message for setting a new parameter value (setpoint).
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read Valid Messages
+|image:RxnRover.lvlib_Passive_Hardware.lvclass_Read_Valid_Messages.vi.png[RxnRover.lvlib:Passive Hardware.lvclass:Read Valid Messages.vi]
+|Reads the list of valid messages
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|Start Message
+|image:RxnRover.lvlib_Passive_Hardware.lvclass_Start_Message.vi.png[RxnRover.lvlib:Passive Hardware.lvclass:Start Message.vi]
+|Returns the message which will notify RxnRover to start collecting data from a Passive-Instrument. 
+Message is not sent in this VI just created.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Stop Message
+|image:RxnRover.lvlib_Passive_Hardware.lvclass_Stop_Message.vi.png[RxnRover.lvlib:Passive Hardware.lvclass:Stop Message.vi]
+|Returns the stop message to tell RxnRover to stop collecting data from a Passive-Hardware instrument.
+Does not send the message just creates it to be sent later.
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Subpanel UI
+|image:RxnRover.lvlib_Passive_Hardware.lvclass_Subpanel_UI.vi.png[RxnRover.lvlib:Passive Hardware.lvclass:Subpanel UI.vi]
+|Dynamic dispatch VI that must be overridden by all inheriting classes. It is the UI that will be inserted into subpanels so data can be displayed to the user. The class will use an internally managed message queue to communicate to it. The user should only communicate to this UI through class methods.
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|Update Data Plot
+|image:RxnRover.lvlib_Passive_Hardware.lvclass_Update_Data_Plot.vi.png[RxnRover.lvlib:Passive Hardware.lvclass:Update Data Plot.vi]
+|Updates the data plot from data collected from a Passive-Hardware instrument in given time intervals.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Variant to Instrument State
+|image:RxnRover.lvlib_Passive_Hardware.lvclass_Variant_to_Instrument_State.vi.png[RxnRover.lvlib:Passive Hardware.lvclass:Variant to Instrument State.vi]
+|Converts the instrument state messages sent from the plugin to the internal state managed by RxnRover's plugin server.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined
+
+=== Class Constant VIs
+
+[NOTE]
+====
+No Constant VIs Found
+====

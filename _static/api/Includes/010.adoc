@@ -1,117 +1,117 @@
-== Controller Array.lvclass
+== Plugin Manager.lvlib
 
 *Responsibility:*
-No description found (add content in lvclass description)
+No description found (add content in lvlib description)
 
-*Version:* 1.0.0.3
+*Version:* 1.0.0.0
 
-=== Diagram
-
-[plantuml, format="svg", align="center"]
-....
-@startuml
-set namespaceSeparator :
-skinparam ClassBackgroundColor #FFFFFF
-skinparam ClassBorderColor #555555
-skinparam ClassFontColor #000000
-skinparam ClassHeaderBackgroundColor #808080
-
-skinparam top to bottom direction
-class "Controller Array" {
-{field} +Array : Array of LV Class
-{static} {method} +Array Size()
-{static} {method} +As Minimal Cluster Array()
-{static} {method} +Delete From Array()
-{static} {method} +Index Array()
-{static} {method} +Insert Into Array()
-{static} {method} +Register Controller()
-{static} {method} +Replace Subset Array()
-{static} {method} +Replace Subset Element()
-{static} {method} -Search Array by Controller Type()
-{static} {method} -Search Array by Name()
-{static} {method} +Search Array()
-
-}
-
-"Controller Array" o-- "Generic Plugin"
-
-
-@enduml
-....
-
-=== Methods
+=== Functions
 
 .Functions (non private scope only)
 [cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
-|Array Size
-|image:Controller_Array.lvclass_Array_Size.vi.png[Controller Array.lvclass:Array Size.vi]
+|Create Plugin Directories
+|image:RxnRover.lvlib_Plugin_Manager.lvlib_Create_Plugin_Directories.vi.png[RxnRover.lvlib:Plugin Manager.lvlib:Create Plugin Directories.vi]
 |No description found (add content in vi description)
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|As Minimal Cluster Array
-|image:Controller_Array.lvclass_As_Minimal_Cluster_Array.vi.png[Controller Array.lvclass:As Minimal Cluster Array.vi]
+|Filter Invalid Plugins
+|image:RxnRover.lvlib_Plugin_Manager.lvlib_Filter_Invalid_Plugins.vi.png[RxnRover.lvlib:Plugin Manager.lvlib:Filter Invalid Plugins.vi]
+|Filter for valid plugins and sort them into two different plugin.ctl arrays, Valid Plugins which should continute to be loaded and fitlered, and invalid plugins which will be logged and notified to the user. 
+
+Created 5/15/2025 - Labview 2020
+RxnRover
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Filter Plugins
+|image:RxnRover.lvlib_Plugin_Manager.lvlib_Filter_Plugins.vi.png[RxnRover.lvlib:Plugin Manager.lvlib:Filter Plugins.vi]
+|Filters the list of plugins for only those of the given plugin type.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Generate Plugin Error String Array
+|image:RxnRover.lvlib_Plugin_Manager.lvlib_Generate_Plugin_Error_String_Array.vi.png[RxnRover.lvlib:Plugin Manager.lvlib:Generate Plugin Error String Array.vi]
+|Helper VI which formats plugin error clusters and ouputs an array of formatted strings (This subVI does not write to a log file)
+With the format;
+[Time RTC 3339] [Plugin Name] Error: Message
+[Time RTC 3339] [Plugin Name] Error: Message
+[Time RTC 3339] [Plugin Name] Error: Message
+. . .
+
+Created 5/20/2025 - Labview 2020
+RxnRover
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Get Default Plugin Directories
+|image:RxnRover.lvlib_Plugin_Manager.lvlib_Get_Default_Plugin_Directories.vi.png[RxnRover.lvlib:Plugin Manager.lvlib:Get Default Plugin Directories.vi]
 |No description found (add content in vi description)
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Delete From Array
-|image:Controller_Array.lvclass_Delete_From_Array.vi.png[Controller Array.lvclass:Delete From Array.vi]
-|Deletes a controller entry from the array, returning the deleted item.
+|Get Plugin Directorys
+|image:RxnRover.lvlib_Plugin_Manager.lvlib_Get_Plugin_Directorys.vi.png[RxnRover.lvlib:Plugin Manager.lvlib:Get Plugin Directorys.vi]
+|Returns an array of plugin directories, creating each plugin directory that does not already exist. The plugin directories are determined by the Get Default Plugin Directories VI. An array of booleans parallel to the plugin directories array is also returned, indicating whether each directory was successfully created or already exists (True) or failed to be created (False).
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Index Array
-|image:Controller_Array.lvclass_Index_Array.vi.png[Controller Array.lvclass:Index Array.vi]
-|No description found (add content in vi description)
+|Handle Plugin Errors
+|image:RxnRover.lvlib_Plugin_Manager.lvlib_Handle_Plugin_Errors.vi.png[RxnRover.lvlib:Plugin Manager.lvlib:Handle Plugin Errors.vi]
+|Handles RxnRover plugin errors by displayig a dialog message including list of the invalid plugin names in the RxnRover menu and logs the details of any errors in a .txt file (pluginerrors.txt)
+
+Created:
+RxnRover
+May 26, 2025
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Insert Into Array
-|image:Controller_Array.lvclass_Insert_Into_Array.vi.png[Controller Array.lvclass:Insert Into Array.vi]
-|Insert an element into the array at the specified index.
+|Load Plugins
+|image:RxnRover.lvlib_Plugin_Manager.lvlib_Load_Plugins.vi.png[RxnRover.lvlib:Plugin Manager.lvlib:Load Plugins.vi]
+|The core loader for plugins which initializes a Plugin Array, reads their configuration files and outputs a completed Plugin Array. This VI is currently called by Load Details and Filter Plugins. This VI calls several helper VIs starting with Read Plugins INI. 
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Read Array
-|image:Controller_Array.lvclass_Read_Array.vi.png[Controller Array.lvclass:Read Array.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
-|image:inlined.png[inlined.png]
+|Log Plugin Errors
+|image:RxnRover.lvlib_Plugin_Manager.lvlib_Log_Plugin_Errors.vi.png[RxnRover.lvlib:Plugin Manager.lvlib:Log Plugin Errors.vi]
+|This VI logs errors within invalid RxnRover plugins in a .txt file located at : 
+with the format;
+[Time RTC 3339] [Plugin name] Error : (error message)             
+[Time RTC 3339] [Plugin name] Error : (error message)              
+[Time RTC 3339] [Plugin name] Error : (error message)              
+. . .
 
-|Register Controller
-|image:Controller_Array.lvclass_Register_Controller.vi.png[Controller Array.lvclass:Register Controller.vi]
-|Given a control type and name, load a controller of that name and add it to the end of the controller array.
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
+If there are no errors present, or invalid plugins, a .txt log file will not be created.
+log file is overwritten at the standard path each time Load Plugins.vi is called (It does not create an additional log file)
+Errors are generated within the Read Configuration File .vi and sorted as invalid plugins within the Filter Invalid Plugins.vi
 
-|Replace Subset Array
-|image:Controller_Array.lvclass_Replace_Subset_Array.vi.png[Controller Array.lvclass:Replace Subset Array.vi]
-|No description found (add content in vi description)
+Created 5/20/2025 - Labview 2020
+RxnRover
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Replace Subset Element
-|image:Controller_Array.lvclass_Replace_Subset_Element.vi.png[Controller Array.lvclass:Replace Subset Element.vi]
-|No description found (add content in vi description)
+|Read Plugin Configuration
+|image:RxnRover.lvlib_Plugin_Manager.lvlib_Read_Plugin_Configuration.vi.png[RxnRover.lvlib:Plugin Manager.lvlib:Read Plugin Configuration.vi]
+|Reads .conf (configuration file) included for each plugin while also checking if the .conf file is valid,  then fills that information into an array of plugin details. If there are any invalid entries within the .conf file an error message with the specifc cause and a debug message is added to the Config Error cluster within plugin details. Logging is dealt with later in other VI's (Filter Invalid Plugins.vi , Log Plugin Errors.vi etc.)
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Search Array
-|image:Controller_Array.lvclass_Search_Array.vi.png[Controller Array.lvclass:Search Array.vi]
-|Search the array of controllers for the specified Searchable Property, using the Search Value by casting it to the type of the Searchable Property. This VI will only return the first occurance.  If no element was found, it returns an index of -1 and a generic controller object.
+|Read Plugin INI
+|image:RxnRover.lvlib_Plugin_Manager.lvlib_Read_Plugin_INI.vi.png[RxnRover.lvlib:Plugin Manager.lvlib:Read Plugin INI.vi]
+|Reads an INI file defining a plugin to be loaded.
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
@@ -123,7 +123,7 @@ class "Controller Array" {
 
 **I**nlining: image:inlined.png[] -> Inlined
 
-=== Class Constant VIs
+=== Library Constant VIs
 
 [NOTE]
 ====
