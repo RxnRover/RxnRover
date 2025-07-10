@@ -1,9 +1,9 @@
-== User Preferences File.lvclass
+== Parameter to Hardware Map.lvclass
 
 *Responsibility:*
-No description found (add content in lvclass description)
+Unordered map structure containing a list of key-value pairs associating a unique parameter name (key) with a hardware object (value).
 
-*Version:* 1.0.0.2
+*Version:* 1.0.0.0
 
 === Diagram
 
@@ -17,20 +17,24 @@ skinparam ClassFontColor #000000
 skinparam ClassHeaderBackgroundColor #808080
 
 skinparam top to bottom direction
-class "User Preferences File" {
-{field} +File Name : String
-{field} +File Location : Path
-{field} +User Preferences : Cluster
-{static} {method} +Add Recent Project()
-{static} {method} +Clear Recent Experiments()
-{static} {method} +Convert Home Directory Tokens()
-{static} {method} +Create If File Does Not Exist()
-{static} {method} +Default File Name()
-{static} {method} +Default File Path()
-{static} {method} +DefaultUserSettings Full Path()
-{static} {method} +Init()
-{static} {method} +Load()
-{static} {method} +Save()
+class "RxnRover.lvlib:Parameter to Hardware Map" {
+{field} #unordered_map : Array of Cluster
+{static} {method} +As Minimal Cluster()
+{static} {method} +Clear()
+{static} {method} +Empty()
+{static} {method} +Equals()
+{static} {method} +Erase (array)()
+{static} {method} #Erase (index)()
+{static} {method} +Erase (single)()
+{static} {method} +Find (array)()
+{static} {method} +Find (single)()
+{static} {method} #Find Index (single)()
+{static} {method} +Insert (array)()
+{static} {method} +Insert (element)()
+{static} {method} +Insert (key-value)()
+{static} {method} #Repeat Key()
+{static} {method} +Size()
+{static} {method} +Swap()
 
 }
 
@@ -46,117 +50,138 @@ class "User Preferences File" {
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
-|Add Recent Project
-|image:User_Preferences_File.lvclass_Add_Recent_Project.vi.png[User Preferences File.lvclass:Add Recent Project.vi]
-|Adds a new path to the Recent Experiments list. This Recent Experiment list is kept in chronological order, so the newly added Recent Experiment will always be at the top. If the new experiment already exists, the old entry is removed and the new entry is placed at the top of the Recent Experiments list.
+|As Minimal Cluster
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_As_Minimal_Cluster.vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:As Minimal Cluster.vi]
+|Returns a minimal representation of the entire map using only serializable data types (mostly strings, arrays, and clusters)
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Clear Recent Experiments
-|image:User_Preferences_File.lvclass_Clear_Recent_Experiments.vi.png[User Preferences File.lvclass:Clear Recent Experiments.vi]
-|Clears all entries in the Recent Experiments list.
+|Clear
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Clear.vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Clear.vi]
+|Remove all elements from the map, resulting in a size of 0.
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Convert Home Directory Tokens
-|image:User_Preferences_File.lvclass_Convert_Home_Directory_Tokens.vi.png[User Preferences File.lvclass:Convert Home Directory Tokens.vi]
-|Checks if a recognized home directory token was given and provides the home directory path using the built-in Get System Directory VI for the User Home directory. This VI will not create the directory if it does not exist and will not modify the given input token path if a valid token is not found.
+|Empty
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Empty.vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Empty.vi]
+|Test if the container is empty.
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Create If File Does Not Exist
-|image:User_Preferences_File.lvclass_Create_If_File_Does_Not_Exist.vi.png[User Preferences File.lvclass:Create If File Does Not Exist.vi]
-|Creates the user preferences file with default values if it does not exist. The Init VI or custom values for file name and location must be set before running this VI.
+|Equals
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Equals.vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Equals.vi]
+|Test if two maps are equal. Item order is not considered. Maps are considered equal if all elements of map_1 are included in map_2 and all elements of map_2 are included in map_1.
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Default File Name
-|image:User_Preferences_File.lvclass_Default_File_Name.vi.png[User Preferences File.lvclass:Default File Name.vi]
-|No description found (add content in vi description)
+|Erase (array)
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Erase_(array).vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Erase (array).vi]
+|Removes all elements from the map specified in the array of keys.
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Default File Path
-|image:User_Preferences_File.lvclass_Default_File_Path.vi.png[User Preferences File.lvclass:Default File Path.vi]
-|No description found (add content in vi description)
+|Erase (index)
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Erase_(index).vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Erase (index).vi]
+|Removes the element from the map specified by the given index.
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Erase (single)
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Erase_(single).vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Erase (single).vi]
+|Removes the element from the map specified by the given key.
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|DefaultUserSettings Full Path
-|image:User_Preferences_File.lvclass_DefaultUserSettings_Full_Path.vi.png[User Preferences File.lvclass:DefaultUserSettings Full Path.vi]
-|Location of the DefaultUserSettings.ini configuration file.
+|Find (array)
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Find_(array).vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Find (array).vi]
+|Find the elements from the map matching the given keys. A parallel boolean array is provided, where each entry indicates whether the key-value pair in the corresponding Key-Value Pairs output array position was found.s
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Init
-|image:User_Preferences_File.lvclass_Init.vi.png[User Preferences File.lvclass:Init.vi]
-|Initialize the file manager with default file names and locations for the given operating system. This VI does not create the file or load it.
+|Find (single)
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Find_(single).vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Find (single).vi]
+|Find the element from the map matching the given key.
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Load
-|image:User_Preferences_File.lvclass_Load.vi.png[User Preferences File.lvclass:Load.vi]
-|Load the preferences file from disk into memory. The loaded file can be accessed through the appropriate accessor members. The initialization member VI should be executed before this VI is run.
+|Find Index (single)
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Find_Index_(single).vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Find Index (single).vi]
+|Return the index from the map specified by the given key.
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Insert (array)
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Insert_(array).vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Insert (array).vi]
+|Insert the given key-value pairs into the map.
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Read File Location
-|image:User_Preferences_File.lvclass_Read_File_Location.vi.png[User Preferences File.lvclass:Read File Location.vi]
-|No description found (add content in vi description)
+|Insert (element)
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Insert_(element).vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Insert (element).vi]
+|Insert the given key-value pair into the map.
 |image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Insert (key-value)
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Insert_(key_value).vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Insert (key-value).vi]
+|Create and insert a key-value pair into the map using the given key and value.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read keys
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Read_keys.vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Read keys.vi]
+|Returns the underlying unordered_map array.
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|Read unordered_map
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Read_unordered_map.vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Read unordered_map.vi]
+|Returns the underlying unordered_map array.
+|image:scope-protected.png[scope-protected.png]
 |image:reentrancy-preallocated.png[reentrancy-preallocated.png]
 |image:inlined.png[inlined.png]
 
-|Read File Name
-|image:User_Preferences_File.lvclass_Read_File_Name.vi.png[User Preferences File.lvclass:Read File Name.vi]
-|No description found (add content in vi description)
+|Repeat Key
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Repeat_Key.vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Repeat Key.vi]
+|Checks if the given key is a repeat of one in the map
+|image:scope-protected.png[scope-protected.png]
 |image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Size
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Size.vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Size.vi]
+|Return the size of the map.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Swap
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Swap.vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Swap.vi]
+|Swaps the elements of one Parameter to Hardware Map with another.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Write unordered_map
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Write_unordered_map.vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Write unordered_map.vi]
+|Overwrites the underlying unordered_map array.
+|image:scope-protected.png[scope-protected.png]
 |image:reentrancy-preallocated.png[reentrancy-preallocated.png]
 |image:inlined.png[inlined.png]
-
-|Read User Preferences
-|image:User_Preferences_File.lvclass_Read_User_Preferences.vi.png[User Preferences File.lvclass:Read User Preferences.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|Save
-|image:User_Preferences_File.lvclass_Save.vi.png[User Preferences File.lvclass:Save.vi]
-|Format the User Preferences file as a readable JSON file and write it to disk.
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|Write File Location
-|image:User_Preferences_File.lvclass_Write_File_Location.vi.png[User Preferences File.lvclass:Write File Location.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
-|image:inlined.png[inlined.png]
-
-|Write File Name
-|image:User_Preferences_File.lvclass_Write_File_Name.vi.png[User Preferences File.lvclass:Write File Name.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
-|image:inlined.png[inlined.png]
-
-|Write User Preferences
-|image:User_Preferences_File.lvclass_Write_User_Preferences.vi.png[User Preferences File.lvclass:Write User Preferences.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
 |===
 
 **S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community

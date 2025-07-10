@@ -1,9 +1,9 @@
-== Parameter to Hardware Map.lvclass
+== Generic Optimizer.lvclass
 
 *Responsibility:*
-Unordered map structure containing a list of key-value pairs associating a unique parameter name (key) with a hardware object (value).
+No description found (add content in lvclass description)
 
-*Version:* 1.0.0.3
+*Version:* 1.0.0.1
 
 === Diagram
 
@@ -17,26 +17,22 @@ skinparam ClassFontColor #000000
 skinparam ClassHeaderBackgroundColor #808080
 
 skinparam top to bottom direction
-class "Parameter to Hardware Map" {
-{field} #unordered_map : Array of Cluster
-{static} {method} +As Minimal Cluster()
-{static} {method} +Clear()
-{static} {method} +Empty()
-{static} {method} +Equals()
-{static} {method} +Erase (array)()
-{static} {method} #Erase (index)()
-{static} {method} +Erase (single)()
-{static} {method} +Find (array)()
-{static} {method} +Find (single)()
-{static} {method} #Find Index (single)()
-{static} {method} +Insert (array)()
-{static} {method} +Insert (element)()
-{static} {method} +Insert (key-value)()
-{static} {method} #Repeat Key()
-{static} {method} +Size()
-{static} {method} +Swap()
+class "RxnRover.lvlib:Generic Optimizer" {
+{static} {method} +Variant to Optimizer State()
+{method} +Control Panel Initialization Message()
+{method} +New Parameter Message()
+{method} +Start Message()
+{method} +Stop Message()
+{method} +Valid Resource Message()
+{method} +Submit Goal()
+{method} +Listening Server Cases()
+{method} +Resource from String()
+{method} +Resource to String()
+{method} +Subpanel UI()
+{method} +Check Valid Message()
 
 }
+"RxnRover.lvlib:Generic Plugin" <|-- "RxnRover.lvlib:Generic Optimizer"
 
 
 
@@ -50,138 +46,96 @@ class "Parameter to Hardware Map" {
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
-|As Minimal Cluster
-|image:Parameter_to_Hardware_Map.lvclass_As_Minimal_Cluster.vi.png[Parameter to Hardware Map.lvclass:As Minimal Cluster.vi]
-|Returns a minimal representation of the entire map using only serializable data types (mostly strings, arrays, and clusters)
+|Control Panel Initialization Message
+|image:RxnRover.lvlib_Generic_Optimizer.lvclass_Control_Panel_Initialization_Message.vi.png[RxnRover.lvlib:Generic Optimizer.lvclass:Control Panel Initialization Message.vi]
+|Method to generate the initial message to send to a Controller's Control Panel.
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|New Parameter Message
+|image:RxnRover.lvlib_Generic_Optimizer.lvclass_New_Parameter_Message.vi.png[RxnRover.lvlib:Generic Optimizer.lvclass:New Parameter Message.vi]
+|Dynamic dispatch for each child controller type to provide it's proper message for setting a new parameter value (setpoint).
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Clear
-|image:Parameter_to_Hardware_Map.lvclass_Clear.vi.png[Parameter to Hardware Map.lvclass:Clear.vi]
-|Remove all elements from the map, resulting in a size of 0.
+|Start Message
+|image:RxnRover.lvlib_Generic_Optimizer.lvclass_Start_Message.vi.png[RxnRover.lvlib:Generic Optimizer.lvclass:Start Message.vi]
+|No description found (add content in vi description)
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Empty
-|image:Parameter_to_Hardware_Map.lvclass_Empty.vi.png[Parameter to Hardware Map.lvclass:Empty.vi]
-|Test if the container is empty.
+|Stop Message
+|image:RxnRover.lvlib_Generic_Optimizer.lvclass_Stop_Message.vi.png[RxnRover.lvlib:Generic Optimizer.lvclass:Stop Message.vi]
+|No description found (add content in vi description)
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Equals
-|image:Parameter_to_Hardware_Map.lvclass_Equals.vi.png[Parameter to Hardware Map.lvclass:Equals.vi]
-|Test if two maps are equal. Item order is not considered. Maps are considered equal if all elements of map_1 are included in map_2 and all elements of map_2 are included in map_1.
+|Valid Resource Message
+|image:RxnRover.lvlib_Generic_Optimizer.lvclass_Valid_Resource_Message.vi.png[RxnRover.lvlib:Generic Optimizer.lvclass:Valid Resource Message.vi]
+|No description found (add content in vi description)
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Erase (array)
-|image:Parameter_to_Hardware_Map.lvclass_Erase_(array).vi.png[Parameter to Hardware Map.lvclass:Erase (array).vi]
-|Removes all elements from the map specified in the array of keys.
+|Submit Goal
+|image:RxnRover.lvlib_Generic_Optimizer.lvclass_Submit_Goal.vi.png[RxnRover.lvlib:Generic Optimizer.lvclass:Submit Goal.vi]
+|No description found (add content in vi description)
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Erase (index)
-|image:Parameter_to_Hardware_Map.lvclass_Erase_(index).vi.png[Parameter to Hardware Map.lvclass:Erase (index).vi]
-|Removes the element from the map specified by the given index.
-|image:scope-protected.png[scope-protected.png]
+|Listening Server Cases
+|image:RxnRover.lvlib_Generic_Optimizer.lvclass_Listening_Server_Cases.vi.png[RxnRover.lvlib:Generic Optimizer.lvclass:Listening Server Cases.vi]
+|Case structure with messages to listen for from the control panel. If more than the basic messages need to be handled, this should be overwritten by the child class.
 |image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|Erase (single)
-|image:Parameter_to_Hardware_Map.lvclass_Erase_(single).vi.png[Parameter to Hardware Map.lvclass:Erase (single).vi]
-|Removes the element from the map specified by the given key.
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
 |image:empty.png[empty.png]
 
-|Find (array)
-|image:Parameter_to_Hardware_Map.lvclass_Find_(array).vi.png[Parameter to Hardware Map.lvclass:Find (array).vi]
-|Find the elements from the map matching the given keys. A parallel boolean array is provided, where each entry indicates whether the key-value pair in the corresponding Key-Value Pairs output array position was found.s
+|Resource from String
+|image:RxnRover.lvlib_Generic_Optimizer.lvclass_Resource_from_String.vi.png[RxnRover.lvlib:Generic Optimizer.lvclass:Resource from String.vi]
+|No description found (add content in vi description)
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Find (single)
-|image:Parameter_to_Hardware_Map.lvclass_Find_(single).vi.png[Parameter to Hardware Map.lvclass:Find (single).vi]
-|Find the element from the map matching the given key.
+|Resource to String
+|image:RxnRover.lvlib_Generic_Optimizer.lvclass_Resource_to_String.vi.png[RxnRover.lvlib:Generic Optimizer.lvclass:Resource to String.vi]
+|No description found (add content in vi description)
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Find Index (single)
-|image:Parameter_to_Hardware_Map.lvclass_Find_Index_(single).vi.png[Parameter to Hardware Map.lvclass:Find Index (single).vi]
-|Return the index from the map specified by the given key.
-|image:scope-protected.png[scope-protected.png]
+|Read Valid Messages
+|image:RxnRover.lvlib_Generic_Optimizer.lvclass_Read_Valid_Messages.vi.png[RxnRover.lvlib:Generic Optimizer.lvclass:Read Valid Messages.vi]
+|No description found (add content in vi description)
 |image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|Insert (array)
-|image:Parameter_to_Hardware_Map.lvclass_Insert_(array).vi.png[Parameter to Hardware Map.lvclass:Insert (array).vi]
-|Insert the given key-value pairs into the map.
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
 |image:empty.png[empty.png]
 
-|Insert (element)
-|image:Parameter_to_Hardware_Map.lvclass_Insert_(element).vi.png[Parameter to Hardware Map.lvclass:Insert (element).vi]
-|Insert the given key-value pair into the map.
+|Subpanel UI
+|image:RxnRover.lvlib_Generic_Optimizer.lvclass_Subpanel_UI.vi.png[RxnRover.lvlib:Generic Optimizer.lvclass:Subpanel UI.vi]
+|Dynamic dispatch VI that must be overridden by all inheriting classes. It is the UI that will be inserted into subpanels so data can be displayed to the user. The class will use an internally managed message queue to communicate to it. The user should only communicate to this UI through class methods.
 |image:empty.png[empty.png]
-|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
 |image:empty.png[empty.png]
 
-|Insert (key-value)
-|image:Parameter_to_Hardware_Map.lvclass_Insert_(key_value).vi.png[Parameter to Hardware Map.lvclass:Insert (key-value).vi]
-|Create and insert a key-value pair into the map using the given key and value.
+|Check Valid Message
+|image:RxnRover.lvlib_Generic_Optimizer.lvclass_Check_Valid_Message.vi.png[RxnRover.lvlib:Generic Optimizer.lvclass:Check Valid Message.vi]
+|No description found (add content in vi description)
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Read keys
-|image:Parameter_to_Hardware_Map.lvclass_Read_keys.vi.png[Parameter to Hardware Map.lvclass:Read keys.vi]
-|Returns the underlying unordered_map array.
+|Variant to Optimizer State
+|image:RxnRover.lvlib_Generic_Optimizer.lvclass_Variant_to_Optimizer_State.vi.png[RxnRover.lvlib:Generic Optimizer.lvclass:Variant to Optimizer State.vi]
+|Converts a variant with attributes into a named cluster representing the optimizer state. If a corresponding variant attribute does not exist, the default value for the named element according to the typedef is used.
 |image:empty.png[empty.png]
-|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
 |image:empty.png[empty.png]
-
-|Read unordered_map
-|image:Parameter_to_Hardware_Map.lvclass_Read_unordered_map.vi.png[Parameter to Hardware Map.lvclass:Read unordered_map.vi]
-|Returns the underlying unordered_map array.
-|image:scope-protected.png[scope-protected.png]
-|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
-|image:inlined.png[inlined.png]
-
-|Repeat Key
-|image:Parameter_to_Hardware_Map.lvclass_Repeat_Key.vi.png[Parameter to Hardware Map.lvclass:Repeat Key.vi]
-|Checks if the given key is a repeat of one in the map
-|image:scope-protected.png[scope-protected.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|Size
-|image:Parameter_to_Hardware_Map.lvclass_Size.vi.png[Parameter to Hardware Map.lvclass:Size.vi]
-|Return the size of the map.
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|Swap
-|image:Parameter_to_Hardware_Map.lvclass_Swap.vi.png[Parameter to Hardware Map.lvclass:Swap.vi]
-|Swaps the elements of one Parameter to Hardware Map with another.
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|Write unordered_map
-|image:Parameter_to_Hardware_Map.lvclass_Write_unordered_map.vi.png[Parameter to Hardware Map.lvclass:Write unordered_map.vi]
-|Overwrites the underlying unordered_map array.
-|image:scope-protected.png[scope-protected.png]
-|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
-|image:inlined.png[inlined.png]
 |===
 
 **S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
