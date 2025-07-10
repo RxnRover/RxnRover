@@ -27,8 +27,8 @@ __pycache__/
 *$py.class
 
 # Sphinx documentation
-documentation/_build/
-documentation/build/
+docs/_build/
+docs/build/
 
 # Environments
 .env
@@ -42,4 +42,4 @@ venv.bak/
 ########## Project Ignores ##########
 
 logs/
-documentation/source/_static/api
+docs/source/_static/api

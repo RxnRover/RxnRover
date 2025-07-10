@@ -1,0 +1,173 @@
+== User Preferences File.lvclass
+
+*Responsibility:*
+No description found (add content in lvclass description)
+
+*Version:* 1.0.0.2
+
+=== Diagram
+
+[plantuml, format="svg", align="center"]
+....
+@startuml
+set namespaceSeparator :
+skinparam ClassBackgroundColor #FFFFFF
+skinparam ClassBorderColor #555555
+skinparam ClassFontColor #000000
+skinparam ClassHeaderBackgroundColor #808080
+
+skinparam top to bottom direction
+class "User Preferences File" {
+{field} +File Name : String
+{field} +File Location : Path
+{field} +User Preferences : Cluster
+{static} {method} +Add Recent Project()
+{static} {method} +Clear Recent Experiments()
+{static} {method} +Convert Home Directory Tokens()
+{static} {method} +Create If File Does Not Exist()
+{static} {method} +Default File Name()
+{static} {method} +Default File Path()
+{static} {method} +DefaultUserSettings Full Path()
+{static} {method} +Init()
+{static} {method} +Load()
+{static} {method} +Save()
+
+}
+
+
+
+@enduml
+....
+
+=== Methods
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|Add Recent Project
+|image:User_Preferences_File.lvclass_Add_Recent_Project.vi.png[User Preferences File.lvclass:Add Recent Project.vi]
+|Adds a new path to the Recent Experiments list. This Recent Experiment list is kept in chronological order, so the newly added Recent Experiment will always be at the top. If the new experiment already exists, the old entry is removed and the new entry is placed at the top of the Recent Experiments list.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Clear Recent Experiments
+|image:User_Preferences_File.lvclass_Clear_Recent_Experiments.vi.png[User Preferences File.lvclass:Clear Recent Experiments.vi]
+|Clears all entries in the Recent Experiments list.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Convert Home Directory Tokens
+|image:User_Preferences_File.lvclass_Convert_Home_Directory_Tokens.vi.png[User Preferences File.lvclass:Convert Home Directory Tokens.vi]
+|Checks if a recognized home directory token was given and provides the home directory path using the built-in Get System Directory VI for the User Home directory. This VI will not create the directory if it does not exist and will not modify the given input token path if a valid token is not found.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Create If File Does Not Exist
+|image:User_Preferences_File.lvclass_Create_If_File_Does_Not_Exist.vi.png[User Preferences File.lvclass:Create If File Does Not Exist.vi]
+|Creates the user preferences file with default values if it does not exist. The Init VI or custom values for file name and location must be set before running this VI.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Default File Name
+|image:User_Preferences_File.lvclass_Default_File_Name.vi.png[User Preferences File.lvclass:Default File Name.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Default File Path
+|image:User_Preferences_File.lvclass_Default_File_Path.vi.png[User Preferences File.lvclass:Default File Path.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|DefaultUserSettings Full Path
+|image:User_Preferences_File.lvclass_DefaultUserSettings_Full_Path.vi.png[User Preferences File.lvclass:DefaultUserSettings Full Path.vi]
+|Location of the DefaultUserSettings.ini configuration file.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Init
+|image:User_Preferences_File.lvclass_Init.vi.png[User Preferences File.lvclass:Init.vi]
+|Initialize the file manager with default file names and locations for the given operating system. This VI does not create the file or load it.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Load
+|image:User_Preferences_File.lvclass_Load.vi.png[User Preferences File.lvclass:Load.vi]
+|Load the preferences file from disk into memory. The loaded file can be accessed through the appropriate accessor members. The initialization member VI should be executed before this VI is run.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read File Location
+|image:User_Preferences_File.lvclass_Read_File_Location.vi.png[User Preferences File.lvclass:Read File Location.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|Read File Name
+|image:User_Preferences_File.lvclass_Read_File_Name.vi.png[User Preferences File.lvclass:Read File Name.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|Read User Preferences
+|image:User_Preferences_File.lvclass_Read_User_Preferences.vi.png[User Preferences File.lvclass:Read User Preferences.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Save
+|image:User_Preferences_File.lvclass_Save.vi.png[User Preferences File.lvclass:Save.vi]
+|Format the User Preferences file as a readable JSON file and write it to disk.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Write File Location
+|image:User_Preferences_File.lvclass_Write_File_Location.vi.png[User Preferences File.lvclass:Write File Location.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|Write File Name
+|image:User_Preferences_File.lvclass_Write_File_Name.vi.png[User Preferences File.lvclass:Write File Name.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|Write User Preferences
+|image:User_Preferences_File.lvclass_Write_User_Preferences.vi.png[User Preferences File.lvclass:Write User Preferences.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined
+
+=== Class Constant VIs
+
+[NOTE]
+====
+No Constant VIs Found
+====

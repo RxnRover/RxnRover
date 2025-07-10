@@ -1,0 +1,131 @@
+== Controller Array.lvclass
+
+*Responsibility:*
+No description found (add content in lvclass description)
+
+*Version:* 1.0.0.3
+
+=== Diagram
+
+[plantuml, format="svg", align="center"]
+....
+@startuml
+set namespaceSeparator :
+skinparam ClassBackgroundColor #FFFFFF
+skinparam ClassBorderColor #555555
+skinparam ClassFontColor #000000
+skinparam ClassHeaderBackgroundColor #808080
+
+skinparam top to bottom direction
+class "Controller Array" {
+{field} +Array : Array of LV Class
+{static} {method} +Array Size()
+{static} {method} +As Minimal Cluster Array()
+{static} {method} +Delete From Array()
+{static} {method} +Index Array()
+{static} {method} +Insert Into Array()
+{static} {method} +Register Controller()
+{static} {method} +Replace Subset Array()
+{static} {method} +Replace Subset Element()
+{static} {method} -Search Array by Controller Type()
+{static} {method} -Search Array by Name()
+{static} {method} +Search Array()
+
+}
+
+"Controller Array" o-- "Generic Plugin"
+
+
+@enduml
+....
+
+=== Methods
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|Array Size
+|image:Controller_Array.lvclass_Array_Size.vi.png[Controller Array.lvclass:Array Size.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|As Minimal Cluster Array
+|image:Controller_Array.lvclass_As_Minimal_Cluster_Array.vi.png[Controller Array.lvclass:As Minimal Cluster Array.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Delete From Array
+|image:Controller_Array.lvclass_Delete_From_Array.vi.png[Controller Array.lvclass:Delete From Array.vi]
+|Deletes a controller entry from the array, returning the deleted item.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Index Array
+|image:Controller_Array.lvclass_Index_Array.vi.png[Controller Array.lvclass:Index Array.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Insert Into Array
+|image:Controller_Array.lvclass_Insert_Into_Array.vi.png[Controller Array.lvclass:Insert Into Array.vi]
+|Insert an element into the array at the specified index.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read Array
+|image:Controller_Array.lvclass_Read_Array.vi.png[Controller Array.lvclass:Read Array.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|Register Controller
+|image:Controller_Array.lvclass_Register_Controller.vi.png[Controller Array.lvclass:Register Controller.vi]
+|Given a control type and name, load a controller of that name and add it to the end of the controller array.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Replace Subset Array
+|image:Controller_Array.lvclass_Replace_Subset_Array.vi.png[Controller Array.lvclass:Replace Subset Array.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Replace Subset Element
+|image:Controller_Array.lvclass_Replace_Subset_Element.vi.png[Controller Array.lvclass:Replace Subset Element.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Search Array
+|image:Controller_Array.lvclass_Search_Array.vi.png[Controller Array.lvclass:Search Array.vi]
+|Search the array of controllers for the specified Searchable Property, using the Search Value by casting it to the type of the Searchable Property. This VI will only return the first occurance.  If no element was found, it returns an index of -1 and a generic controller object.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined
+
+=== Class Constant VIs
+
+[NOTE]
+====
+No Constant VIs Found
+====
