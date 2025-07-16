@@ -24,6 +24,8 @@ jobs:
 
       # Deploys the website to the gh-pages branch
       - name: Deploy to GitHub Pages
+        # Trigger on push to the default branch (usually 'master' or 'main')
+        if: github.event_name == 'push' && github.ref_name == github.event.repository.default_branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
