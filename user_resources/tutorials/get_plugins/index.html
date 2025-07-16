@@ -49,9 +49,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../mock_experiment/mock_experiment.html">Mock Experiment</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Get Existing Plugins</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#where-can-i-acquire-plugins">Where can I acquire plugins?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#installing-plugins">Installing Plugins</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#install-via-vipm-recommended">Install via VIPM (Recommended)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#manual-installation">Manual Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#where-should-downloaded-plugins-go">Where should downloaded plugins go?</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../clean_tmp_data.html">Remove Temporary Data</a></li>
@@ -115,31 +113,13 @@ the listings or use the search feature to find your desired plugins, and
 follow the acquisition instructions included with each plugin listing to
 download it.</p>
 </section>
-<section id="installing-plugins">
-<h2>Installing Plugins<a class="headerlink" href="#installing-plugins" title="Link to this heading"></a></h2>
-<p>You can install plugins for Rxn Rover in two main ways:</p>
-</section>
-<section id="install-via-vipm-recommended">
-<h2>Install via VIPM (Recommended)<a class="headerlink" href="#install-via-vipm-recommended" title="Link to this heading"></a></h2>
-<p>If the plugin(s) you are trying to install contains a <cite>.vip</cite> file, the easiest way to install plugin(s) is through the <strong>VI Package Manager (VIPM)</strong>.</p>
-<ul class="simple">
-<li><p>Download and install the <cite>.vip</cite> package as described in the plugin’s instructions. (Usually found in the release section of the plugin’s GitHub repository.)</p></li>
-</ul>
-</section>
-<section id="manual-installation">
-<h2>Manual Installation<a class="headerlink" href="#manual-installation" title="Link to this heading"></a></h2>
-<p>Typical manual installation of a plugin just requires moving the downloaded plugin
+<section id="where-should-downloaded-plugins-go">
+<h2>Where should downloaded plugins go?<a class="headerlink" href="#where-should-downloaded-plugins-go" title="Link to this heading"></a></h2>
+<p>Typical installation of a plugin just requires moving the downloaded plugin
 to your <code class="docutils literal notranslate"><span class="pre">&lt;documents&gt;/RxnRover/Plugins</span></code> directory, where <code class="docutils literal notranslate"><span class="pre">&lt;documents&gt;</span></code> is
-your operating system’s <strong>Documents</strong> directory.</p>
-<ol class="arabic">
-<li><p>Download the plugin files (typically a folder containing source code and a <cite>plugin.conf</cite> file).</p></li>
-<li><p>Move the plugin folder into the following directory:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">documents</span><span class="o">&gt;/</span><span class="n">RxnRover</span><span class="o">/</span><span class="n">Plugins</span>
-</pre></div>
-</div>
-</li>
-<li><p>Rxn Rover will automatically detect plugins located in this folder by reading their <cite>plugin.conf</cite> files.</p></li>
-</ol>
+the location of a user’s Documents directory for your operating system. Rxn
+Rover will check this directory and load plugins based on their
+<code class="docutils literal notranslate"><span class="pre">plugin.conf</span></code> files.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Each plugin, especially third-party plugins, may have additional or

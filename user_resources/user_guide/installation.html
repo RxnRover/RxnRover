@@ -110,35 +110,18 @@ components from the <a class="reference external" href="https://rxnrover.github.
 executable version that can be run with the free <a class="reference external" href="https://www.ni.com/en-us/support/downloads/software-products/download.labview-runtime.html#369481">LabVIEW runtime engine</a>,
 but the dynamic nature of Rxn Rover has made this step difficult to implement.</p>
 <p>You also need the Dynamic Reentrant library, developed by the Rxn Rover team
-to facilitate communication between Rxn Rover and its plugins. You can install
-this library using either a <cite>.vip</cite> file (via VIPM) or a ZIP archive (for manual installation).</p>
-<p>The latest release is available at:
-<a class="reference external" href="https://www.github.com/RxnRover/DynamicReentrant/releases/latest">https://www.github.com/RxnRover/DynamicReentrant/releases/latest</a></p>
-<ul>
-<li><p><strong>VIPM Install:</strong> Download the <cite>.vip</cite> package from the Releases page and install it using the VI Package Manager (VIPM).</p></li>
-<li><p><strong>Manual Install:</strong> Download the ZIP archive from the same page. Extract its contents into your LabVIEW installation’s <cite>user.lib</cite> directory:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">labview</span><span class="o">&gt;/</span><span class="n">user</span><span class="o">.</span><span class="n">lib</span><span class="o">/</span>
-</pre></div>
-</div>
-<p>where <cite>&lt;labview&gt;</cite> refers to the directory where LabVIEW is installed. <cite>user.lib</cite> is where shared or user-created libraries are placed.</p>
-</li>
-</ul>
+to facilitate communication between Rxn Rover and its plugins. It can be
+downloaded from <a class="reference external" href="https://www.github.com/RxnRover/DynamicReentrant">https://www.github.com/RxnRover/DynamicReentrant</a> by clicking
+the “Code” button and selecting “Download ZIP”. Extract the ZIP file into your
+<cite>&lt;labview&gt;/user.lib/</cite> directory, where <cite>&lt;labview&gt;</cite> is the location of your
+LabVIEW installation. <cite>user.lib</cite> is where user-created, common libraries used
+across multiple projects are located.</p>
 </section>
 <section id="rxn-rover-setup">
 <h2>Rxn Rover Setup<a class="headerlink" href="#rxn-rover-setup" title="Link to this heading"></a></h2>
 <p>Once the prerequisites are installed:</p>
-<p>Install via VIPM:</p>
 <ol class="arabic simple">
-<li><p>Download the <code class="docutils literal notranslate"><span class="pre">.vip</span></code> from <a class="reference external" href="https://github.com/RxnRover/RxnRover/releases/latest">Rxn Rover’s release page</a>.</p></li>
-<li><p>Open <code class="docutils literal notranslate"><span class="pre">.vip</span></code> the VIPM application.</p></li>
-<li><p>Follow the prompts to install Rxn Rover.</p></li>
-<li><p>Double-click Main.vi in the top directory of the repository.</p></li>
-<li><p>Click the “Run” arrow in the top left of the window that opens to run
-Rxn Rover.</p></li>
-</ol>
-<p>Manual install:</p>
-<ol class="arabic simple">
-<li><p>Clone or download/extract the <a class="reference external" href="https://github.com/RxnRover/RxnRover">Rxn Rover repository</a>. into your <code class="docutils literal notranslate"><span class="pre">Documents</span></code> directory.</p></li>
+<li><p>Clone or download/extract the <a class="reference external" href="https://github.com/RxnRover/RxnRover">Rxn Rover repository</a>.</p></li>
 <li><p>Double-click Main.vi in the top directory of the repository.</p></li>
 <li><p>Click the “Run” arrow in the top left of the window that opens to run
 Rxn Rover.</p></li>
