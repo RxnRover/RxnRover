@@ -27,9 +27,12 @@ You can install plugins for Rxn Rover in two main ways:
 Install via VIPM (Recommended)
 ------------------------------
 
-If the plugin(s) you are trying to install contains a `.vip` file, the easiest way to install plugin(s) is through the **VI Package Manager (VIPM)**.
+If the plugin(s) you are trying to install provides a `.vip` file, the easiest way to install plugin(s) is through the **VI Package Manager (VIPM)**.
 
 - Download and install the `.vip` package as described in the plugin's instructions. (Usually found in the release section of the plugin's GitHub repository.)
+
+.. note::
+   Be sure to double check you **installed all required dependencies** including: instrument drivers, external libraries, etc. These are often listed in the plugin's documentation or README
 
 Manual Installation
 -------------------

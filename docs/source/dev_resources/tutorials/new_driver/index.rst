@@ -3,12 +3,12 @@
 Create a New Driver
 ===================
 
-RxnRover supports plugin-based integration with a variety of laboratory instruments and systems. A *driver* is a software component that enables RxnRover to communicate with external hardware, typically laboratory instruments.
+Rxn Rover supports plugin-based integration with a variety of laboratory instruments and systems. A *driver* is a software component that enables Rxn Rover to communicate with external hardware, typically laboratory instruments.
 
-Creating a LabVIEW driver requires a solid understanding of programming in LabVIEW. We recommend completing National Instruments' official LabVIEW tutorials before getting started.
+Creating a LabVIEW driver requires a solid understanding of programming in LabVIEW. We recommend completing NIs' official LabVIEW tutorials before getting started.
 
 .. warning::
-    RxnRover will fail to communicate with hardware devices that do not have an accompanying driver.
+    Rxn Rover will fail to communicate with hardware devices that do not have an accompanying driver.
 
 .. hint:: 
     You can visit the `Instrument Driver Network (IDNet) <https://www.ni.com/en/support/downloads/instrument-drivers.html>`_ Or the `Rxn Rover Plugin Catalog <https://rxnrover.github.io/PluginCatalog>`__  to see if your instrument already has a LabVIEW-supported driver.
@@ -85,7 +85,7 @@ After setting up your LabVIEW project:
 - Begin implementing the required functionality using your instrument's user manual or command set
 
 .. note::
-    We strongly recommend testing each VI with your instrument to verify correct functionality before integrating with RxnRover.
+    We strongly recommend testing each VI with your instrument to verify correct functionality before integrating with Rxn Rover.
 
-See :ref:`create-new-plugin` for how to integrate this driver with RxnRover’s plugin system.
+See :ref:`create-new-plugin` for how to integrate this driver with Rxn Rover’s plugin system.
 See :ref:`tutorial on creating a VIPM package <create-new-vipm-package>` to package your driver for automated installation and distribution.

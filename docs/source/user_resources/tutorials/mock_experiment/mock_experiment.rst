@@ -6,7 +6,7 @@ Mock Experiment
 .. warning::
    
    This example experiment has only been tested on Windows 10 with LabVIEW 
-   2020.
+   2020 SP1.
 
 .. warning::
    
@@ -106,7 +106,7 @@ Installing Plugins
    instructions provided by the authors carefully!
    
 
-To install the plugins acquired in :ref:`mock-experiment-download-plugins`, double click the .vip files you download, or open them in VIPM (VI Package Manager) 
+To install the plugins acquired in :ref:`mock-experiment-download-plugins`, double click the ``.vip`` files you download, or open them in VIPM (VI Package Manager) 
 and follow the instructions to install them. If you do not have VIPM, you can manually install the plugins by 
 extracting each ZIP file into the ``<documents>/RxnRover/Plugins`` directory, 
 where ``<documents>`` is the current user's Documents directory.

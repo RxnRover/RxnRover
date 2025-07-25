@@ -3,26 +3,26 @@
 Create a New Plugin
 ===================
 
-Plugins are an essential part of RxnRover, providing the ability to interface with, control, analyze, and communicate directly with connected devices. In this tutorial, we will walk through the process of creating a new plugin in RxnRover.
+Plugins are an essential part of Rxn Rover, providing the ability to interface with, control, analyze, and communicate directly with connected devices. In this tutorial, we will walk through the process of creating a new plugin in RxnRover.
 
 Overview
 --------
 
-Plugins in RxnRover typically interact with hardware devices; however, purely software-based plugins can exist in the form of analytical tools, simulation tools, etc. Before you begin writing a plugin for a specific type of hardware, you'll need to consider whether you require a custom device driver or if you can use an existing one. Some manufacturers might already provide a LabVIEW driver.
+Plugins in Rxn Rover typically interact with hardware devices; however, purely software-based plugins can exist in the form of analytical tools, simulation tools, etc. Before you begin writing a plugin for a specific type of hardware, you'll need to consider whether you require a custom device driver or if you can use an existing one. Some manufacturers might already provide a LabVIEW driver.
 
 .. note::
-   All RxnRover plugins require the `DynamicReentrant <https://github.com/RxnRover/DynamicReentrant>`_ library installed. This library is provided by the RxnRover team to facilitate communication with RxnRover.
+   All Rxn Rover plugins require the `DynamicReentrant <https://github.com/RxnRover/DynamicReentrant>`_ library installed. This library is provided by the Rxn Rover team to facilitate communication with RxnRover.
 
 Understanding the Plugin Structure
 ----------------------------------
 
-The basic components of a RxnRover plugin are:
+The basic components of a Rxn Rover plugin are:
 
 1. **Driver**: The software component that communicates directly with the device. If you already have a provided LabVIEW driver, you will only need to create the plugin for the device.
 
-2. **Plugin**: The interface between the driver and RxnRover. This connects the low-level functionality of the driver to the higher-level features of the RxnRover platform. As well as supplied the User-Interface in RxnRover.
+2. **Plugin**: The interface between the driver and Rxn Rover. This connects the low-level functionality of the driver to the higher-level features of the Rxn Rover platform. As well as supplied the User-Interface in RxnRover.
 
-In some cases, if a device driver already exists, you may only need to focus on developing the plugin that integrates with RxnRover.
+In some cases, if a device driver already exists, you may only need to focus on developing the plugin that integrates with Rxn Rover.
 
 .. hint:: 
     You can visit the `Instrument Driver Network (IDNet) <https://www.ni.com/en/support/downloads/instrument-drivers.html>`_ Or the `Rxn Rover Plugin Catalog <https://rxnrover.github.io/PluginCatalog>`__  to see if your instrument already has a LabVIEW-supported driver.
@@ -79,8 +79,8 @@ Once you have your driver ready (or confirmed that one already exists), follow t
    - Edit ``plugin.conf`` to reflect your new plugin:
 
     - Plugin name (We'd recommend naming it after your instrument, however it can be whatever you'd like just not blank)
-    - Plugin type (Must be one of the RxnRover-supported and recognized plugin types)
-    - Controller type (Must be one of the RxnRover-supported and recognized controller types)
+    - Plugin type (Must be one of the Rxn Rover-supported and recognized plugin types)
+    - Controller type (Must be one of the Rxn Rover-supported and recognized controller types)
 
    - Edit ``Main.vi`` :
 

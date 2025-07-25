@@ -97,7 +97,7 @@ echo Generating documentation with Sphinx...
 
 call .\make.bat html
 
-REM Copy Autodoc image assets to spinhx build 
+REM Copy Autodoc image assets to Spinhx build 
 set "IMG_SRC=%~dp0source\_static\api\Images"
 set "IMG_DST=%~dp0build\html\dev_resources\api\Images"
 

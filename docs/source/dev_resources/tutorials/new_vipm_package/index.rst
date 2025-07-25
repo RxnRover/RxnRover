@@ -5,7 +5,7 @@ Create a VIPM Package
 
 The `Virtual Package Manager (VIPM) <https://www.vipm.io/>`_ is a tool for managing LabVIEW packages, including instrument drivers and plugins. Using VIPM, you can create a package from your LabVIEW project that can be easily shared and installed by others.
 
-This tutorial will guide you through the process of creating a new VIPM package for use with the RxnRover platform.
+This tutorial will guide you through the process of creating a new VIPM package for use with the Rxn Rover platform.
 
 General Steps to Create a VIPM Package
 --------------------------------------
@@ -29,12 +29,12 @@ General Steps to Create a VIPM Package
    - **Build Output Directory**: Choose a location like ``<your-workspace>\VIPMPackages``.
 
 .. note::
-   The rest of the configuration differs slightly depending on whether you're a **first-party** (RxnRover) or **third-party** developer.
+   The rest of the configuration differs slightly depending on whether you're a **first-party** (Rxn Rover) or **third-party** developer.
 
-First-Party Plugins (RxnRover Developers)
------------------------------------------
+First-Party Plugins (Rxn Rover Developers)
+------------------------------------------
 
-These instructions are for RxnRover developers creating official plugins or drivers.
+These instructions are for Rxn Rover developers creating official plugins or drivers.
 
 1. **Display Information**
 
@@ -62,7 +62,7 @@ Continue with the rest of the tutorial.
 Third-Party Plugins
 -------------------
 
-For external developers who wish to make their plugin compatible with RxnRover.
+For external developers who wish to make their plugin compatible with Rxn Rover.
 
 1. **Display Information**
 
@@ -85,7 +85,7 @@ For external developers who wish to make their plugin compatible with RxnRover.
   ``instr.lib\RxnRover\<Product Name>``
 
 .. note::
-   Keep install paths consistent with RxnRover’s plugin architecture to ensure compatibility.
+   Keep install paths consistent with Rxn Rover’s plugin architecture to ensure compatibility.
 
 3. **Source File Settings**
 
@@ -125,7 +125,7 @@ Build and Share the Package
 2. The output ``.vip`` file will be generated in your chosen directory.
 3. Run the ``.vip`` file to install and test the package using VIPM.
 
-Share your ``.vip`` file with others or submit it to the RxnRover Plugin Catalog for inclusion.
+Share your ``.vip`` file with others or submit it to the Rxn Rover Plugin Catalog for inclusion.
 
 .. _plugin_submission:
 

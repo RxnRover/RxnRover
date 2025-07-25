@@ -1,6 +1,7 @@
 GitHub Etiquette
+================
 
-This section outlines best practices for collaborating on `RxnRover's GitHub <https://github.com/RxnRover>`__ repository.
+This section outlines best practices for collaborating on `Rxn Rover's GitHub <https://github.com/RxnRover/RxnRover>`__ repository.
 
 Following these guidelines ensures a productive and respectful environment for all contributors, especially given the unique challenges of working with LabVIEW and visual codebases.
 
@@ -56,4 +57,4 @@ Working with Issues
 Thank You for Contributing!
 ---------------------------
 
-Your contributions—big or small—help improve RxnRover for everybody. Thank you!
+Your contributions—big or small—help improve Rxn Rover for everybody. Thank you!
