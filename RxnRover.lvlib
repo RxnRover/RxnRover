@@ -54,6 +54,7 @@
 		<Item Name="Add Hardware.vi" Type="VI" URL="../src/RxnRover/Plugin Servers/Add Hardware.vi"/>
 		<Item Name="Add Optimizer.vi" Type="VI" URL="../src/RxnRover/Plugin Servers/Add Optimizer.vi"/>
 		<Item Name="Assign Parameters to Hardware Dialog.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Assign Parameters to Hardware Dialog.vi"/>
+		<Item Name="ClassRegistration.vi" Type="VI" URL="../src/RxnRover/Plugin Servers/ClassRegistration.vi"/>
 		<Item Name="Controller Array.lvclass" Type="LVClass" URL="../src/RxnRover/Plugin Servers/Controller Array/Controller Array.lvclass"/>
 		<Item Name="Generic Optimizer.lvclass" Type="LVClass" URL="../src/RxnRover/Plugin Servers/Generic Optimizer/Generic Optimizer.lvclass"/>
 		<Item Name="Generic Plugin.lvclass" Type="LVClass" URL="../src/RxnRover/Plugin Servers/Controller/Generic Plugin.lvclass"/>

@@ -1,6 +1,6 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Project Type="Project" LVVersion="20008000">
-	<Property Name="CCSymbols" Type="Str">DEBUG,0;NO_DRIVER,0;</Property>
+	<Property Name="CCSymbols" Type="Str">DEBUG,0;NO_DRIVER,1;</Property>
 	<Property Name="NI.LV.All.SaveVersion" Type="Str">20.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="NI.Project.Description" Type="Str">Rxn Rover (pronounced Reaction Rover) is an open-source, general reaction automation software. Similarly, Rxn Rover connects an optimization algorithm - machine learning or non-machine learning - with a reactor and analysis instrumentation to create a self-optimizing system. This system allows the optimizer to control and change the reaction parameters, perform the reaction, analyze the desired results, and choose the next search step with or without human intervention. Designed knowing that each research laboratory and experiment presents different challenges, Rxn Rover supports various optimization algorithms, an array of analysis tools, and a customizable, modular reactor setup to allow for arbitrary reactor designs using provided or user-created plugins. Rxn Rover and its plugins are designed to be easy to use, understand, and modify with little to no programming experience, but complex enough to support intricate, multi-step reactions.</Property>
@@ -37,10 +37,8 @@
 		<Item Name="RxnRover.lvlib" Type="Library" URL="../RxnRover.lvlib"/>
 		<Item Name="RxnRover.vipb" Type="Document" URL="../RxnRover.vipb"/>
 		<Item Name="RxnRover.vipc" Type="Document" URL="../RxnRover.vipc"/>
+		<Item Name="Dynamic Reentrant.lvlib" Type="Library" URL="/&lt;userlib&gt;/RxnRover/DynamicReentrant/Dynamic Reentrant.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
-			<Item Name="user.lib" Type="Folder">
-				<Item Name="Dynamic Reentrant.lvlib" Type="Library" URL="/&lt;userlib&gt;/RxnRover/DynamicReentrant/Dynamic Reentrant.lvlib"/>
-			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
 				<Item Name="Application Directory.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Application Directory.vi"/>
@@ -104,136 +102,100 @@
 				<Item Name="System Exec.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/system.llb/System Exec.vi"/>
 				<Item Name="Create Directory Recursive.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Create Directory Recursive.vi"/>
 				<Item Name="1D String Array to Delimited String.vi" Type="VI" URL="/&lt;vilib&gt;/AdvancedString/1D String Array to Delimited String.vi"/>
+				<Item Name="Get LV Class Default Value By Name.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/LVClass/Get LV Class Default Value By Name.vi"/>
 			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
-			<Item Name="Stand-Alone EXE" Type="EXE">
+			<Item Name="Rxn Rover" Type="EXE">
 				<Property Name="App_copyErrors" Type="Bool">true</Property>
-				<Property Name="App_INI_aliasGUID" Type="Str">{B511CD8F-BE21-4470-A7C4-3ACBADFC72C8}</Property>
-				<Property Name="App_INI_GUID" Type="Str">{78EABFCD-5B97-4F87-AF3F-FF129EE73305}</Property>
+				<Property Name="App_INI_aliasGUID" Type="Str">{2F31323E-3D06-4BA0-9785-C6C3F726CA15}</Property>
+				<Property Name="App_INI_GUID" Type="Str">{A1E16D66-E4ED-418E-80B6-30A7DD203558}</Property>
 				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
 				<Property Name="App_serverType" Type="Int">0</Property>
+				<Property Name="App_waitDebugging" Type="Bool">true</Property>
 				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
-				<Property Name="Bld_buildCacheID" Type="Str">{2CE40C4E-446A-4350-9E11-C85D8BAE8F13}</Property>
-				<Property Name="Bld_buildSpecName" Type="Str">Stand-Alone EXE</Property>
-				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
-				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
-				<Property Name="Bld_localDestDir" Type="Path">../builds/standalone_exe</Property>
-				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
-				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
-				<Property Name="Bld_previewCacheID" Type="Str">{09FD23A0-93D2-46A2-B12D-FA02255F97C6}</Property>
-				<Property Name="Bld_userLogFile" Type="Path">../builds/standalone_exe/build_log.txt</Property>
-				<Property Name="Bld_userLogFile.pathType" Type="Str">relativeToProject</Property>
-				<Property Name="Bld_version.build" Type="Int">13</Property>
+				<Property Name="Bld_buildCacheID" Type="Str">{33CBE206-DBF4-4E7D-AC64-2EFF578F9A09}</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">Rxn Rover</Property>
+				<Property Name="Bld_localDestDir" Type="Path">/C/Users/britt/Documents/NI_AB_PROJECTNAME</Property>
+				<Property Name="Bld_previewCacheID" Type="Str">{42669890-F9C4-4B93-940D-4B7BE360259A}</Property>
+				<Property Name="Bld_version.build" Type="Int">25</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
-				<Property Name="Bld_version.patch" Type="Int">3</Property>
-				<Property Name="Destination[0].destName" Type="Str">RxnRover.exe</Property>
-				<Property Name="Destination[0].path" Type="Path">../builds/standalone_exe/NI_AB_PROJECTNAME.exe</Property>
-				<Property Name="Destination[0].path.type" Type="Str">relativeToProject</Property>
+				<Property Name="Destination[0].destName" Type="Str">Rxn Rover.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">/C/Users/britt/Documents/NI_AB_PROJECTNAME/Rxn Rover.exe</Property>
+				<Property Name="Destination[0].path.type" Type="Str">&lt;none&gt;</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[0].type" Type="Str">App</Property>
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
-				<Property Name="Destination[1].path" Type="Path">../builds/standalone_exe/data</Property>
-				<Property Name="Destination[1].path.type" Type="Str">relativeToProject</Property>
-				<Property Name="Destination[2].destName" Type="Str">Resources</Property>
-				<Property Name="Destination[2].path" Type="Path">../builds/standalone_exe/resources</Property>
-				<Property Name="Destination[2].path.type" Type="Str">relativeToProject</Property>
-				<Property Name="Destination[2].preserveHierarchy" Type="Bool">true</Property>
+				<Property Name="Destination[1].path" Type="Path">/C/Users/britt/Documents/NI_AB_PROJECTNAME/data</Property>
+				<Property Name="Destination[1].path.type" Type="Str">&lt;none&gt;</Property>
+				<Property Name="Destination[2].destName" Type="Str">resources</Property>
+				<Property Name="Destination[2].path" Type="Path">/C/Users/britt/Documents/NI_AB_PROJECTNAME/resources/defaults</Property>
+				<Property Name="Destination[2].path.type" Type="Str">&lt;none&gt;</Property>
 				<Property Name="DestinationCount" Type="Int">3</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/resources/icons/full_color_logo_3600x3600.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{A93DF313-1C85-4629-A4CE-F27FABE7AC19}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{18CAE08C-85CD-4CD7-BA9C-C886F99AB324}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Main.vi</Property>
-				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
-				<Property Name="Source[1].type" Type="Str">VI</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/RxnRover.lvlib</Property>
+				<Property Name="Source[1].Library.allowMissingMembers" Type="Bool">true</Property>
+				<Property Name="Source[1].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[1].type" Type="Str">Library</Property>
+				<Property Name="Source[10].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[10].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Servers/Passive Hardware.lvclass</Property>
+				<Property Name="Source[10].type" Type="Str">Library</Property>
+				<Property Name="Source[11].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[11].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Servers/Pump Controller.lvclass</Property>
+				<Property Name="Source[11].type" Type="Str">Library</Property>
+				<Property Name="Source[12].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[12].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Servers/Syringe Pump.lvclass</Property>
+				<Property Name="Source[12].type" Type="Str">Library</Property>
+				<Property Name="Source[13].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[13].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Servers/Temperature Controller.lvclass</Property>
+				<Property Name="Source[13].type" Type="Str">Library</Property>
+				<Property Name="Source[14].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[14].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Servers/ClassRegistration.vi</Property>
+				<Property Name="Source[14].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[14].type" Type="Str">VI</Property>
 				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[2].itemID" Type="Ref">/My Computer/RxnRover.lvlib</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/My Computer/Dynamic Reentrant.lvlib</Property>
 				<Property Name="Source[2].Library.allowMissingMembers" Type="Bool">true</Property>
 				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[2].type" Type="Str">Library</Property>
-				<Property Name="Source[3].Container.applyDestination" Type="Bool">true</Property>
-				<Property Name="Source[3].Container.applyInclusion" Type="Bool">true</Property>
-				<Property Name="Source[3].Container.depDestIndex" Type="Int">0</Property>
-				<Property Name="Source[3].destinationIndex" Type="Int">2</Property>
-				<Property Name="Source[3].itemID" Type="Ref">/My Computer/resources</Property>
-				<Property Name="Source[3].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[3].type" Type="Str">Container</Property>
-				<Property Name="SourceCount" Type="Int">4</Property>
-				<Property Name="TgtF_companyName" Type="Str">Iowa State University</Property>
-				<Property Name="TgtF_fileDescription" Type="Str">Stand-Alone EXE</Property>
-				<Property Name="TgtF_internalName" Type="Str">Stand-Alone EXE</Property>
-				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2021</Property>
-				<Property Name="TgtF_productName" Type="Str">Stand-Alone EXE</Property>
-				<Property Name="TgtF_targetfileGUID" Type="Str">{A9B9C488-ADD7-40F6-AAC2-547427E5CB24}</Property>
-				<Property Name="TgtF_targetfileName" Type="Str">RxnRover.exe</Property>
+				<Property Name="Source[3].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[3].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Main.vi</Property>
+				<Property Name="Source[3].sourceInclusion" Type="Str">TopLevel</Property>
+				<Property Name="Source[3].type" Type="Str">VI</Property>
+				<Property Name="Source[4].Container.applyDestination" Type="Bool">true</Property>
+				<Property Name="Source[4].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[4].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[4].destinationIndex" Type="Int">2</Property>
+				<Property Name="Source[4].itemID" Type="Ref">/My Computer/resources</Property>
+				<Property Name="Source[4].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[4].type" Type="Str">Container</Property>
+				<Property Name="Source[5].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[5].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Servers/Controller Array.lvclass</Property>
+				<Property Name="Source[5].type" Type="Str">Library</Property>
+				<Property Name="Source[6].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[6].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Servers/Generic Optimizer.lvclass</Property>
+				<Property Name="Source[6].type" Type="Str">Library</Property>
+				<Property Name="Source[7].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[7].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Servers/Generic Plugin.lvclass</Property>
+				<Property Name="Source[7].type" Type="Str">Library</Property>
+				<Property Name="Source[8].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[8].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Servers/LC Parser.lvclass</Property>
+				<Property Name="Source[8].type" Type="Str">Library</Property>
+				<Property Name="Source[9].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[9].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Servers/Parameter to Hardware Map.lvclass</Property>
+				<Property Name="Source[9].type" Type="Str">Library</Property>
+				<Property Name="SourceCount" Type="Int">15</Property>
+				<Property Name="TgtF_companyName" Type="Str">Rxn Rover</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">Rxn Rover</Property>
+				<Property Name="TgtF_internalName" Type="Str">Rxn Rover</Property>
+				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2025 </Property>
+				<Property Name="TgtF_productName" Type="Str">Rxn Rover</Property>
+				<Property Name="TgtF_targetfileGUID" Type="Str">{755389F4-867C-4A32-8720-0560476B92AE}</Property>
+				<Property Name="TgtF_targetfileName" Type="Str">Rxn Rover.exe</Property>
 				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
-			</Item>
-			<Item Name="Rxn Rover Installer" Type="Installer">
-				<Property Name="Destination[0].name" Type="Str">Rxn Rover</Property>
-				<Property Name="Destination[0].parent" Type="Str">{3912416A-D2E5-411B-AFEE-B63654D690C0}</Property>
-				<Property Name="Destination[0].tag" Type="Str">{E900022A-0109-41DA-A00A-423EC44A52F4}</Property>
-				<Property Name="Destination[0].type" Type="Str">userFolder</Property>
-				<Property Name="DestinationCount" Type="Int">1</Property>
-				<Property Name="DistPart[0].flavorID" Type="Str">DefaultFull</Property>
-				<Property Name="DistPart[0].productID" Type="Str">{6B440D80-3B0D-43B2-8A06-E2E939AA1006}</Property>
-				<Property Name="DistPart[0].productName" Type="Str">NI LabVIEW Runtime 2020 SP1</Property>
-				<Property Name="DistPart[0].SoftDep[0].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[0].SoftDep[0].productName" Type="Str">NI ActiveX Container</Property>
-				<Property Name="DistPart[0].SoftDep[0].upgradeCode" Type="Str">{1038A887-23E1-4289-B0BD-0C4B83C6BA21}</Property>
-				<Property Name="DistPart[0].SoftDep[1].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[0].SoftDep[1].productName" Type="Str">NI Deployment Framework 2020</Property>
-				<Property Name="DistPart[0].SoftDep[1].upgradeCode" Type="Str">{838942E4-B73C-492E-81A3-AA1E291FD0DC}</Property>
-				<Property Name="DistPart[0].SoftDep[2].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[0].SoftDep[2].productName" Type="Str">NI LabVIEW Real-Time NBFifo 2020</Property>
-				<Property Name="DistPart[0].SoftDep[2].upgradeCode" Type="Str">{00D0B680-F876-4E42-A25F-52B65418C2A6}</Property>
-				<Property Name="DistPart[0].SoftDep[3].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[0].SoftDep[3].productName" Type="Str">NI Logos 20.0</Property>
-				<Property Name="DistPart[0].SoftDep[3].upgradeCode" Type="Str">{5E4A4CE3-4D06-11D4-8B22-006008C16337}</Property>
-				<Property Name="DistPart[0].SoftDep[4].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[0].SoftDep[4].productName" Type="Str">NI mDNS Responder 19.0</Property>
-				<Property Name="DistPart[0].SoftDep[4].upgradeCode" Type="Str">{9607874B-4BB3-42CB-B450-A2F5EF60BA3B}</Property>
-				<Property Name="DistPart[0].SoftDep[5].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[0].SoftDep[5].productName" Type="Str">Math Kernel Libraries 2017</Property>
-				<Property Name="DistPart[0].SoftDep[5].upgradeCode" Type="Str">{699C1AC5-2CF2-4745-9674-B19536EBA8A3}</Property>
-				<Property Name="DistPart[0].SoftDep[6].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[0].SoftDep[6].productName" Type="Str">Math Kernel Libraries 2020</Property>
-				<Property Name="DistPart[0].SoftDep[6].upgradeCode" Type="Str">{9872BBBA-FB96-42A4-80A2-9605AC5CBCF1}</Property>
-				<Property Name="DistPart[0].SoftDep[7].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[0].SoftDep[7].productName" Type="Str">NI VC2015 Runtime</Property>
-				<Property Name="DistPart[0].SoftDep[7].upgradeCode" Type="Str">{D42E7BAE-6589-4570-B6A3-3E28889392E7}</Property>
-				<Property Name="DistPart[0].SoftDep[8].exclude" Type="Bool">false</Property>
-				<Property Name="DistPart[0].SoftDep[8].productName" Type="Str">NI TDM Streaming 19.0</Property>
-				<Property Name="DistPart[0].SoftDep[8].upgradeCode" Type="Str">{4CD11BE6-6BB7-4082-8A27-C13771BC309B}</Property>
-				<Property Name="DistPart[0].SoftDepCount" Type="Int">9</Property>
-				<Property Name="DistPart[0].upgradeCode" Type="Str">{D84FC73F-D1E0-4C05-A30C-DB882CD1ABD8}</Property>
-				<Property Name="DistPartCount" Type="Int">1</Property>
-				<Property Name="INST_author" Type="Str">Iowa State University</Property>
-				<Property Name="INST_autoIncrement" Type="Bool">true</Property>
-				<Property Name="INST_buildLocation" Type="Path">../build/Rxn Rover Installer</Property>
-				<Property Name="INST_buildLocation.type" Type="Str">relativeToProject</Property>
-				<Property Name="INST_buildSpecName" Type="Str">Rxn Rover Installer</Property>
-				<Property Name="INST_defaultDir" Type="Str">{E900022A-0109-41DA-A00A-423EC44A52F4}</Property>
-				<Property Name="INST_installerName" Type="Str">install_rxn_rover.exe</Property>
-				<Property Name="INST_productName" Type="Str">Rxn Rover</Property>
-				<Property Name="INST_productVersion" Type="Str">1.0.2</Property>
-				<Property Name="InstSpecBitness" Type="Str">32-bit</Property>
-				<Property Name="InstSpecVersion" Type="Str">20018000</Property>
-				<Property Name="MSI_arpCompany" Type="Str">Iowa State University</Property>
-				<Property Name="MSI_autoselectDrivers" Type="Bool">true</Property>
-				<Property Name="MSI_distID" Type="Str">{F86A3199-9C98-4FAF-AA24-9195790F23A9}</Property>
-				<Property Name="MSI_hideNonRuntimes" Type="Bool">true</Property>
-				<Property Name="MSI_osCheck" Type="Int">0</Property>
-				<Property Name="MSI_upgradeCode" Type="Str">{1AC2C4C0-14E6-4064-A887-97454C3489DF}</Property>
-				<Property Name="RegDest[0].dirName" Type="Str">Software</Property>
-				<Property Name="RegDest[0].dirTag" Type="Str">{DDFAFC8B-E728-4AC8-96DE-B920EBB97A86}</Property>
-				<Property Name="RegDest[0].parentTag" Type="Str">2</Property>
-				<Property Name="RegDestCount" Type="Int">1</Property>
-				<Property Name="Source[0].dest" Type="Str">{E900022A-0109-41DA-A00A-423EC44A52F4}</Property>
-				<Property Name="Source[0].name" Type="Str">Main.vi</Property>
-				<Property Name="Source[0].tag" Type="Ref">/My Computer/RxnRover.lvlib/Main.vi</Property>
-				<Property Name="Source[0].type" Type="Str">File</Property>
-				<Property Name="SourceCount" Type="Int">1</Property>
 			</Item>
 		</Item>
 	</Item>
