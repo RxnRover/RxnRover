@@ -7,4 +7,4 @@
 
 Please cite as: *Reaction Chemistry & Engineering*, 2022, **7**, 416 - 428
 
-<img src="./assets/full_color_logo_3600x3600.jpg" alt="logo" width="300"/>
+<img src="./resources/icons/full_color_logo_3600x3600.jpg" alt="logo" width="300"/>
