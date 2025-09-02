@@ -25,19 +25,19 @@ but the dynamic nature of Rxn Rover has made this step difficult to implement.
 
 You also need the Dynamic Reentrant library, developed by the Rxn Rover team
 to facilitate communication between Rxn Rover and its plugins. You can install
-this library using either a `.vip` file (via VIPM) or a ZIP archive (for manual installation).
+this library using either a ``.vip`` file (via VIPM) or a ZIP archive (for manual installation).
 
 The latest release is available at:
 `https://www.github.com/RxnRover/DynamicReentrant/releases/latest <https://www.github.com/RxnRover/DynamicReentrant/releases/latest>`_
 
-- **VIPM Install:** Download the `.vip` package from the Releases page and install it using the VI Package Manager (VIPM).
-- **Manual Install:** Download the ZIP archive from the same page. Extract its contents into your LabVIEW installation's `user.lib` directory:
+- **VIPM Install:** Download the ``.vip`` package from the Releases page and install it using the VI Package Manager (VIPM).
+- **Manual Install:** Download the ZIP archive from the same page. Extract its contents into your LabVIEW installation's ``user.lib`` directory:
 
   ::
 
      <labview>/user.lib/
 
-  where `<labview>` refers to the directory where LabVIEW is installed. `user.lib` is where shared or user-created libraries are placed.
+  where ``<labview>`` refers to the directory where LabVIEW is installed. ``user.lib`` is where shared or user-created libraries are placed.
 
 
 Rxn Rover Setup
@@ -50,7 +50,7 @@ Install via VIPM:
 #. Download the ``.vip`` from `Rxn Rover's release page <https://github.com/RxnRover/RxnRover/releases/latest>`__.
 #. Open ``.vip`` the VIPM application.
 #. Follow the prompts to install Rxn Rover. 
-#. Double-click Main.vi in the top directory of the repository.
+#. Double-click ``Main.vi`` in the top directory of the repository.
 #. Click the "Run" arrow in the top left of the window that opens to run
    Rxn Rover.
 
@@ -58,7 +58,7 @@ Manual install:
 
 #. Clone or download/extract the `Rxn Rover repository <https://github.com/RxnRover/RxnRover>`__. into your ``Documents`` directory.
 
-#. Double-click Main.vi in the top directory of the repository.
+#. Double-click ``Main.vi`` in the top directory of the repository.
 
 #. Click the "Run" arrow in the top left of the window that opens to run
    Rxn Rover.
