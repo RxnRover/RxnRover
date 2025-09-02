@@ -11,7 +11,7 @@ Creating a LabVIEW driver requires a solid understanding of programming in LabVI
     Rxn Rover will fail to communicate with hardware devices that do not have an accompanying driver.
 
 .. hint:: 
-    You can visit the `Instrument Driver Network (IDNet) <https://www.ni.com/en/support/downloads/instrument-drivers.html>`_ Or the `Rxn Rover Plugin Catalog <https://rxnrover.github.io/PluginCatalog>`__  to see if your instrument already has a LabVIEW-supported driver.
+    You can visit the `Instrument Driver Network (IDNet) <https://www.ni.com/en/support/downloads/instrument-drivers.html>`_ or the `Rxn Rover Plugin Catalog <https://rxnrover.github.io/PluginCatalog>`__  to see if your instrument already has a LabVIEW-supported driver.
 
 This tutorial is not meant to be a comprehensive-tutorial just as supplementary instruction. For more detailed guidelines, refer to:  
 `Developing LabVIEW Plug and Play Instrument Drivers <https://www.ni.com/en/support/downloads/instrument-drivers/tools-resources/developing-labview-plug-and-play-instrument-drivers.html>`_
