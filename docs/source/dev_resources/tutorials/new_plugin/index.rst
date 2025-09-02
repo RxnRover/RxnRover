@@ -11,7 +11,7 @@ Overview
 Plugins in Rxn Rover typically interact with hardware devices; however, purely software-based plugins can exist in the form of analytical tools, simulation tools, etc. Before you begin writing a plugin for a specific type of hardware, you'll need to consider whether you require a custom device driver or if you can use an existing one. Some manufacturers might already provide a LabVIEW driver.
 
 .. note::
-   All Rxn Rover plugins require the `DynamicReentrant <https://github.com/RxnRover/DynamicReentrant>`_ library installed. This library is provided by the Rxn Rover team to facilitate communication with RxnRover.
+   All Rxn Rover plugins require the `DynamicReentrant <https://github.com/RxnRover/DynamicReentrant>`_ library to be installed. This library is provided by the Rxn Rover team to facilitate communication with RxnRover.
 
 Understanding the Plugin Structure
 ----------------------------------
@@ -25,7 +25,7 @@ The basic components of a Rxn Rover plugin are:
 In some cases, if a device driver already exists, you may only need to focus on developing the plugin that integrates with Rxn Rover.
 
 .. hint:: 
-    You can visit the `Instrument Driver Network (IDNet) <https://www.ni.com/en/support/downloads/instrument-drivers.html>`_ Or the `Rxn Rover Plugin Catalog <https://rxnrover.github.io/PluginCatalog>`__  to see if your instrument already has a LabVIEW-supported driver.
+    You can visit the `Instrument Driver Network (IDNet) <https://www.ni.com/en/support/downloads/instrument-drivers.html>`_ or the `Rxn Rover Plugin Catalog <https://rxnrover.github.io/PluginCatalog>`__  to see if your instrument already has a LabVIEW-supported driver.
 
 Create Device Driver
 ---------------------
@@ -34,7 +34,7 @@ If the device does not already have a pre-existing driver, you'll need to create
 
 For more detailed guidelines, refer to:  
 `Developing LabVIEW Plug and Play Instrument Drivers <https://www.ni.com/en/support/downloads/instrument-drivers/tools-resources/developing-labview-plug-and-play-instrument-drivers.html>`_
-Or see our :ref:`tutorial on creating a driver <create-new-driver>`
+or see our :ref:`tutorial on creating a driver <create-new-driver>`
 
 Driver Development Checklist:
 
@@ -66,9 +66,9 @@ Once you have your driver ready (or confirmed that one already exists), follow t
 
    Either:
 
-    - Copy and rename the template folder.
-
     - Use the LabVIEW Project Creator to make a new project from the template.
+
+    - Copy and rename the template folder.
 
    Place your new plugin folder in: ``<Documents>/RxnRover/CustomPlugins``
 
