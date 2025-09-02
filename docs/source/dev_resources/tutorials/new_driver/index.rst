@@ -57,8 +57,8 @@ Top-Level VIs
 Folders
 ^^^^^^^
 
-**Public/**  
-VIs intended for use by external callers:
+- **Public/**  
+  VIs intended for use by external callers:
 
 - **Action-Status/**  
   VIs that perform actions or acquire data (e.g., getters)
