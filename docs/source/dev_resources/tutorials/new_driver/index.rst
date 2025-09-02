@@ -67,7 +67,8 @@ VIs intended for use by external callers:
   VIs that change the instrument's configuration or state (e.g., setters)
 
 - **Data/**  
-  Includes common I/O operations:  
+  Includes common I/O operations:
+
   - `Data Read.vi`  
   - `Data Write.vi`
 
