@@ -54,18 +54,15 @@ The mock analyzer plugin we will be using generates random data as if it were
 being generated and parsed from a liquid chromatograph (LC). The catalog entry
 for this plugin can be found under ``First-Party Plugins >  Plugin Classes > 
 Analyzers > Liquid Chromatography > Mock LC Parser``, where there will be 
-acquisition instructions and a brief description of the plugin. Download the
-repository by following the link in the acquisition section, clicking the green 
-"Code" button in the top right of the Mock LC Parser repository, and selecting
-"Download ZIP". Notice that these download instructions are also on the front 
-page of the Mock LC Parser repository.
+acquisition instructions and a brief description of the plugin. Follow the link given in 
+the Plugin Catalog listing to the Github release section for the Mock LC Parser and then download the
+plugin by clicking :guilabel:`rxnrover_lib_mock_lc_parser-X.X.X.X.vip` located under the "Assets"
+section at the bottom of the page.
 
-.. figure:: mock_lc_parser_repo.png
-   :alt: Screenshot of the Mock LC Parser repository.
+.. figure:: mock_lc_parser_release.png
+   :alt: Screenshot of the Mock LC Parser release section.
    
-   Mock LC Parser repository showing the green "Code" button in the top right
-   and the top of the installation instructions for the plugin at the bottom of
-   the image.
+   Mock LC Parser github release section showing the release name, description, and downloadable assets.
 
 Mock Pump
 ^^^^^^^^^
