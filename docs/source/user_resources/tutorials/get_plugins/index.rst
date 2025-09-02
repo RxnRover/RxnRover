@@ -41,7 +41,7 @@ Typical manual installation of a plugin just requires moving the downloaded plug
 to your ``<documents>/RxnRover/Plugins`` directory, where ``<documents>`` is
 your operating system's **Documents** directory.
 
-1. Download the plugin files (typically a folder containing source code and a `plugin.conf` file).
+1. Download the plugin files (typically a folder containing source code and a ``plugin.conf`` file).
 2. Move the plugin folder into the following directory:
 
    ::
