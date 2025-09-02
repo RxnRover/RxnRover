@@ -28,7 +28,7 @@ to facilitate communication between Rxn Rover and its plugins. You can install
 this library using either a ``.vip`` file (via VIPM) or a ZIP archive (for manual installation).
 
 The latest release is available at:
-`https://www.github.com/RxnRover/DynamicReentrant/releases/latest <https://www.github.com/RxnRover/DynamicReentrant/releases/latest>`_
+`Dynamic Reentrant's release page <https://www.github.com/RxnRover/DynamicReentrant/releases/latest>`_
 
 - **VIPM Install:** Download the ``.vip`` package from the Releases page and install it using the VI Package Manager (VIPM).
 - **Manual Install:** Download the ZIP archive from the same page. Extract its contents into your LabVIEW installation's ``user.lib`` directory:
@@ -46,6 +46,7 @@ Rxn Rover Setup
 Once the prerequisites are installed:
 
 Install via VIPM:
+~~~~~~~~~~~~~~~~~
 
 #. Download the ``.vip`` from `Rxn Rover's release page <https://github.com/RxnRover/RxnRover/releases/latest>`__.
 #. Open ``.vip`` the VIPM application.
@@ -55,6 +56,7 @@ Install via VIPM:
    Rxn Rover.
 
 Manual install:
+~~~~~~~~~~~~~~~
 
 #. Clone or download/extract the `Rxn Rover repository <https://github.com/RxnRover/RxnRover>`__. into your ``Documents`` directory.
 
