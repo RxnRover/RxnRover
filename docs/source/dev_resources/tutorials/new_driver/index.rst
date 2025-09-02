@@ -87,5 +87,5 @@ After setting up your LabVIEW project:
 .. note::
     We strongly recommend testing each VI with your instrument to verify correct functionality before integrating with Rxn Rover.
 
-See :ref:`create-new-plugin` for how to integrate this driver with Rxn Rover’s plugin system.
+See :ref:`create-new-plugin` for how to integrate this driver with Rxn Rover's plugin system.
 See :ref:`tutorial on creating a VIPM package <create-new-vipm-package>` to package your driver for automated installation and distribution.
