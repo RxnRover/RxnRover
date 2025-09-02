@@ -131,10 +131,10 @@ contain symbols that are not allowed in a file name.
    
    Experiment Manager window with example recent experiments.
 
-Click the "Create New Experiment" button and fill in the information like in 
+Click the :guilabel:`Create New Experiment` button and fill in the information like in 
 the image below. Choose an Experiment Location that will be easy to find in a
 file explorer, like a directory on your Desktop or in your Documents. Press 
-"OK" when you are finished.
+:guilabel:`OK` when you are finished.
 
 .. _mock-experiment-new-experiment-window:
 
@@ -172,8 +172,8 @@ Loading the Plugins
 Reactor Components
 ^^^^^^^^^^^^^^^^^^
 
-First, we will load some Reactor Components. To do this, click the "Load
-Controller" button in the top left. Enter information to match the image below.
+First, we will load some Reactor Components. To do this, click the :guilabel:`Load Controller` button in the top left. 
+Enter information to match the image below.
 
 .. _mock-experiment-load-hardware:
 
@@ -184,10 +184,10 @@ Controller" button in the top left. Enter information to match the image below.
    Select Hardware window used to load and name Reactor Component plugin 
    instances.
    
-Press "OK" and the plugin will start loading. The plugin will open a dialog 
+Press :guilabel:`OK` and the plugin will start loading. The plugin will open a dialog 
 window to connect the plugin to a hardware resource. Although no instruments
 are connected, your computer should still have a COM port to select. Select 
-this in the VISA Resource dropdown list now and "Connect". (Additional 
+this in the VISA Resource dropdown list now and :guilabel:`Connect`. (Additional 
 information: `What is VISA? <https://www.ni.com/en-us/support/documentation/
 supplemental/06/ni-visa-overview.html>`__)
 
@@ -231,8 +231,8 @@ section on the right.
 Optimizer
 ^^^^^^^^^
 
-Press the "Load Optimizer" button to open the "Select Optimizer" window. Select
-"SQSnobFit" from the list and press "OK". It does not matter if you name
+Press the :guilabel:`Load Optimizer` button to open the "Select Optimizer" window. Select
+"SQSnobFit" from the list and press :guilabel:`OK`. It does not matter if you name
 the optimizer, as this name is not visible anywhere currently.
 
 .. _mock-experiment-load-optimizer:
@@ -245,10 +245,9 @@ the optimizer, as this name is not visible anywhere currently.
 Instead of a VISA Resource, this optimizer plugin requires a script that tells
 it how to start SQSnobFit. Browse to ``<documents>/RxnRover/Plugins/SQSnobFit/
 sqsnobfit_remote_optimizer/scripts/`` and select ``start_inference.bat``
-(Windows) or ``start_inference.sh`` (Linux or Mac). When "Connect" is pressed, 
+(Windows) or ``start_inference.sh`` (Linux or Mac). When :guilabel:`Connect` is pressed, 
 a terminal should open that is running the optimization algorithm. Minimize 
-this terminal, but do not close it! If you accidentally close it, press "Stop
-Optimizer" and restart this section.
+this terminal, but do not close it! If you accidentally close it, press :guilabel:`Stop Optimizer` and restart this section.
 
 .. _mock-experiment-select-optimizer-script-filled:
 
@@ -280,8 +279,8 @@ Assigning Parameters
 ^^^^^^^^^^^^^^^^^^^^
 
 A window to assign parameters to reactor components will either open 
-automatically when an optimizer is loaded, or by pressing the "Reassign 
-Parameters" button in the Optimizer Control section. Plugins are assigned to
+automatically when an optimizer is loaded, or by pressing the :guilabel:`Reassign Parameters` 
+button in the "Optimizer Control" section. Plugins are assigned to
 parameters by dragging the plugin names from the "Unclassified" section to the 
 desired parameter. Assign the mock reactor component plugins to the optimizer 
 plugins as shown below.
@@ -294,18 +293,18 @@ plugins as shown below.
    Parameter assignment window with the mock plugins assigned to their 
    corresponding optimization parameters.
 
-Once you have assigned the parameters, press "Accept Parameters" to manually
+Once you have assigned the parameters, press :guilabel:`Accept Parameters` to manually
 forward the initial parameters from the optimizer to the reactor components
-and press "Start Hardware" so the components turn on (start pumping and 
-heating). Afterward, check the "Pass Parameters Automatically" box. Once the
+and press :guilabel:`Start Hardware` so the components turn on (start pumping and 
+heating). Afterward, check the :guilabel:`Pass Parameters Automatically` box. Once the
 analyzer is loaded and passing reaction results to the optimizer, the 
 optimizer will explore the space automatically.
 
 Analyzer
 ^^^^^^^^
 
-Press the "Load Analyzer" button to open the "Select Analyzer" window. Select
-"Mock LC Parser" from the list and press "OK". It does not matter if you name
+Press the :guilabel:`Load Analyzer` button to open the "Select Analyzer" window. Select
+"Mock LC Parser" from the list and press :guilabel:`OK`. It does not matter if you name
 the analyzer, as this name is not visible anywhere currently.
 
 .. _mock-experiment-load-analyzer:
@@ -325,10 +324,10 @@ in the Downloads folder, but by creating it in the Experiment Location, all
 relevant data files for a given experiment are in the same place. This makes
 referencing the data later easier.
 
-When "Connect" is pressed, a terminal will open, running the report file 
+When :guilabel:`Connect` is pressed, a terminal will open, running the report file 
 generation script, which generates mock LC report files with random data every 
 two seconds. Minimize this terminal, but do not close it! If you accidentally 
-close it, press "Stop Analyzer" and restart this section.
+close it, press :guilabel:`Stop Analyzer` and restart this section.
 
 .. _mock-experiment-select-analyzer-directory:
 
@@ -361,7 +360,7 @@ Stopping the Optimization
 
 With reactor components, an optimizer, and an analyzer loaded, the automated
 optimization should be under way! Let it run for a minute or two to gather some
-"data". After that, stop the reactor components with "Stop Hardware" and close
+"data". After that, stop the reactor components with :guilabel:`Stop Hardware` and close
 the Rxn Rover window. You will also need to close the two terminals that were 
 opened when the optimizer and analyzer plugins were loaded.
 
