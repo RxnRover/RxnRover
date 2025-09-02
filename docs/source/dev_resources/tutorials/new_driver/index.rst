@@ -75,8 +75,8 @@ Folders
 - **Utility/**  
   Helper and sub-VIs not meant to be called directly
 
-**Private/**  
-Internal-use VIs not exposed to the end user or calling applications.
+- **Private/**  
+  Internal-use VIs not exposed to the end user or calling applications.
 
 Next Steps
 ----------
