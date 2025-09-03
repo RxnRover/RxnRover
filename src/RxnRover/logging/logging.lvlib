@@ -10,6 +10,11 @@
 </Property>
 	<Item Name="Default Log File.vi" Type="VI" URL="../Default Log File.vi"/>
 	<Item Name="Levels.ctl" Type="VI" URL="../Levels.ctl"/>
+	<Item Name="Log Message - CRITICAL.vi" Type="VI" URL="../Log Message - CRITICAL.vi"/>
+	<Item Name="Log Message - DEBUG.vi" Type="VI" URL="../Log Message - DEBUG.vi"/>
+	<Item Name="Log Message - ERROR.vi" Type="VI" URL="../Log Message - ERROR.vi"/>
+	<Item Name="Log Message - INFO.vi" Type="VI" URL="../Log Message - INFO.vi"/>
+	<Item Name="Log Message - WARNING.vi" Type="VI" URL="../Log Message - WARNING.vi"/>
 	<Item Name="Log Message with Level.vi" Type="VI" URL="../Log Message with Level.vi"/>
 	<Item Name="Log Message.vi" Type="VI" URL="../Log Message.vi"/>
 </Library>
