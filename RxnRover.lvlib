@@ -39,6 +39,9 @@
 	<Item Name="File IO" Type="Folder">
 		<Item Name="File IO.lvlib" Type="Library" URL="../src/RxnRover/File IO/File IO.lvlib"/>
 	</Item>
+	<Item Name="logging" Type="Folder">
+		<Item Name="logging.lvlib" Type="Library" URL="../src/RxnRover/logging/logging.lvlib"/>
+	</Item>
 	<Item Name="Plugin Manager" Type="Folder">
 		<Item Name="Initialization" Type="Folder">
 			<Item Name="Initialize Analyzer from Experiment Cluster.vi" Type="VI" URL="../src/RxnRover/Plugin Manager/Initialization/Initialize Analyzer from Experiment Cluster.vi"/>
