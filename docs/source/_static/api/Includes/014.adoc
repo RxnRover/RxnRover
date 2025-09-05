@@ -1,0 +1,152 @@
+== Generic Optimizer.lvclass
+
+*Responsibility:*
+No description found (add content in lvclass description)
+
+*Version:* 1.0.0.1
+
+=== Diagram
+
+[plantuml, format="svg", align="center"]
+....
+@startuml
+set namespaceSeparator :
+skinparam ClassBackgroundColor #FFFFFF
+skinparam ClassBorderColor #555555
+skinparam ClassFontColor #000000
+skinparam ClassHeaderBackgroundColor #808080
+
+skinparam top to bottom direction
+class "RxnRover.lvlib:Generic Optimizer" {
+{static} {method} +Variant to Optimizer State()
+{method} +Control Panel Initialization Message()
+{method} +New Parameter Message()
+{method} +Start Message()
+{method} +Stop Message()
+{method} +Valid Resource Message()
+{method} +Submit Goal()
+{method} +Listening Server Cases()
+{method} +Resource from String()
+{method} +Resource to String()
+{method} +Subpanel UI()
+{method} +Check Valid Message()
+
+}
+"RxnRover.lvlib:Generic Plugin" <|-- "RxnRover.lvlib:Generic Optimizer"
+
+
+
+@enduml
+....
+
+=== Methods
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|Control Panel Initialization Message
+|image:RxnRover.lvlib_Generic_Optimizer.lvclass_Control_Panel_Initialization_Message.vi.png[RxnRover.lvlib:Generic Optimizer.lvclass:Control Panel Initialization Message.vi]
+|Method to generate the initial message to send to a Controller's Control Panel.
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|New Parameter Message
+|image:RxnRover.lvlib_Generic_Optimizer.lvclass_New_Parameter_Message.vi.png[RxnRover.lvlib:Generic Optimizer.lvclass:New Parameter Message.vi]
+|Dynamic dispatch for each child controller type to provide it's proper message for setting a new parameter value (setpoint).
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Start Message
+|image:RxnRover.lvlib_Generic_Optimizer.lvclass_Start_Message.vi.png[RxnRover.lvlib:Generic Optimizer.lvclass:Start Message.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Stop Message
+|image:RxnRover.lvlib_Generic_Optimizer.lvclass_Stop_Message.vi.png[RxnRover.lvlib:Generic Optimizer.lvclass:Stop Message.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Valid Resource Message
+|image:RxnRover.lvlib_Generic_Optimizer.lvclass_Valid_Resource_Message.vi.png[RxnRover.lvlib:Generic Optimizer.lvclass:Valid Resource Message.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Submit Goal
+|image:RxnRover.lvlib_Generic_Optimizer.lvclass_Submit_Goal.vi.png[RxnRover.lvlib:Generic Optimizer.lvclass:Submit Goal.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Listening Server Cases
+|image:RxnRover.lvlib_Generic_Optimizer.lvclass_Listening_Server_Cases.vi.png[RxnRover.lvlib:Generic Optimizer.lvclass:Listening Server Cases.vi]
+|Case structure with messages to listen for from the control panel. If more than the basic messages need to be handled, this should be overwritten by the child class.
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|Resource from String
+|image:RxnRover.lvlib_Generic_Optimizer.lvclass_Resource_from_String.vi.png[RxnRover.lvlib:Generic Optimizer.lvclass:Resource from String.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Resource to String
+|image:RxnRover.lvlib_Generic_Optimizer.lvclass_Resource_to_String.vi.png[RxnRover.lvlib:Generic Optimizer.lvclass:Resource to String.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read Valid Messages
+|image:RxnRover.lvlib_Generic_Optimizer.lvclass_Read_Valid_Messages.vi.png[RxnRover.lvlib:Generic Optimizer.lvclass:Read Valid Messages.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|Subpanel UI
+|image:RxnRover.lvlib_Generic_Optimizer.lvclass_Subpanel_UI.vi.png[RxnRover.lvlib:Generic Optimizer.lvclass:Subpanel UI.vi]
+|Dynamic dispatch VI that must be overridden by all inheriting classes. It is the UI that will be inserted into subpanels so data can be displayed to the user. The class will use an internally managed message queue to communicate to it. The user should only communicate to this UI through class methods.
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|Check Valid Message
+|image:RxnRover.lvlib_Generic_Optimizer.lvclass_Check_Valid_Message.vi.png[RxnRover.lvlib:Generic Optimizer.lvclass:Check Valid Message.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Variant to Optimizer State
+|image:RxnRover.lvlib_Generic_Optimizer.lvclass_Variant_to_Optimizer_State.vi.png[RxnRover.lvlib:Generic Optimizer.lvclass:Variant to Optimizer State.vi]
+|Converts a variant with attributes into a named cluster representing the optimizer state. If a corresponding variant attribute does not exist, the default value for the named element according to the typedef is used.
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined
+
+=== Class Constant VIs
+
+[NOTE]
+====
+No Constant VIs Found
+====

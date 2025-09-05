@@ -1,0 +1,85 @@
+== Experiment Manager.lvlib
+
+*Responsibility:*
+No description found (add content in lvlib description)
+
+*Version:* 1.0.0.0
+
+.Nested libraries
+[cols="", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Type
+
+|<<User Event - Stop.lvlib>>
+|Library
+|===
+
+=== Functions
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|Create or Load Experiment Dialog
+|image:RxnRover.lvlib_Experiment_Manager.lvlib_Create_or_Load_Experiment_Dialog.vi.png[RxnRover.lvlib:Experiment Manager.lvlib:Create or Load Experiment Dialog.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Error Handler - Event Handling Loop
+|image:RxnRover.lvlib_Experiment_Manager.lvlib_Error_Handler___Event_Handling_Loop.vi.png[RxnRover.lvlib:Experiment Manager.lvlib:Error Handler - Event Handling Loop.vi]
+|Process an error that occurred in the Event Handling Loop, either by ignoring it, or generating an "Error" message.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Error Handler - Message Handling Loop
+|image:RxnRover.lvlib_Experiment_Manager.lvlib_Error_Handler___Message_Handling_Loop.vi.png[RxnRover.lvlib:Experiment Manager.lvlib:Error Handler - Message Handling Loop.vi]
+|Process an error that occurred in the Message Handling Loop, either by ignoring it, or generating an "Exit" message.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|New Experiment Dialog
+|image:RxnRover.lvlib_Experiment_Manager.lvlib_New_Experiment_Dialog.vi.png[RxnRover.lvlib:Experiment Manager.lvlib:New Experiment Dialog.vi]
+|Opens a dialog window to specify the name and folder location of a new experiment. Project Name and Project Location will be blank if values are not provided, and any values provided will be validated and the dialog updated accordingly.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|New Experiment
+|image:RxnRover.lvlib_Experiment_Manager.lvlib_New_Experiment.vi.png[RxnRover.lvlib:Experiment Manager.lvlib:New Experiment.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Validate Experiment Location
+|image:RxnRover.lvlib_Experiment_Manager.lvlib_Validate_Experiment_Location.vi.png[RxnRover.lvlib:Experiment Manager.lvlib:Validate Experiment Location.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Validate Experiment Name
+|image:RxnRover.lvlib_Experiment_Manager.lvlib_Validate_Experiment_Name.vi.png[RxnRover.lvlib:Experiment Manager.lvlib:Validate Experiment Name.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined
+
+=== Library Constant VIs
+
+[NOTE]
+====
+No Constant VIs Found
+====

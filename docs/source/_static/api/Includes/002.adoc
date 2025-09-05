@@ -1,0 +1,484 @@
+== RxnRover.lvlib
+
+*Responsibility:*
+No description found (add content in lvlib description)
+
+*Version:* 1.0.0.0
+
+.Nested libraries
+[cols="", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Type
+
+|<<Controller Array.lvclass>>
+|LVClass
+
+|<<Generic Optimizer.lvclass>>
+|LVClass
+
+|<<Generic Plugin.lvclass>>
+|LVClass
+
+|<<LC Parser.lvclass>>
+|LVClass
+
+|<<Parameter to Hardware Map.lvclass>>
+|LVClass
+
+|<<Passive Hardware.lvclass>>
+|LVClass
+
+|<<Pump Controller.lvclass>>
+|LVClass
+
+|<<Syringe Pump.lvclass>>
+|LVClass
+
+|<<Temperature Controller.lvclass>>
+|LVClass
+
+|<<User Preferences File.lvclass>>
+|LVClass
+
+|<<Experiment File.lvlib>>
+|Library
+
+|<<Experiment Manager.lvlib>>
+|Library
+
+|<<User Event - Stop.lvlib>>
+|Library
+
+|<<File IO.lvlib>>
+|Library
+
+|<<JSON Utilities.lvlib>>
+|Library
+
+|<<LocalAppData Utilities.lvlib>>
+|Library
+
+|<<Project Locations.lvlib>>
+|Library
+
+|<<Plugin Manager.lvlib>>
+|Library
+
+|<<test Message Queue.lvlib>>
+|Library
+|===
+
+=== Functions
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|Hardware Subpanels
+|image:RxnRover.lvlib_Hardware_Subpanels.vi.png[RxnRover.lvlib:Hardware Subpanels.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Ready Status
+|image:RxnRover.lvlib_Ready_Status.vi.png[RxnRover.lvlib:Ready Status.vi]
+|Sets the status indicator to display a "Ready" status.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Remove Control Panel
+|image:RxnRover.lvlib_Remove_Control_Panel.vi.png[RxnRover.lvlib:Remove Control Panel.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Remove Entry
+|image:RxnRover.lvlib_Remove_Entry.vi.png[RxnRover.lvlib:Remove Entry.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Set Unsaved Changes in Title
+|image:RxnRover.lvlib_Set_Unsaved_Changes_in_Title.vi.png[RxnRover.lvlib:Set Unsaved Changes in Title.vi]
+|Update the Reaction Rover window title to have an asterisk (*) after the project file location, indicating that there are unsaved changes to the project.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Update Status Event
+|image:RxnRover.lvlib_Update_Status_Event.vi.png[RxnRover.lvlib:Update Status Event.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Update Status
+|image:RxnRover.lvlib_Update_Status.vi.png[RxnRover.lvlib:Update Status.vi]
+|Updates the status indicator with new text.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Update VI List
+|image:RxnRover.lvlib_Update_VI_List.vi.png[RxnRover.lvlib:Update VI List.vi]
+|Fires the Update VI List Event with the provided Controller Array.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Update Window Title
+|image:RxnRover.lvlib_Update_Window_Title.vi.png[RxnRover.lvlib:Update Window Title.vi]
+|Updates the window title with the correct experiment name and path.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Generate New Log Path Event
+|image:RxnRover.lvlib_Generate_New_Log_Path_Event.vi.png[RxnRover.lvlib:Generate New Log Path Event.vi]
+|Update the directory logs will be written to.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Hardware List Updated
+|image:RxnRover.lvlib_Hardware_List_Updated.vi.png[RxnRover.lvlib:Hardware List Updated.vi]
+|Fires the Update VI List Event with the provided Controller Array.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Hardware Updated Event
+|image:RxnRover.lvlib_Hardware_Updated_Event.vi.png[RxnRover.lvlib:Hardware Updated Event.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Message Received Event
+|image:RxnRover.lvlib_Message_Received_Event.vi.png[RxnRover.lvlib:Message Received Event.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|New Hardware Selected Event
+|image:RxnRover.lvlib_New_Hardware_Selected_Event.vi.png[RxnRover.lvlib:New Hardware Selected Event.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|New Hardware Selected
+|image:RxnRover.lvlib_New_Hardware_Selected.vi.png[RxnRover.lvlib:New Hardware Selected.vi]
+|Fires the Update VI List Event with the provided Controller Array.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|New Log Path Event
+|image:RxnRover.lvlib_New_Log_Path_Event.vi.png[RxnRover.lvlib:New Log Path Event.vi]
+|Event containing a new location to output log files.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|New Parameters Event
+|image:RxnRover.lvlib_New_Parameters_Event.vi.png[RxnRover.lvlib:New Parameters Event.vi]
+|This event is fired when a new set of parameters is received from a reactor control plugin.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|New Yield Event
+|image:RxnRover.lvlib_New_Yield_Event.vi.png[RxnRover.lvlib:New Yield Event.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Process Stopped Event
+|image:RxnRover.lvlib_Process_Stopped_Event.vi.png[RxnRover.lvlib:Process Stopped Event.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Stop Event
+|image:RxnRover.lvlib_Stop_Event.vi.png[RxnRover.lvlib:Stop Event.vi]
+|Effectively provides a singleton "Stop" event instance. The event instance is created on the first call and returned on all subsequent calls.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Submit Goal Event
+|image:RxnRover.lvlib_Submit_Goal_Event.vi.png[RxnRover.lvlib:Submit Goal Event.vi]
+|Event containing the new result value.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|VI List Event
+|image:RxnRover.lvlib_VI_List_Event.vi.png[RxnRover.lvlib:VI List Event.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Initialize Analyzer from Experiment Cluster
+|image:RxnRover.lvlib_Initialize_Analyzer_from_Experiment_Cluster.vi.png[RxnRover.lvlib:Initialize Analyzer from Experiment Cluster.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Initialize Hardware from Experiment Cluster
+|image:RxnRover.lvlib_Initialize_Hardware_from_Experiment_Cluster.vi.png[RxnRover.lvlib:Initialize Hardware from Experiment Cluster.vi]
+|Initialize reactor component plugins from the experiment file plugin list.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Initialize Optimizer from Experiment Cluster
+|image:RxnRover.lvlib_Initialize_Optimizer_from_Experiment_Cluster.vi.png[RxnRover.lvlib:Initialize Optimizer from Experiment Cluster.vi]
+|Attempt to load optimizer plugins from the given experiment file.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Initialize Parameter to Hardware Map from Experiment Cluster
+|image:RxnRover.lvlib_Initialize_Parameter_to_Hardware_Map_from_Experiment_Cluster.vi.png[RxnRover.lvlib:Initialize Parameter to Hardware Map from Experiment Cluster.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Load Details and Filter Plugins
+|image:RxnRover.lvlib_Load_Details_and_Filter_Plugins.vi.png[RxnRover.lvlib:Load Details and Filter Plugins.vi]
+|Convenience function to check all plugin directories for plugin definitions, load in the details for each plugin, and filter the plugin details by supported plugin types.
+
+This function also creates the plugin directories if they do not already exist, in which case no plugins will be loaded since the directories could not have been populated yet.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Add Analyzer
+|image:RxnRover.lvlib_Add_Analyzer.vi.png[RxnRover.lvlib:Add Analyzer.vi]
+|Adds a new analyzer plugin to the process cache.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Add Hardware
+|image:RxnRover.lvlib_Add_Hardware.vi.png[RxnRover.lvlib:Add Hardware.vi]
+|Adds the reactor component plugin to the plugin list.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Add Optimizer
+|image:RxnRover.lvlib_Add_Optimizer.vi.png[RxnRover.lvlib:Add Optimizer.vi]
+|Adds a new optimizer plugin to the process cache.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Assign Parameters to Hardware Dialog
+|image:RxnRover.lvlib_Assign_Parameters_to_Hardware_Dialog.vi.png[RxnRover.lvlib:Assign Parameters to Hardware Dialog.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Initialize Plugin
+|image:RxnRover.lvlib_Initialize_Plugin.vi.png[RxnRover.lvlib:Initialize Plugin.vi]
+|Initialize a plugin instance based on the information given.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Load Plugin Dialog
+|image:RxnRover.lvlib_Load_Plugin_Dialog.vi.png[RxnRover.lvlib:Load Plugin Dialog.vi]
+|Dialog allowing the user to select a plugin by name. Returns the selected plugin details.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Stop Analyzer VI
+|image:RxnRover.lvlib_Stop_Analyzer_VI.vi.png[RxnRover.lvlib:Stop Analyzer VI.vi]
+|Stops the named process, shutting down the subpanel indicator and control panel, removing the entry from the message history cache, and deleting it form the object array. This VI triggers status update events.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Stop Optimizer VI
+|image:RxnRover.lvlib_Stop_Optimizer_VI.vi.png[RxnRover.lvlib:Stop Optimizer VI.vi]
+|Stops the named process, shutting down the subpanel indicator and control panel, removing the entry from the message history cache, and deleting it form the object array. This VI triggers status update events.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Stop Process VI
+|image:RxnRover.lvlib_Stop_Process_VI.vi.png[RxnRover.lvlib:Stop Process VI.vi]
+|Stops the named process, shutting down the subpanel indicator and control panel, removing the entry from the message history cache, and deleting it form the object array. This VI triggers status update events.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Add Process Queue Reference
+|image:RxnRover.lvlib_Add_Process_Queue_Reference.vi.png[RxnRover.lvlib:Add Process Queue Reference.vi]
+|Appends queue to an array of process queues.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Add VI to Tab Control
+|image:RxnRover.lvlib_Add_VI_to_Tab_Control.vi.png[RxnRover.lvlib:Add VI to Tab Control.vi]
+|Adds the VI to the first visible page of the tab control given, assuming the first control on the page is a subpanel.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Cache Message
+|image:RxnRover.lvlib_Cache_Message.vi.png[RxnRover.lvlib:Cache Message.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Check Loop Error
+|image:RxnRover.lvlib_Check_Loop_Error.vi.png[RxnRover.lvlib:Check Loop Error.vi]
+|Check the 'error to process' to see if its code value matches any of the values in the 'Ignore Errors' array. If so, do nothing. If not, send an "Error" message containing the error data to the Message Handling Loop for further processing. If the "Exit on Error?" input is TRUE, send an "Exit" message to the Message Handling Loop instead.
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|Choose Idle or Error State
+|image:RxnRover.lvlib_Choose_Idle_or_Error_State.vi.png[RxnRover.lvlib:Choose Idle or Error State.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Error Handler - Main VI State Machine
+|image:RxnRover.lvlib_Error_Handler___Main_VI_State_Machine.vi.png[RxnRover.lvlib:Error Handler - Main VI State Machine.vi]
+|Process an error that occurred in the Message Handling Loop, either by ignoring it, or generating an "Exit" message.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Find Available Queue
+|image:RxnRover.lvlib_Find_Available_Queue.vi.png[RxnRover.lvlib:Find Available Queue.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Find Subpanel on Page
+|image:RxnRover.lvlib_Find_Subpanel_on_Page.vi.png[RxnRover.lvlib:Find Subpanel on Page.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Load Plugin Front Panel
+|image:RxnRover.lvlib_Load_Plugin_Front_Panel.vi.png[RxnRover.lvlib:Load Plugin Front Panel.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Queue Message
+|image:RxnRover.lvlib_Queue_Message.vi.png[RxnRover.lvlib:Queue Message.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Save Reaction Rover Data to Experiment File
+|image:RxnRover.lvlib_Save_Reaction_Rover_Data_to_Experiment_File.vi.png[RxnRover.lvlib:Save Reaction Rover Data to Experiment File.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Split Name and Message
+|image:RxnRover.lvlib_Split_Name_and_Message.vi.png[RxnRover.lvlib:Split Name and Message.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Variant to Data String
+|image:RxnRover.lvlib_Variant_to_Data_String.vi.png[RxnRover.lvlib:Variant to Data String.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Is Variant Supported Type
+|image:RxnRover.lvlib_Is_Variant_Supported_Type.vi.png[RxnRover.lvlib:Is Variant Supported Type.vi]
+|Checks if the variant is any of the supported types for parameter values.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Is Variant Type Boolean
+|image:RxnRover.lvlib_Is_Variant_Type_Boolean.vi.png[RxnRover.lvlib:Is Variant Type Boolean.vi]
+|Check if the variant contents are a boolean.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Is Variant Type Numeric
+|image:RxnRover.lvlib_Is_Variant_Type_Numeric.vi.png[RxnRover.lvlib:Is Variant Type Numeric.vi]
+|Check if the variant contents are a numeric type.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Is Variant Type Path
+|image:RxnRover.lvlib_Is_Variant_Type_Path.vi.png[RxnRover.lvlib:Is Variant Type Path.vi]
+|Check if the variant contents are a path.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Is Variant Type String
+|image:RxnRover.lvlib_Is_Variant_Type_String.vi.png[RxnRover.lvlib:Is Variant Type String.vi]
+|Check if the variant contents are a string.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Unsupported Type Error
+|image:RxnRover.lvlib_Unsupported_Type_Error.vi.png[RxnRover.lvlib:Unsupported Type Error.vi]
+|Provides an error cluster for an unsupported type. This will get the type of the variant and add that to the error message.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Main
+|image:RxnRover.lvlib_Main.vi.png[RxnRover.lvlib:Main.vi]
+|Use this template to build a simple state machine design pattern. Each state executes code and determines which state to transition to.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined
+
+=== Library Constant VIs
+
+[NOTE]
+====
+No Constant VIs Found
+====
