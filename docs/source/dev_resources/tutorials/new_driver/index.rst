@@ -3,7 +3,7 @@
 Create a New Driver
 ===================
 
-Rxn Rover supports plugin-based integration with a variety of laboratory instruments and systems. A *driver* is a software component that enables Rxn Rover to communicate with external hardware, typically laboratory instruments.
+Rxn Rover supports plugin-based integration with a variety of laboratory instruments and systems. A *LabVIEW Driver* is a software component which includes VIs (LabVIEW code) that is used to communicate with external hardware, typically laboratory instruments.
 
 Creating a LabVIEW driver requires a solid understanding of programming in LabVIEW. We recommend completing NIs' official LabVIEW tutorials before getting started.
 
@@ -24,8 +24,8 @@ To get started, create a new LabVIEW project using the built-in **Instrument Dri
 Steps:
 
 1. Launch LabVIEW and go to **File → Create Project**
-2. In the templates panel, select **Instrument Driver Project**
-3. Click **Finish**
+2. In the templates panel, select :guilabel:`Instrument Driver Project`
+3. Click :guilabel:`Finish`
 
 This opens the **Create New Instrument Driver Project** dialog. We recommend the following configuration:
 
@@ -38,21 +38,21 @@ You can optionally enter:
 - A driver description  
 - A custom VI icon banner template
 
-Once completed, LabVIEW will generate a project located in the `instr.lib` directory—LabVIEW’s standard location for all instrument drivers.
+Once completed, LabVIEW will generate a project located in the ``instr.lib`` directory—LabVIEW’s standard location for all instrument drivers.
 
 Driver Project Structure
 ------------------------
 
-Your new driver project will be created with a standard folder and VI structure under the `.lvlib` file. The layout will include:
+Your new driver project will be created with a standard folder and VI structure under the ``.lvlib`` file. The layout will include:
 
 Top-Level VIs
 ^^^^^^^^^^^^^
 
-- **Close.vi** – Terminates communication with the instrument
-- **Initialize.vi** – Establishes communication and prepares the instrument
-- **VI Tree.vi** – A non-functional VI that provides a visual index of all included VIs
-- **dir.mnu** – Customizes palette view
-- **Readme.html** – A template README file for your driver
+- ``Close.vi`` – Terminates communication with the instrument
+- ``Initialize.vi`` – Establishes communication and prepares the instrument
+- ``VI Tree.vi`` – A non-functional VI that provides a visual index of all included VIs
+- ``dir.mnu`` – Customizes palette view
+- ``Readme.html`` – A template README file for your driver (though you should also consider creating your own ``README.md`` for GitHub)
 
 Folders
 ^^^^^^^
@@ -69,8 +69,8 @@ Folders
 - **Data/**  
   Includes common I/O operations:
 
-  - `Data Read.vi`  
-  - `Data Write.vi`
+  - ``Data Read.vi``    
+  - ``Data Write.vi``
 
 - **Utility/**  
   Helper and sub-VIs not meant to be called directly
