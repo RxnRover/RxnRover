@@ -52,7 +52,7 @@ Working with Issues
   Avoid bundling multiple unrelated fixes into one branch or PR. This makes reviewing and debugging more difficult.
 
 - **Close resolved issues**  
-  Once your PR addressing an issue has been merged, make sure to close the related issue or link it properly in the PR description (`Closes #123`).
+  Once your PR addressing an issue has been merged, make sure to close the related issue or link it properly in the PR description (`Closes #123`). For more information see, `Github - Linking a Pull Request to an Issue <https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue>`_
 
 Thank You for Contributing!
 ---------------------------
