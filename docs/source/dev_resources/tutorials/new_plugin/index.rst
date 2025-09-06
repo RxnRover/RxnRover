@@ -8,27 +8,27 @@ Plugins are an essential part of Rxn Rover, providing the ability to interface w
 Overview
 --------
 
-Plugins in Rxn Rover typically interact with hardware devices; however, purely software-based plugins can exist in the form of analytical tools, simulation tools, etc. Before you begin writing a plugin for a specific type of hardware, you'll need to consider whether you require a custom device driver or if you can use an existing one. Some manufacturers might already provide a LabVIEW driver.
+Plugins in Rxn Rover typically interact with hardware devices; however, purely software-based plugins can exist too, like for reactor control algorithms, analytical tools, and simulation tools. Before you begin writing a plugin for a specific type of hardware, you'll need to consider whether you require a custom device driver or if you can use an existing one. Some manufacturers might already provide a LabVIEW driver.
 
 .. note::
-   All Rxn Rover plugins require the `DynamicReentrant <https://github.com/RxnRover/DynamicReentrant>`_ library to be installed. This library is provided by the Rxn Rover team to facilitate communication with RxnRover.
+   All Rxn Rover plugins require the `DynamicReentrant <https://rxnrover.github.io/PluginCatalog/core_tools/libraries/dynamic_reentrant.html>`_ library to be installed. This library is provided by the Rxn Rover team to facilitate communication with RxnRover.
 
-Understanding the Plugin Structure
-----------------------------------
+Understanding Plugins and related Components
+--------------------------------------------
 
-The basic components of a Rxn Rover plugin are:
+The `typical` basic components of a Rxn Rover plugin are:
 
-1. **Driver**: The software component that communicates directly with the device. If you already have a provided LabVIEW driver, you will only need to create the plugin for the device.
+1. **LabVIEW Driver**: The software component that communicates directly with the device. If you already have a provided LabVIEW driver, you will only need to create the plugin for the device. The VI's created in the LabVIEW drivers library will be called/referenced by the plugin. Though it is not necessarily apart of the plugin itself, it is still highly important for a plugins functionality. However, it also important to note that not every plugin will need a corresponding LabVIEW driver, for example a purely software-based plugin or our `Mock Pump Controller Plugin <https://rxnrover.github.io/PluginCatalog/first_party/reactor_components/mock_pump_controller.html>`_. 
 
-2. **Plugin**: The interface between the driver and Rxn Rover. This connects the low-level functionality of the driver to the higher-level features of the Rxn Rover platform. As well as supplied the User-Interface in RxnRover.
+2. **Plugin**: The interface between the driver and Rxn Rover. This connects the low-level functionality of the driver to the higher-level features of the Rxn Rover platform. As well as supplies the User-Interface in RxnRover.
 
 In some cases, if a device driver already exists, you may only need to focus on developing the plugin that integrates with Rxn Rover.
 
 .. hint:: 
     You can visit the `Instrument Driver Network (IDNet) <https://www.ni.com/en/support/downloads/instrument-drivers.html>`_ or the `Rxn Rover Plugin Catalog <https://rxnrover.github.io/PluginCatalog>`__  to see if your instrument already has a LabVIEW-supported driver.
 
-Create Device Driver
----------------------
+Create Device LabVIEW Driver
+----------------------------
 
 If the device does not already have a pre-existing driver, you'll need to create one. Instrument drivers are responsible for handling the communication and control of the device with your computer.
 
@@ -36,7 +36,7 @@ For more detailed guidelines, refer to:
 `Developing LabVIEW Plug and Play Instrument Drivers <https://www.ni.com/en/support/downloads/instrument-drivers/tools-resources/developing-labview-plug-and-play-instrument-drivers.html>`_
 or see our :ref:`tutorial on creating a driver <create-new-driver>`
 
-Driver Development Checklist:
+LabVIEW Driver Development Checklist:
 
 - **Understand the communication protocol** used by the device (e.g., USB, GPIB, Ethernet).
 - **Test basic connectivity** with the device.
@@ -44,50 +44,55 @@ Driver Development Checklist:
 - **Handle errors and exceptions** to ensure robust communication.
 
 Create the Plugin From Template
--------------------------------
+--------------------------------
 
 Once you have your driver ready (or confirmed that one already exists), follow these steps to create the plugin:
 
-1. Ensure you have correctly installed the `DynamicReentrant <https://github.com/RxnRover/DynamicReentrant>`_ library.
+1. Ensure you have correctly installed the `DynamicReentrant <https://rxnrover.github.io/PluginCatalog/core_tools/libraries/dynamic_reentrant.html>`_ library.
 
-2. **Download the Template**
+2. Download the Template
 
-   - Download or clone the `Generic Plugin Template <https://github.com/RxnRover/template_general_plugin>`_ from GitHub.
-
+   - Download or clone the `Generic Plugin Template <https://rxnrover.github.io/PluginCatalog/first_party/templates/general_plugin_template.html>`_ from GitHub.
    - Extract the ZIP and rename the folder (recommended: ``General Plugin Template``).
 
-3. **Integrate into LabVIEW** *(optional but recommended)*
+3. Integrate into LabVIEW *(optional but recommended)*
 
-   - Copy the extracted folder to: ``<LabVIEW Data>/ProjectTemplates/Source/General Plugin Template``
+   - Copy the extracted folder to:
 
-   - Move the ``general_plugin_template.xml`` file to: ``<LabVIEW Data>/ProjectTemplates/MetaData/``
+     ``<LabVIEW Data>/ProjectTemplates/Source/General Plugin Template``
 
-4. **Create a New Plugin Instance**
+   - Move the ``general_plugin_template.xml`` file to:
 
-   Either:
+     ``<LabVIEW Data>/ProjectTemplates/MetaData/``
 
-    - Use the LabVIEW Project Creator to make a new project from the template.
+4. Create a New Plugin Instance
 
-    - Copy and rename the template folder.
+   You can either:
 
-   Place your new plugin folder in: ``<Documents>/RxnRover/CustomPlugins``
+   - Use the LabVIEW Project Creator to make a new project from the template.
+   - Copy and rename the template folder.
 
-5. **Customize the Plugin**
+   Place your new plugin folder in:
+
+   ``<Documents>/RxnRover/CustomPlugins``
+
+5. Customize the Plugin
 
    - Rename ``Generic Plugin Template.lvproj`` and ``Rename to match project.lvlib`` to match your instrument.
 
    - Edit ``plugin.conf`` to reflect your new plugin:
 
-    - Plugin name (We'd recommend naming it after your instrument, however it can be whatever you'd like just not blank)
-    - Plugin type (Must be one of the Rxn Rover-supported and recognized plugin types)
-    - Controller type (Must be one of the Rxn Rover-supported and recognized controller types)
+     - Plugin name (We recommend naming it after your instrument; it can be anything non-blank)
+     - Plugin type (Must be one of the Rxn Rover-supported and recognized plugin types)
+     - Controller type (Must be one of the Rxn Rover-supported and recognized controller types)
 
-   - Edit ``Main.vi`` :
+   - Edit ``Main.vi``:
 
-    - Update the title and display units.
-    - Follow the instructions on the front panel.
-    - Adjust the numeric formatting of fields.
-    - Set default values for all front panel controls.
+     - Update the title and display units.
+     - Follow the instructions on the front panel.
+     - Adjust the numeric formatting of fields.
+     - Set default values for all front panel controls.
+
 
 Modify the Plugin Template
 --------------------------
