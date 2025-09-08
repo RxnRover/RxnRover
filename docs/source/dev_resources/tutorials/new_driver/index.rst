@@ -15,6 +15,7 @@ Creating a LabVIEW driver requires a solid understanding of programming in LabVI
 
 This tutorial is not meant to be a comprehensive-tutorial just as supplementary instruction. For more detailed guidelines, refer to:  
 `Developing LabVIEW Plug and Play Instrument Drivers <https://www.ni.com/en/support/downloads/instrument-drivers/tools-resources/developing-labview-plug-and-play-instrument-drivers.html>`_
+and `Instrument Driver Development Tools and Resources <https://ni.com/en/support/downloads/instrument-drivers/tools-resources.html>`_.
 
 Create a LabVIEW Driver Project
 -------------------------------
@@ -88,5 +89,8 @@ After setting up your LabVIEW project:
 .. note::
     We strongly recommend testing each VI with your instrument to verify correct functionality before integrating with Rxn Rover.
 
+.. note::
+    If any part of this tutorial is unclear, you can explore examples inside our `Public GitHub Repositories <https://github.com/orgs/RxnRover/repositories>`_ or reach out to us by making a discussion on `Rxn Rover's GitHub Discussion Board <https://github.com/orgs/RxnRover/discussions>`_
+    
 See :ref:`create-new-plugin` for how to integrate this driver with Rxn Rover's plugin system.
 See :ref:`tutorial on creating a VIPM package <create-new-vipm-package>` to package your driver for automated installation and distribution.
