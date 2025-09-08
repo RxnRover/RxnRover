@@ -107,8 +107,8 @@ For external developers who wish to make their plugin compatible with Rxn Rover.
   - VIPM will auto-detect most dependencies.
   - Manually add:
   
-    - `RxnRover<https://rxnrover.github.io/PluginCatalog/core_tools/software/rxn_rover.html>`_ (core library)
-    - `Dynamic Reentrant<https://rxnrover.github.io/PluginCatalog/core_tools/libraries/dynamic_reentrant.html>`_ (required for plugin loading)
+    - `RxnRover <https://rxnrover.github.io/PluginCatalog/core_tools/software/rxn_rover.html>`_ (core library)
+    - `Dynamic Reentrant <https://rxnrover.github.io/PluginCatalog/core_tools/libraries/dynamic_reentrant.html>`_ (required for plugin loading)
     - Any other required plugins or drivers.
 
 .. important::
@@ -135,5 +135,8 @@ Build and Share the Package
 Share your ``.vip`` file with others or submit it to the Rxn Rover Plugin Catalog for inclusion.
 
 .. _plugin_submission:
+
+.. note::
+    If any part of this tutorial is unclear, please feel free to reach out to us by making a discussion on `Rxn Rover's GitHub Discussion Board <https://github.com/orgs/RxnRover/discussions>`_
 
 After creating your plugin consider `making a submission <https://rxnrover.github.io/PluginCatalog/submissions/plugin_submission_form.html>`__ to the `Rxn Rover Plugin Catalog <https://rxnrover.github.io/PluginCatalog>`__
