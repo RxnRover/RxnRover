@@ -5,6 +5,13 @@ Create a New Plugin
 
 Plugins are an essential part of Rxn Rover, providing the ability to interface with, control, analyze, and communicate directly with connected devices. In this tutorial, we will walk through the process of creating a new plugin in RxnRover.
 
+.. figure:: Mock_Plugin_UI_Example.png
+   :alt: Screenshot of a Mock Pump Controller Plugin.  
+      experiments.
+   :scale: 75%
+   
+   Mock Pump Controller Plugin ``main.vi`` showcasing the UI of a typical Rxn Rover plugin
+
 Overview
 --------
 
@@ -102,6 +109,7 @@ Once you open ``Main.vi`` and navigate to the block diagram, you’ll see severa
 - Instrument Manager Loop (IML)
 - Acquisition Message Loop (AML)
 - Logging Message Loop (LML)
+- Ui Manager Loop (UML) *(only if you are changing the UI)*
 
 .. note::
     If you are not changing the functionality of the plugin (write one setpoint, read one value, start, stop, etc.) you probably only need to change the Instrument Manager Loop (IML), Logging Message Loop (LML), and Acquisition Message Loop (AML).
@@ -144,6 +152,26 @@ In the ``Initialize`` case of the LML:
 
 - Update the ``Channels`` array to correspond to the instrument states listed in the AML's Acquisition Messages array.
 - This ensures the correct data is logged to the CSV file.
+
+**UML Changes** *(only if you are changing the UI)*
+
+The UI Manager Loop (UML) along with the Data Display Loop (DDL) handles the showing of data updates / user interaction (Ex. button presses) on the front panel of ``Main.vi``. 
+
+In the ``Initialize`` case of the UML:
+
+ - Ensure that all front planel control/indicators are properly linked to the ``UI Data.ctl`` typedef. 
+ - Ensure that all front panel controls/indicators are properly reference via ``VI Server References``
+
+Inside of the Event Handling Loop (EHL):
+
+ - Add event cases for any new front panel controls you add to ``Main.vi``
+
+In the Data Display Loop (DDL):
+
+  - Ensure that the variables inside Instrument State cluster you want to display are properly linked to the controls / indicators on the front panel of ``Main.vi``  
+
+.. note::
+    If any part of this tutorial is unclear, please feel free to look at other Plugin examples in the `Rxn Rover Plugin Catalog <https://rxnrover.github.io/PluginCatalog>`__ or reach out to us by making a discussion on `Rxn Rover's GitHub Discussion Board <https://github.com/orgs/RxnRover/discussions>`_
 
 Follow the :ref:`tutorial on creating a VIPM package <create-new-vipm-package>` to package your plugin for automated installation and distribution.
 After creating your plugin consider `making a submission <https://rxnrover.github.io/PluginCatalog/submissions/plugin_submission_form.html>`__ to the `Rxn Rover Plugin Catalog <https://rxnrover.github.io/PluginCatalog>`__
