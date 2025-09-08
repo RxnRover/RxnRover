@@ -3,6 +3,10 @@ GitHub Etiquette
 
 This section outlines best practices for collaborating on `Rxn Rover's GitHub <https://github.com/RxnRover/RxnRover>`__ repository.
 
+.. note::
+    We also have a `Rxn Rover GitHub Discussion Board <https://github.com/orgs/RxnRover/discussions>`_ where you can ask questions, share ideas, and engage with the community.
+
+
 Following these guidelines ensures a productive and respectful environment for all contributors, especially given the unique challenges of working with LabVIEW and visual codebases.
 
 General Guidelines
