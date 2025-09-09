@@ -137,6 +137,8 @@ Share your ``.vip`` file with others or submit it to the Rxn Rover Plugin Catalo
 .. _plugin_submission:
 
 .. note::
-    If any part of this tutorial is unclear, please feel free to reach out to us by making a discussion on `Rxn Rover's GitHub Discussion Board <https://github.com/orgs/RxnRover/discussions>`_
+
+   If any part of this tutorial feels unclear, you can explore the ``.vipb`` build files inside the Plugin examples in our `Public GitHub Repositories <https://github.com/orgs/RxnRover/repositories?q=plugin>`_, or start a conversation on the `Rxn Rover GitHub Discussion Board <https://github.com/orgs/RxnRover/discussions>`_.
+
 
 After creating your plugin consider `making a submission <https://rxnrover.github.io/PluginCatalog/submissions/plugin_submission_form.html>`__ to the `Rxn Rover Plugin Catalog <https://rxnrover.github.io/PluginCatalog>`__

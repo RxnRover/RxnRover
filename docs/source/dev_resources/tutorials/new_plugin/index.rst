@@ -171,7 +171,7 @@ In the Data Display Loop (DDL):
   - Ensure that the variables inside Instrument State cluster you want to display are properly linked to the controls / indicators on the front panel of ``Main.vi``  
 
 .. note::
-    If any part of this tutorial is unclear, please feel free to look at other Plugin examples in the `Rxn Rover Plugin Catalog <https://rxnrover.github.io/PluginCatalog>`__ or reach out to us by making a discussion on `Rxn Rover's GitHub Discussion Board <https://github.com/orgs/RxnRover/discussions>`_
+    If any part of this tutorial is unclear, please feel free to look at other Plugin examples in our `Public GitHub Repositories <https://github.com/orgs/RxnRover/repositories?q=plugin>`_ or reach out to us by making a discussion on `Rxn Rover's GitHub Discussion Board <https://github.com/orgs/RxnRover/discussions>`_
 
 Follow the :ref:`tutorial on creating a VIPM package <create-new-vipm-package>` to package your plugin for automated installation and distribution.
 After creating your plugin consider `making a submission <https://rxnrover.github.io/PluginCatalog/submissions/plugin_submission_form.html>`__ to the `Rxn Rover Plugin Catalog <https://rxnrover.github.io/PluginCatalog>`__
