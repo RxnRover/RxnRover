@@ -90,7 +90,7 @@ After setting up your LabVIEW project:
     We strongly recommend testing each VI with your instrument to verify correct functionality before integrating with Rxn Rover.
 
 .. note::
-    If any part of this tutorial is unclear, you can explore examples inside our `Public GitHub Repositories <https://github.com/orgs/RxnRover/repositories>`_ or reach out to us by making a discussion on `Rxn Rover's GitHub Discussion Board <https://github.com/orgs/RxnRover/discussions>`_
+    If any part of this tutorial is unclear, you can explore examples inside our `Public GitHub Repositories <https://github.com/orgs/RxnRover/repositories?q=driver>`_ or reach out to us by making a discussion on `Rxn Rover's GitHub Discussion Board <https://github.com/orgs/RxnRover/discussions>`_
     
 See :ref:`create-new-plugin` for how to integrate this driver with Rxn Rover's plugin system.
 See :ref:`tutorial on creating a VIPM package <create-new-vipm-package>` to package your driver for automated installation and distribution.
