@@ -18,12 +18,12 @@ Overview
 Plugins in Rxn Rover typically interact with hardware devices; however, purely software-based plugins can exist too, like for reactor control algorithms, analytical tools, and simulation tools. Before you begin writing a plugin for a specific type of hardware, you'll need to consider whether you require a custom device driver or if you can use an existing one. Some manufacturers might already provide a LabVIEW driver.
 
 .. note::
-   All Rxn Rover plugins require the `DynamicReentrant <https://rxnrover.github.io/PluginCatalog/core_tools/libraries/dynamic_reentrant.html>`_ library to be installed. This library is provided by the Rxn Rover team to facilitate communication with RxnRover.
+   All Rxn Rover plugins require the `DynamicReentrant <https://rxnrover.github.io/PluginCatalog/core_tools/libraries/dynamic_reentrant.html>`_ library to be installed. This library is provided by the Rxn Rover team to facilitate communication with Rxn Rover.
 
 Understanding Plugins and related Components
 --------------------------------------------
 
-The `typical` basic components of a Rxn Rover plugin are:
+The *typical* basic components of a Rxn Rover plugin are:
 
 1. **LabVIEW Driver**: The software component that communicates directly with the device. If you already have a provided LabVIEW driver, you will only need to create the plugin for the device. The VI's created in the LabVIEW drivers library will be called/referenced by the plugin. Though it is not necessarily apart of the plugin itself, it is still highly important for a plugins functionality. However, it also important to note that not every plugin will need a corresponding LabVIEW driver, for example a purely software-based plugin or our `Mock Pump Controller Plugin <https://rxnrover.github.io/PluginCatalog/first_party/reactor_components/mock_pump_controller.html>`_. 
 

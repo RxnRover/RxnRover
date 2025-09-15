@@ -112,7 +112,7 @@ For external developers who wish to make their plugin compatible with Rxn Rover.
     - Any other required plugins or drivers.
 
 .. important::
-   If your plugin depends on a specific driver—or vice versa—be sure to include that in the dependencies.
+   If your plugin depends on a specific driver, be sure to include that in the dependencies.
 
 
 5. **Install Requirements**
@@ -128,7 +128,7 @@ For external developers who wish to make their plugin compatible with Rxn Rover.
 Build and Share the Package
 ---------------------------
 
-1. Once configuration is complete, click :guilabel:`Build Package(Arrow)` in the VIPM toolbar.
+1. Once configuration is complete, click :guilabel:`Build Package` in the VIPM toolbar.
 2. The output ``.vip`` file will be generated in your chosen directory.
 3. Run the ``.vip`` file to install and test the package using VIPM.
 

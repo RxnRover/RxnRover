@@ -55,14 +55,14 @@ being generated and parsed from a liquid chromatograph (LC). The catalog entry
 for this plugin can be found under ``First-Party Plugins >  Plugin Classes > 
 Analyzers > Liquid Chromatography > Mock LC Parser``, where there will be 
 acquisition instructions and a brief description of the plugin. Follow the link given in 
-the Plugin Catalog listing to the Github release section for the Mock LC Parser and then download the
+the Plugin Catalog listing to the GitHub release section for the Mock LC Parser and then download the
 plugin by clicking :guilabel:`rxnrover_lib_mock_lc_parser-X.X.X.X.vip` located under the "Assets"
 section at the bottom of the page.
 
 .. figure:: mock_lc_parser_release.png
    :alt: Screenshot of the Mock LC Parser release section.
    
-   Mock LC Parser github release section showing the release name, description, and downloadable assets.
+   Mock LC Parser GitHub release section showing the release name, description, and downloadable assets.
 
 Mock Pump
 ^^^^^^^^^
