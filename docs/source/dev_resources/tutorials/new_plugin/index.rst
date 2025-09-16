@@ -25,7 +25,7 @@ Understanding Plugins and related Components
 
 The *typical* basic components of a Rxn Rover plugin are:
 
-1. **LabVIEW Driver**: The software component that communicates directly with the device. If you already have a provided LabVIEW driver, you will only need to create the plugin for the device. The VI's created in the LabVIEW drivers library will be called/referenced by the plugin. Though it is not necessarily apart of the plugin itself, it is still highly important for a plugins functionality. However, it also important to note that not every plugin will need a corresponding LabVIEW driver, for example a purely software-based plugin or our `Mock Pump Controller Plugin <https://rxnrover.github.io/PluginCatalog/first_party/reactor_components/mock_pump_controller.html>`_. 
+1. **LabVIEW Driver**: The software component that communicates directly with the device. If you already have a provided LabVIEW driver, you will only need to create the plugin for the device. The VIs created in the LabVIEW drivers library will be called/referenced by the plugin. Though it is not necessarily apart of the plugin itself, it is still highly important for a plugins functionality. However, it also important to note that not every plugin will need a corresponding LabVIEW driver, for example a purely software-based plugin or our `Mock Pump Controller Plugin <https://rxnrover.github.io/PluginCatalog/first_party/reactor_components/mock_pump_controller.html>`_. 
 
 2. **Plugin**: The interface between the driver and Rxn Rover. This connects the low-level functionality of the driver to the higher-level features of the Rxn Rover platform. As well as supplies the User-Interface in RxnRover.
 
