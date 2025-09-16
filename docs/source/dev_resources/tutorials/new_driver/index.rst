@@ -1,7 +1,7 @@
 .. _create-new-driver:
 
-Create a New Driver
-===================
+Creating a New Driver
+=====================
 
 Rxn Rover supports plugin-based integration with a variety of laboratory instruments and systems. A *LabVIEW Driver* is a software component which includes VIs (LabVIEW code) that is used to communicate with external hardware, typically laboratory instruments.
 
@@ -17,8 +17,8 @@ This tutorial is not meant to be a comprehensive-tutorial just as supplementary 
 `Developing LabVIEW Plug and Play Instrument Drivers <https://www.ni.com/en/support/downloads/instrument-drivers/tools-resources/developing-labview-plug-and-play-instrument-drivers.html>`_
 and `Instrument Driver Development Tools and Resources <https://ni.com/en/support/downloads/instrument-drivers/tools-resources.html>`_.
 
-Create a LabVIEW Driver Project
--------------------------------
+Creating a LabVIEW Driver Project
+---------------------------------
 
 To get started, create a new LabVIEW project using the built-in **Instrument Driver Project** template.
 
@@ -49,11 +49,11 @@ Your new driver project will be created with a standard folder and VI structure 
 Top-Level VIs
 ^^^^^^^^^^^^^
 
-- ``Close.vi`` – Terminates communication with the instrument
-- ``Initialize.vi`` – Establishes communication and prepares the instrument
-- ``VI Tree.vi`` – A non-functional VI that provides a visual index of all included VIs
-- ``dir.mnu`` – Customizes palette view
-- ``Readme.html`` – A template README file for your driver (though you should also consider creating your own ``README.md`` for GitHub)
+ - ``Close.vi`` – Terminates communication with the instrument
+ - ``Initialize.vi`` – Establishes communication and prepares the instrument
+ - ``VI Tree.vi`` – A non-functional VI that provides a visual index of all included VIs
+ - ``dir.mnu`` – Customizes palette view
+ - ``Readme.html`` – A template README file for your driver (though you should also consider creating your own ``README.md`` for GitHub)
 
 Folders
 ^^^^^^^
@@ -70,8 +70,8 @@ Folders
 - **Data/**  
   Includes common I/O operations:
 
-  - ``Data Read.vi``    
-  - ``Data Write.vi``
+   - ``Data Read.vi``    
+   - ``Data Write.vi``
 
 - **Utility/**  
   Helper and sub-VIs not meant to be called directly

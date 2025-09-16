@@ -1,7 +1,7 @@
 .. _create-new-plugin:
 
-Create a New Plugin
-===================
+Creating a New Plugin
+=====================
 
 Plugins are an essential part of Rxn Rover, providing the ability to interface with, control, analyze, and communicate directly with connected devices. In this tutorial, we will walk through the process of creating a new plugin in RxnRover.
 
@@ -20,22 +20,22 @@ Plugins in Rxn Rover typically interact with hardware devices; however, purely s
 .. note::
    All Rxn Rover plugins require the `DynamicReentrant <https://rxnrover.github.io/PluginCatalog/core_tools/libraries/dynamic_reentrant.html>`_ library to be installed. This library is provided by the Rxn Rover team to facilitate communication with Rxn Rover.
 
-Understanding Plugins and related Components
+Understanding Plugins and Related Components
 --------------------------------------------
 
 The *typical* basic components of a Rxn Rover plugin are:
 
 1. **LabVIEW Driver**: The software component that communicates directly with the device. If you already have a provided LabVIEW driver, you will only need to create the plugin for the device. The VIs created in the LabVIEW drivers library will be called/referenced by the plugin. Though it is not necessarily apart of the plugin itself, it is still highly important for a plugins functionality. However, it also important to note that not every plugin will need a corresponding LabVIEW driver, for example a purely software-based plugin or our `Mock Pump Controller Plugin <https://rxnrover.github.io/PluginCatalog/first_party/reactor_components/mock_pump_controller.html>`_. 
 
-2. **Plugin**: The interface between the driver and Rxn Rover. This connects the low-level functionality of the driver to the higher-level features of the Rxn Rover platform. As well as supplies the User-Interface in RxnRover.
+2. **Plugin**: The interface between the driver and Rxn Rover. This connects the low-level functionality of the driver to the higher-level features of the Rxn Rover platform. It also supplies the user interface in RxnRover.
 
 In some cases, if a device driver already exists, you may only need to focus on developing the plugin that integrates with Rxn Rover.
 
 .. hint:: 
     You can visit the `Instrument Driver Network (IDNet) <https://www.ni.com/en/support/downloads/instrument-drivers.html>`_ or the `Rxn Rover Plugin Catalog <https://rxnrover.github.io/PluginCatalog>`__  to see if your instrument already has a LabVIEW-supported driver.
 
-Create Device LabVIEW Driver
-----------------------------
+Creating a LabVIEW Device Driver
+--------------------------------
 
 If the device does not already have a pre-existing driver, you'll need to create one. Instrument drivers are responsible for handling the communication and control of the device with your computer.
 
@@ -50,8 +50,8 @@ LabVIEW Driver Development Checklist:
 - **Create functions for controlling and querying the device** (e.g., setting parameters, reading data, etc.).
 - **Handle errors and exceptions** to ensure robust communication.
 
-Create the Plugin From Template
---------------------------------
+Creating a Plugin from the Template
+-----------------------------------
 
 Once you have your driver ready (or confirmed that one already exists), follow these steps to create the plugin:
 
@@ -101,15 +101,15 @@ Once you have your driver ready (or confirmed that one already exists), follow t
      - Set default values for all front panel controls.
 
 
-Modify the Plugin Template
---------------------------
+Modifying the Plugin Template
+-----------------------------
 
-Once you open ``Main.vi`` and navigate to the block diagram, you’ll see several parallel loops. Most modifications will be made in the following three loops:
+Once you open ``Main.vi`` and navigate to the block diagram, you'll see several parallel loops. Most modifications will be made in the following three loops:
 
 - Instrument Manager Loop (IML)
 - Acquisition Message Loop (AML)
 - Logging Message Loop (LML)
-- Ui Manager Loop (UML) *(only if you are changing the UI)*
+- UI Manager Loop (UML) *(only if you are changing the UI)*
 
 .. note::
     If you are not changing the functionality of the plugin (write one setpoint, read one value, start, stop, etc.) you probably only need to change the Instrument Manager Loop (IML), Logging Message Loop (LML), and Acquisition Message Loop (AML).
@@ -121,10 +121,10 @@ In the ``Initialize`` case:
 
 - Modify the **instrument state** typedef according to the instructions in the code. This typedef represents the state of the instrument. For example, a heater plugin might include:
   
-  - Temperature setpoint
-  - Current temperature
-  - Heating status
-  - Error flags
+   - Temperature setpoint
+   - Current temperature
+   - Heating status
+   - Error flags
 
 - For each state added, create a corresponding ``Get State`` message case in the IML. This allows the plugin to query the instrument for that information.
 
@@ -132,9 +132,9 @@ In the ``Initialize`` case:
 
 - Modify the following cases to integrate with your specific instrument:
 
-  - ``Start Instrument``
-  - ``Stop Instrument``
-  - ``Change Setpoint``
+   - ``Start Instrument``
+   - ``Stop Instrument``
+   - ``Change Setpoint``
 
 - In the ``Set VISA Resource`` case, update the ``Init.vi -> Connecting`` case to correctly verify and initialize the instrument connection.
 
@@ -159,16 +159,16 @@ The UI Manager Loop (UML) along with the Data Display Loop (DDL) handles the sho
 
 In the ``Initialize`` case of the UML:
 
- - Ensure that all front planel control/indicators are properly linked to the ``UI Data.ctl`` typedef. 
- - Ensure that all front panel controls/indicators are properly reference via ``VI Server References``
+- Ensure that all front planel control/indicators are properly linked to the ``UI Data.ctl`` typedef. 
+- Ensure that all front panel controls/indicators are properly reference via ``VI Server References``
 
 Inside of the Event Handling Loop (EHL):
 
- - Add event cases for any new front panel controls you add to ``Main.vi``
+- Add event cases for any new front panel controls you add to ``Main.vi``
 
 In the Data Display Loop (DDL):
 
-  - Ensure that the variables inside Instrument State cluster you want to display are properly linked to the controls / indicators on the front panel of ``Main.vi``  
+- Ensure that the variables inside Instrument State cluster you want to display are properly linked to the controls / indicators on the front panel of ``Main.vi``  
 
 .. note::
     If any part of this tutorial is unclear, please feel free to look at other Plugin examples in our `Public GitHub Repositories <https://github.com/orgs/RxnRover/repositories?q=plugin>`_ or reach out to us by making a discussion on `Rxn Rover's GitHub Discussion Board <https://github.com/orgs/RxnRover/discussions>`_
