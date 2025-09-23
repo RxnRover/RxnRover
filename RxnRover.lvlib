@@ -42,7 +42,7 @@
 	<Item Name="logging" Type="Folder">
 		<Item Name="Load Log Config from Preferences.vi" Type="VI" URL="../src/RxnRover/logging/Load Log Config from Preferences.vi"/>
 		<Item Name="logging.lvlib" Type="Library" URL="../src/RxnRover/logging/logging.lvlib"/>
-		<Item Name="Write Log Config to Preferences.vi" Type="VI" URL="../src/RxnRover/logging/Write Log Config to Preferences.vi"/>
+		<Item Name="Save Log Config to Preferences.vi" Type="VI" URL="../src/RxnRover/logging/Save Log Config to Preferences.vi"/>
 	</Item>
 	<Item Name="Plugin Manager" Type="Folder">
 		<Item Name="Initialization" Type="Folder">
