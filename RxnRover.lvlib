@@ -109,5 +109,6 @@
 	<Item Name="User Preferences" Type="Folder">
 		<Item Name="User Preferences File.lvclass" Type="LVClass" URL="../src/RxnRover/User Preferences/User Preferences File.lvclass"/>
 	</Item>
+	<Item Name="Load and Apply User Preferences.vi" Type="VI" URL="../src/RxnRover/User Preferences/Load and Apply User Preferences.vi"/>
 	<Item Name="Main.vi" Type="VI" URL="../src/Main.vi"/>
 </Library>
