@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-- Windows OS
+- Windows 10/11
 - [LabVIEW](https://www.ni.com/en-us/support/downloads/software-products/download.labview.html#369643)
 - [AntiDoc 3.0](https://gitlab.com/wovalab/open-source/labview-doc-generator) from VIPM (v3.1 currently does not work with this workflow!)
 - [AntiDoc CLI 2.1](https://gitlab.com/wovalab/open-source/cli-for-antidoc) from VIPM (>=3.0 currently does not work with this workflow!)
