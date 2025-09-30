@@ -12,6 +12,6 @@
 
 ## Building the Docs
 
-Run `build_docs.bat`, located at `<rxn_rover>/documentation/build_docs.bat`, in a terminal. This script will build the API documentation using AntiDoc, convert it to HTML using asciidoctor, then use Sphinx to generate the rest of the documentation and link the API documentation.
+Run `build_docs.bat`, located at `<rxn_rover>/docs/build_docs.bat`, in a terminal. This script will build the API documentation using AntiDoc, convert it to HTML using asciidoctor, then use Sphinx to generate the rest of the documentation and link the API documentation.
 
-**Note:** This script will install Sphinx and its dependencies into a virtual environment located at `<rxn_rover>/documentation/venv`. 
+**Note:** This script will install Sphinx and its dependencies into a virtual environment located at `<rxn_rover>/docs/venv`. 
