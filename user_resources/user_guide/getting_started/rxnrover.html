@@ -126,17 +126,16 @@ step. Basic operation of Rxn Rover for automated reaction optimization
 consists of the following steps:</p>
 <ol class="arabic simple">
 <li><p>Create or load an Experiment file.</p></li>
-<li><p>Load reactor components with the Load Reactor Component button in Overall
+<li><p>Load reactor components with the <span class="guilabel">Load Controller</span> button in Overall
 Experiment control.</p></li>
-<li><p>Load an optimizer with the Load Optimizer button in Overall Experiment
+<li><p>Load an optimizer with the <span class="guilabel">Load Optimizer</span> button in Overall Experiment
 control.</p></li>
-<li><p>Associate optimizer parameters to reactor components through the
-Reassign Parameters dialog. See <a class="reference internal" href="#reassign-parameters"><span class="std std-ref">Assigning Optimizer Parameters to Reactor Components</span></a>.</p></li>
-<li><p>Load an analyzer to parse data from analysis instrumentation with the Load
-Analyzer button in Overall Experiment control.</p></li>
-<li><p>Configure plugin-specific options using the Manual Control section.</p></li>
-<li><p>Click “Start Experiment” to start the reactor and begin collecting data.</p></li>
-<li><p>Click “Stop Experiment” when it is complete and refer to the Experiment
+<li><p>Associate optimizer parameters to reactor components by clicking <span class="guilabel">Reassign Parameters</span> button and going through the
+“Reassign Parameters” dialog. See <a class="reference internal" href="#reassign-parameters"><span class="std std-ref">Assigning Optimizer Parameters to Reactor Components</span></a>.</p></li>
+<li><p>Load an analyzer to parse data from analysis instrumentation with the <span class="guilabel">Load Analyzer</span> button in Overall Experiment control.</p></li>
+<li><p>Configure plugin-specific options using the “Manual Control” section.</p></li>
+<li><p>Click <span class="guilabel">Start Experiment</span> to start the reactor and begin collecting data.</p></li>
+<li><p>Click <span class="guilabel">Stop Experiment</span> when it is complete and refer to the Experiment
 Location for data files.</p></li>
 </ol>
 </section>
@@ -149,11 +148,11 @@ difficult to reach. Manual control setup is similar to <a class="reference inter
 control</span></a> setup, but with less steps:</p>
 <ol class="arabic simple">
 <li><p>Create or load an Experiment file.</p></li>
-<li><p>Load reactor components with the Load Reactor Component button in Overall
+<li><p>Load reactor components with the <span class="guilabel">Load Controller</span> button in Overall
 Experiment control.</p></li>
-<li><p>Configure plugin-specific options using the Manual Control section.</p></li>
-<li><p>Click “Start Experiment” to start the reactor and begin collecting data.</p></li>
-<li><p>Click “Stop Experiment” when it is complete and refer to the Experiment
+<li><p>Configure plugin-specific options using the “Manual Control” section.</p></li>
+<li><p>Click <span class="guilabel">Start Experiment</span> to start the reactor and begin collecting data.</p></li>
+<li><p>Click <span class="guilabel">Stop Experiment</span> when it is complete and refer to the Experiment
 Location for data files.</p></li>
 </ol>
 </section>
@@ -163,23 +162,25 @@ Location for data files.</p></li>
 process to a new user. This section desribes how to make these assignments.</p>
 <p>The <a class="reference internal" href="#reassign-parameters-dialog"><span class="std std-ref">Reassign Parameters dialog</span></a> is used to
 assign specific reactor components to optimizer parameters, which will change
-reaction conditions accordingly. In the Reassign Parameters dialog, plugins
+reaction conditions accordingly. In the “Reassign Parameters” dialog, plugins
 are assigned to paramters by dragging “Unclassified” plugins to one of the
 listed parameters.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Can’t find the Reassign Parameters window?</strong></p>
 <p>The Reassign Parameters dialog will automatically appear after an
-optimizer is loaded, or can be opened at any time by pressing the “Reassign
-Parameters” button in Optimizer Control.</p>
+optimizer is loaded, or can be opened at any time by pressing the <span class="guilabel">Reassign Parameters</span> button in Optimizer Control.</p>
 </div>
 <figure class="align-default" id="id2">
-<span id="reassign-parameters-dialog"></span><a class="reference internal image-reference" href="../../../_images/reassign_parameters_dialog.png"><img alt="Screenshot of the Reassign Parameters dialog window." src="../../../_images/reassign_parameters_dialog.png" style="width: 254.0px; height: 295.0px;" />
+<span id="reassign-parameters-dialog"></span><a class="reference internal image-reference" href="../../../_images/reassign_parameters_dialog.png"><img alt="Screenshot of the Reassign Parameters dialog window." src="../../../_images/reassign_parameters_dialog.png" style="width: 381.0px; height: 442.5px;" />
 </a>
 <figcaption>
 <p><span class="caption-text">Reassign Parameters dialog window.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
 </figcaption>
 </figure>
+<p>After dragging a plugin to a parameter, the plugin will be listed under the
+parameter. Once you have assigned all parameters, press <span class="guilabel">Done</span></p>
+<p>If you want to reassign parameters again or have made a mistake, you can repeat the steps above.</p>
 </section>
 </section>
 

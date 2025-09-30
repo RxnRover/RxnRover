@@ -1,0 +1,62 @@
+== test Message Queue.lvlib
+
+*Responsibility:*
+No description found (add content in lvlib description)
+
+*Version:* 1.0.0.0
+
+=== Functions
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|Enqueue Message (Array)
+|image:RxnRover.lvlib_test_Message_Queue.lvlib_Enqueue_Message_(Array).vi.png[RxnRover.lvlib:test Message Queue.lvlib:Enqueue Message (Array).vi]
+|For a regular message, enqueue the message. For a priority message, enqueue it at the front of the queue.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Enqueue Message (Single)
+|image:RxnRover.lvlib_test_Message_Queue.lvlib_Enqueue_Message_(Single).vi.png[RxnRover.lvlib:test Message Queue.lvlib:Enqueue Message (Single).vi]
+|For a regular message, enqueue the message. For a priority message, enqueue it at the front of the queue.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Create All Message Queues
+|image:RxnRover.lvlib_test_Message_Queue.lvlib_Create_All_Message_Queues.vi.png[RxnRover.lvlib:test Message Queue.lvlib:Create All Message Queues.vi]
+|This VI creates and initializes all the message queues for your application. If your application requires more than one message queue, right-click the "Message Queues" constant above and select Open Type Def.  Add the new Message Queue(s) to the type definition, then initialize them in this VI. 
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Obtain Message Queue
+|image:RxnRover.lvlib_test_Message_Queue.lvlib_Obtain_Message_Queue.vi.png[RxnRover.lvlib:test Message Queue.lvlib:Obtain Message Queue.vi]
+|Create a queue with the Message Cluster data type.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Dequeue Message
+|image:RxnRover.lvlib_test_Message_Queue.lvlib_Dequeue_Message.vi.png[RxnRover.lvlib:test Message Queue.lvlib:Dequeue Message.vi]
+|This VI pulls messages off the Message Queue.
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined
+
+=== Library Constant VIs
+
+[NOTE]
+====
+No Constant VIs Found
+====

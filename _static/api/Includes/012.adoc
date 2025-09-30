@@ -1,0 +1,265 @@
+== Classes overview
+
+This project contains 10 classes and 0 interface.
+
+.Classes list
+[cols="", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Classes |Interfaces
+
+|<<Controller Array.lvclass>>
+|
+
+|<<Generic Optimizer.lvclass>>
+|
+
+|<<Generic Plugin.lvclass>>
+|
+
+|<<LC Parser.lvclass>>
+|
+
+|<<Parameter to Hardware Map.lvclass>>
+|
+
+|<<Passive Hardware.lvclass>>
+|
+
+|<<Pump Controller.lvclass>>
+|
+
+|<<Syringe Pump.lvclass>>
+|
+
+|<<Temperature Controller.lvclass>>
+|
+
+|<<User Preferences File.lvclass>>
+|
+|===
+
+[plantuml, format="svg", align="center"]
+....
+@startuml
+set namespaceSeparator :
+skinparam ClassBackgroundColor #FFFFFF
+skinparam ClassBorderColor #555555
+skinparam ClassFontColor #000000
+skinparam ClassHeaderBackgroundColor #808080
+
+skinparam top to bottom direction
+class "RxnRover.lvlib:Controller Array" {
+{field} +Array : Array of LV Class
+{static} {method} +Array Size()
+{static} {method} +As Minimal Cluster Array()
+{static} {method} +Delete From Array()
+{static} {method} +Index Array()
+{static} {method} +Insert Into Array()
+{static} {method} +Register Controller()
+{static} {method} +Replace Subset Array()
+{static} {method} +Replace Subset Element()
+{static} {method} -Search Array by Controller Type()
+{static} {method} -Search Array by Name()
+{static} {method} +Search Array()
+
+}
+
+"RxnRover.lvlib:Controller Array" o-- "RxnRover.lvlib:Generic Plugin"
+
+class "RxnRover.lvlib:Generic Optimizer" {
+{static} {method} +Variant to Optimizer State()
+{method} +Control Panel Initialization Message()
+{method} +New Parameter Message()
+{method} +Start Message()
+{method} +Stop Message()
+{method} +Valid Resource Message()
+{method} +Submit Goal()
+{method} +Listening Server Cases()
+{method} +Resource from String()
+{method} +Resource to String()
+{method} +Subpanel UI()
+{method} +Check Valid Message()
+
+}
+"RxnRover.lvlib:Generic Plugin" <|-- "RxnRover.lvlib:Generic Optimizer"
+
+
+class "RxnRover.lvlib:Generic Plugin" {
+{field} +Name : String
+{field} +Controller Type : Enum U16
+{field} -Control Panel : Cluster
+{field} -Subpanel : Cluster
+{static} {method} +Send Listening Queue()
+{static} {method} +Send Log Delimiter Message()
+{static} {method} +Send Log Directory Message()
+{static} {method} +Send Log on Run Message()
+{static} {method} +Send Log Prefix Message()
+{static} {method} +Send New Parameter()
+{static} {method} +Send Start Message()
+{static} {method} +Send Stop Message()
+{static} {method} +Wait for Control Panel Exit()
+{static} {method} +Wait for Control Panel Start()
+{static} {method} +Wait for Message (blocking)()
+{static} {method} +Wait for Process Running Event()
+{static} {method} +Wait for Valid Resource()
+{static} {method} +Panel Running Event()
+{static} {method} +Abort Control Panel()
+{static} {method} +Control Panel - Close()
+{static} {method} +Control Panel - Initialize()
+{static} {method} +Internal Message Queue - Close()
+{static} {method} +Internal Message Queue - Initialize()
+{static} {method} +Listening Server - Initialize()
+{static} {method} +Listening Server()
+{static} {method} +Stop Control Panel()
+{static} {method} +From Minimal Cluster()
+{static} {method} +Load Controller Type from Enum()
+{static} {method} +Load Controller Type from Path()
+{static} {method} #Close Subpanel UI Reference()
+{static} {method} +Initialize Subpanel UI()
+{static} {method} +Insert Subpanel UI()
+{static} {method} #Open Subpanel UI Reference()
+{static} {method} +Report to Subpanel()
+{static} {method} +Stop Subpanel UI()
+{static} {method} +Close VI Reference()
+{static} {method} +Close()
+{static} {method} +Compare Controller Type()
+{static} {method} +Continue Waiting or Abort Dialog()
+{static} {method} +Initialize()
+{static} {method} +Open Reentrant Class Method VI()
+{static} {method} +String to Controller Type()
+{method} +Control Panel Initialization Message()
+{method} +Log Directory Message()
+{method} +Log File Delimiter Message()
+{method} +Log on Run Message()
+{method} +Log Prefix Message()
+{method} +New Parameter Message()
+{method} +Start Message()
+{method} +Stop Message()
+{method} +Valid Resource Message()
+{method} +Listening Server - Close()
+{method} +Listening Server Cases()
+{method} +Open Listening Server Reference()
+{method} +Resource from String()
+{method} +As Minimal Cluster()
+{method} +Subpanel UI()
+{method} +Check Valid Message()
+{method} +Resource to String()
+
+}
+
+
+class "RxnRover.lvlib:LC Parser" {
+{static} {method} +Variant to Analyzer State()
+{method} +Check Valid Message()
+{method} +Control Panel Initialization Message()
+{method} +Listening Server Cases()
+{method} +New Parameter Message()
+{method} +Resource from String()
+{method} +Resource to String()
+{method} +Start Message()
+{method} +Stop Message()
+{method} +Subpanel UI()
+{method} +Valid Resource Message()
+
+}
+"RxnRover.lvlib:Generic Plugin" <|-- "RxnRover.lvlib:LC Parser"
+
+
+class "RxnRover.lvlib:Parameter to Hardware Map" {
+{field} #unordered_map : Array of Cluster
+{static} {method} +As Minimal Cluster()
+{static} {method} +Clear()
+{static} {method} +Empty()
+{static} {method} +Equals()
+{static} {method} +Erase (array)()
+{static} {method} #Erase (index)()
+{static} {method} +Erase (single)()
+{static} {method} +Find (array)()
+{static} {method} +Find (single)()
+{static} {method} #Find Index (single)()
+{static} {method} +Insert (array)()
+{static} {method} +Insert (element)()
+{static} {method} +Insert (key-value)()
+{static} {method} #Repeat Key()
+{static} {method} +Size()
+{static} {method} +Swap()
+
+}
+
+
+class "RxnRover.lvlib:Passive Hardware" {
+{field} +Valid Messages : Array of String
+{static} {method} +Update Data Plot()
+{static} {method} +Variant to Instrument State()
+{method} +Check Valid Message()
+{method} +Control Panel Initialization Message()
+{method} +New Parameter Message()
+{method} +Start Message()
+{method} +Stop Message()
+{method} +Subpanel UI()
+
+}
+"RxnRover.lvlib:Generic Plugin" <|-- "RxnRover.lvlib:Passive Hardware"
+
+
+class "RxnRover.lvlib:Pump Controller" {
+{field} +Valid Messages : Array of String
+{static} {method} +Update Data Plot()
+{static} {method} +Variant to Instrument State Cluster()
+{method} +Check Valid Message()
+{method} +Control Panel Initialization Message()
+{method} +New Parameter Message()
+{method} +Start Message()
+{method} +Stop Message()
+{method} +Subpanel UI()
+
+}
+"RxnRover.lvlib:Generic Plugin" <|-- "RxnRover.lvlib:Pump Controller"
+
+
+class "RxnRover.lvlib:Syringe Pump" {
+{field} -Valid Messages : Array of String
+{static} {method} +Variant to Instrument State Cluster TMP()
+{method} +New Parameter Message()
+{method} +Subpanel UI()
+
+}
+"RxnRover.lvlib:Pump Controller" <|-- "RxnRover.lvlib:Syringe Pump"
+
+
+class "RxnRover.lvlib:Temperature Controller" {
+{field} +Valid Messages : Array of String
+{static} {method} +Update Data Plot()
+{static} {method} +Variant to Instrument State()
+{method} +Check Valid Message()
+{method} +Control Panel Initialization Message()
+{method} +New Parameter Message()
+{method} +Start Message()
+{method} +Stop Message()
+{method} +Subpanel UI()
+
+}
+"RxnRover.lvlib:Generic Plugin" <|-- "RxnRover.lvlib:Temperature Controller"
+
+
+class "RxnRover.lvlib:User Preferences File" {
+{field} +File Name : String
+{field} +File Location : Path
+{field} +User Preferences : Cluster
+{static} {method} +Add Recent Project()
+{static} {method} +Clear Recent Experiments()
+{static} {method} +Convert Home Directory Tokens()
+{static} {method} +Create If File Does Not Exist()
+{static} {method} +Default File Name()
+{static} {method} +Default File Path()
+{static} {method} +DefaultUserSettings Full Path()
+{static} {method} +Init()
+{static} {method} +Load()
+{static} {method} +Save()
+
+}
+
+
+
+@enduml
+....

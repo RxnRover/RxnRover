@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Create a New Plugin &mdash; Rxn Rover  documentation</title>
+  <title>Creating a New Plugin &mdash; Rxn Rover  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
 
@@ -19,7 +19,7 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Create New Plugin Type" href="../new_plugin_type/index.html" />
+    <link rel="next" title="Creating a New Plugin Type" href="../new_plugin_type/index.html" />
     <link rel="prev" title="Tutorials" href="../index.html" /> 
 </head>
 
@@ -52,8 +52,17 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../dev_guide/index.html">Developer Guide</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorials</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Create a New Plugin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../new_plugin_type/index.html">Create New Plugin Type</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Creating a New Plugin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#understanding-plugins-and-related-components">Understanding Plugins and Related Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-labview-device-driver">Creating a LabVIEW Device Driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-plugin-from-the-template">Creating a Plugin from the Template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modifying-the-plugin-template">Modifying the Plugin Template</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../new_plugin_type/index.html">Creating a New Plugin Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../new_driver/index.html">Creating a New Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../new_vipm_package/index.html">Creating a VIPM Package</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API Documentation</a></li>
@@ -80,7 +89,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">Tutorials</a></li>
-      <li class="breadcrumb-item active">Create a New Plugin</li>
+      <li class="breadcrumb-item active">Creating a New Plugin</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../../_sources/dev_resources/tutorials/new_plugin/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -90,8 +99,178 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="create-a-new-plugin">
-<span id="create-new-plugin"></span><h1>Create a New Plugin<a class="headerlink" href="#create-a-new-plugin" title="Link to this heading"></a></h1>
+  <section id="creating-a-new-plugin">
+<span id="create-new-plugin"></span><h1>Creating a New Plugin<a class="headerlink" href="#creating-a-new-plugin" title="Link to this heading"></a></h1>
+<p>Plugins are an essential part of Rxn Rover, providing the ability to interface with, control, analyze, and communicate directly with connected devices. In this tutorial, we will walk through the process of creating a new plugin in RxnRover.</p>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../../../_images/Mock_Plugin_UI_Example.png"><img alt="Screenshot of a Mock Pump Controller Plugin. experiments." src="../../../_images/Mock_Plugin_UI_Example.png" style="width: 306.0px; height: 654.75px;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Mock Pump Controller Plugin <code class="docutils literal notranslate"><span class="pre">main.vi</span></code> showcasing the UI of a typical Rxn Rover plugin</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Plugins in Rxn Rover typically interact with hardware devices; however, purely software-based plugins can exist too, like for reactor control algorithms, analytical tools, and simulation tools. Before you begin writing a plugin for a specific type of hardware, you’ll need to consider whether you require a custom device driver or if you can use an existing one. Some manufacturers might already provide a LabVIEW driver.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All Rxn Rover plugins require the <a class="reference external" href="https://rxnrover.github.io/PluginCatalog/core_tools/libraries/dynamic_reentrant.html">DynamicReentrant</a> library to be installed. This library is provided by the Rxn Rover team to facilitate communication with Rxn Rover.</p>
+</div>
+</section>
+<section id="understanding-plugins-and-related-components">
+<h2>Understanding Plugins and Related Components<a class="headerlink" href="#understanding-plugins-and-related-components" title="Link to this heading"></a></h2>
+<p>The <em>typical</em> basic components of a Rxn Rover plugin are:</p>
+<ol class="arabic simple">
+<li><p><strong>LabVIEW Driver</strong>: The software component that communicates directly with the device. If you already have a provided LabVIEW driver, you will only need to create the plugin for the device. The VIs created in the LabVIEW drivers library will be called/referenced by the plugin. Though it is not necessarily apart of the plugin itself, it is still highly important for a plugins functionality. However, it also important to note that not every plugin will need a corresponding LabVIEW driver, for example a purely software-based plugin or our <a class="reference external" href="https://rxnrover.github.io/PluginCatalog/first_party/reactor_components/mock_pump_controller.html">Mock Pump Controller Plugin</a>.</p></li>
+<li><p><strong>Plugin</strong>: The interface between the driver and Rxn Rover. This connects the low-level functionality of the driver to the higher-level features of the Rxn Rover platform. It also supplies the user interface in RxnRover.</p></li>
+</ol>
+<p>In some cases, if a device driver already exists, you may only need to focus on developing the plugin that integrates with Rxn Rover.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>You can visit the <a class="reference external" href="https://www.ni.com/en/support/downloads/instrument-drivers.html">Instrument Driver Network (IDNet)</a> or the <a class="reference external" href="https://rxnrover.github.io/PluginCatalog">Rxn Rover Plugin Catalog</a>  to see if your instrument already has a LabVIEW-supported driver.</p>
+</div>
+</section>
+<section id="creating-a-labview-device-driver">
+<h2>Creating a LabVIEW Device Driver<a class="headerlink" href="#creating-a-labview-device-driver" title="Link to this heading"></a></h2>
+<p>If the device does not already have a pre-existing driver, you’ll need to create one. Instrument drivers are responsible for handling the communication and control of the device with your computer.</p>
+<p>For more detailed guidelines, refer to:
+<a class="reference external" href="https://www.ni.com/en/support/downloads/instrument-drivers/tools-resources/developing-labview-plug-and-play-instrument-drivers.html">Developing LabVIEW Plug and Play Instrument Drivers</a>
+or see our <a class="reference internal" href="../new_driver/index.html#create-new-driver"><span class="std std-ref">tutorial on creating a driver</span></a></p>
+<p>LabVIEW Driver Development Checklist:</p>
+<ul class="simple">
+<li><p><strong>Understand the communication protocol</strong> used by the device (e.g., USB, GPIB, Ethernet).</p></li>
+<li><p><strong>Test basic connectivity</strong> with the device.</p></li>
+<li><p><strong>Create functions for controlling and querying the device</strong> (e.g., setting parameters, reading data, etc.).</p></li>
+<li><p><strong>Handle errors and exceptions</strong> to ensure robust communication.</p></li>
+</ul>
+</section>
+<section id="creating-a-plugin-from-the-template">
+<h2>Creating a Plugin from the Template<a class="headerlink" href="#creating-a-plugin-from-the-template" title="Link to this heading"></a></h2>
+<p>Once you have your driver ready (or confirmed that one already exists), follow these steps to create the plugin:</p>
+<ol class="arabic">
+<li><p>Ensure you have correctly installed the <a class="reference external" href="https://rxnrover.github.io/PluginCatalog/core_tools/libraries/dynamic_reentrant.html">DynamicReentrant</a> library.</p></li>
+<li><p>Download the Template</p>
+<ul class="simple">
+<li><p>Download or clone the <a class="reference external" href="https://rxnrover.github.io/PluginCatalog/first_party/templates/general_plugin_template.html">Generic Plugin Template</a> from GitHub.</p></li>
+<li><p>Extract the ZIP and rename the folder (recommended: <code class="docutils literal notranslate"><span class="pre">General</span> <span class="pre">Plugin</span> <span class="pre">Template</span></code>).</p></li>
+</ul>
+</li>
+<li><p>Integrate into LabVIEW <em>(optional but recommended)</em></p>
+<ul>
+<li><p>Copy the extracted folder to:</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;LabVIEW</span> <span class="pre">Data&gt;/ProjectTemplates/Source/General</span> <span class="pre">Plugin</span> <span class="pre">Template</span></code></p>
+</li>
+<li><p>Move the <code class="docutils literal notranslate"><span class="pre">general_plugin_template.xml</span></code> file to:</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;LabVIEW</span> <span class="pre">Data&gt;/ProjectTemplates/MetaData/</span></code></p>
+</li>
+</ul>
+</li>
+<li><p>Create a New Plugin Instance</p>
+<p>You can either:</p>
+<ul class="simple">
+<li><p>Use the LabVIEW Project Creator to make a new project from the template.</p></li>
+<li><p>Copy and rename the template folder.</p></li>
+</ul>
+<p>Place your new plugin folder in:</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;Documents&gt;/RxnRover/CustomPlugins</span></code></p>
+</li>
+<li><p>Customize the Plugin</p>
+<ul class="simple">
+<li><p>Rename <code class="docutils literal notranslate"><span class="pre">Generic</span> <span class="pre">Plugin</span> <span class="pre">Template.lvproj</span></code> and <code class="docutils literal notranslate"><span class="pre">Rename</span> <span class="pre">to</span> <span class="pre">match</span> <span class="pre">project.lvlib</span></code> to match your instrument.</p></li>
+<li><p>Edit <code class="docutils literal notranslate"><span class="pre">plugin.conf</span></code> to reflect your new plugin:</p>
+<ul>
+<li><p>Plugin name (We recommend naming it after your instrument; it can be anything non-blank)</p></li>
+<li><p>Plugin type (Must be one of the Rxn Rover-supported and recognized plugin types)</p></li>
+<li><p>Controller type (Must be one of the Rxn Rover-supported and recognized controller types)</p></li>
+</ul>
+</li>
+<li><p>Edit <code class="docutils literal notranslate"><span class="pre">Main.vi</span></code>:</p>
+<ul>
+<li><p>Update the title and display units.</p></li>
+<li><p>Follow the instructions on the front panel.</p></li>
+<li><p>Adjust the numeric formatting of fields.</p></li>
+<li><p>Set default values for all front panel controls.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="modifying-the-plugin-template">
+<h2>Modifying the Plugin Template<a class="headerlink" href="#modifying-the-plugin-template" title="Link to this heading"></a></h2>
+<p>Once you open <code class="docutils literal notranslate"><span class="pre">Main.vi</span></code> and navigate to the block diagram, you’ll see several parallel loops. Most modifications will be made in the following three loops:</p>
+<ul class="simple">
+<li><p>Instrument Manager Loop (IML)</p></li>
+<li><p>Acquisition Message Loop (AML)</p></li>
+<li><p>Logging Message Loop (LML)</p></li>
+<li><p>UI Manager Loop (UML) <em>(only if you are changing the UI)</em></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are not changing the functionality of the plugin (write one setpoint, read one value, start, stop, etc.) you probably only need to change the Instrument Manager Loop (IML), Logging Message Loop (LML), and Acquisition Message Loop (AML).</p>
+</div>
+<p><strong>IML Changes</strong></p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">Initialize</span></code> case:</p>
+<ul>
+<li><p>Modify the <strong>instrument state</strong> typedef according to the instructions in the code. This typedef represents the state of the instrument. For example, a heater plugin might include:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Temperature setpoint</p></li>
+<li><p>Current temperature</p></li>
+<li><p>Heating status</p></li>
+<li><p>Error flags</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>For each state added, create a corresponding <code class="docutils literal notranslate"><span class="pre">Get</span> <span class="pre">State</span></code> message case in the IML. This allows the plugin to query the instrument for that information.</p>
+<p>Follow the instructions in the <code class="docutils literal notranslate"><span class="pre">---</span> <span class="pre">Copy</span> <span class="pre">for</span> <span class="pre">Get</span> <span class="pre">State</span> <span class="pre">Messages</span> <span class="pre">---</span></code> case and refer to the example cases listed below it in the case structure.</p>
+</li>
+<li><p>Modify the following cases to integrate with your specific instrument:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Start</span> <span class="pre">Instrument</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Stop</span> <span class="pre">Instrument</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Change</span> <span class="pre">Setpoint</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">VISA</span> <span class="pre">Resource</span></code> case, update the <code class="docutils literal notranslate"><span class="pre">Init.vi</span> <span class="pre">-&gt;</span> <span class="pre">Connecting</span></code> case to correctly verify and initialize the instrument connection.</p></li>
+</ul>
+<p><strong>AML Changes</strong></p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">Initialize</span></code> case of the AML:</p>
+<ul class="simple">
+<li><p>Modify, add, or remove items in the <strong>Acquisition Messages</strong> array. Each item should trigger a corresponding message case in the IML.</p></li>
+<li><p>Ensure all messages exactly match the IML case names.</p></li>
+<li><p>Make sure that the <code class="docutils literal notranslate"><span class="pre">Report</span></code> message is the <strong>last</strong> item in the array.</p></li>
+</ul>
+<p><strong>LML Changes</strong></p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">Initialize</span></code> case of the LML:</p>
+<ul class="simple">
+<li><p>Update the <code class="docutils literal notranslate"><span class="pre">Channels</span></code> array to correspond to the instrument states listed in the AML’s Acquisition Messages array.</p></li>
+<li><p>This ensures the correct data is logged to the CSV file.</p></li>
+</ul>
+<p><strong>UML Changes</strong> <em>(only if you are changing the UI)</em></p>
+<p>The UI Manager Loop (UML) along with the Data Display Loop (DDL) handles the showing of data updates / user interaction (Ex. button presses) on the front panel of <code class="docutils literal notranslate"><span class="pre">Main.vi</span></code>.</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">Initialize</span></code> case of the UML:</p>
+<ul class="simple">
+<li><p>Ensure that all front planel control/indicators are properly linked to the <code class="docutils literal notranslate"><span class="pre">UI</span> <span class="pre">Data.ctl</span></code> typedef.</p></li>
+<li><p>Ensure that all front panel controls/indicators are properly reference via <code class="docutils literal notranslate"><span class="pre">VI</span> <span class="pre">Server</span> <span class="pre">References</span></code></p></li>
+</ul>
+<p>Inside of the Event Handling Loop (EHL):</p>
+<ul class="simple">
+<li><p>Add event cases for any new front panel controls you add to <code class="docutils literal notranslate"><span class="pre">Main.vi</span></code></p></li>
+</ul>
+<p>In the Data Display Loop (DDL):</p>
+<ul class="simple">
+<li><p>Ensure that the variables inside Instrument State cluster you want to display are properly linked to the controls / indicators on the front panel of <code class="docutils literal notranslate"><span class="pre">Main.vi</span></code></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If any part of this tutorial is unclear, please feel free to look at other Plugin examples in our <a class="reference external" href="https://github.com/orgs/RxnRover/repositories?q=plugin">Public GitHub Repositories</a> or reach out to us by making a discussion on <a class="reference external" href="https://github.com/orgs/RxnRover/discussions">Rxn Rover’s GitHub Discussion Board</a></p>
+</div>
+<p>Follow the <a class="reference internal" href="../new_vipm_package/index.html#create-new-vipm-package"><span class="std std-ref">tutorial on creating a VIPM package</span></a> to package your plugin for automated installation and distribution.
+After creating your plugin consider <a class="reference external" href="https://rxnrover.github.io/PluginCatalog/submissions/plugin_submission_form.html">making a submission</a> to the <a class="reference external" href="https://rxnrover.github.io/PluginCatalog">Rxn Rover Plugin Catalog</a></p>
+</section>
 </section>
 
 
@@ -99,7 +278,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../index.html" class="btn btn-neutral float-left" title="Tutorials" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../new_plugin_type/index.html" class="btn btn-neutral float-right" title="Create New Plugin Type" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../new_plugin_type/index.html" class="btn btn-neutral float-right" title="Creating a New Plugin Type" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

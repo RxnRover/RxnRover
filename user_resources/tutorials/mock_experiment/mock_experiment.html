@@ -117,7 +117,7 @@
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This example experiment has only been tested on Windows 10 with LabVIEW
-2020.</p>
+2020 SP1.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -156,17 +156,14 @@ Optimizers, and Reactor Components.</p>
 being generated and parsed from a liquid chromatograph (LC). The catalog entry
 for this plugin can be found under <code class="docutils literal notranslate"><span class="pre">First-Party</span> <span class="pre">Plugins</span> <span class="pre">&gt;</span>&#160; <span class="pre">Plugin</span> <span class="pre">Classes</span> <span class="pre">&gt;</span>
 <span class="pre">Analyzers</span> <span class="pre">&gt;</span> <span class="pre">Liquid</span> <span class="pre">Chromatography</span> <span class="pre">&gt;</span> <span class="pre">Mock</span> <span class="pre">LC</span> <span class="pre">Parser</span></code>, where there will be
-acquisition instructions and a brief description of the plugin. Download the
-repository by following the link in the acquisition section, clicking the green
-“Code” button in the top right of the Mock LC Parser repository, and selecting
-“Download ZIP”. Notice that these download instructions are also on the front
-page of the Mock LC Parser repository.</p>
+acquisition instructions and a brief description of the plugin. Follow the link given in
+the Plugin Catalog listing to the GitHub release section for the Mock LC Parser and then download the
+plugin by clicking <span class="guilabel">rxnrover_lib_mock_lc_parser-X.X.X.X.vip</span> located under the “Assets”
+section at the bottom of the page.</p>
 <figure class="align-default" id="id2">
-<img alt="Screenshot of the Mock LC Parser repository." src="../../../_images/mock_lc_parser_repo.png" />
+<img alt="Screenshot of the Mock LC Parser release section." src="../../../_images/mock_lc_parser_release.png" />
 <figcaption>
-<p><span class="caption-text">Mock LC Parser repository showing the green “Code” button in the top right
-and the top of the installation instructions for the plugin at the bottom of
-the image.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+<p><span class="caption-text">Mock LC Parser GitHub release section showing the release name, description, and downloadable assets.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -204,8 +201,9 @@ under <code class="docutils literal notranslate"><span class="pre">First-Party</
 installing other plugins please remember to read the installation
 instructions provided by the authors carefully!</p>
 </div>
-<p>To install the plugins acquired in <a class="reference internal" href="#mock-experiment-download-plugins"><span class="std std-ref">Downloading the Plugins</span></a>,
-extract each ZIP file into the <code class="docutils literal notranslate"><span class="pre">&lt;documents&gt;/RxnRover/Plugins</span></code> directory,
+<p>To install the plugins acquired in <a class="reference internal" href="#mock-experiment-download-plugins"><span class="std std-ref">Downloading the Plugins</span></a>, double click the <code class="docutils literal notranslate"><span class="pre">.vip</span></code> files you download, or open them in VIPM (VI Package Manager)
+and follow the instructions to install them. If you do not have VIPM, you can manually install the plugins by
+extracting each ZIP file into the <code class="docutils literal notranslate"><span class="pre">&lt;documents&gt;/RxnRover/Plugins</span></code> directory,
 where <code class="docutils literal notranslate"><span class="pre">&lt;documents&gt;</span></code> is the current user’s Documents directory.
 (<a class="reference internal" href="../../user_guide/troubleshooting/missing_plugin_directories.html#missing-plugin-directories"><span class="std std-ref">My Plugin Directories are Missing!</span></a>)</p>
 </section>
@@ -222,10 +220,10 @@ contain symbols that are not allowed in a file name.</p>
 <p><span class="caption-text">Experiment Manager window with example recent experiments.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<p>Click the “Create New Experiment” button and fill in the information like in
+<p>Click the <span class="guilabel">Create New Experiment</span> button and fill in the information like in
 the image below. Choose an Experiment Location that will be easy to find in a
 file explorer, like a directory on your Desktop or in your Documents. Press
-“OK” when you are finished.</p>
+<span class="guilabel">OK</span> when you are finished.</p>
 <figure class="align-default" id="id4">
 <span id="mock-experiment-new-experiment-window"></span><a class="reference internal image-reference" href="../../../_images/create_mock_experiment.png"><img alt="Screenshot of the &quot;Create New Experiment&quot; dialog with information for this mock experiment filled in." src="../../../_images/create_mock_experiment.png" style="width: 282.0px; height: 220.5px;" />
 </a>
@@ -254,8 +252,8 @@ see <a class="reference internal" href="../../user_guide/getting_started/experim
 <span id="mock-experiment-load-plugins"></span><h2>Loading the Plugins<a class="headerlink" href="#loading-the-plugins" title="Link to this heading"></a></h2>
 <section id="reactor-components">
 <h3>Reactor Components<a class="headerlink" href="#reactor-components" title="Link to this heading"></a></h3>
-<p>First, we will load some Reactor Components. To do this, click the “Load
-Controller” button in the top left. Enter information to match the image below.</p>
+<p>First, we will load some Reactor Components. To do this, click the <span class="guilabel">Load Controller</span> button in the top left.
+Enter information to match the image below.</p>
 <figure class="align-default" id="id6">
 <span id="mock-experiment-load-hardware"></span><img alt="Screenshot of &quot;Select Hardware&quot; window used to load and name Reactor Component plugin instances." src="../../../_images/load_hardware.png" />
 <figcaption>
@@ -263,10 +261,10 @@ Controller” button in the top left. Enter information to match the image below
 instances.</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<p>Press “OK” and the plugin will start loading. The plugin will open a dialog
+<p>Press <span class="guilabel">OK</span> and the plugin will start loading. The plugin will open a dialog
 window to connect the plugin to a hardware resource. Although no instruments
 are connected, your computer should still have a COM port to select. Select
-this in the VISA Resource dropdown list now and “Connect”. (Additional
+this in the VISA Resource dropdown list now and <span class="guilabel">Connect</span>. (Additional
 information: <a class="reference external" href="https://www.ni.com/en-us/support/documentation/supplemental/06/ni-visa-overview.html">What is VISA?</a>)</p>
 <figure class="align-default" id="id7">
 <span id="mock-experiment-select-hardware"></span><img alt="Screenshot of VISA Resource selection window." src="../../../_images/select_hardware_resource.png" />
@@ -304,8 +302,8 @@ plugin list expanded.</span><a class="headerlink" href="#id8" title="Link to thi
 </section>
 <section id="optimizer">
 <h3>Optimizer<a class="headerlink" href="#optimizer" title="Link to this heading"></a></h3>
-<p>Press the “Load Optimizer” button to open the “Select Optimizer” window. Select
-“SQSnobFit” from the list and press “OK”. It does not matter if you name
+<p>Press the <span class="guilabel">Load Optimizer</span> button to open the “Select Optimizer” window. Select
+“SQSnobFit” from the list and press <span class="guilabel">OK</span>. It does not matter if you name
 the optimizer, as this name is not visible anywhere currently.</p>
 <figure class="align-default" id="id9">
 <span id="mock-experiment-load-optimizer"></span><img alt="Screenshot of &quot;Select Optimizer&quot; window." src="../../../_images/load_optimizer.png" />
@@ -316,10 +314,9 @@ the optimizer, as this name is not visible anywhere currently.</p>
 <p>Instead of a VISA Resource, this optimizer plugin requires a script that tells
 it how to start SQSnobFit. Browse to <code class="docutils literal notranslate"><span class="pre">&lt;documents&gt;/RxnRover/Plugins/SQSnobFit/</span>
 <span class="pre">sqsnobfit_remote_optimizer/scripts/</span></code> and select <code class="docutils literal notranslate"><span class="pre">start_inference.bat</span></code>
-(Windows) or <code class="docutils literal notranslate"><span class="pre">start_inference.sh</span></code> (Linux or Mac). When “Connect” is pressed,
+(Windows) or <code class="docutils literal notranslate"><span class="pre">start_inference.sh</span></code> (Linux or Mac). When <span class="guilabel">Connect</span> is pressed,
 a terminal should open that is running the optimization algorithm. Minimize
-this terminal, but do not close it! If you accidentally close it, press “Stop
-Optimizer” and restart this section.</p>
+this terminal, but do not close it! If you accidentally close it, press <span class="guilabel">Stop Optimizer</span> and restart this section.</p>
 <figure class="align-default" id="id10">
 <span id="mock-experiment-select-optimizer-script-filled"></span><img alt="Screenshot of Optimizer Start Script selection window." src="../../../_images/select_optimizer_script_filled.png" />
 <figcaption>
@@ -346,8 +343,8 @@ click outside the text box for the change to take affect.</p>
 <section id="assigning-parameters">
 <h3>Assigning Parameters<a class="headerlink" href="#assigning-parameters" title="Link to this heading"></a></h3>
 <p>A window to assign parameters to reactor components will either open
-automatically when an optimizer is loaded, or by pressing the “Reassign
-Parameters” button in the Optimizer Control section. Plugins are assigned to
+automatically when an optimizer is loaded, or by pressing the <span class="guilabel">Reassign Parameters</span>
+button in the “Optimizer Control” section. Plugins are assigned to
 parameters by dragging the plugin names from the “Unclassified” section to the
 desired parameter. Assign the mock reactor component plugins to the optimizer
 plugins as shown below.</p>
@@ -358,17 +355,17 @@ plugins as shown below.</p>
 corresponding optimization parameters.</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<p>Once you have assigned the parameters, press “Accept Parameters” to manually
+<p>Once you have assigned the parameters, press <span class="guilabel">Accept Parameters</span> to manually
 forward the initial parameters from the optimizer to the reactor components
-and press “Start Hardware” so the components turn on (start pumping and
-heating). Afterward, check the “Pass Parameters Automatically” box. Once the
+and press <span class="guilabel">Start Hardware</span> so the components turn on (start pumping and
+heating). Afterward, check the <span class="guilabel">Pass Parameters Automatically</span> box. Once the
 analyzer is loaded and passing reaction results to the optimizer, the
 optimizer will explore the space automatically.</p>
 </section>
 <section id="analyzer">
 <h3>Analyzer<a class="headerlink" href="#analyzer" title="Link to this heading"></a></h3>
-<p>Press the “Load Analyzer” button to open the “Select Analyzer” window. Select
-“Mock LC Parser” from the list and press “OK”. It does not matter if you name
+<p>Press the <span class="guilabel">Load Analyzer</span> button to open the “Select Analyzer” window. Select
+“Mock LC Parser” from the list and press <span class="guilabel">OK</span>. It does not matter if you name
 the analyzer, as this name is not visible anywhere currently.</p>
 <figure class="align-default" id="id14">
 <span id="mock-experiment-load-analyzer"></span><img alt="Screenshot of &quot;Select Analyzer&quot; window." src="../../../_images/load_analyzer.png" />
@@ -385,10 +382,10 @@ optimizer. This “reports” directory could also be placed on your Desktop or
 in the Downloads folder, but by creating it in the Experiment Location, all
 relevant data files for a given experiment are in the same place. This makes
 referencing the data later easier.</p>
-<p>When “Connect” is pressed, a terminal will open, running the report file
+<p>When <span class="guilabel">Connect</span> is pressed, a terminal will open, running the report file
 generation script, which generates mock LC report files with random data every
 two seconds. Minimize this terminal, but do not close it! If you accidentally
-close it, press “Stop Analyzer” and restart this section.</p>
+close it, press <span class="guilabel">Stop Analyzer</span> and restart this section.</p>
 <figure class="align-default" id="id15">
 <span id="mock-experiment-select-analyzer-directory"></span><img alt="Screenshot of Analyzer report directory selection window." src="../../../_images/select_analyzer_directory_filled.png" />
 <figcaption>
@@ -417,7 +414,7 @@ report, averaging every three reports and sending the result to the optimizer.</
 <h2>Stopping the Optimization<a class="headerlink" href="#stopping-the-optimization" title="Link to this heading"></a></h2>
 <p>With reactor components, an optimizer, and an analyzer loaded, the automated
 optimization should be under way! Let it run for a minute or two to gather some
-“data”. After that, stop the reactor components with “Stop Hardware” and close
+“data”. After that, stop the reactor components with <span class="guilabel">Stop Hardware</span> and close
 the Rxn Rover window. You will also need to close the two terminals that were
 opened when the optimizer and analyzer plugins were loaded.</p>
 </section>

@@ -47,7 +47,11 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">User Guide</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Installation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#rxn-rover-setup">Rxn Rover Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rxn-rover-setup">Rxn Rover Setup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#install-via-vipm">Install via VIPM:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#manual-install">Manual install:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="getting_started/index.html">Getting Started</a></li>
@@ -110,22 +114,43 @@ components from the <a class="reference external" href="https://rxnrover.github.
 executable version that can be run with the free <a class="reference external" href="https://www.ni.com/en-us/support/downloads/software-products/download.labview-runtime.html#369481">LabVIEW runtime engine</a>,
 but the dynamic nature of Rxn Rover has made this step difficult to implement.</p>
 <p>You also need the Dynamic Reentrant library, developed by the Rxn Rover team
-to facilitate communication between Rxn Rover and its plugins. It can be
-downloaded from <a class="reference external" href="https://www.github.com/RxnRover/DynamicReentrant">https://www.github.com/RxnRover/DynamicReentrant</a> by clicking
-the “Code” button and selecting “Download ZIP”. Extract the ZIP file into your
-<cite>&lt;labview&gt;/user.lib/</cite> directory, where <cite>&lt;labview&gt;</cite> is the location of your
-LabVIEW installation. <cite>user.lib</cite> is where user-created, common libraries used
-across multiple projects are located.</p>
+to facilitate communication between Rxn Rover and its plugins. You can install
+this library using either a <code class="docutils literal notranslate"><span class="pre">.vip</span></code> file (via VIPM) or a ZIP archive (for manual installation).</p>
+<p>The latest release is available at:
+<a class="reference external" href="https://www.github.com/RxnRover/DynamicReentrant/releases/latest">Dynamic Reentrant’s release page</a></p>
+<ul>
+<li><p><strong>VIPM Install:</strong> Download the <code class="docutils literal notranslate"><span class="pre">.vip</span></code> package from the Releases page and install it using the VI Package Manager (VIPM).</p></li>
+<li><p><strong>Manual Install:</strong> Download the ZIP archive from the same page. Extract its contents into your LabVIEW installation’s <code class="docutils literal notranslate"><span class="pre">user.lib</span></code> directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">labview</span><span class="o">&gt;/</span><span class="n">user</span><span class="o">.</span><span class="n">lib</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">&lt;labview&gt;</span></code> refers to the directory where LabVIEW is installed. <code class="docutils literal notranslate"><span class="pre">user.lib</span></code> is where shared or user-created libraries are placed.</p>
+</li>
+</ul>
 </section>
 <section id="rxn-rover-setup">
 <h2>Rxn Rover Setup<a class="headerlink" href="#rxn-rover-setup" title="Link to this heading"></a></h2>
 <p>Once the prerequisites are installed:</p>
+<section id="install-via-vipm">
+<h3>Install via VIPM:<a class="headerlink" href="#install-via-vipm" title="Link to this heading"></a></h3>
 <ol class="arabic simple">
-<li><p>Clone or download/extract the <a class="reference external" href="https://github.com/RxnRover/RxnRover">Rxn Rover repository</a>.</p></li>
-<li><p>Double-click Main.vi in the top directory of the repository.</p></li>
+<li><p>Download the <code class="docutils literal notranslate"><span class="pre">.vip</span></code> from <a class="reference external" href="https://github.com/RxnRover/RxnRover/releases/latest">Rxn Rover’s release page</a>.</p></li>
+<li><p>Open <code class="docutils literal notranslate"><span class="pre">.vip</span></code> the VIPM application.</p></li>
+<li><p>Follow the prompts to install Rxn Rover.</p></li>
+<li><p>Double-click <code class="docutils literal notranslate"><span class="pre">Main.vi</span></code> in the top directory of the repository.</p></li>
 <li><p>Click the “Run” arrow in the top left of the window that opens to run
 Rxn Rover.</p></li>
 </ol>
+</section>
+<section id="manual-install">
+<h3>Manual install:<a class="headerlink" href="#manual-install" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Clone or download/extract the <a class="reference external" href="https://github.com/RxnRover/RxnRover">Rxn Rover repository</a>. into your <code class="docutils literal notranslate"><span class="pre">Documents</span></code> directory.</p></li>
+<li><p>Double-click <code class="docutils literal notranslate"><span class="pre">Main.vi</span></code> in the top directory of the repository.</p></li>
+<li><p>Click the “Run” arrow in the top left of the window that opens to run
+Rxn Rover.</p></li>
+</ol>
+</section>
 </section>
 </section>
 
