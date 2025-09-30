@@ -1,0 +1,74 @@
+== Syringe Pump.lvclass
+
+*Responsibility:*
+No description found (add content in lvclass description)
+
+*Version:* 1.0.0.1
+
+=== Diagram
+
+[plantuml, format="svg", align="center"]
+....
+@startuml
+set namespaceSeparator :
+skinparam ClassBackgroundColor #FFFFFF
+skinparam ClassBorderColor #555555
+skinparam ClassFontColor #000000
+skinparam ClassHeaderBackgroundColor #808080
+
+skinparam top to bottom direction
+class "RxnRover.lvlib:Syringe Pump" {
+{field} -Valid Messages : Array of String
+{static} {method} +Variant to Instrument State Cluster TMP()
+{method} +New Parameter Message()
+{method} +Subpanel UI()
+
+}
+"RxnRover.lvlib:Pump Controller" <|-- "RxnRover.lvlib:Syringe Pump"
+
+
+
+@enduml
+....
+
+=== Methods
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|New Parameter Message
+|image:RxnRover.lvlib_Syringe_Pump.lvclass_New_Parameter_Message.vi.png[RxnRover.lvlib:Syringe Pump.lvclass:New Parameter Message.vi]
+|Dynamic dispatch for each child controller type to provide it's proper message for setting a new parameter value (setpoint).
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Subpanel UI
+|image:RxnRover.lvlib_Syringe_Pump.lvclass_Subpanel_UI.vi.png[RxnRover.lvlib:Syringe Pump.lvclass:Subpanel UI.vi]
+|The UI that will be inserted into subpanels so data can be displayed to the user. The class will use an internally managed message queue to communicate to it. The user should only communicate to this UI through class methods.
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|Variant to Instrument State Cluster TMP
+|image:RxnRover.lvlib_Syringe_Pump.lvclass_Variant_to_Instrument_State_Cluster_TMP.vi.png[RxnRover.lvlib:Syringe Pump.lvclass:Variant to Instrument State Cluster TMP.vi]
+|Converts a variant with attributes into a named cluster representing the instrument state. If a corresponding variant attribute does not exist, the default value for the named element according to the typedef is used.
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined
+
+=== Class Constant VIs
+
+[NOTE]
+====
+No Constant VIs Found
+====

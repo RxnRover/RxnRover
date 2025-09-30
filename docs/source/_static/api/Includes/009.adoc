@@ -1,0 +1,48 @@
+== Project Locations.lvlib
+
+*Responsibility:*
+No description found (add content in lvlib description)
+
+*Version:* 1.0.0.0
+
+=== Functions
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|File Defaults Location
+|image:RxnRover.lvlib_File_IO.lvlib_Project_Locations.lvlib_File_Defaults_Location.vi.png[RxnRover.lvlib:File IO.lvlib:Project Locations.lvlib:File Defaults Location.vi]
+|Returns the location of default files for the application, independent of whether it is run with the LabVIEW runtime, as a standalone EXE, using an installer, or during development in LabVIEW.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Icons Location
+|image:RxnRover.lvlib_File_IO.lvlib_Project_Locations.lvlib_Icons_Location.vi.png[RxnRover.lvlib:File IO.lvlib:Project Locations.lvlib:Icons Location.vi]
+|Returns the location of default files for the application, independent of whether it is run with the LabVIEW runtime, as a standalone EXE, using an installer, or during development in LabVIEW.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Resource Location
+|image:RxnRover.lvlib_File_IO.lvlib_Project_Locations.lvlib_Resource_Location.vi.png[RxnRover.lvlib:File IO.lvlib:Project Locations.lvlib:Resource Location.vi]
+|Returns the resource location for the application, independent of whether it is run with the LabVIEW runtime, as a standalone EXE, using an installer, or during development in LabVIEW.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined
+
+=== Library Constant VIs
+
+[NOTE]
+====
+No Constant VIs Found
+====

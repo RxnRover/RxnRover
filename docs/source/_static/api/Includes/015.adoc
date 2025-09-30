@@ -1,0 +1,660 @@
+== Generic Plugin.lvclass
+
+*Responsibility:*
+No description found (add content in lvclass description)
+
+*Version:* 1.0.0.2
+
+=== Diagram
+
+[plantuml, format="svg", align="center"]
+....
+@startuml
+set namespaceSeparator :
+skinparam ClassBackgroundColor #FFFFFF
+skinparam ClassBorderColor #555555
+skinparam ClassFontColor #000000
+skinparam ClassHeaderBackgroundColor #808080
+
+skinparam top to bottom direction
+class "RxnRover.lvlib:Generic Plugin" {
+{field} +Name : String
+{field} +Controller Type : Enum U16
+{field} -Control Panel : Cluster
+{field} -Subpanel : Cluster
+{static} {method} +Send Listening Queue()
+{static} {method} +Send Log Delimiter Message()
+{static} {method} +Send Log Directory Message()
+{static} {method} +Send Log on Run Message()
+{static} {method} +Send Log Prefix Message()
+{static} {method} +Send New Parameter()
+{static} {method} +Send Start Message()
+{static} {method} +Send Stop Message()
+{static} {method} +Wait for Control Panel Exit()
+{static} {method} +Wait for Control Panel Start()
+{static} {method} +Wait for Message (blocking)()
+{static} {method} +Wait for Process Running Event()
+{static} {method} +Wait for Valid Resource()
+{static} {method} +Panel Running Event()
+{static} {method} +Abort Control Panel()
+{static} {method} +Control Panel - Close()
+{static} {method} +Control Panel - Initialize()
+{static} {method} +Internal Message Queue - Close()
+{static} {method} +Internal Message Queue - Initialize()
+{static} {method} +Listening Server - Initialize()
+{static} {method} +Listening Server()
+{static} {method} +Stop Control Panel()
+{static} {method} +From Minimal Cluster()
+{static} {method} +Load Controller Type from Enum()
+{static} {method} +Load Controller Type from Path()
+{static} {method} #Close Subpanel UI Reference()
+{static} {method} +Initialize Subpanel UI()
+{static} {method} +Insert Subpanel UI()
+{static} {method} #Open Subpanel UI Reference()
+{static} {method} +Report to Subpanel()
+{static} {method} +Stop Subpanel UI()
+{static} {method} +Close VI Reference()
+{static} {method} +Close()
+{static} {method} +Compare Controller Type()
+{static} {method} +Continue Waiting or Abort Dialog()
+{static} {method} +Initialize()
+{static} {method} +Open Reentrant Class Method VI()
+{static} {method} +String to Controller Type()
+{method} +Control Panel Initialization Message()
+{method} +Log Directory Message()
+{method} +Log File Delimiter Message()
+{method} +Log on Run Message()
+{method} +Log Prefix Message()
+{method} +New Parameter Message()
+{method} +Start Message()
+{method} +Stop Message()
+{method} +Valid Resource Message()
+{method} +Listening Server - Close()
+{method} +Listening Server Cases()
+{method} +Open Listening Server Reference()
+{method} +Resource from String()
+{method} +As Minimal Cluster()
+{method} +Subpanel UI()
+{method} +Check Valid Message()
+{method} +Resource to String()
+
+}
+
+
+
+@enduml
+....
+
+=== Methods
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|Control Panel Initialization Message
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Control_Panel_Initialization_Message.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Control Panel Initialization Message.vi]
+|Method to generate the initial message to send to a Controller's Control Panel.
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|Log Directory Message
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Log_Directory_Message.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Log Directory Message.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Log File Delimiter Message
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Log_File_Delimiter_Message.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Log File Delimiter Message.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Log on Run Message
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Log_on_Run_Message.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Log on Run Message.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Log Prefix Message
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Log_Prefix_Message.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Log Prefix Message.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|New Parameter Message
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_New_Parameter_Message.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:New Parameter Message.vi]
+|Dynamic dispatch for each child controller type to provide it's proper message for setting a new parameter value (setpoint).
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Start Message
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Start_Message.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Start Message.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Stop Message
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Stop_Message.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Stop Message.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Valid Resource Message
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Valid_Resource_Message.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Valid Resource Message.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Send Listening Queue
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Send_Listening_Queue.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Send Listening Queue.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Send Log Delimiter Message
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Send_Log_Delimiter_Message.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Send Log Delimiter Message.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Send Log Directory Message
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Send_Log_Directory_Message.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Send Log Directory Message.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Send Log on Run Message
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Send_Log_on_Run_Message.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Send Log on Run Message.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Send Log Prefix Message
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Send_Log_Prefix_Message.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Send Log Prefix Message.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Send New Parameter
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Send_New_Parameter.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Send New Parameter.vi]
+|Sends the new set of parameters to the associated plugin.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Send Start Message
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Send_Start_Message.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Send Start Message.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Send Stop Message
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Send_Stop_Message.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Send Stop Message.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Wait for Control Panel Exit
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Wait_for_Control_Panel_Exit.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Wait for Control Panel Exit.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Wait for Control Panel Start
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Wait_for_Control_Panel_Start.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Wait for Control Panel Start.vi]
+|Wait for a message indicating that the control panel has started, or timeout if a value is given for the wait time.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Wait for Message (blocking)
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Wait_for_Message_(blocking).vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Wait for Message (blocking).vi]
+|Waits for a message with the specified command, ignoring all other messages. This is a blocking VI. This VI can be given a timeout value (-1 for no timeout) so it only blocks for a set amount of time. If no message is received, the message "Timeout" with no data will be returned.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Wait for Process Running Event
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Wait_for_Process_Running_Event.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Wait for Process Running Event.vi]
+|Waits for a message with the specified command, ignoring all other messages. This is a blocking VI.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Wait for Valid Resource
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Wait_for_Valid_Resource.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Wait for Valid Resource.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read Control Panel Message Queue
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Read_Control_Panel_Message_Queue.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Read Control Panel Message Queue.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|Read Control Panel Path
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Read_Control_Panel_Path.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Read Control Panel Path.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|Read Control Panel Reference
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Read_Control_Panel_Reference.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Read Control Panel Reference.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|Read Internal Message Queue
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Read_Internal_Message_Queue.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Read Internal Message Queue.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|Read Listening Queue
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Read_Listening_Queue.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Read Listening Queue.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|Read Resource
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Read_Resource.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Read Resource.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|Write Control Panel Message Queue
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Write_Control_Panel_Message_Queue.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Write Control Panel Message Queue.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|Write Control Panel Path
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Write_Control_Panel_Path.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Write Control Panel Path.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|Write Control Panel Reference
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Write_Control_Panel_Reference.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Write Control Panel Reference.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|Write Internal Message Queue
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Write_Internal_Message_Queue.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Write Internal Message Queue.vi]
+|Assigns a message queue as the new Internal Message Queue used for internal communications in the Controller object.
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|Write Listening Queue
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Write_Listening_Queue.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Write Listening Queue.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|Write Resource
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Write_Resource.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Write Resource.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|Panel Running Event
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Panel_Running_Event.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Panel Running Event.vi]
+|Event raised when a control panel starts (value = True) or stops (value = False).
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Abort Control Panel
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Abort_Control_Panel.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Abort Control Panel.vi]
+|Aborts the control panel immediately. This may leave any hardware or software the plugin was controlling in an unexpected state!
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Control Panel - Close
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Control_Panel___Close.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Control Panel - Close.vi]
+|Initialize the Control Panel at the provided controller path. Forwards a stop message to the control panel process to signal that it should end.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Control Panel - Initialize
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Control_Panel___Initialize.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Control Panel - Initialize.vi]
+|Initialize the Control Panel at the provided controller path. Waits for the initial "Process Start" message, where the controller type the control panel reports must match that of the instantiated controller object, or an error is thrown.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Internal Message Queue - Close
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Internal_Message_Queue___Close.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Internal Message Queue - Close.vi]
+|Close the internal message queue of the plugin server.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Internal Message Queue - Initialize
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Internal_Message_Queue___Initialize.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Internal Message Queue - Initialize.vi]
+|Initializes the internal message queue.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Listening Server - Close
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Listening_Server___Close.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Listening Server - Close.vi]
+|Closes the listening server VI reference and clears the corresponding class attribute.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Listening Server - Initialize
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Listening_Server___Initialize.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Listening Server - Initialize.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Listening Server Cases
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Listening_Server_Cases.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Listening Server Cases.vi]
+|Case structure with messages to listen for from the control panel. If more than the basic messages need to be handled, this should be overwritten by the child class.
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|Listening Server
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Listening_Server.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Listening Server.vi]
+|Listening server VI that will listen to the assigned Receiving Queue of the object, which is receiving messages from a plugin. The Listening Server Cases VI should be overridden and updated to properly respond to messages from a plugin.
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|Open Listening Server Reference
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Open_Listening_Server_Reference.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Open Listening Server Reference.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Resource from String
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Resource_from_String.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Resource from String.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Stop Control Panel
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Stop_Control_Panel.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Stop Control Panel.vi]
+|Sends the "Exit" command to the associated control panel. By default, this VI blocks until the "Process Exit" command is received from the control panel.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read Controller Type
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Read_Controller_Type.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Read Controller Type.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|Read Name
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Read_Name.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Read Name.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|Read Sending Queue
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Read_Sending_Queue.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Read Sending Queue.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read Subpanel Listening Queue
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Read_Subpanel_Listening_Queue.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Read Subpanel Listening Queue.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|Read Valid Messages
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Read_Valid_Messages.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Read Valid Messages.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|Write Controller Type
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Write_Controller_Type.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Write Controller Type.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|Write Name
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Write_Name.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Write Name.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|Write Sending Queue
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Write_Sending_Queue.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Write Sending Queue.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|As Minimal Cluster
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_As_Minimal_Cluster.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:As Minimal Cluster.vi]
+|Get a minimal cluster representation of the plugin.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|From Minimal Cluster
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_From_Minimal_Cluster.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:From Minimal Cluster.vi]
+|Creates a new plugin server instance from the details in a minimal cluster.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Load Controller Type from Enum
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Load_Controller_Type_from_Enum.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Load Controller Type from Enum.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Load Controller Type from Path
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Load_Controller_Type_from_Path.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Load Controller Type from Path.vi]
+|Loads the plugin server class from the provided path. This should be an absolute path in the development environment and a relative path for standalone applications.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read Subpanel Message Queue
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Read_Subpanel_Message_Queue.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Read Subpanel Message Queue.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|Read Subpanel UI Reference
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Read_Subpanel_UI_Reference.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Read Subpanel UI Reference.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|Write Subpanel Message Queue
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Write_Subpanel_Message_Queue.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Write Subpanel Message Queue.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|Write Subpanel Name
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Write_Subpanel_Name.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Write Subpanel Name.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Close Subpanel UI Reference
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Close_Subpanel_UI_Reference.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Close Subpanel UI Reference.vi]
+|Closes the subpanel UI VI reference and clears the corresponding class attribute.
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Initialize Subpanel UI
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Initialize_Subpanel_UI.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Initialize Subpanel UI.vi]
+|Initialize the subpanel UI VI reference and message queue inside the class, also giving the subpanel UI the correct message queue for further communication.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Insert Subpanel UI
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Insert_Subpanel_UI.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Insert Subpanel UI.vi]
+|Insert the Subpanel UI of the controller into the provided subpanel. The subpanel MUST have been initialized before calling this!
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Open Subpanel UI Reference
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Open_Subpanel_UI_Reference.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Open Subpanel UI Reference.vi]
+|Get a reference for the Subpanel UI.vi of the controller.
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Report to Subpanel
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Report_to_Subpanel.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Report to Subpanel.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Stop Subpanel UI
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Stop_Subpanel_UI.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Stop Subpanel UI.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Subpanel UI
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Subpanel_UI.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Subpanel UI.vi]
+|Dynamic dispatch VI that must be overridden by all inheriting classes. It is the UI that will be inserted into subpanels so data can be displayed to the user. The class will use an internally managed message queue to communicate to it. The user should only communicate to this UI through class methods.
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|Check Valid Message
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Check_Valid_Message.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Check Valid Message.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Close VI Reference
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Close_VI_Reference.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Close VI Reference.vi]
+|Closes a VI reference. This VI is intented to work both in the development environment and in stand-alone programs.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Close
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Close.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Close.vi]
+|Shuts down the plugin server, destroying references and queues it generated. This will not destroy externally set references and queues.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Compare Controller Type
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Compare_Controller_Type.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Compare Controller Type.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Continue Waiting or Abort Dialog
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Continue_Waiting_or_Abort_Dialog.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Continue Waiting or Abort Dialog.vi]
+|Open a dialog asking whether to continue waiting or abort the plugin.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Initialize
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Initialize.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Initialize.vi]
+|Initializes the internals of the plugin server.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Open Reentrant Class Method VI
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Open_Reentrant_Class_Method_VI.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Open Reentrant Class Method VI.vi]
+|Opens a class method VI reference for reentrant execution. This VI is intented to work both in the development environment and in stand-alone programs.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Resource to String
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_Resource_to_String.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:Resource to String.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|String to Controller Type
+|image:RxnRover.lvlib_Generic_Plugin.lvclass_String_to_Controller_Type.vi.png[RxnRover.lvlib:Generic Plugin.lvclass:String to Controller Type.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined
+
+=== Class Constant VIs
+
+[NOTE]
+====
+No Constant VIs Found
+====

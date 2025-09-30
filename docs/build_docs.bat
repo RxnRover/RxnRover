@@ -23,7 +23,7 @@ set VENVDIR=venv
 REM Create full paths from relative paths.
 REM Note: %~dp0 gets the absolute path.
 set "PROJECT_PATH=%~dp0..\RxnRover.lvproj"
-set "ADOC_PATH=%~dp0source\_static\api\index.adoc"
+set "ADOC_PATH=%~dp0source\_static\api"
 
 REM Command line flags
 REM These flags are uninitialized, but become defined if the relevant flag is set.
@@ -60,12 +60,13 @@ if defined SPHINX_ONLY (
 REM Generate static HTML with AntiDoc CLI
 echo Generating project documentation with AntiDoc CLI...
 
-g-cli --lv-ver 2020 Antidoc -- -pp "%PROJECT_PATH%" -t "Rxn Rover Documentation" -out "%ADOC_PATH%"
+g-cli --lv-ver 2020 Antidoc -- -pp "%PROJECT_PATH%" -t "Rxn Rover Documentation" -out "%ADOC_PATH%" -addon lvproj
 
 REM Convert asciidoc (*.adoc) file to HTML
 echo Converting asciidoc ^(^*.adoc^) file to HTML using asciidoctor...
 
-call asciidoctor -r asciidoctor-diagram/graphviz -b html5 "%ADOC_PATH%"
+call asciidoctor -r asciidoctor-diagram/graphviz -b html5 "%ADOC_PATH%\RxnRover.adoc"
+
 
 
 :sphinx
@@ -95,6 +96,19 @@ REM Generate Sphinx documentation
 echo Generating documentation with Sphinx...
 
 call .\make.bat html
+
+REM Copy Autodoc image assets to Spinhx build 
+set "IMG_SRC=%~dp0source\_static\api\Images"
+set "IMG_DST=%~dp0build\html\dev_resources\api\Images"
+
+REM Delete old images before copying
+if exist "%IMG_DST%" (
+    rmdir /S /Q "%IMG_DST%"
+)
+mkdir "%IMG_DST%"
+
+REM Copy image files
+xcopy /E /Y /I "%IMG_SRC%\*" "%IMG_DST%\" >nul
 
 REM Pause if run from being double-clicked, so the user can see the output
 if %0 == "%~0" pause

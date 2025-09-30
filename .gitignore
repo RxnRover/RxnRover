@@ -30,6 +30,7 @@ __pycache__/
 **/_build/
 **/build/
 
+
 # Environments
 .env
 .venv
