@@ -4,7 +4,9 @@
 
 - Windows OS
 - [LabVIEW](https://www.ni.com/en-us/support/downloads/software-products/download.labview.html#369643)
-- [AntiDoc](https://gitlab.com/wovalab/open-source/labview-doc-generator) and [AntiDoc CLI](https://gitlab.com/wovalab/open-source/cli-for-antidoc) from VIPM.
+- [AntiDoc 3.0](https://gitlab.com/wovalab/open-source/labview-doc-generator) from VIPM (v3.1 currently does not work with this workflow!)
+- [AntiDoc CLI 2.1](https://gitlab.com/wovalab/open-source/cli-for-antidoc) from VIPM (>=3.0 currently does not work with this workflow!)
+- [AntiDoc Add-On - LabVIEW project documentation 3.0](https://gitlab.com/wovalab/open-source/antidoc-document-types/labview-project) from VIPM
 - [Python 3.x](https://www.python.org/), pip, and venv.
 - [Ruby](https://www.ruby-lang.org/en/) and the [asciidoctor](https://asciidoctor.org/) Gem.
 
