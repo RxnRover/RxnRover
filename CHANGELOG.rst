@@ -1,15 +1,14 @@
 Changelog
 =========
 
-dev
----
+v1.5.0
+------
 
 **Features**
 
 - Added logging library and logging messages to portions of the codebase.
 - Log level option was added to user preferences.
   - **For existing user preference files**, the new entry will be added to the preferences file with a default value of ``INFO`` and a warning will be logged stating that this occurred.
-
 
 **Fixes**
 
