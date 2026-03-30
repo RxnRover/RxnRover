@@ -4,10 +4,6 @@ Changelog
 dev
 ---
 
-**Breaking Changes**
-
-- 
-
 **Features**
 
 - Added logging library and logging messages to portions of the codebase.
