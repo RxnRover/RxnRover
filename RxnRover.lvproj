@@ -39,14 +39,7 @@
 		<Item Name="RxnRover.vipc" Type="Document" URL="../RxnRover.vipc"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
-				<Item Name="Message.ctl" Type="VI" URL="/&lt;userlib&gt;/RxnRover/DynamicReentrant/src/Type Defs/Message.ctl"/>
-				<Item Name="Construct Message.vi" Type="VI" URL="/&lt;userlib&gt;/RxnRover/DynamicReentrant/src/Messaging/Construct Message.vi"/>
-				<Item Name="Enqueue Message.vi" Type="VI" URL="/&lt;userlib&gt;/RxnRover/DynamicReentrant/src/Messaging/Enqueue Message.vi"/>
-				<Item Name="Queue Name.vi" Type="VI" URL="/&lt;userlib&gt;/RxnRover/DynamicReentrant/src/Queue Name.vi"/>
-				<Item Name="Open Reentrant VI.vi" Type="VI" URL="/&lt;userlib&gt;/RxnRover/DynamicReentrant/src/Open Reentrant VI.vi"/>
-				<Item Name="Dequeue Message.vi" Type="VI" URL="/&lt;userlib&gt;/RxnRover/DynamicReentrant/src/Messaging/Dequeue Message.vi"/>
-				<Item Name="Queue Exists.vi" Type="VI" URL="/&lt;userlib&gt;/RxnRover/DynamicReentrant/src/Queue Exists.vi"/>
-				<Item Name="Obtain Main VI Queue.vi" Type="VI" URL="/&lt;userlib&gt;/RxnRover/DynamicReentrant/src/Obtain Main VI Queue.vi"/>
+				<Item Name="Dynamic Reentrant.lvlib" Type="Library" URL="/&lt;userlib&gt;/RxnRover/DynamicReentrant/Dynamic Reentrant.lvlib"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
