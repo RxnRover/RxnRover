@@ -15,3 +15,29 @@ v1.5.0
 - Fixed dynamically loaded class paths to include executable name as directory in the absolute path.
 - Updated standalone EXE build specification to not exclude unused VIs. This ensures that the plugin server LVClasses are still included without unnecessary extra code.
 - Added ``LICENSE.txt`` to be installed alongside the EXE in the standalone EXE build specification.
+- Changed existing plugin error logs to use new logging system.
+
+**Known Issues**
+
+- Executable cannot load plugins and should not be used.
+
+Template (change to anticipated version)
+----------------------------------------
+
+Follows `semantic versioning <semver.org>`__.
+
+**Breaking Changes**
+
+- 
+
+**Features**
+
+- 
+
+**Fixes**
+
+- 
+
+**Known Issues**
+
+- 
