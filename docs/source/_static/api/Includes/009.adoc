@@ -26,6 +26,13 @@ No description found (add content in lvlib description)
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
+|Log Location
+|image:RxnRover.lvlib_File_IO.lvlib_Project_Locations.lvlib_Log_Location.vi.png[RxnRover.lvlib:File IO.lvlib:Project Locations.lvlib:Log Location.vi]
+|Returns the location of logs for the application, independent of whether it is run with the LabVIEW runtime, as a standalone EXE, using an installer, or during development in LabVIEW.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
 |Resource Location
 |image:RxnRover.lvlib_File_IO.lvlib_Project_Locations.lvlib_Resource_Location.vi.png[RxnRover.lvlib:File IO.lvlib:Project Locations.lvlib:Resource Location.vi]
 |Returns the resource location for the application, independent of whether it is run with the LabVIEW runtime, as a standalone EXE, using an installer, or during development in LabVIEW.

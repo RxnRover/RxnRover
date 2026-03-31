@@ -27,16 +27,16 @@ No description found (add content in lvlib description)
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
-|Convert Absolute Path to Relative Path from Application
-|image:RxnRover.lvlib_File_IO.lvlib_Convert_Absolute_Path_to_Relative_Path_from_Application.vi.png[RxnRover.lvlib:File IO.lvlib:Convert Absolute Path to Relative Path from Application.vi]
-|Converts a given absolute path to a relative path from the calling application.
+|Convert Absolute Path if Executable
+|image:RxnRover.lvlib_File_IO.lvlib_Convert_Absolute_Path_if_Executable.vi.png[RxnRover.lvlib:File IO.lvlib:Convert Absolute Path if Executable.vi]
+|Converts an absolute path to include the executable file as a subdirectory in the path if the application is being executed as an executable. The given absolute path is retained if a development environment is being used.
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Convert Absolute to Relative Path if Executable
-|image:RxnRover.lvlib_File_IO.lvlib_Convert_Absolute_to_Relative_Path_if_Executable.vi.png[RxnRover.lvlib:File IO.lvlib:Convert Absolute to Relative Path if Executable.vi]
-|Converts an absolute path to a relative path if the application is being executed as an executable. The absolute path is retained if a development environment is being used.
+|Convert Absolute Path to Relative Path from Application
+|image:RxnRover.lvlib_File_IO.lvlib_Convert_Absolute_Path_to_Relative_Path_from_Application.vi.png[RxnRover.lvlib:File IO.lvlib:Convert Absolute Path to Relative Path from Application.vi]
+|Converts a given absolute path to a relative path from the calling application.
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]

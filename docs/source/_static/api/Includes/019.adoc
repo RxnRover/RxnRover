@@ -1,9 +1,9 @@
-== Pump Controller.lvclass
+== Passive Hardware.lvclass
 
 *Responsibility:*
-No description found (add content in lvclass description)
+Passive Hardware class which is a Controller Type within RxnRover, and is used to support passive instrument integration.  Passive Hardware typically operates in a read-only or passive capacity and requires minimal interaction with RxnRover itself. An example of a passive-hardware device in the context of RxnRover is a pH probe, or other sensors. 
 
-*Version:* 1.0.0.0
+*Version:* 1.0.0.1
 
 === Diagram
 
@@ -17,10 +17,10 @@ skinparam ClassFontColor #000000
 skinparam ClassHeaderBackgroundColor #808080
 
 skinparam top to bottom direction
-class "RxnRover.lvlib:Pump Controller" {
+class "RxnRover.lvlib:Passive Hardware" {
 {field} +Valid Messages : Array of String
 {static} {method} +Update Data Plot()
-{static} {method} +Variant to Instrument State Cluster()
+{static} {method} +Variant to Instrument State()
 {method} +Check Valid Message()
 {method} +Control Panel Initialization Message()
 {method} +New Parameter Message()
@@ -29,7 +29,7 @@ class "RxnRover.lvlib:Pump Controller" {
 {method} +Subpanel UI()
 
 }
-"RxnRover.lvlib:Generic Plugin" <|-- "RxnRover.lvlib:Pump Controller"
+"RxnRover.lvlib:Generic Plugin" <|-- "RxnRover.lvlib:Passive Hardware"
 
 
 
@@ -44,66 +44,69 @@ class "RxnRover.lvlib:Pump Controller" {
 |Name |Connector pane |Description |S. |R. |I.
 
 |Check Valid Message
-|image:RxnRover.lvlib_Pump_Controller.lvclass_Check_Valid_Message.vi.png[RxnRover.lvlib:Pump Controller.lvclass:Check Valid Message.vi]
-|No description found (add content in vi description)
+|image:RxnRover.lvlib_Passive_Hardware.lvclass_Check_Valid_Message.vi.png[RxnRover.lvlib:Passive Hardware.lvclass:Check Valid Message.vi]
+|Checks if a message recieved from a Passive-Hardware instrument is valid by comparing it to a list of valid messages. 
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
 |Control Panel Initialization Message
-|image:RxnRover.lvlib_Pump_Controller.lvclass_Control_Panel_Initialization_Message.vi.png[RxnRover.lvlib:Pump Controller.lvclass:Control Panel Initialization Message.vi]
-|Generate the initial message to send to the Pump Controller Control Panel. 
+|image:RxnRover.lvlib_Passive_Hardware.lvclass_Control_Panel_Initialization_Message.vi.png[RxnRover.lvlib:Passive Hardware.lvclass:Control Panel Initialization Message.vi]
+|Method to generate the initial message to send to a Controller's Control Panel.
 |image:empty.png[empty.png]
 |image:reentrancy-shared.png[reentrancy-shared.png]
 |image:empty.png[empty.png]
 
 |New Parameter Message
-|image:RxnRover.lvlib_Pump_Controller.lvclass_New_Parameter_Message.vi.png[RxnRover.lvlib:Pump Controller.lvclass:New Parameter Message.vi]
+|image:RxnRover.lvlib_Passive_Hardware.lvclass_New_Parameter_Message.vi.png[RxnRover.lvlib:Passive Hardware.lvclass:New Parameter Message.vi]
 |Dynamic dispatch for each child controller type to provide it's proper message for setting a new parameter value (setpoint).
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
 |Read Valid Messages
-|image:RxnRover.lvlib_Pump_Controller.lvclass_Read_Valid_Messages.vi.png[RxnRover.lvlib:Pump Controller.lvclass:Read Valid Messages.vi]
-|No description found (add content in vi description)
+|image:RxnRover.lvlib_Passive_Hardware.lvclass_Read_Valid_Messages.vi.png[RxnRover.lvlib:Passive Hardware.lvclass:Read Valid Messages.vi]
+|Reads the list of valid messages
 |image:empty.png[empty.png]
 |image:reentrancy-shared.png[reentrancy-shared.png]
 |image:empty.png[empty.png]
 
 |Start Message
-|image:RxnRover.lvlib_Pump_Controller.lvclass_Start_Message.vi.png[RxnRover.lvlib:Pump Controller.lvclass:Start Message.vi]
-|No description found (add content in vi description)
+|image:RxnRover.lvlib_Passive_Hardware.lvclass_Start_Message.vi.png[RxnRover.lvlib:Passive Hardware.lvclass:Start Message.vi]
+|Returns the message which will notify RxnRover to start collecting data from a Passive-Instrument. 
+Message is not sent in this VI just created.
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
 |Stop Message
-|image:RxnRover.lvlib_Pump_Controller.lvclass_Stop_Message.vi.png[RxnRover.lvlib:Pump Controller.lvclass:Stop Message.vi]
-|No description found (add content in vi description)
+|image:RxnRover.lvlib_Passive_Hardware.lvclass_Stop_Message.vi.png[RxnRover.lvlib:Passive Hardware.lvclass:Stop Message.vi]
+|Returns the stop message to tell RxnRover to stop collecting data from a Passive-Hardware instrument.
+Does not send the message just creates it to be sent later.
+
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
 |Subpanel UI
-|image:RxnRover.lvlib_Pump_Controller.lvclass_Subpanel_UI.vi.png[RxnRover.lvlib:Pump Controller.lvclass:Subpanel UI.vi]
-|The UI that will be inserted into subpanels so data can be displayed to the user. The class will use an internally managed message queue to communicate to it. The user should only communicate to this UI through class methods.
+|image:RxnRover.lvlib_Passive_Hardware.lvclass_Subpanel_UI.vi.png[RxnRover.lvlib:Passive Hardware.lvclass:Subpanel UI.vi]
+|Dynamic dispatch VI that must be overridden by all inheriting classes. It is the UI that will be inserted into subpanels so data can be displayed to the user. The class will use an internally managed message queue to communicate to it. The user should only communicate to this UI through class methods.
 |image:empty.png[empty.png]
 |image:reentrancy-shared.png[reentrancy-shared.png]
 |image:empty.png[empty.png]
 
 |Update Data Plot
-|image:RxnRover.lvlib_Pump_Controller.lvclass_Update_Data_Plot.vi.png[RxnRover.lvlib:Pump Controller.lvclass:Update Data Plot.vi]
-|No description found (add content in vi description)
+|image:RxnRover.lvlib_Passive_Hardware.lvclass_Update_Data_Plot.vi.png[RxnRover.lvlib:Passive Hardware.lvclass:Update Data Plot.vi]
+|Updates the data plot from data collected from a Passive-Hardware instrument in given time intervals.
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Variant to Instrument State Cluster
-|image:RxnRover.lvlib_Pump_Controller.lvclass_Variant_to_Instrument_State_Cluster.vi.png[RxnRover.lvlib:Pump Controller.lvclass:Variant to Instrument State Cluster.vi]
-|Converts a variant with attributes into a named cluster representing the instrument state. If a corresponding variant attribute does not exist, the default value for the named element according to the typedef is used.
+|Variant to Instrument State
+|image:RxnRover.lvlib_Passive_Hardware.lvclass_Variant_to_Instrument_State.vi.png[RxnRover.lvlib:Passive Hardware.lvclass:Variant to Instrument State.vi]
+|Converts the instrument state messages sent from the plugin to the internal state managed by RxnRover's plugin server.
 |image:empty.png[empty.png]
-|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |===
 
