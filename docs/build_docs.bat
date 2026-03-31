@@ -60,14 +60,7 @@ if defined SPHINX_ONLY (
 REM Generate static HTML with AntiDoc CLI
 echo Generating project documentation with AntiDoc CLI...
 
-g-cli --lv-ver 2020 Antidoc -- -pp "%PROJECT_PATH%" -t "Rxn Rover Documentation" -out "%ADOC_PATH%" -addon lvproj
-
-REM Convert asciidoc (*.adoc) file to HTML
-echo Converting asciidoc ^(^*.adoc^) file to HTML using asciidoctor...
-
-call asciidoctor -r asciidoctor-diagram/graphviz -b html5 "%ADOC_PATH%\RxnRover.adoc"
-
-
+g-cli --lv-ver 2020 Antidoc -- -pp "%PROJECT_PATH%" -t "Rxn Rover Documentation" -out "%ADOC_PATH%" -addon lvproj -render html -close
 
 :sphinx
 
