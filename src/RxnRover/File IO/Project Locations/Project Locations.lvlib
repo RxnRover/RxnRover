@@ -8,5 +8,6 @@
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="File Defaults Location.vi" Type="VI" URL="../File Defaults Location.vi"/>
 	<Item Name="Icons Location.vi" Type="VI" URL="../Icons Location.vi"/>
+	<Item Name="Log Location.vi" Type="VI" URL="../Log Location.vi"/>
 	<Item Name="Resource Location.vi" Type="VI" URL="../Resource Location.vi"/>
 </Library>

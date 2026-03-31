@@ -39,6 +39,11 @@
 	<Item Name="File IO" Type="Folder">
 		<Item Name="File IO.lvlib" Type="Library" URL="../src/RxnRover/File IO/File IO.lvlib"/>
 	</Item>
+	<Item Name="logging" Type="Folder">
+		<Item Name="Load Log Config from Preferences.vi" Type="VI" URL="../src/RxnRover/logging/Load Log Config from Preferences.vi"/>
+		<Item Name="logging.lvlib" Type="Library" URL="../src/RxnRover/logging/logging.lvlib"/>
+		<Item Name="Save Log Config to Preferences.vi" Type="VI" URL="../src/RxnRover/logging/Save Log Config to Preferences.vi"/>
+	</Item>
 	<Item Name="Plugin Manager" Type="Folder">
 		<Item Name="Initialization" Type="Folder">
 			<Item Name="Initialize Analyzer from Experiment Cluster.vi" Type="VI" URL="../src/RxnRover/Plugin Manager/Initialization/Initialize Analyzer from Experiment Cluster.vi"/>
@@ -104,5 +109,6 @@
 	<Item Name="User Preferences" Type="Folder">
 		<Item Name="User Preferences File.lvclass" Type="LVClass" URL="../src/RxnRover/User Preferences/User Preferences File.lvclass"/>
 	</Item>
+	<Item Name="Load and Apply User Preferences.vi" Type="VI" URL="../src/RxnRover/User Preferences/Load and Apply User Preferences.vi"/>
 	<Item Name="Main.vi" Type="VI" URL="../src/Main.vi"/>
 </Library>
