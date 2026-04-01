@@ -1,5 +1,5 @@
 = Rxn Rover Documentation
-Antidoc v3.0.0; Antidoc CLI <contact@wovalab.com>; 
+Antidoc v3.1.0; Antidoc CLI <contact@wovalab.com>; 
 :doctype: book
 :toc: left
 :imagesdir: Images
@@ -37,11 +37,11 @@ include::Includes/010.adoc[leveloffset=+1]
 
 include::Includes/011.adoc[leveloffset=+1]
 
+include::Includes/012.adoc[leveloffset=+1]
+
 == Classes
 
 This section describes the classes contained in the project.
-
-include::Includes/012.adoc[leveloffset=+1]
 
 include::Includes/013.adoc[leveloffset=+1]
 
@@ -63,17 +63,19 @@ include::Includes/021.adoc[leveloffset=+1]
 
 include::Includes/022.adoc[leveloffset=+1]
 
+include::Includes/023.adoc[leveloffset=+1]
+
 == Legal Information
 
 === Document creation
 
 This document has been generated using the following tools.
 
-include::Includes/023.adoc[leveloffset=+2]
-
 include::Includes/024.adoc[leveloffset=+2]
 
 include::Includes/025.adoc[leveloffset=+2]
+
+include::Includes/026.adoc[leveloffset=+2]
 
 === Product used in the project
 

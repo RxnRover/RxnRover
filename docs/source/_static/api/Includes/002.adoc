@@ -61,6 +61,9 @@ No description found (add content in lvlib description)
 |<<Project Locations.lvlib>>
 |Library
 
+|<<logging.lvlib>>
+|Library
+
 |<<Plugin Manager.lvlib>>
 |Library
 
@@ -225,6 +228,28 @@ No description found (add content in lvlib description)
 |VI List Event
 |image:RxnRover.lvlib_VI_List_Event.vi.png[RxnRover.lvlib:VI List Event.vi]
 |No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Load Log Config from Preferences
+|image:RxnRover.lvlib_Load_Log_Config_from_Preferences.vi.png[RxnRover.lvlib:Load Log Config from Preferences.vi]
+|Updates the log configuration based on user preferences. This VI serves as a link between a User Preferences File object and the logging library without directly coupling the two.
+
+NOTE: The provided User Preferences object must already be initialized.
+
+To view or update the log configuration at runtime, use the logging.lvlib:Set Log Config.vi and logging.lvlib:Get Log Config.vi VIs.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Save Log Config to Preferences
+|image:RxnRover.lvlib_Save_Log_Config_to_Preferences.vi.png[RxnRover.lvlib:Save Log Config to Preferences.vi]
+|Stores the log configuration to the provided user preferences object. It does not save the user preferences to a file! This VI serves as a link between a User Preferences File object and the logging library without directly coupling the two.
+
+NOTE: The provided User Preferences object must already be initialized.
+
+To view or update the log configuration at runtime, use the logging.lvlib:Set Log Config.vi and logging.lvlib:Get Log Config.vi VIs.
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
@@ -458,6 +483,13 @@ This function also creates the plugin directories if they do not already exist, 
 |Unsupported Type Error
 |image:RxnRover.lvlib_Unsupported_Type_Error.vi.png[RxnRover.lvlib:Unsupported Type Error.vi]
 |Provides an error cluster for an unsupported type. This will get the type of the variant and add that to the error message.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Load and Apply User Preferences
+|image:RxnRover.lvlib_Load_and_Apply_User_Preferences.vi.png[RxnRover.lvlib:Load and Apply User Preferences.vi]
+|Wrapper function to load the user preferences file for Rxn Rover and apply the loaded preferences.
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]

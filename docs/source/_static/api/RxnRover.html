@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.23">
-<meta name="author" content="Antidoc v3.0.0, Antidoc CLI">
+<meta name="generator" content="Asciidoctor 2.0.22">
+<meta name="author" content="Antidoc v3.1.0, Antidoc CLI">
 <title>Rxn Rover Documentation</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -439,7 +439,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 <h1>Rxn Rover Documentation</h1>
 <div class="details">
-<span id="author" class="author">Antidoc v3.0.0</span><br>
+<span id="author" class="author">Antidoc v3.1.0</span><br>
 <span id="author2" class="author">Antidoc CLI</span><br>
 <span id="email2" class="email"><a href="mailto:contact@wovalab.com">contact@wovalab.com</a></span><br>
 </div>
@@ -458,8 +458,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_json_utilities_lvlib">2.7. JSON Utilities.lvlib</a></li>
 <li><a href="#_localappdata_utilities_lvlib">2.8. LocalAppData Utilities.lvlib</a></li>
 <li><a href="#_project_locations_lvlib">2.9. Project Locations.lvlib</a></li>
-<li><a href="#_plugin_manager_lvlib">2.10. Plugin Manager.lvlib</a></li>
-<li><a href="#_test_message_queue_lvlib">2.11. test Message Queue.lvlib</a></li>
+<li><a href="#_logging_lvlib">2.10. logging.lvlib</a></li>
+<li><a href="#_plugin_manager_lvlib">2.11. Plugin Manager.lvlib</a></li>
+<li><a href="#_test_message_queue_lvlib">2.12. test Message Queue.lvlib</a></li>
 </ul>
 </li>
 <li><a href="#_classes">3. Classes</a>
@@ -622,6 +623,10 @@ No description found (add content in lvlib description)</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#_project_locations_lvlib">Project Locations.lvlib</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Library</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#logging.lvlib">[logging.lvlib]</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Library</p></td>
 </tr>
 <tr>
@@ -999,6 +1004,42 @@ No description found (add content in lvlib description)</p>
 <p><span class="image"><img src="Images/RxnRover.lvlib_VI_List_Event.vi.png" alt="RxnRover.lvlib:VI List Event.vi"></span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Load Log Config from Preferences</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/RxnRover.lvlib_Load_Log_Config_from_Preferences.vi.png" alt="RxnRover.lvlib:Load Log Config from Preferences.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Updates the log configuration based on user preferences. This VI serves as a link between a User Preferences File object and the logging library without directly coupling the two.</p>
+<p class="tableblock">NOTE: The provided User Preferences object must already be initialized.</p>
+<p class="tableblock">To view or update the log configuration at runtime, use the logging.lvlib:Set Log Config.vi and logging.lvlib:Get Log Config.vi VIs.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Save Log Config to Preferences</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/RxnRover.lvlib_Save_Log_Config_to_Preferences.vi.png" alt="RxnRover.lvlib:Save Log Config to Preferences.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stores the log configuration to the provided user preferences object. It does not save the user preferences to a file! This VI serves as a link between a User Preferences File object and the logging library without directly coupling the two.</p>
+<p class="tableblock">NOTE: The provided User Preferences object must already be initialized.</p>
+<p class="tableblock">To view or update the log configuration at runtime, use the logging.lvlib:Set Log Config.vi and logging.lvlib:Get Log Config.vi VIs.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
 </div></div></td>
@@ -1539,6 +1580,22 @@ No description found (add content in lvlib description)</p>
 </div></div></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Load and Apply User Preferences</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/RxnRover.lvlib_Load_and_Apply_User_Preferences.vi.png" alt="RxnRover.lvlib:Load and Apply User Preferences.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wrapper function to load the user preferences file for Rxn Rover and apply the loaded preferences.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Main</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="image"><img src="Images/RxnRover.lvlib_Main.vi.png" alt="RxnRover.lvlib:Main.vi"></span></p>
@@ -2057,11 +2114,11 @@ No description found (add content in lvlib description)</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Convert Absolute Path to Relative Path from Application</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Convert Absolute Path if Executable</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/RxnRover.lvlib_File_IO.lvlib_Convert_Absolute_Path_to_Relative_Path_from_Application.vi.png" alt="RxnRover.lvlib:File IO.lvlib:Convert Absolute Path to Relative Path from Application.vi"></span></p>
+<p><span class="image"><img src="Images/RxnRover.lvlib_File_IO.lvlib_Convert_Absolute_Path_if_Executable.vi.png" alt="RxnRover.lvlib:File IO.lvlib:Convert Absolute Path if Executable.vi"></span></p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Converts a given absolute path to a relative path from the calling application.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Converts an absolute path to include the executable file as a subdirectory in the path if the application is being executed as an executable. The given absolute path is retained if a development environment is being used.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
 </div></div></td>
@@ -2073,11 +2130,11 @@ No description found (add content in lvlib description)</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Convert Absolute to Relative Path if Executable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Convert Absolute Path to Relative Path from Application</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/RxnRover.lvlib_File_IO.lvlib_Convert_Absolute_to_Relative_Path_if_Executable.vi.png" alt="RxnRover.lvlib:File IO.lvlib:Convert Absolute to Relative Path if Executable.vi"></span></p>
+<p><span class="image"><img src="Images/RxnRover.lvlib_File_IO.lvlib_Convert_Absolute_Path_to_Relative_Path_from_Application.vi.png" alt="RxnRover.lvlib:File IO.lvlib:Convert Absolute Path to Relative Path from Application.vi"></span></p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Converts an absolute path to a relative path if the application is being executed as an executable. The absolute path is retained if a development environment is being used.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Converts a given absolute path to a relative path from the calling application.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
 </div></div></td>
@@ -2452,6 +2509,22 @@ No description found (add content in lvlib description)</p>
 </div></div></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Log Location</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/RxnRover.lvlib_File_IO.lvlib_Project_Locations.lvlib_Log_Location.vi.png" alt="RxnRover.lvlib:File IO.lvlib:Project Locations.lvlib:Log Location.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns the location of logs for the application, independent of whether it is run with the LabVIEW runtime, as a standalone EXE, using an installer, or during development in LabVIEW.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Resource Location</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="image"><img src="Images/RxnRover.lvlib_File_IO.lvlib_Project_Locations.lvlib_Resource_Location.vi.png" alt="RxnRover.lvlib:File IO.lvlib:Project Locations.lvlib:Resource Location.vi"></span></p>
@@ -2498,7 +2571,7 @@ No description found (add content in lvlib description)</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_plugin_manager_lvlib"><a class="anchor" href="#_plugin_manager_lvlib"></a><a class="link" href="#_plugin_manager_lvlib">2.10. Plugin Manager.lvlib</a></h3>
+<h3 id="_logging_lvlib"><a class="anchor" href="#_logging_lvlib"></a><a class="link" href="#_logging_lvlib">2.10. logging.lvlib</a></h3>
 <div class="paragraph">
 <p><strong>Responsibility:</strong>
 No description found (add content in lvlib description)</p>
@@ -2510,6 +2583,245 @@ No description found (add content in lvlib description)</p>
 <h4 id="_functions_10"><a class="anchor" href="#_functions_10"></a><a class="link" href="#_functions_10">2.10.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
 <caption class="title">Table 12. Functions (non private scope only)</caption>
+<colgroup>
+<col style="width: 14.8148%;">
+<col style="width: 29.6296%;">
+<col style="width: 44.4444%;">
+<col style="width: 3.7037%;">
+<col style="width: 3.7037%;">
+<col style="width: 3.7038%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Connector pane</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">S.</th>
+<th class="tableblock halign-left valign-top">R.</th>
+<th class="tableblock halign-left valign-top">I.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default Log File</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/RxnRover.lvlib_logging.lvlib_Default_Log_File.vi.png" alt="RxnRover.lvlib:logging.lvlib:Default Log File.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns a log file name of the form "&lt;date&gt;_&lt;time&gt;_&lt;name&gt;.log" where the date and time correspond to the first call to this function and &lt;name&gt; is the provided log name to help categorize different log messages in different files.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get Log Config</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/RxnRover.lvlib_logging.lvlib_Get_Log_Config.vi.png" alt="RxnRover.lvlib:logging.lvlib:Get Log Config.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gets the current logging configuration.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Log Config</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/RxnRover.lvlib_logging.lvlib_Log_Config.vi.png" alt="RxnRover.lvlib:logging.lvlib:Log Config.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides access to read from or write to the log configuration, maintaining a functional global variable of the current configuration state.</p>
+<p class="tableblock">WARNING: This VI should not be used to change the logging configuration by itself! It is only intended for internal use. Instead use the Get and Set wrapper functions.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Log Message - CRITICAL</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/RxnRover.lvlib_logging.lvlib_Log_Message___CRITICAL.vi.png" alt="RxnRover.lvlib:logging.lvlib:Log Message - CRITICAL.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Log the given message to the Rxn Rover log file with log level CRITICAL.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Log Message - DEBUG</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/RxnRover.lvlib_logging.lvlib_Log_Message___DEBUG.vi.png" alt="RxnRover.lvlib:logging.lvlib:Log Message - DEBUG.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Log the given message to the Rxn Rover log file with log level DEBUG.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Log Message - ERROR</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/RxnRover.lvlib_logging.lvlib_Log_Message___ERROR.vi.png" alt="RxnRover.lvlib:logging.lvlib:Log Message - ERROR.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Log the given message to the Rxn Rover log file with log level ERROR.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Log Message - INFO</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/RxnRover.lvlib_logging.lvlib_Log_Message___INFO.vi.png" alt="RxnRover.lvlib:logging.lvlib:Log Message - INFO.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Log the given message to the Rxn Rover log file with log level INFO.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Log Message - WARNING</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/RxnRover.lvlib_logging.lvlib_Log_Message___WARNING.vi.png" alt="RxnRover.lvlib:logging.lvlib:Log Message - WARNING.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Log the given message to the Rxn Rover log file with log level WARNING.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Log Message with Level</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/RxnRover.lvlib_logging.lvlib_Log_Message_with_Level.vi.png" alt="RxnRover.lvlib:logging.lvlib:Log Message with Level.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Log the given message to the Rxn Rover log file. Appends the log level, date, and time to the message.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Log Message</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/RxnRover.lvlib_logging.lvlib_Log_Message.vi.png" alt="RxnRover.lvlib:logging.lvlib:Log Message.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Logs the given message to a log file in the Rxn Rover log directory. If no log file is provided, the default log file name is used. See Default Log File.vi for more details about the form of the default log file name.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Set Log Config</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/RxnRover.lvlib_logging.lvlib_Set_Log_Config.vi.png" alt="RxnRover.lvlib:logging.lvlib:Set Log Config.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the logging configuration.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>S</strong>cope: <span class="image"><img src="Images/scope-protected.png" alt="scope protected"></span> &#8594; Protected | <span class="image"><img src="Images/scope-community.png" alt="scope community"></span> &#8594; Community</p>
+</div>
+<div class="paragraph">
+<p><strong>R</strong>eentrancy: <span class="image"><img src="Images/reentrancy-preallocated.png" alt="reentrancy preallocated"></span> &#8594; Preallocated reentrancy | <span class="image"><img src="Images/reentrancy-shared.png" alt="reentrancy shared"></span> &#8594; Shared reentrancy</p>
+</div>
+<div class="paragraph">
+<p><strong>I</strong>nlining: <span class="image"><img src="Images/inlined.png" alt="inlined"></span> &#8594; Inlined</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_library_constant_vis_10"><a class="anchor" href="#_library_constant_vis_10"></a><a class="link" href="#_library_constant_vis_10">2.10.2. Library Constant VIs</a></h4>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>No Constant VIs Found</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_plugin_manager_lvlib"><a class="anchor" href="#_plugin_manager_lvlib"></a><a class="link" href="#_plugin_manager_lvlib">2.11. Plugin Manager.lvlib</a></h3>
+<div class="paragraph">
+<p><strong>Responsibility:</strong>
+No description found (add content in lvlib description)</p>
+</div>
+<div class="paragraph">
+<p><strong>Version:</strong> 1.0.0.0</p>
+</div>
+<div class="sect3">
+<h4 id="_functions_11"><a class="anchor" href="#_functions_11"></a><a class="link" href="#_functions_11">2.11.1. Functions</a></h4>
+<table class="tableblock frame-all grid-all stripes-none stretch">
+<caption class="title">Table 13. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -2740,7 +3052,7 @@ RxnRover</p></td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_library_constant_vis_10"><a class="anchor" href="#_library_constant_vis_10"></a><a class="link" href="#_library_constant_vis_10">2.10.2. Library Constant VIs</a></h4>
+<h4 id="_library_constant_vis_11"><a class="anchor" href="#_library_constant_vis_11"></a><a class="link" href="#_library_constant_vis_11">2.11.2. Library Constant VIs</a></h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -2758,7 +3070,7 @@ RxnRover</p></td>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_test_message_queue_lvlib"><a class="anchor" href="#_test_message_queue_lvlib"></a><a class="link" href="#_test_message_queue_lvlib">2.11. test Message Queue.lvlib</a></h3>
+<h3 id="_test_message_queue_lvlib"><a class="anchor" href="#_test_message_queue_lvlib"></a><a class="link" href="#_test_message_queue_lvlib">2.12. test Message Queue.lvlib</a></h3>
 <div class="paragraph">
 <p><strong>Responsibility:</strong>
 No description found (add content in lvlib description)</p>
@@ -2767,9 +3079,9 @@ No description found (add content in lvlib description)</p>
 <p><strong>Version:</strong> 1.0.0.0</p>
 </div>
 <div class="sect3">
-<h4 id="_functions_11"><a class="anchor" href="#_functions_11"></a><a class="link" href="#_functions_11">2.11.1. Functions</a></h4>
+<h4 id="_functions_12"><a class="anchor" href="#_functions_12"></a><a class="link" href="#_functions_12">2.12.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 13. Functions (non private scope only)</caption>
+<caption class="title">Table 14. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -2882,7 +3194,7 @@ No description found (add content in lvlib description)</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_library_constant_vis_11"><a class="anchor" href="#_library_constant_vis_11"></a><a class="link" href="#_library_constant_vis_11">2.11.2. Library Constant VIs</a></h4>
+<h4 id="_library_constant_vis_12"><a class="anchor" href="#_library_constant_vis_12"></a><a class="link" href="#_library_constant_vis_12">2.12.2. Library Constant VIs</a></h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -2913,7 +3225,7 @@ No description found (add content in lvlib description)</p>
 <p>This project contains 10 classes and 0 interface.</p>
 </div>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 14. Classes list</caption>
+<caption class="title">Table 15. Classes list</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2967,230 +3279,9 @@ No description found (add content in lvlib description)</p>
 </tr>
 </tbody>
 </table>
-<div class="literalblock">
+<div class="imageblock text-center kroki">
 <div class="content">
-<pre>@startuml
-set namespaceSeparator :
-skinparam ClassBackgroundColor #FFFFFF
-skinparam ClassBorderColor #555555
-skinparam ClassFontColor #000000
-skinparam ClassHeaderBackgroundColor #808080
-
-skinparam top to bottom direction
-class "RxnRover.lvlib:Controller Array" {
-{field} +Array : Array of LV Class
-{static} {method} +Array Size()
-{static} {method} +As Minimal Cluster Array()
-{static} {method} +Delete From Array()
-{static} {method} +Index Array()
-{static} {method} +Insert Into Array()
-{static} {method} +Register Controller()
-{static} {method} +Replace Subset Array()
-{static} {method} +Replace Subset Element()
-{static} {method} -Search Array by Controller Type()
-{static} {method} -Search Array by Name()
-{static} {method} +Search Array()
-
-}
-
-"RxnRover.lvlib:Controller Array" o-- "RxnRover.lvlib:Generic Plugin"
-
-class "RxnRover.lvlib:Generic Optimizer" {
-{static} {method} +Variant to Optimizer State()
-{method} +Control Panel Initialization Message()
-{method} +New Parameter Message()
-{method} +Start Message()
-{method} +Stop Message()
-{method} +Valid Resource Message()
-{method} +Submit Goal()
-{method} +Listening Server Cases()
-{method} +Resource from String()
-{method} +Resource to String()
-{method} +Subpanel UI()
-{method} +Check Valid Message()
-
-}
-"RxnRover.lvlib:Generic Plugin" &lt;|-- "RxnRover.lvlib:Generic Optimizer"
-
-
-class "RxnRover.lvlib:Generic Plugin" {
-{field} +Name : String
-{field} +Controller Type : Enum U16
-{field} -Control Panel : Cluster
-{field} -Subpanel : Cluster
-{static} {method} +Send Listening Queue()
-{static} {method} +Send Log Delimiter Message()
-{static} {method} +Send Log Directory Message()
-{static} {method} +Send Log on Run Message()
-{static} {method} +Send Log Prefix Message()
-{static} {method} +Send New Parameter()
-{static} {method} +Send Start Message()
-{static} {method} +Send Stop Message()
-{static} {method} +Wait for Control Panel Exit()
-{static} {method} +Wait for Control Panel Start()
-{static} {method} +Wait for Message (blocking)()
-{static} {method} +Wait for Process Running Event()
-{static} {method} +Wait for Valid Resource()
-{static} {method} +Panel Running Event()
-{static} {method} +Abort Control Panel()
-{static} {method} +Control Panel - Close()
-{static} {method} +Control Panel - Initialize()
-{static} {method} +Internal Message Queue - Close()
-{static} {method} +Internal Message Queue - Initialize()
-{static} {method} +Listening Server - Initialize()
-{static} {method} +Listening Server()
-{static} {method} +Stop Control Panel()
-{static} {method} +From Minimal Cluster()
-{static} {method} +Load Controller Type from Enum()
-{static} {method} +Load Controller Type from Path()
-{static} {method} #Close Subpanel UI Reference()
-{static} {method} +Initialize Subpanel UI()
-{static} {method} +Insert Subpanel UI()
-{static} {method} #Open Subpanel UI Reference()
-{static} {method} +Report to Subpanel()
-{static} {method} +Stop Subpanel UI()
-{static} {method} +Close VI Reference()
-{static} {method} +Close()
-{static} {method} +Compare Controller Type()
-{static} {method} +Continue Waiting or Abort Dialog()
-{static} {method} +Initialize()
-{static} {method} +Open Reentrant Class Method VI()
-{static} {method} +String to Controller Type()
-{method} +Control Panel Initialization Message()
-{method} +Log Directory Message()
-{method} +Log File Delimiter Message()
-{method} +Log on Run Message()
-{method} +Log Prefix Message()
-{method} +New Parameter Message()
-{method} +Start Message()
-{method} +Stop Message()
-{method} +Valid Resource Message()
-{method} +Listening Server - Close()
-{method} +Listening Server Cases()
-{method} +Open Listening Server Reference()
-{method} +Resource from String()
-{method} +As Minimal Cluster()
-{method} +Subpanel UI()
-{method} +Check Valid Message()
-{method} +Resource to String()
-
-}
-
-
-class "RxnRover.lvlib:LC Parser" {
-{static} {method} +Variant to Analyzer State()
-{method} +Check Valid Message()
-{method} +Control Panel Initialization Message()
-{method} +Listening Server Cases()
-{method} +New Parameter Message()
-{method} +Resource from String()
-{method} +Resource to String()
-{method} +Start Message()
-{method} +Stop Message()
-{method} +Subpanel UI()
-{method} +Valid Resource Message()
-
-}
-"RxnRover.lvlib:Generic Plugin" &lt;|-- "RxnRover.lvlib:LC Parser"
-
-
-class "RxnRover.lvlib:Parameter to Hardware Map" {
-{field} #unordered_map : Array of Cluster
-{static} {method} +As Minimal Cluster()
-{static} {method} +Clear()
-{static} {method} +Empty()
-{static} {method} +Equals()
-{static} {method} +Erase (array)()
-{static} {method} #Erase (index)()
-{static} {method} +Erase (single)()
-{static} {method} +Find (array)()
-{static} {method} +Find (single)()
-{static} {method} #Find Index (single)()
-{static} {method} +Insert (array)()
-{static} {method} +Insert (element)()
-{static} {method} +Insert (key-value)()
-{static} {method} #Repeat Key()
-{static} {method} +Size()
-{static} {method} +Swap()
-
-}
-
-
-class "RxnRover.lvlib:Passive Hardware" {
-{field} +Valid Messages : Array of String
-{static} {method} +Update Data Plot()
-{static} {method} +Variant to Instrument State()
-{method} +Check Valid Message()
-{method} +Control Panel Initialization Message()
-{method} +New Parameter Message()
-{method} +Start Message()
-{method} +Stop Message()
-{method} +Subpanel UI()
-
-}
-"RxnRover.lvlib:Generic Plugin" &lt;|-- "RxnRover.lvlib:Passive Hardware"
-
-
-class "RxnRover.lvlib:Pump Controller" {
-{field} +Valid Messages : Array of String
-{static} {method} +Update Data Plot()
-{static} {method} +Variant to Instrument State Cluster()
-{method} +Check Valid Message()
-{method} +Control Panel Initialization Message()
-{method} +New Parameter Message()
-{method} +Start Message()
-{method} +Stop Message()
-{method} +Subpanel UI()
-
-}
-"RxnRover.lvlib:Generic Plugin" &lt;|-- "RxnRover.lvlib:Pump Controller"
-
-
-class "RxnRover.lvlib:Syringe Pump" {
-{field} -Valid Messages : Array of String
-{static} {method} +Variant to Instrument State Cluster TMP()
-{method} +New Parameter Message()
-{method} +Subpanel UI()
-
-}
-"RxnRover.lvlib:Pump Controller" &lt;|-- "RxnRover.lvlib:Syringe Pump"
-
-
-class "RxnRover.lvlib:Temperature Controller" {
-{field} +Valid Messages : Array of String
-{static} {method} +Update Data Plot()
-{static} {method} +Variant to Instrument State()
-{method} +Check Valid Message()
-{method} +Control Panel Initialization Message()
-{method} +New Parameter Message()
-{method} +Start Message()
-{method} +Stop Message()
-{method} +Subpanel UI()
-
-}
-"RxnRover.lvlib:Generic Plugin" &lt;|-- "RxnRover.lvlib:Temperature Controller"
-
-
-class "RxnRover.lvlib:User Preferences File" {
-{field} +File Name : String
-{field} +File Location : Path
-{field} +User Preferences : Cluster
-{static} {method} +Add Recent Project()
-{static} {method} +Clear Recent Experiments()
-{static} {method} +Convert Home Directory Tokens()
-{static} {method} +Create If File Does Not Exist()
-{static} {method} +Default File Name()
-{static} {method} +Default File Path()
-{static} {method} +DefaultUserSettings Full Path()
-{static} {method} +Init()
-{static} {method} +Load()
-{static} {method} +Save()
-
-}
-
-
-
-@enduml</pre>
+<img src="Images/diag-6ca894b09b2a5728b2e4743a38ad850bbc0a68de93698ea2f45a308f4c2b021e.svg" alt="Diagram">
 </div>
 </div>
 </div>
@@ -3205,43 +3296,16 @@ No description found (add content in lvclass description)</p>
 </div>
 <div class="sect3">
 <h4 id="_diagram"><a class="anchor" href="#_diagram"></a><a class="link" href="#_diagram">3.2.1. Diagram</a></h4>
-<div class="literalblock">
+<div class="imageblock text-center kroki">
 <div class="content">
-<pre>@startuml
-set namespaceSeparator :
-skinparam ClassBackgroundColor #FFFFFF
-skinparam ClassBorderColor #555555
-skinparam ClassFontColor #000000
-skinparam ClassHeaderBackgroundColor #808080
-
-skinparam top to bottom direction
-class "RxnRover.lvlib:Controller Array" {
-{field} +Array : Array of LV Class
-{static} {method} +Array Size()
-{static} {method} +As Minimal Cluster Array()
-{static} {method} +Delete From Array()
-{static} {method} +Index Array()
-{static} {method} +Insert Into Array()
-{static} {method} +Register Controller()
-{static} {method} +Replace Subset Array()
-{static} {method} +Replace Subset Element()
-{static} {method} -Search Array by Controller Type()
-{static} {method} -Search Array by Name()
-{static} {method} +Search Array()
-
-}
-
-"RxnRover.lvlib:Controller Array" o-- "RxnRover.lvlib:Generic Plugin"
-
-
-@enduml</pre>
+<img src="Images/diag-25eda843c463cc8ddcdd4ec99d2fa0969ac93f3c3c863ce44e20ed4e80826b0b.svg" alt="Diagram">
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_methods"><a class="anchor" href="#_methods"></a><a class="link" href="#_methods">3.2.2. Methods</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 15. Functions (non private scope only)</caption>
+<caption class="title">Table 16. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -3462,43 +3526,16 @@ No description found (add content in lvclass description)</p>
 </div>
 <div class="sect3">
 <h4 id="_diagram_2"><a class="anchor" href="#_diagram_2"></a><a class="link" href="#_diagram_2">3.3.1. Diagram</a></h4>
-<div class="literalblock">
+<div class="imageblock text-center kroki">
 <div class="content">
-<pre>@startuml
-set namespaceSeparator :
-skinparam ClassBackgroundColor #FFFFFF
-skinparam ClassBorderColor #555555
-skinparam ClassFontColor #000000
-skinparam ClassHeaderBackgroundColor #808080
-
-skinparam top to bottom direction
-class "RxnRover.lvlib:Generic Optimizer" {
-{static} {method} +Variant to Optimizer State()
-{method} +Control Panel Initialization Message()
-{method} +New Parameter Message()
-{method} +Start Message()
-{method} +Stop Message()
-{method} +Valid Resource Message()
-{method} +Submit Goal()
-{method} +Listening Server Cases()
-{method} +Resource from String()
-{method} +Resource to String()
-{method} +Subpanel UI()
-{method} +Check Valid Message()
-
-}
-"RxnRover.lvlib:Generic Plugin" &lt;|-- "RxnRover.lvlib:Generic Optimizer"
-
-
-
-@enduml</pre>
+<img src="Images/diag-85683c3b766843d5ee3358ef0f132ad35cea84f3cb25dd617433cda398324fbb.svg" alt="Diagram">
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_methods_2"><a class="anchor" href="#_methods_2"></a><a class="link" href="#_methods_2">3.3.2. Methods</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 16. Functions (non private scope only)</caption>
+<caption class="title">Table 17. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -3767,89 +3804,16 @@ No description found (add content in lvclass description)</p>
 </div>
 <div class="sect3">
 <h4 id="_diagram_3"><a class="anchor" href="#_diagram_3"></a><a class="link" href="#_diagram_3">3.4.1. Diagram</a></h4>
-<div class="literalblock">
+<div class="imageblock text-center kroki">
 <div class="content">
-<pre>@startuml
-set namespaceSeparator :
-skinparam ClassBackgroundColor #FFFFFF
-skinparam ClassBorderColor #555555
-skinparam ClassFontColor #000000
-skinparam ClassHeaderBackgroundColor #808080
-
-skinparam top to bottom direction
-class "RxnRover.lvlib:Generic Plugin" {
-{field} +Name : String
-{field} +Controller Type : Enum U16
-{field} -Control Panel : Cluster
-{field} -Subpanel : Cluster
-{static} {method} +Send Listening Queue()
-{static} {method} +Send Log Delimiter Message()
-{static} {method} +Send Log Directory Message()
-{static} {method} +Send Log on Run Message()
-{static} {method} +Send Log Prefix Message()
-{static} {method} +Send New Parameter()
-{static} {method} +Send Start Message()
-{static} {method} +Send Stop Message()
-{static} {method} +Wait for Control Panel Exit()
-{static} {method} +Wait for Control Panel Start()
-{static} {method} +Wait for Message (blocking)()
-{static} {method} +Wait for Process Running Event()
-{static} {method} +Wait for Valid Resource()
-{static} {method} +Panel Running Event()
-{static} {method} +Abort Control Panel()
-{static} {method} +Control Panel - Close()
-{static} {method} +Control Panel - Initialize()
-{static} {method} +Internal Message Queue - Close()
-{static} {method} +Internal Message Queue - Initialize()
-{static} {method} +Listening Server - Initialize()
-{static} {method} +Listening Server()
-{static} {method} +Stop Control Panel()
-{static} {method} +From Minimal Cluster()
-{static} {method} +Load Controller Type from Enum()
-{static} {method} +Load Controller Type from Path()
-{static} {method} #Close Subpanel UI Reference()
-{static} {method} +Initialize Subpanel UI()
-{static} {method} +Insert Subpanel UI()
-{static} {method} #Open Subpanel UI Reference()
-{static} {method} +Report to Subpanel()
-{static} {method} +Stop Subpanel UI()
-{static} {method} +Close VI Reference()
-{static} {method} +Close()
-{static} {method} +Compare Controller Type()
-{static} {method} +Continue Waiting or Abort Dialog()
-{static} {method} +Initialize()
-{static} {method} +Open Reentrant Class Method VI()
-{static} {method} +String to Controller Type()
-{method} +Control Panel Initialization Message()
-{method} +Log Directory Message()
-{method} +Log File Delimiter Message()
-{method} +Log on Run Message()
-{method} +Log Prefix Message()
-{method} +New Parameter Message()
-{method} +Start Message()
-{method} +Stop Message()
-{method} +Valid Resource Message()
-{method} +Listening Server - Close()
-{method} +Listening Server Cases()
-{method} +Open Listening Server Reference()
-{method} +Resource from String()
-{method} +As Minimal Cluster()
-{method} +Subpanel UI()
-{method} +Check Valid Message()
-{method} +Resource to String()
-
-}
-
-
-
-@enduml</pre>
+<img src="Images/diag-e2c5a62d81902bfedc9a30699c0c913bdd8a255e81fa8866f349ba725ebb42f8.svg" alt="Diagram">
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_methods_3"><a class="anchor" href="#_methods_3"></a><a class="link" href="#_methods_3">3.4.2. Methods</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 17. Functions (non private scope only)</caption>
+<caption class="title">Table 18. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -5174,42 +5138,16 @@ No description found (add content in lvclass description)</p>
 </div>
 <div class="sect3">
 <h4 id="_diagram_4"><a class="anchor" href="#_diagram_4"></a><a class="link" href="#_diagram_4">3.5.1. Diagram</a></h4>
-<div class="literalblock">
+<div class="imageblock text-center kroki">
 <div class="content">
-<pre>@startuml
-set namespaceSeparator :
-skinparam ClassBackgroundColor #FFFFFF
-skinparam ClassBorderColor #555555
-skinparam ClassFontColor #000000
-skinparam ClassHeaderBackgroundColor #808080
-
-skinparam top to bottom direction
-class "RxnRover.lvlib:LC Parser" {
-{static} {method} +Variant to Analyzer State()
-{method} +Check Valid Message()
-{method} +Control Panel Initialization Message()
-{method} +Listening Server Cases()
-{method} +New Parameter Message()
-{method} +Resource from String()
-{method} +Resource to String()
-{method} +Start Message()
-{method} +Stop Message()
-{method} +Subpanel UI()
-{method} +Valid Resource Message()
-
-}
-"RxnRover.lvlib:Generic Plugin" &lt;|-- "RxnRover.lvlib:LC Parser"
-
-
-
-@enduml</pre>
+<img src="Images/diag-0b896dc08f7bfbf7caa0b627104abdcfb4646c52f009feffc209b60e9e2b1b34.svg" alt="Diagram">
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_methods_4"><a class="anchor" href="#_methods_4"></a><a class="link" href="#_methods_4">3.5.2. Methods</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 18. Functions (non private scope only)</caption>
+<caption class="title">Table 19. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -5462,47 +5400,16 @@ Unordered map structure containing a list of key-value pairs associating a uniqu
 </div>
 <div class="sect3">
 <h4 id="_diagram_5"><a class="anchor" href="#_diagram_5"></a><a class="link" href="#_diagram_5">3.6.1. Diagram</a></h4>
-<div class="literalblock">
+<div class="imageblock text-center kroki">
 <div class="content">
-<pre>@startuml
-set namespaceSeparator :
-skinparam ClassBackgroundColor #FFFFFF
-skinparam ClassBorderColor #555555
-skinparam ClassFontColor #000000
-skinparam ClassHeaderBackgroundColor #808080
-
-skinparam top to bottom direction
-class "RxnRover.lvlib:Parameter to Hardware Map" {
-{field} #unordered_map : Array of Cluster
-{static} {method} +As Minimal Cluster()
-{static} {method} +Clear()
-{static} {method} +Empty()
-{static} {method} +Equals()
-{static} {method} +Erase (array)()
-{static} {method} #Erase (index)()
-{static} {method} +Erase (single)()
-{static} {method} +Find (array)()
-{static} {method} +Find (single)()
-{static} {method} #Find Index (single)()
-{static} {method} +Insert (array)()
-{static} {method} +Insert (element)()
-{static} {method} +Insert (key-value)()
-{static} {method} #Repeat Key()
-{static} {method} +Size()
-{static} {method} +Swap()
-
-}
-
-
-
-@enduml</pre>
+<img src="Images/diag-b32f7ed776a35d47820b40d799df683c4ec3a93a8da08cab3c8cbbb2c2e5b7a4.svg" alt="Diagram">
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_methods_5"><a class="anchor" href="#_methods_5"></a><a class="link" href="#_methods_5">3.6.2. Methods</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 19. Functions (non private scope only)</caption>
+<caption class="title">Table 20. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -5867,40 +5774,16 @@ Passive Hardware class which is a Controller Type within RxnRover, and is used t
 </div>
 <div class="sect3">
 <h4 id="_diagram_6"><a class="anchor" href="#_diagram_6"></a><a class="link" href="#_diagram_6">3.7.1. Diagram</a></h4>
-<div class="literalblock">
+<div class="imageblock text-center kroki">
 <div class="content">
-<pre>@startuml
-set namespaceSeparator :
-skinparam ClassBackgroundColor #FFFFFF
-skinparam ClassBorderColor #555555
-skinparam ClassFontColor #000000
-skinparam ClassHeaderBackgroundColor #808080
-
-skinparam top to bottom direction
-class "RxnRover.lvlib:Passive Hardware" {
-{field} +Valid Messages : Array of String
-{static} {method} +Update Data Plot()
-{static} {method} +Variant to Instrument State()
-{method} +Check Valid Message()
-{method} +Control Panel Initialization Message()
-{method} +New Parameter Message()
-{method} +Start Message()
-{method} +Stop Message()
-{method} +Subpanel UI()
-
-}
-"RxnRover.lvlib:Generic Plugin" &lt;|-- "RxnRover.lvlib:Passive Hardware"
-
-
-
-@enduml</pre>
+<img src="Images/diag-6c5d54a2e465a1605ccc47ef6fceac93cf80480b198024968c6a78bb13d58535.svg" alt="Diagram">
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_methods_6"><a class="anchor" href="#_methods_6"></a><a class="link" href="#_methods_6">3.7.2. Methods</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 20. Functions (non private scope only)</caption>
+<caption class="title">Table 21. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -6107,40 +5990,16 @@ No description found (add content in lvclass description)</p>
 </div>
 <div class="sect3">
 <h4 id="_diagram_7"><a class="anchor" href="#_diagram_7"></a><a class="link" href="#_diagram_7">3.8.1. Diagram</a></h4>
-<div class="literalblock">
+<div class="imageblock text-center kroki">
 <div class="content">
-<pre>@startuml
-set namespaceSeparator :
-skinparam ClassBackgroundColor #FFFFFF
-skinparam ClassBorderColor #555555
-skinparam ClassFontColor #000000
-skinparam ClassHeaderBackgroundColor #808080
-
-skinparam top to bottom direction
-class "RxnRover.lvlib:Pump Controller" {
-{field} +Valid Messages : Array of String
-{static} {method} +Update Data Plot()
-{static} {method} +Variant to Instrument State Cluster()
-{method} +Check Valid Message()
-{method} +Control Panel Initialization Message()
-{method} +New Parameter Message()
-{method} +Start Message()
-{method} +Stop Message()
-{method} +Subpanel UI()
-
-}
-"RxnRover.lvlib:Generic Plugin" &lt;|-- "RxnRover.lvlib:Pump Controller"
-
-
-
-@enduml</pre>
+<img src="Images/diag-ccc417967e1a58abf4302ffbb0a33e15398a49e8095f83e00e7316e066773d3a.svg" alt="Diagram">
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_methods_7"><a class="anchor" href="#_methods_7"></a><a class="link" href="#_methods_7">3.8.2. Methods</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 21. Functions (non private scope only)</caption>
+<caption class="title">Table 22. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -6345,35 +6204,16 @@ No description found (add content in lvclass description)</p>
 </div>
 <div class="sect3">
 <h4 id="_diagram_8"><a class="anchor" href="#_diagram_8"></a><a class="link" href="#_diagram_8">3.9.1. Diagram</a></h4>
-<div class="literalblock">
+<div class="imageblock text-center kroki">
 <div class="content">
-<pre>@startuml
-set namespaceSeparator :
-skinparam ClassBackgroundColor #FFFFFF
-skinparam ClassBorderColor #555555
-skinparam ClassFontColor #000000
-skinparam ClassHeaderBackgroundColor #808080
-
-skinparam top to bottom direction
-class "RxnRover.lvlib:Syringe Pump" {
-{field} -Valid Messages : Array of String
-{static} {method} +Variant to Instrument State Cluster TMP()
-{method} +New Parameter Message()
-{method} +Subpanel UI()
-
-}
-"RxnRover.lvlib:Pump Controller" &lt;|-- "RxnRover.lvlib:Syringe Pump"
-
-
-
-@enduml</pre>
+<img src="Images/diag-84f85d46ee94cc25a8bd12e5f705030a758721f06ca6df32b2bec71d434e8d46.svg" alt="Diagram">
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_methods_8"><a class="anchor" href="#_methods_8"></a><a class="link" href="#_methods_8">3.9.2. Methods</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 22. Functions (non private scope only)</caption>
+<caption class="title">Table 23. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -6482,40 +6322,16 @@ No description found (add content in lvclass description)</p>
 </div>
 <div class="sect3">
 <h4 id="_diagram_9"><a class="anchor" href="#_diagram_9"></a><a class="link" href="#_diagram_9">3.10.1. Diagram</a></h4>
-<div class="literalblock">
+<div class="imageblock text-center kroki">
 <div class="content">
-<pre>@startuml
-set namespaceSeparator :
-skinparam ClassBackgroundColor #FFFFFF
-skinparam ClassBorderColor #555555
-skinparam ClassFontColor #000000
-skinparam ClassHeaderBackgroundColor #808080
-
-skinparam top to bottom direction
-class "RxnRover.lvlib:Temperature Controller" {
-{field} +Valid Messages : Array of String
-{static} {method} +Update Data Plot()
-{static} {method} +Variant to Instrument State()
-{method} +Check Valid Message()
-{method} +Control Panel Initialization Message()
-{method} +New Parameter Message()
-{method} +Start Message()
-{method} +Stop Message()
-{method} +Subpanel UI()
-
-}
-"RxnRover.lvlib:Generic Plugin" &lt;|-- "RxnRover.lvlib:Temperature Controller"
-
-
-
-@enduml</pre>
+<img src="Images/diag-06c5802bf13b32123975d604010b681fd327641806628fc91c52a0f0ab59c1f2.svg" alt="Diagram">
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_methods_9"><a class="anchor" href="#_methods_9"></a><a class="link" href="#_methods_9">3.10.2. Methods</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 23. Functions (non private scope only)</caption>
+<caption class="title">Table 24. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -6716,47 +6532,20 @@ class "RxnRover.lvlib:Temperature Controller" {
 No description found (add content in lvclass description)</p>
 </div>
 <div class="paragraph">
-<p><strong>Version:</strong> 1.0.0.0</p>
+<p><strong>Version:</strong> 1.0.0.2</p>
 </div>
 <div class="sect3">
 <h4 id="_diagram_10"><a class="anchor" href="#_diagram_10"></a><a class="link" href="#_diagram_10">3.11.1. Diagram</a></h4>
-<div class="literalblock">
+<div class="imageblock text-center kroki">
 <div class="content">
-<pre>@startuml
-set namespaceSeparator :
-skinparam ClassBackgroundColor #FFFFFF
-skinparam ClassBorderColor #555555
-skinparam ClassFontColor #000000
-skinparam ClassHeaderBackgroundColor #808080
-
-skinparam top to bottom direction
-class "RxnRover.lvlib:User Preferences File" {
-{field} +File Name : String
-{field} +File Location : Path
-{field} +User Preferences : Cluster
-{static} {method} +Add Recent Project()
-{static} {method} +Clear Recent Experiments()
-{static} {method} +Convert Home Directory Tokens()
-{static} {method} +Create If File Does Not Exist()
-{static} {method} +Default File Name()
-{static} {method} +Default File Path()
-{static} {method} +DefaultUserSettings Full Path()
-{static} {method} +Init()
-{static} {method} +Load()
-{static} {method} +Save()
-
-}
-
-
-
-@enduml</pre>
+<img src="Images/diag-0eaa486d923cafd5ad52db1901deccb84299917d6eb599344c4353738039b7c4.svg" alt="Diagram">
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_methods_10"><a class="anchor" href="#_methods_10"></a><a class="link" href="#_methods_10">3.11.2. Methods</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 24. Functions (non private scope only)</caption>
+<caption class="title">Table 25. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -7232,7 +7021,7 @@ This is the author&#8217;s responsibility to list any of the missing product use
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-07-10 13:53:07 -0700
+Last updated 2026-03-31 13:13:02 -0600
 </div>
 </div>
 </body>

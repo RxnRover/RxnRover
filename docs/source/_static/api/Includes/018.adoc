@@ -1,9 +1,9 @@
-== Passive Hardware.lvclass
+== Parameter to Hardware Map.lvclass
 
 *Responsibility:*
-Passive Hardware class which is a Controller Type within RxnRover, and is used to support passive instrument integration.  Passive Hardware typically operates in a read-only or passive capacity and requires minimal interaction with RxnRover itself. An example of a passive-hardware device in the context of RxnRover is a pH probe, or other sensors. 
+Unordered map structure containing a list of key-value pairs associating a unique parameter name (key) with a hardware object (value).
 
-*Version:* 1.0.0.1
+*Version:* 1.0.0.0
 
 === Diagram
 
@@ -17,19 +17,26 @@ skinparam ClassFontColor #000000
 skinparam ClassHeaderBackgroundColor #808080
 
 skinparam top to bottom direction
-class "RxnRover.lvlib:Passive Hardware" {
-{field} +Valid Messages : Array of String
-{static} {method} +Update Data Plot()
-{static} {method} +Variant to Instrument State()
-{method} +Check Valid Message()
-{method} +Control Panel Initialization Message()
-{method} +New Parameter Message()
-{method} +Start Message()
-{method} +Stop Message()
-{method} +Subpanel UI()
+class "RxnRover.lvlib:Parameter to Hardware Map" {
+{field} #unordered_map : Array of Cluster
+{static} {method} +As Minimal Cluster()
+{static} {method} +Clear()
+{static} {method} +Empty()
+{static} {method} +Equals()
+{static} {method} +Erase (array)()
+{static} {method} #Erase (index)()
+{static} {method} +Erase (single)()
+{static} {method} +Find (array)()
+{static} {method} +Find (single)()
+{static} {method} #Find Index (single)()
+{static} {method} +Insert (array)()
+{static} {method} +Insert (element)()
+{static} {method} +Insert (key-value)()
+{static} {method} #Repeat Key()
+{static} {method} +Size()
+{static} {method} +Swap()
 
 }
-"RxnRover.lvlib:Generic Plugin" <|-- "RxnRover.lvlib:Passive Hardware"
 
 
 
@@ -43,71 +50,138 @@ class "RxnRover.lvlib:Passive Hardware" {
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
-|Check Valid Message
-|image:RxnRover.lvlib_Passive_Hardware.lvclass_Check_Valid_Message.vi.png[RxnRover.lvlib:Passive Hardware.lvclass:Check Valid Message.vi]
-|Checks if a message recieved from a Passive-Hardware instrument is valid by comparing it to a list of valid messages. 
+|As Minimal Cluster
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_As_Minimal_Cluster.vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:As Minimal Cluster.vi]
+|Returns a minimal representation of the entire map using only serializable data types (mostly strings, arrays, and clusters)
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Control Panel Initialization Message
-|image:RxnRover.lvlib_Passive_Hardware.lvclass_Control_Panel_Initialization_Message.vi.png[RxnRover.lvlib:Passive Hardware.lvclass:Control Panel Initialization Message.vi]
-|Method to generate the initial message to send to a Controller's Control Panel.
-|image:empty.png[empty.png]
-|image:reentrancy-shared.png[reentrancy-shared.png]
-|image:empty.png[empty.png]
-
-|New Parameter Message
-|image:RxnRover.lvlib_Passive_Hardware.lvclass_New_Parameter_Message.vi.png[RxnRover.lvlib:Passive Hardware.lvclass:New Parameter Message.vi]
-|Dynamic dispatch for each child controller type to provide it's proper message for setting a new parameter value (setpoint).
+|Clear
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Clear.vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Clear.vi]
+|Remove all elements from the map, resulting in a size of 0.
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Read Valid Messages
-|image:RxnRover.lvlib_Passive_Hardware.lvclass_Read_Valid_Messages.vi.png[RxnRover.lvlib:Passive Hardware.lvclass:Read Valid Messages.vi]
-|Reads the list of valid messages
-|image:empty.png[empty.png]
-|image:reentrancy-shared.png[reentrancy-shared.png]
-|image:empty.png[empty.png]
-
-|Start Message
-|image:RxnRover.lvlib_Passive_Hardware.lvclass_Start_Message.vi.png[RxnRover.lvlib:Passive Hardware.lvclass:Start Message.vi]
-|Returns the message which will notify RxnRover to start collecting data from a Passive-Instrument. 
-Message is not sent in this VI just created.
+|Empty
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Empty.vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Empty.vi]
+|Test if the container is empty.
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Stop Message
-|image:RxnRover.lvlib_Passive_Hardware.lvclass_Stop_Message.vi.png[RxnRover.lvlib:Passive Hardware.lvclass:Stop Message.vi]
-|Returns the stop message to tell RxnRover to stop collecting data from a Passive-Hardware instrument.
-Does not send the message just creates it to be sent later.
-
+|Equals
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Equals.vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Equals.vi]
+|Test if two maps are equal. Item order is not considered. Maps are considered equal if all elements of map_1 are included in map_2 and all elements of map_2 are included in map_1.
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Subpanel UI
-|image:RxnRover.lvlib_Passive_Hardware.lvclass_Subpanel_UI.vi.png[RxnRover.lvlib:Passive Hardware.lvclass:Subpanel UI.vi]
-|Dynamic dispatch VI that must be overridden by all inheriting classes. It is the UI that will be inserted into subpanels so data can be displayed to the user. The class will use an internally managed message queue to communicate to it. The user should only communicate to this UI through class methods.
-|image:empty.png[empty.png]
-|image:reentrancy-shared.png[reentrancy-shared.png]
-|image:empty.png[empty.png]
-
-|Update Data Plot
-|image:RxnRover.lvlib_Passive_Hardware.lvclass_Update_Data_Plot.vi.png[RxnRover.lvlib:Passive Hardware.lvclass:Update Data Plot.vi]
-|Updates the data plot from data collected from a Passive-Hardware instrument in given time intervals.
+|Erase (array)
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Erase_(array).vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Erase (array).vi]
+|Removes all elements from the map specified in the array of keys.
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|Variant to Instrument State
-|image:RxnRover.lvlib_Passive_Hardware.lvclass_Variant_to_Instrument_State.vi.png[RxnRover.lvlib:Passive Hardware.lvclass:Variant to Instrument State.vi]
-|Converts the instrument state messages sent from the plugin to the internal state managed by RxnRover's plugin server.
+|Erase (index)
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Erase_(index).vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Erase (index).vi]
+|Removes the element from the map specified by the given index.
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Erase (single)
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Erase_(single).vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Erase (single).vi]
+|Removes the element from the map specified by the given key.
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
+
+|Find (array)
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Find_(array).vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Find (array).vi]
+|Find the elements from the map matching the given keys. A parallel boolean array is provided, where each entry indicates whether the key-value pair in the corresponding Key-Value Pairs output array position was found.s
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Find (single)
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Find_(single).vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Find (single).vi]
+|Find the element from the map matching the given key.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Find Index (single)
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Find_Index_(single).vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Find Index (single).vi]
+|Return the index from the map specified by the given key.
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Insert (array)
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Insert_(array).vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Insert (array).vi]
+|Insert the given key-value pairs into the map.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Insert (element)
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Insert_(element).vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Insert (element).vi]
+|Insert the given key-value pair into the map.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Insert (key-value)
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Insert_(key_value).vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Insert (key-value).vi]
+|Create and insert a key-value pair into the map using the given key and value.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read keys
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Read_keys.vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Read keys.vi]
+|Returns the underlying unordered_map array.
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|Read unordered_map
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Read_unordered_map.vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Read unordered_map.vi]
+|Returns the underlying unordered_map array.
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|Repeat Key
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Repeat_Key.vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Repeat Key.vi]
+|Checks if the given key is a repeat of one in the map
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Size
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Size.vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Size.vi]
+|Return the size of the map.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Swap
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Swap.vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Swap.vi]
+|Swaps the elements of one Parameter to Hardware Map with another.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Write unordered_map
+|image:RxnRover.lvlib_Parameter_to_Hardware_Map.lvclass_Write_unordered_map.vi.png[RxnRover.lvlib:Parameter to Hardware Map.lvclass:Write unordered_map.vi]
+|Overwrites the underlying unordered_map array.
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
 |===
 
 **S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
