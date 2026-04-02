@@ -16,11 +16,15 @@
 		<Item Name="Update Window Title.vi" Type="VI" URL="../src/RxnRover/Display VIs/Update Window Title.vi"/>
 	</Item>
 	<Item Name="events" Type="Folder">
+		<Item Name="Analyzer List Updated.vi" Type="VI" URL="../src/RxnRover/events/Analyzer List Updated.vi"/>
+		<Item Name="Analyzer Updated Event.vi" Type="VI" URL="../src/RxnRover/events/Analyzer Updated Event.vi"/>
 		<Item Name="Generate New Log Path Event.vi" Type="VI" URL="../src/RxnRover/Display VIs/Generate New Log Path Event.vi"/>
 		<Item Name="Hardware List Updated.vi" Type="VI" URL="../src/RxnRover/events/Hardware List Updated.vi"/>
 		<Item Name="Hardware Update Event Data.ctl" Type="VI" URL="../src/RxnRover/events/Hardware Update Event Data.ctl"/>
 		<Item Name="Hardware Updated Event.vi" Type="VI" URL="../src/RxnRover/events/Hardware Updated Event.vi"/>
 		<Item Name="Message Received Event.vi" Type="VI" URL="../src/RxnRover/events/Message Received Event.vi"/>
+		<Item Name="New Analyzer Selected Event.vi" Type="VI" URL="../src/RxnRover/events/New Analyzer Selected Event.vi"/>
+		<Item Name="New Analyzer Selected.vi" Type="VI" URL="../src/RxnRover/events/New Analyzer Selected.vi"/>
 		<Item Name="New Hardware Selected Event.vi" Type="VI" URL="../src/RxnRover/events/New Hardware Selected Event.vi"/>
 		<Item Name="New Hardware Selected.vi" Type="VI" URL="../src/RxnRover/events/New Hardware Selected.vi"/>
 		<Item Name="New Log Path Event.vi" Type="VI" URL="../src/RxnRover/events/New Log Path Event.vi"/>
