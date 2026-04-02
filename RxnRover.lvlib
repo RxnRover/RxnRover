@@ -89,6 +89,7 @@
 		<Item Name="Find Subpanel on Page.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Find Subpanel on Page.vi"/>
 		<Item Name="Load Plugin Front Panel.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Load Plugin Front Panel.vi"/>
 		<Item Name="Queue Message.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Queue Message.vi"/>
+		<Item Name="Reorder Analyzers Dialog.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Reorder Analyzers Dialog.vi"/>
 		<Item Name="Save Reaction Rover Data to Experiment File.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Save Reaction Rover Data to Experiment File.vi"/>
 		<Item Name="Split Name and Message.vi" Type="VI" URL="../src/RxnRover/Sub VIs/Split Name and Message.vi"/>
 		<Item Name="test Message Queue.lvlib" Type="Library" URL="../src/RxnRover/Sub VIs/Message Queue/test Message Queue.lvlib"/>
