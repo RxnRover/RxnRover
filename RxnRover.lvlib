@@ -29,6 +29,7 @@
 		<Item Name="New Hardware Selected.vi" Type="VI" URL="../src/RxnRover/events/New Hardware Selected.vi"/>
 		<Item Name="New Log Path Event.vi" Type="VI" URL="../src/RxnRover/events/New Log Path Event.vi"/>
 		<Item Name="New Parameters Event.vi" Type="VI" URL="../src/RxnRover/events/New Parameters Event.vi"/>
+		<Item Name="New Yield Cluster.ctl" Type="VI" URL="../src/RxnRover/events/New Yield Cluster.ctl"/>
 		<Item Name="New Yield Event.vi" Type="VI" URL="../src/RxnRover/events/New Yield Event.vi"/>
 		<Item Name="Process Stopped Cluster.ctl" Type="VI" URL="../src/RxnRover/events/Process Stopped Cluster.ctl"/>
 		<Item Name="Process Stopped Event.vi" Type="VI" URL="../src/RxnRover/events/Process Stopped Event.vi"/>
