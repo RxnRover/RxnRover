@@ -1,0 +1,4 @@
+[submodule "snobfit_remote_optimization"]
+	path = sqsnobfit_remote_optimizer
+	url = https://github.com/RxnRover/snobfit_remote_optimization.git
+	branch = fix_default_config_ref

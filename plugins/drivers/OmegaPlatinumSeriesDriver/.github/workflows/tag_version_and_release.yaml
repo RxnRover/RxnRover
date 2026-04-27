@@ -1,0 +1,14 @@
+name: Tag Version and Release
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    types:
+      - labeled
+
+jobs:
+  tag_version_and_release:
+    uses: RxnRover/.github/.github/workflows/tag_version_and_release_main.yml@main

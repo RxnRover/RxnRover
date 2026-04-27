@@ -1,0 +1,9 @@
+Original Sample Set Id,1288, 1357
+Peak Results
+#,Name,RT,Area,Height,Amount,Units
+1,Analyte,1.289,4280162,1535623,11.000,mM
+2,Side Product,1.300,2469065,1001525,5.745,mM
+3,Side Product,1.301,2283951,941704,5.312,mM
+4,Starting Material,1.301,2168036,897959,5.000,mM
+5,Side Product,1.302,2270342,936911,5.280,mM
+6,Side Product,1.302,2161202,897042,5.025,mM

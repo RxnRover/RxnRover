@@ -11,7 +11,7 @@
 *.dylib
 
 # Executables
-*.exe
+# do not ignore executable for this branch *.exe
 builds/
 
 # Metadata
@@ -44,7 +44,7 @@ venv.bak/
 
 docs/source/_static/api
 logs/
-plugins/
+# plugins/ (do not ignore plugins for the executable)
 
 # todo.txt ignores
 **/todo.txt

@@ -1,0 +1,21 @@
+# Libraries
+*.lvlibp
+*.llb
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+build/
+
+# Metadata
+*.aliases
+*.lvlps
+.cache/
+
+# Project-specific files
+logs/

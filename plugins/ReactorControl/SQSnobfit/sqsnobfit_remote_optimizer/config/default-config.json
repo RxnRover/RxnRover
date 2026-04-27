@@ -1,0 +1,27 @@
+{
+    "init_from_config": true,
+    "param_init": [
+        0.5,
+        0.5
+    ],
+    "bounds": [
+        [
+            -5.12,
+            5.12
+        ],
+        [
+            -5.12,
+            5.12
+        ]
+    ],
+    "budget": 1000,
+    "options": {
+        "minfcall": null,
+        "maxmp": null,
+        "maxfail": 5,
+        "verbose": false
+    },
+    "direction": "min",
+    "ip_address": "tcp://127.0.0.1",
+    "port": "5555"
+}
