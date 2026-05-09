@@ -20,4 +20,5 @@
 	<Item Name="Plugin Types.ctl" Type="VI" URL="../Plugin Types.ctl"/>
 	<Item Name="Read Plugin Configuration.vi" Type="VI" URL="../Read Plugin Configuration.vi"/>
 	<Item Name="Read Plugin INI.vi" Type="VI" URL="../Read Plugin INI.vi"/>
+	<Item Name="Search for packed library.vi" Type="VI" URL="../Search for packed library.vi"/>
 </Library>
