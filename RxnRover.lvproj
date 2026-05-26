@@ -124,7 +124,7 @@
 				<Property Name="Bld_previewCacheID" Type="Str">{09FD23A0-93D2-46A2-B12D-FA02255F97C6}</Property>
 				<Property Name="Bld_userLogFile" Type="Path">../builds/standalone_exe/build_log.txt</Property>
 				<Property Name="Bld_userLogFile.pathType" Type="Str">relativeToProject</Property>
-				<Property Name="Bld_version.build" Type="Int">30</Property>
+				<Property Name="Bld_version.build" Type="Int">47</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Bld_version.patch" Type="Int">3</Property>
 				<Property Name="Destination[0].destName" Type="Str">RxnRover.exe</Property>
@@ -145,17 +145,97 @@
 				<Property Name="DestinationCount" Type="Int">4</Property>
 				<Property Name="Exe_cmdLineArgs" Type="Bool">true</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/resources/icons/full_color_logo_3600x3600.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{716B3FCB-E269-46ED-A9E8-65C1B6BF1540}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{A04273D7-5649-4D28-B942-0A4844530AD0}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Main.vi</Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
+				<Property Name="Source[10].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[10].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Load and Apply User Preferences.vi</Property>
+				<Property Name="Source[10].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[10].type" Type="Str">VI</Property>
+				<Property Name="Source[11].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[11].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Display VIs/Hardware Subpanels.vi</Property>
+				<Property Name="Source[11].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[11].type" Type="Str">VI</Property>
+				<Property Name="Source[12].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[12].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Display VIs/Ready Status.vi</Property>
+				<Property Name="Source[12].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[12].type" Type="Str">VI</Property>
+				<Property Name="Source[13].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[13].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Display VIs/Remove Control Panel.vi</Property>
+				<Property Name="Source[13].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[13].type" Type="Str">VI</Property>
+				<Property Name="Source[14].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[14].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Display VIs/Remove Entry.vi</Property>
+				<Property Name="Source[14].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[14].type" Type="Str">VI</Property>
+				<Property Name="Source[15].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[15].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Display VIs/Set Unsaved Changes in Title.vi</Property>
+				<Property Name="Source[15].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[15].type" Type="Str">VI</Property>
+				<Property Name="Source[16].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[16].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Display VIs/Update Status Event.vi</Property>
+				<Property Name="Source[16].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[16].type" Type="Str">VI</Property>
+				<Property Name="Source[17].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[17].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Display VIs/Update Status.vi</Property>
+				<Property Name="Source[17].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[17].type" Type="Str">VI</Property>
+				<Property Name="Source[18].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[18].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Display VIs/Update VI List.vi</Property>
+				<Property Name="Source[18].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[18].type" Type="Str">VI</Property>
+				<Property Name="Source[19].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[19].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Display VIs/Update Window Title.vi</Property>
+				<Property Name="Source[19].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[19].type" Type="Str">VI</Property>
 				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[2].itemID" Type="Ref">/My Computer/RxnRover.lvlib</Property>
 				<Property Name="Source[2].Library.allowMissingMembers" Type="Bool">true</Property>
 				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[2].type" Type="Str">Library</Property>
+				<Property Name="Source[20].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[20].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/Generate New Log Path Event.vi</Property>
+				<Property Name="Source[20].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[20].type" Type="Str">VI</Property>
+				<Property Name="Source[21].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[21].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/Hardware List Updated.vi</Property>
+				<Property Name="Source[21].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[21].type" Type="Str">VI</Property>
+				<Property Name="Source[22].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[22].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/Hardware Update Event Data.ctl</Property>
+				<Property Name="Source[22].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[22].type" Type="Str">VI</Property>
+				<Property Name="Source[23].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[23].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/Hardware Updated Event.vi</Property>
+				<Property Name="Source[23].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[23].type" Type="Str">VI</Property>
+				<Property Name="Source[24].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[24].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/Message Received Event.vi</Property>
+				<Property Name="Source[24].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[24].type" Type="Str">VI</Property>
+				<Property Name="Source[25].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[25].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/New Hardware Selected Event.vi</Property>
+				<Property Name="Source[25].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[25].type" Type="Str">VI</Property>
+				<Property Name="Source[26].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[26].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/New Hardware Selected.vi</Property>
+				<Property Name="Source[26].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[26].type" Type="Str">VI</Property>
+				<Property Name="Source[27].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[27].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/New Log Path Event.vi</Property>
+				<Property Name="Source[27].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[27].type" Type="Str">VI</Property>
+				<Property Name="Source[28].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[28].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/New Parameters Event.vi</Property>
+				<Property Name="Source[28].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[28].type" Type="Str">VI</Property>
+				<Property Name="Source[29].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[29].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/New Yield Event.vi</Property>
+				<Property Name="Source[29].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[29].type" Type="Str">VI</Property>
 				<Property Name="Source[3].Container.applyDestination" Type="Bool">true</Property>
 				<Property Name="Source[3].Container.applyInclusion" Type="Bool">true</Property>
 				<Property Name="Source[3].Container.depDestIndex" Type="Int">0</Property>
@@ -163,10 +243,330 @@
 				<Property Name="Source[3].itemID" Type="Ref">/My Computer/resources</Property>
 				<Property Name="Source[3].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[3].type" Type="Str">Container</Property>
+				<Property Name="Source[30].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[30].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/Process Stopped Cluster.ctl</Property>
+				<Property Name="Source[30].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[30].type" Type="Str">VI</Property>
+				<Property Name="Source[31].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[31].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/Process Stopped Event.vi</Property>
+				<Property Name="Source[31].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[31].type" Type="Str">VI</Property>
+				<Property Name="Source[32].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[32].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/Stop Event.vi</Property>
+				<Property Name="Source[32].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[32].type" Type="Str">VI</Property>
+				<Property Name="Source[33].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[33].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/Submit Goal Event.vi</Property>
+				<Property Name="Source[33].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[33].type" Type="Str">VI</Property>
+				<Property Name="Source[34].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[34].itemID" Type="Ref">/My Computer/RxnRover.lvlib/events/VI List Event.vi</Property>
+				<Property Name="Source[34].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[34].type" Type="Str">VI</Property>
+				<Property Name="Source[35].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[35].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Experiment/Experiment File.lvlib</Property>
+				<Property Name="Source[35].Library.allowMissingMembers" Type="Bool">true</Property>
+				<Property Name="Source[35].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[35].type" Type="Str">Library</Property>
+				<Property Name="Source[36].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[36].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Experiment/Experiment Manager.lvlib</Property>
+				<Property Name="Source[36].Library.allowMissingMembers" Type="Bool">true</Property>
+				<Property Name="Source[36].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[36].type" Type="Str">Library</Property>
+				<Property Name="Source[37].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[37].itemID" Type="Ref">/My Computer/RxnRover.lvlib/logging/Load Log Config from Preferences.vi</Property>
+				<Property Name="Source[37].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[37].type" Type="Str">VI</Property>
+				<Property Name="Source[38].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[38].itemID" Type="Ref">/My Computer/RxnRover.lvlib/logging/logging.lvlib</Property>
+				<Property Name="Source[38].Library.allowMissingMembers" Type="Bool">true</Property>
+				<Property Name="Source[38].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[38].type" Type="Str">Library</Property>
+				<Property Name="Source[39].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[39].itemID" Type="Ref">/My Computer/RxnRover.lvlib/logging/Save Log Config to Preferences.vi</Property>
+				<Property Name="Source[39].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[39].type" Type="Str">VI</Property>
 				<Property Name="Source[4].destinationIndex" Type="Int">3</Property>
 				<Property Name="Source[4].itemID" Type="Ref">/My Computer/LICENSE.txt</Property>
 				<Property Name="Source[4].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="SourceCount" Type="Int">5</Property>
+				<Property Name="Source[40].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[40].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[40].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[40].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Manager/Initialization</Property>
+				<Property Name="Source[40].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[40].type" Type="Str">Container</Property>
+				<Property Name="Source[41].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[41].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Manager/Plugin Manager.lvlib</Property>
+				<Property Name="Source[41].Library.allowMissingMembers" Type="Bool">true</Property>
+				<Property Name="Source[41].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[41].type" Type="Str">Library</Property>
+				<Property Name="Source[42].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[42].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Experiment/Experiment File.lvlib/Experiment File Cluster.ctl</Property>
+				<Property Name="Source[42].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[42].type" Type="Str">VI</Property>
+				<Property Name="Source[43].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[43].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Experiment/Experiment File.lvlib/Initialize Experiment File.vi</Property>
+				<Property Name="Source[43].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[43].type" Type="Str">VI</Property>
+				<Property Name="Source[44].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[44].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Experiment/Experiment File.lvlib/Load Experiment File.vi</Property>
+				<Property Name="Source[44].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[44].type" Type="Str">VI</Property>
+				<Property Name="Source[45].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[45].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Experiment/Experiment File.lvlib/Save Experiment File.vi</Property>
+				<Property Name="Source[45].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[45].type" Type="Str">VI</Property>
+				<Property Name="Source[46].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[46].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Experiment/Experiment Manager.lvlib/Create or Load Experiment Dialog.vi</Property>
+				<Property Name="Source[46].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[46].type" Type="Str">VI</Property>
+				<Property Name="Source[47].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[47].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Experiment/Experiment Manager.lvlib/Error Handler - Event Handling Loop.vi</Property>
+				<Property Name="Source[47].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[47].type" Type="Str">VI</Property>
+				<Property Name="Source[48].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[48].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Experiment/Experiment Manager.lvlib/Error Handler - Message Handling Loop.vi</Property>
+				<Property Name="Source[48].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[48].type" Type="Str">VI</Property>
+				<Property Name="Source[49].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[49].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Experiment/Experiment Manager.lvlib/New Experiment Dialog Data.ctl</Property>
+				<Property Name="Source[49].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[49].type" Type="Str">VI</Property>
+				<Property Name="Source[5].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[5].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[5].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[5].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Servers</Property>
+				<Property Name="Source[5].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[5].type" Type="Str">Container</Property>
+				<Property Name="Source[50].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[50].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Experiment/Experiment Manager.lvlib/New Experiment Dialog.vi</Property>
+				<Property Name="Source[50].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[50].type" Type="Str">VI</Property>
+				<Property Name="Source[51].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[51].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Experiment/Experiment Manager.lvlib/New Experiment.vi</Property>
+				<Property Name="Source[51].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[51].type" Type="Str">VI</Property>
+				<Property Name="Source[52].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[52].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Experiment/Experiment Manager.lvlib/UI Data.ctl</Property>
+				<Property Name="Source[52].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[52].type" Type="Str">VI</Property>
+				<Property Name="Source[53].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[53].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Experiment/Experiment Manager.lvlib/User Event - Stop.lvlib</Property>
+				<Property Name="Source[53].Library.allowMissingMembers" Type="Bool">true</Property>
+				<Property Name="Source[53].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[53].type" Type="Str">Library</Property>
+				<Property Name="Source[54].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[54].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Experiment/Experiment Manager.lvlib/Validate Experiment Location.vi</Property>
+				<Property Name="Source[54].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[54].type" Type="Str">VI</Property>
+				<Property Name="Source[55].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[55].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Experiment/Experiment Manager.lvlib/Validate Experiment Name.vi</Property>
+				<Property Name="Source[55].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[55].type" Type="Str">VI</Property>
+				<Property Name="Source[56].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[56].itemID" Type="Ref">/My Computer/RxnRover.lvlib/File IO/File IO.lvlib/Convert Absolute Path if Executable.vi</Property>
+				<Property Name="Source[56].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[56].type" Type="Str">VI</Property>
+				<Property Name="Source[57].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[57].itemID" Type="Ref">/My Computer/RxnRover.lvlib/File IO/File IO.lvlib/Convert Absolute Path to Relative Path from Application.vi</Property>
+				<Property Name="Source[57].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[57].type" Type="Str">VI</Property>
+				<Property Name="Source[58].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[58].itemID" Type="Ref">/My Computer/RxnRover.lvlib/File IO/File IO.lvlib/JSON Utilities.lvlib</Property>
+				<Property Name="Source[58].Library.allowMissingMembers" Type="Bool">true</Property>
+				<Property Name="Source[58].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[58].type" Type="Str">Library</Property>
+				<Property Name="Source[59].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[59].itemID" Type="Ref">/My Computer/RxnRover.lvlib/File IO/File IO.lvlib/LocalAppData Utilities.lvlib</Property>
+				<Property Name="Source[59].Library.allowMissingMembers" Type="Bool">true</Property>
+				<Property Name="Source[59].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[59].type" Type="Str">Library</Property>
+				<Property Name="Source[6].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[6].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[6].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[6].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Sub VIs</Property>
+				<Property Name="Source[6].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[6].type" Type="Str">Container</Property>
+				<Property Name="Source[60].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[60].itemID" Type="Ref">/My Computer/RxnRover.lvlib/File IO/File IO.lvlib/Open File Explorer.vi</Property>
+				<Property Name="Source[60].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[60].type" Type="Str">VI</Property>
+				<Property Name="Source[61].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[61].itemID" Type="Ref">/My Computer/RxnRover.lvlib/File IO/File IO.lvlib/Project Locations.lvlib</Property>
+				<Property Name="Source[61].Library.allowMissingMembers" Type="Bool">true</Property>
+				<Property Name="Source[61].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[61].type" Type="Str">Library</Property>
+				<Property Name="Source[62].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[62].itemID" Type="Ref">/My Computer/RxnRover.lvlib/File IO/File IO.lvlib/Relative Path to Absolute Path.vi</Property>
+				<Property Name="Source[62].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[62].type" Type="Str">VI</Property>
+				<Property Name="Source[63].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[63].itemID" Type="Ref">/My Computer/RxnRover.lvlib/logging/logging.lvlib/Default Log File.vi</Property>
+				<Property Name="Source[63].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[63].type" Type="Str">VI</Property>
+				<Property Name="Source[64].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[64].itemID" Type="Ref">/My Computer/RxnRover.lvlib/logging/logging.lvlib/Get Log Config.vi</Property>
+				<Property Name="Source[64].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[64].type" Type="Str">VI</Property>
+				<Property Name="Source[65].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[65].itemID" Type="Ref">/My Computer/RxnRover.lvlib/logging/logging.lvlib/Log Config.ctl</Property>
+				<Property Name="Source[65].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[65].type" Type="Str">VI</Property>
+				<Property Name="Source[66].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[66].itemID" Type="Ref">/My Computer/RxnRover.lvlib/logging/logging.lvlib/Log Config.vi</Property>
+				<Property Name="Source[66].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[66].type" Type="Str">VI</Property>
+				<Property Name="Source[67].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[67].itemID" Type="Ref">/My Computer/RxnRover.lvlib/logging/logging.lvlib/Log Levels.ctl</Property>
+				<Property Name="Source[67].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[67].type" Type="Str">VI</Property>
+				<Property Name="Source[68].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[68].itemID" Type="Ref">/My Computer/RxnRover.lvlib/logging/logging.lvlib/Log Message - CRITICAL.vi</Property>
+				<Property Name="Source[68].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[68].type" Type="Str">VI</Property>
+				<Property Name="Source[69].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[69].itemID" Type="Ref">/My Computer/RxnRover.lvlib/logging/logging.lvlib/Log Message - DEBUG.vi</Property>
+				<Property Name="Source[69].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[69].type" Type="Str">VI</Property>
+				<Property Name="Source[7].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[7].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[7].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[7].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Type Definitions</Property>
+				<Property Name="Source[7].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[7].type" Type="Str">Container</Property>
+				<Property Name="Source[70].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[70].itemID" Type="Ref">/My Computer/RxnRover.lvlib/logging/logging.lvlib/Log Message - ERROR.vi</Property>
+				<Property Name="Source[70].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[70].type" Type="Str">VI</Property>
+				<Property Name="Source[71].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[71].itemID" Type="Ref">/My Computer/RxnRover.lvlib/logging/logging.lvlib/Log Message - INFO.vi</Property>
+				<Property Name="Source[71].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[71].type" Type="Str">VI</Property>
+				<Property Name="Source[72].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[72].itemID" Type="Ref">/My Computer/RxnRover.lvlib/logging/logging.lvlib/Log Message - WARNING.vi</Property>
+				<Property Name="Source[72].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[72].type" Type="Str">VI</Property>
+				<Property Name="Source[73].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[73].itemID" Type="Ref">/My Computer/RxnRover.lvlib/logging/logging.lvlib/Log Message with Level.vi</Property>
+				<Property Name="Source[73].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[73].type" Type="Str">VI</Property>
+				<Property Name="Source[74].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[74].itemID" Type="Ref">/My Computer/RxnRover.lvlib/logging/logging.lvlib/Log Message.vi</Property>
+				<Property Name="Source[74].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[74].type" Type="Str">VI</Property>
+				<Property Name="Source[75].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[75].itemID" Type="Ref">/My Computer/RxnRover.lvlib/logging/logging.lvlib/Set Log Config.vi</Property>
+				<Property Name="Source[75].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[75].type" Type="Str">VI</Property>
+				<Property Name="Source[76].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[76].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Manager/Plugin Manager.lvlib/Config Error.ctl</Property>
+				<Property Name="Source[76].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[76].type" Type="Str">VI</Property>
+				<Property Name="Source[77].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[77].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Manager/Plugin Manager.lvlib/Create Plugin Directories.vi</Property>
+				<Property Name="Source[77].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[77].type" Type="Str">VI</Property>
+				<Property Name="Source[78].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[78].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Manager/Plugin Manager.lvlib/Filter Invalid Plugins.vi</Property>
+				<Property Name="Source[78].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[78].type" Type="Str">VI</Property>
+				<Property Name="Source[79].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[79].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Manager/Plugin Manager.lvlib/Filter Plugins.vi</Property>
+				<Property Name="Source[79].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[79].type" Type="Str">VI</Property>
+				<Property Name="Source[8].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[8].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[8].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[8].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Type Handling</Property>
+				<Property Name="Source[8].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[8].type" Type="Str">Container</Property>
+				<Property Name="Source[80].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[80].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Manager/Plugin Manager.lvlib/Generate Plugin Error String Array.vi</Property>
+				<Property Name="Source[80].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[80].type" Type="Str">VI</Property>
+				<Property Name="Source[81].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[81].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Manager/Plugin Manager.lvlib/Get Default Plugin Directories.vi</Property>
+				<Property Name="Source[81].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[81].type" Type="Str">VI</Property>
+				<Property Name="Source[82].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[82].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Manager/Plugin Manager.lvlib/Get Plugin Directorys.vi</Property>
+				<Property Name="Source[82].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[82].type" Type="Str">VI</Property>
+				<Property Name="Source[83].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[83].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Manager/Plugin Manager.lvlib/Handle Plugin Errors.vi</Property>
+				<Property Name="Source[83].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[83].type" Type="Str">VI</Property>
+				<Property Name="Source[84].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[84].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Manager/Plugin Manager.lvlib/Load Plugins.vi</Property>
+				<Property Name="Source[84].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[84].type" Type="Str">VI</Property>
+				<Property Name="Source[85].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[85].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Manager/Plugin Manager.lvlib/Log Plugin Errors.vi</Property>
+				<Property Name="Source[85].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[85].type" Type="Str">VI</Property>
+				<Property Name="Source[86].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[86].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Manager/Plugin Manager.lvlib/Plugin Details.ctl</Property>
+				<Property Name="Source[86].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[86].type" Type="Str">VI</Property>
+				<Property Name="Source[87].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[87].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Manager/Plugin Manager.lvlib/Plugin Types.ctl</Property>
+				<Property Name="Source[87].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[87].type" Type="Str">VI</Property>
+				<Property Name="Source[88].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[88].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Manager/Plugin Manager.lvlib/Read Plugin Configuration.vi</Property>
+				<Property Name="Source[88].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[88].type" Type="Str">VI</Property>
+				<Property Name="Source[89].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[89].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Manager/Plugin Manager.lvlib/Read Plugin INI.vi</Property>
+				<Property Name="Source[89].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[89].type" Type="Str">VI</Property>
+				<Property Name="Source[9].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[9].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[9].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[9].itemID" Type="Ref">/My Computer/RxnRover.lvlib/User Preferences</Property>
+				<Property Name="Source[9].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[9].type" Type="Str">Container</Property>
+				<Property Name="Source[90].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[90].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Plugin Manager/Plugin Manager.lvlib/Search for packed library.vi</Property>
+				<Property Name="Source[90].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[90].type" Type="Str">VI</Property>
+				<Property Name="Source[91].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[91].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Experiment/Experiment Manager.lvlib/User Event - Stop.lvlib/Create User Event - Stop.vi</Property>
+				<Property Name="Source[91].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[91].type" Type="Str">VI</Property>
+				<Property Name="Source[92].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[92].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Experiment/Experiment Manager.lvlib/User Event - Stop.lvlib/Fire User Event - Stop.vi</Property>
+				<Property Name="Source[92].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[92].type" Type="Str">VI</Property>
+				<Property Name="Source[93].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[93].itemID" Type="Ref">/My Computer/RxnRover.lvlib/Experiment/Experiment Manager.lvlib/User Event - Stop.lvlib/Destroy User Event - Stop.vi</Property>
+				<Property Name="Source[93].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[93].type" Type="Str">VI</Property>
+				<Property Name="Source[94].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[94].itemID" Type="Ref">/My Computer/RxnRover.lvlib/File IO/File IO.lvlib/JSON Utilities.lvlib/JSON Add Indent.vi</Property>
+				<Property Name="Source[94].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[94].type" Type="Str">VI</Property>
+				<Property Name="Source[95].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[95].itemID" Type="Ref">/My Computer/RxnRover.lvlib/File IO/File IO.lvlib/JSON Utilities.lvlib/JSON Add White Space.vi</Property>
+				<Property Name="Source[95].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[95].type" Type="Str">VI</Property>
+				<Property Name="Source[96].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[96].itemID" Type="Ref">/My Computer/RxnRover.lvlib/File IO/File IO.lvlib/Project Locations.lvlib/File Defaults Location.vi</Property>
+				<Property Name="Source[96].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[96].type" Type="Str">VI</Property>
+				<Property Name="Source[97].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[97].itemID" Type="Ref">/My Computer/RxnRover.lvlib/File IO/File IO.lvlib/Project Locations.lvlib/Icons Location.vi</Property>
+				<Property Name="Source[97].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[97].type" Type="Str">VI</Property>
+				<Property Name="Source[98].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[98].itemID" Type="Ref">/My Computer/RxnRover.lvlib/File IO/File IO.lvlib/Project Locations.lvlib/Log Location.vi</Property>
+				<Property Name="Source[98].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[98].type" Type="Str">VI</Property>
+				<Property Name="Source[99].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[99].itemID" Type="Ref">/My Computer/RxnRover.lvlib/File IO/File IO.lvlib/Project Locations.lvlib/Resource Location.vi</Property>
+				<Property Name="Source[99].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[99].type" Type="Str">VI</Property>
+				<Property Name="SourceCount" Type="Int">100</Property>
 				<Property Name="TgtF_companyName" Type="Str">Iowa State University</Property>
 				<Property Name="TgtF_fastFileFormat" Type="Bool">true</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">Standalone executable for Rxn Rover.</Property>
