@@ -1,6 +1,23 @@
 Changelog
 =========
 
+v1.5.1
+------
+
+**Features**
+
+- Multiple analyzer plugins can now be loaded simultaneously.
+
+**Fixes**
+
+- Updated status box message from "Submitting Yield" to "Submitting Results" when sending analyzer results to an optimizer
+- Removed `docs/{venv,build}` directories from packaging
+
+**Known Issues**
+
+- Executable cannot load plugins and should not be used.
+- Currently assumes single-objective optimizer and only sends first objective value in list
+
 v1.5.0
 ------
 
